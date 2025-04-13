@@ -1,5 +1,5 @@
 site_name: Dispatcharr Docs
-site_url: 
+site_url: https://dispatcharr.github.io/Dispatcharr-Docs/
 theme:
   name: material
   palette:
