@@ -1,0 +1,1 @@
+Starting docs repository for Dispatcharr
