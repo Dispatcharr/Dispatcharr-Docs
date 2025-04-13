@@ -2,9 +2,11 @@ site_name: Dispatcharr Docs
 site_url: https://dispatcharr.github.io/Dispatcharr-Docs/
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
   palette:
     scheme: slate
-    primary: teal
+    primary: blue grey
     features:
     - announce.dismiss
     - content.action.edit
@@ -89,3 +91,8 @@ markdown_extensions:
 # Repository
 repo_name: dispatcharr/Dispatcharr-Docs
 repo_url: https://github.com/Dispatcharr/Dispatcharr-Docs
+
+nav:
+  - Home: index.md
+  - Getting started:
+    - Installation: getting-started.md

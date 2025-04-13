@@ -68,3 +68,4 @@ ENV/
 
 # MkDocs documentation
 site*/
+.DS_Store
