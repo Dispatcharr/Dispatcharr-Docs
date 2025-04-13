@@ -2,3 +2,7 @@ site_name: Dispatcharr Docs
 site_url: 
 theme:
   name: material
+  palette:
+    scheme: slate
+    primary: teal
+    
