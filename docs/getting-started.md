@@ -2,8 +2,6 @@
 
 Dispatcharr can be installed using Docker on various platforms, including Windows, macOS, Proxmox, and Unraid. This guide provides detailed instructions for each method.
 
----
-
 ## Prerequisites
 
 Ensure Docker and Docker Compose are installed on your platform.
@@ -88,13 +86,45 @@ docker compose up -d
 2. Search "Dispatcharr" and Select Install
 3. Leave the defaults unless you need to change them
 
+### Building from Source (Unsupported)
+
+Clone this repository:
+```bash
+git clone https://github.com/Dispatcharr/Dispatcharr.git
+cd Dispatcharr
+```
+
+Create and activate a virtual environment (optional but recommended):
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+Install required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+Run database migrations and start the server (Django + React front-end):
+
+```bash
+python manage.py migrate
+python manage.py runserver
+```
+
+For the front-end, navigate to the frontend/ folder and run:
+
+npm install
+npm run build
+
+Once running, visit [http://localhost:9191](http://localhost:9191/) (or the port you exposed) in your browser.
+
 ## Accessing Dispatcharr
 
 Open your web browser and navigate to:
 
-```
-http://localhost:9191
-```
+[http://localhost:9191](http://localhost:9191/)
 
 Replace `localhost` with your server's IP address if accessing remotely.
 
