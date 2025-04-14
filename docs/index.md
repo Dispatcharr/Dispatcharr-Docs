@@ -7,7 +7,7 @@
 <div class="grid cards" markdown>
 
 - :material-github: [__Github__ repository](https://github.com/Dispatcharr/Dispatcharr)
-- :fontawesome-brands-docker: [__Docker__ hub images](https://hub.docker.com/layers/dispatcharr/dispatcharr/latest/images/sha256-e5b6823ec8bc0d3128b73e93616e321384b399c4b71408f7174525575e740034)
+- :octicons-container-16: [__GH Container__ images](https://github.com/Dispatcharr/Dispatcharr/pkgs/container/dispatcharr)
 - :fontawesome-regular-circle-play: [__Getting__ started](getting-started.md)
 - :material-cog: __Configuration__
 
