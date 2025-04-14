@@ -71,6 +71,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
+      url_download: true
       auto_append:
         - includes/mkdocs.md
   - pymdownx.superfences:
@@ -89,8 +90,8 @@ markdown_extensions:
   - pymdownx.tilde
 
 # Repository
-repo_name: dispatcharr/Dispatcharr-Docs
-repo_url: https://github.com/Dispatcharr/Dispatcharr-Docs
+repo_name: Dispatcharr
+repo_url: https://github.com/Dispatcharr/
 
 nav:
   - Home: index.md
