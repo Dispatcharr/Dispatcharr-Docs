@@ -7,7 +7,8 @@ theme:
   palette:
     scheme: slate
     primary: blue grey
-    features:
+  features:
+    - toc.integrate
     - announce.dismiss
     - content.action.edit
     - content.action.view
@@ -18,9 +19,9 @@ theme:
     # - content.tabs.link
     - content.tooltips
     # - header.autohide
-    # - navigation.expand
+    - navigation.expand
     - navigation.footer
-    - navigation.indexes
+    # - navigation.indexes
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
@@ -34,7 +35,7 @@ theme:
     - search.share
     - search.suggest
     - toc.follow
-    # - toc.integrate
+ 
   font:
     text: Roboto
     code: Roboto Mono
@@ -63,11 +64,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.magiclink:
-      normalize_issue_symbols: true
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets:
@@ -96,4 +92,9 @@ repo_url: https://github.com/Dispatcharr/
 nav:
   - Home: index.md
   - Getting started:
-    - Installation: getting-started.md
+    - Installation: installation.md
+    - Getting Started: getting-started.md
+  - User Guide: user-guide.md
+  - FAQ/Troubleshooting: troubleshooting.md
+  - API: api.md
+  - Join Discord: https://discord.gg/wfeqTRRJru
