@@ -42,4 +42,7 @@ add content here
 
 #### Emby
 
-add content here
+Emby can accept HDHR or M3U format. In Dispatcharr, navigate to the "Channels" page then click either the HDHR or M3U buttons at the top of the page, and copy the provided URL.  
+
+Navigate to your Emby page and click the Settings icon to manage your emby server.  Click "Live TV", then "Add TV source".  Choose HD Homerun if using the HDHR URL, or M3U if using the M3U URL from Dispatcharr.  Paste the URL and save.  
+> If adding as M3U in Emby, leave the Simultaneous stream limit set as "0", since stream limits will be handled by Dispatcharr.
