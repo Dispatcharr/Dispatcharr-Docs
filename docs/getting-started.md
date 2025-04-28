@@ -55,7 +55,29 @@ Create your user account by entering a username and password that you will remem
 add content here
 
 #### Plex
-add content here
+
+- Plex accepts the HDHR format and can mostly find HDHR units on its own. 
+- In Dispatcharr, navigate to the "Channels" page then click the HDHR button at the top of the page, and copy the provided URL.  
+??? info "Screenshot" 
+    ![HDHR URL](assets/find_hdhr_url.png)
+- Navigate to your Plex page and click the Settings icon to manage your plex server.  
+- Scroll down to `Manage` and click `Live TV & DVR`, then `Set Up Plex Tuner`.
+- Plex should automatically find your Dispatcharr instance, but if it doesn't click the `Don't see your HDHomeRun device? Enter its network address manually` and enter the HDHR URL you copied from Dispatcharr and press `Connect`.
+
+??? info "Screenshot" 
+    ![Plex Live TV Automatic](assets/add_hdhr_plex.png){style="height:70vmin"}
+
+- Plex will provide you with their EPG if they support your country and postal code. If they do not provide EPG for you or if you want to use your own you can add EPG from Dispatcharr.
+!!! warning
+    Please note, if plex EPG does not exist for your area you will be forced to provide your own before you can continue.
+
+??? info "Screenshot"
+    ![Plex Add EPG](assets/add_epg_plex.png){style="height:70vmin"}
+
+- You can now map the epg to channels if any did not automatically match.
+??? info "Screenshot"
+    ![Map EPG Plex](assets/map_epg_plex.png){style="height:70vmin"}
+- Press `Continue` and plex will now load in the channels and EPG data
 
 #### ChannelsDVR
 add content here
