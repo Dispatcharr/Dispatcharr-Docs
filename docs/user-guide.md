@@ -96,7 +96,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 * Default User-Agent - Set the default User-Agent
 * Default Stream Profile - Set the default Stream Profile
 * Preferred Region - Set your preferred region
-* Auto Import Mapped Files - ?
+* Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 
 ###Stream Profiles
 * There are 4 default stream profiles with the ability to create your own custom ones
@@ -106,8 +106,8 @@ From this page you can add and maintain your M3U accounts and EPGs
     * streamlink - For custom streams based on the services supported by [streamlink](https://streamlink.github.io/)
 * Custom Stream Profiles - create your own custom stream profile by clicking the "Add Stream Profile" button on the Settings page
     * Name - a name for your stream profile
-	* Command - ?
-	* Parameters - ?
+	* Command - ffmpeg or streamlink
+	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html) or [streamlink](https://streamlink.github.io/cli.html) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
 ###User-Agents
