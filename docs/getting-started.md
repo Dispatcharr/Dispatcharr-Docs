@@ -12,6 +12,8 @@ See [installation guide](installation.md).
 
 After installation and starting up, open a web browser and go to `http://{your_ip_here}:9191`
 Create your user account by entering a username and password that you will remember. You can optionally add an email address.
+!!! note
+    Email addresses are currently unused but may be used in future versions.
 
 ---
 
