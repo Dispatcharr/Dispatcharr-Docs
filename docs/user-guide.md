@@ -52,9 +52,23 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Max Streams - Set a number for the max number of concurrent streams allowed for your M3U. For unlimited, set to 0
 	* User-Agent - If you want to set a specific user-agent for this M3U account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
+	* Is Active - Toggle whether this M3U account is active or not
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * Yellow edit icon to edit the associated M3U account
+	    * "Groups" button - Allows you to filter streams from the M3U based on the listed groups
+		* "Profiles" button - Allows you to add a second set of credentials for the same provider. 
+        !!! example
+            Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
+	        1. Set up Provider-A as an M3U account in the M3U & EPG manager.  
+			2. Click the corresponding yellow edit icon under the Actions column.  
+			3. Click the "Profiles" button.  
+			4. Click the "New" button.  
+			5. Copy the text under "Search" at the bottom of the dialog box, and paste into the "Search" box.   
+			6. Paste the same text into the "Replace" box. Within the text, you should see something like "username=XXXXXXX&password=YYYYYYY".  
+			7. Replace the XXXXXXX and YYYYYYY with the username and password with the credentials from your second Provider-A account.  
+	
+	
 	* Red delete icon to remove the associated M3U account
 	* Blue refresh icon to manually refresh/update the associated M3U account
 	
