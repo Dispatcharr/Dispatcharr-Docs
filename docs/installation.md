@@ -32,9 +32,9 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
 3. Open a PowerShell or Command Prompt window in this directory.
 4. Start Dispatcharr with:
 
-```shell
-docker compose up -d
-```
+    ```shell
+    docker compose up -d
+    ```
 
 ---
 
@@ -45,15 +45,15 @@ docker compose up -d
 3. Create a `docker-compose.yml` file with the provided content.
 4. Launch Terminal and navigate to your directory:
 
-```shell
-cd ~/Dispatcharr
-```
+    ```shell
+    cd ~/Dispatcharr
+    ```
 
 5. Run the container:
 
-```shell
-docker compose up -d
-```
+    ```shell
+    docker compose up -d
+    ```
 
 ---
 
@@ -61,23 +61,22 @@ docker compose up -d
 
 1. Create an Ubuntu LXC container or VM with Docker and Docker Compose installed.
 
-```shell
-apt update
-apt install docker.io docker-compose -y
-```
+    ```shell
+    apt install docker.io docker-compose -y
+    ```
 
 2. Create and navigate to your Dispatcharr directory:
 
-```shell
-mkdir ~/dispatcharr && cd ~/dispatcharr
-```
+    ```shell
+    mkdir ~/dispatcharr && cd ~/dispatcharr
+    ```
 
 3. Add your `docker-compose.yml`.
 4. Launch Dispatcharr:
 
-```shell
-docker compose up -d
-```
+    ```shell
+    docker compose up -d
+    ```
 
 
 ### Unraid
