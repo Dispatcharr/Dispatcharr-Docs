@@ -40,6 +40,8 @@ The "Links" section has buttons to see and copy the external links needed by a c
 * M3U - Use this link for clients that use M3U format
 * EPG - Use this link to provide your client with episode guide data that matches your channels
 
+---
+
 ## M3U & EPG Manager
 From this page you can add and maintain your M3U accounts and EPGs
 ###M3U accounts
@@ -69,6 +71,8 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Red delete icon to remove the associated EPG
 	* Blue refresh icon to manually refresh/update the associated EPG
 	
+---
+	
 ## TV Guide
 * The TV Guide page will by default display channels for which there is EPG data loaded. 
 * You can search by channel name and/or filter by channel groups and profiles.
@@ -77,9 +81,12 @@ From this page you can add and maintain your M3U accounts and EPGs
 !!! note
     You can record by channel and time from the DVR page
 
+---
 
 ## DVR
 * The DVR page allows you to manage your current and future recordings and set new recordings based on channel and time.
+
+---
 
 ## Stats
 * The Stats page shows info on all active streams
@@ -91,6 +98,8 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Number of watchers
 	* IP addresses and associated User-Agents
 * You can force stop any current streams by clicking the red "Stop Channel" button
+
+---
 
 ## Settings
 * Default User-Agent - Set the default User-Agent

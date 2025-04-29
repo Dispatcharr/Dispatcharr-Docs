@@ -13,6 +13,8 @@ See [installation guide](installation.md).
 After installation and starting up, open a web browser and go to `http://{your_ip_here}:9191`
 Create your user account by entering a username and password that you will remember. You can optionally add an email address.
 
+---
+
 ## Adding M3U and EPG
 1. Add your first M3U by clicking the "Add M3U" button on the right-hand side under "Getting started".  
 2. This will take you to the M3U & EPG Manager (also accessible from the navbar on the left). 
@@ -40,7 +42,9 @@ Create your user account by entering a username and password that you will remem
     - Depending on the size of your EPG, it may take some time to load.
     ??? info "Screenshot"
 	    ![Adding EPG](assets/adding_epg.png)
-	
+
+---
+
 ### Creating your first channel
 
 - Go to the main Channels screen in the navbar. 
@@ -50,15 +54,23 @@ Create your user account by entering a username and password that you will remem
 ??? info "Screenshot" 
     ![Adding a channel](assets/adding_channel.png)
 
+---
+	
 ### Media Playback Setup
 #### Jellyfin
 add content here
 
+---
+
 #### Plex
 add content here
 
+---
+
 #### ChannelsDVR
 add content here
+
+---
 
 #### Emby
 

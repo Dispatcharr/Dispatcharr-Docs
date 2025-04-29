@@ -78,6 +78,7 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
     docker compose up -d
     ```
 
+---
 
 ### Unraid
 
@@ -85,39 +86,44 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
 2. Search "Dispatcharr" and Select Install
 3. Leave the defaults unless you need to change them
 
+---
+
 ### Building from Source (Unsupported)
 
-Clone this repository:
-```bash
-git clone https://github.com/Dispatcharr/Dispatcharr.git
-cd Dispatcharr
-```
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/Dispatcharr/Dispatcharr.git
+    cd Dispatcharr
+    ```
 
-Create and activate a virtual environment (optional but recommended):
+2. Create and activate a virtual environment (optional but recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
 
-```bash
-python -m venv venv
-source venv/bin/activate
-```
+3. Install required dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-Install required dependencies:
-```bash
-pip install -r requirements.txt
-```
+4. Run database migrations and start the server (Django + React front-end):
 
-Run database migrations and start the server (Django + React front-end):
+    ```bash
+    python manage.py migrate
+    python manage.py runserver
+    ```
 
-```bash
-python manage.py migrate
-python manage.py runserver
-```
+5. For the front-end, navigate to the frontend/ folder and run:
 
-For the front-end, navigate to the frontend/ folder and run:
+    ```
+    npm install
+    npm run build
+    ```
+   
+6. Once running, visit [http://localhost:9191](http://localhost:9191/) (or the port you exposed) in your browser.
 
-npm install
-npm run build
-
-Once running, visit [http://localhost:9191](http://localhost:9191/) (or the port you exposed) in your browser.
+---
 
 ## Accessing Dispatcharr
 
