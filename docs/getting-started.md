@@ -19,7 +19,7 @@ Create your user account by entering a username and password that you will remem
 
 ## Adding M3U and EPG
 1. Add your first M3U by clicking the "Add M3U" button on the right-hand side under "Getting started".  
-2. This will take you to the M3U & EPG Manager (also accessible from the navbar on the left). 
+2. This will take you to the M3U & EPG Manager (also accessible from the navbar on the left).  
 ??? info "Screenshot" 
     ![Getting started](assets/getting_started.png)
 
@@ -52,7 +52,7 @@ Create your user account by entering a username and password that you will remem
 - Go to the main Channels screen in the navbar. 
 - If an M3U was added and successfully scanned, you should see a list of streams on the right side of the page under "Streams".  
 - Find a stream in the list, or search for one by typing in the "Name" column header. 
-- Press the green [+] create new channel button to add the stream to a new channel.
+- Press the green [+] create new channel button to add the stream to a new channel.  
 ??? info "Screenshot" 
     ![Adding a channel](assets/adding_channel.png)
 
