@@ -8,6 +8,7 @@ Ensure Docker and Docker Compose are installed on your platform.
 
 - [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
 - [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
+- [Docker on Linux](https://docs.docker.com/engine/install/)
 - [Docker on Proxmox (LXC)](https://pve.proxmox.com/wiki/Linux_Container)
 - [Docker on Unraid](https://docs.unraid.net/unraid-os/manual/docker-management/)
 
@@ -57,6 +58,61 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
 
 ---
 
+### Linux Docker
+
+!!! warning
+    Some distros use outdated versions of Docker so it is recommended to install directly from Docker
+
+Install Docker using the official instructions, such as those for [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+
+??? example "Ubuntu example"
+    1. Uninstall old versions.
+
+    ```shell
+    for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+    ```
+
+    2. Setup Dockers own apt repository for up-to-date versions.
+
+    ```shell
+    # Add Docker's official GPG key:
+    sudo apt-get update
+    sudo apt-get install ca-certificates curl
+    sudo install -m 0755 -d /etc/apt/keyrings
+    sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+    sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+    # Add the repository to Apt sources:
+    echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    sudo apt-get update
+    ```
+
+    3. Install Docker.
+
+    ```shell
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    ```
+
+1. Create and navigate to your Dispatcharr directory.
+    ```shell
+    mkdir ~/dispatcharr && cd ~/dispatcharr
+    ```
+
+2. Add your own `docker-compose.yml` or use the provided example.
+
+3. Launch Dispatcharr:
+
+    ```shell
+    docker compose up -d
+    ```
+
+!!! note
+    If you wish to use the `docker compose` commands without sudo you may need to follow Dockers official guide [here](https://docs.docker.com/engine/install/linux-postinstall/).
+
+---
 ### Proxmox
 
 1. Create an Ubuntu LXC container or VM with Docker and Docker Compose installed.
