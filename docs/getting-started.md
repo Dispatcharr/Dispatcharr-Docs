@@ -60,7 +60,34 @@ Create your user account by entering a username and password that you will remem
 	
 ### Media Playback Setup
 #### Jellyfin
-add content here
+##### Add TV source
+- Jellyfin can accept HDHR or M3U format. 
+- In Dispatcharr, navigate to the "Channels" page then click either the HDHR or M3U buttons at the top of the page, and copy the provided URL.  
+=== "HDHR"
+    ??? info "Screenshot"
+        ![Find HDHR URL](assets/find_hdhr_url.png)
+	
+=== "M3U"
+    ??? info "Screenshot"
+        ![Find M3U URL](assets/find_m3u_url.png)
+
+- Navigate to your Jellyfin page and click the Admin Panel Icon to manage your Jellyfin server.  
+- Click "Live TV" under the Live TV section, then the '+' button next to "Tuner Devices".  
+??? info "Screenshot"
+    ![Jellyfin LiveTV Setup Tuner](assets/jellyfin_livetv_setup_tuner.png)
+- Under 'Tuner Type', choose HD Homerun if using the HDHR URL, or M3U Tuner if using the M3U URL from Dispatcharr.  
+- Paste the URL and save.  
+!!! note
+    If adding as M3U, leave the Simultaneous stream limit set as "0", since stream limits will be handled by Dispatcharr.  
+##### Add Guide Data Source
+- To add guide data from Dispatcharr, navigate to the Dispatcharr "Channels" page then click the EPG button at the top of the page and copy the provided URL.
+??? info "Screenshot"
+    ![Find EPG URL](assets/find_epg_url.png)
+- In Jellyfin Live TV settings page, click the '+' next to "TV Guide Data Providers".
+??? info "Screenshot"
+    ![Jellyfin Add EPG](assets/jellyfin_add_epg.png)
+- Choose 'XMLTV' and paste the URL
+- EPG data will be automatically mapped.
 
 ---
 
@@ -97,12 +124,27 @@ add content here
 ---
 
 #### Emby
-
+##### Add TV source
 - Emby can accept HDHR or M3U format. 
 - In Dispatcharr, navigate to the "Channels" page then click either the HDHR or M3U buttons at the top of the page, and copy the provided URL.  
+=== "HDHR"
+    ??? info "Screenshot"
+        ![Find HDHR URL](assets/find_hdhr_url.png)
+	
+=== "M3U"
+    ??? info "Screenshot"
+        ![Find M3U URL](assets/find_m3u_url.png)
 - Navigate to your Emby page and click the Settings icon to manage your emby server.  
 - Click "Live TV", then "Add TV source".  
 - Choose HD Homerun if using the HDHR URL, or M3U if using the M3U URL from Dispatcharr.  
 - Paste the URL and save.  
 !!! note
-    If adding as M3U in Emby, leave the Simultaneous stream limit set as "0", since stream limits will be handled by Dispatcharr.
+    If adding as M3U, leave the Simultaneous stream limit set as "0", since stream limits will be handled by Dispatcharr.  
+##### Add Guide Data Source
+- You can use Emby provided guide data, guide data from dispatcharr, or a combination of both.
+  - To add Emby provided guide data, click "Add Guide Data Source", choose your country, then choose "Emby Guide Data" under Guide Data Source and hit Next.
+  - Follow the provided prompts to find the channel data you need. You may add multiple Emby Guide Data sources if needed.
+  - Emby will attempt to match channels to guide data, but you may need to manually map the guide data to your channels. You can do so at "Live TV" > Channels, or in the Emby metadata manager.
+  - To add guide data from dispatcharr, navigate to the dispatcharr "Channels" page then click the EPG button at the top of the page and copy the provided URL.
+  - In Emby Live TV settings page, click "Add Guide Data Source", choose your country, then choose "XMLTV" Guide Data Source and hit Next.
+  - EPG data will be automatically mapped.
