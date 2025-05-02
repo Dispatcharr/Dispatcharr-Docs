@@ -3,7 +3,7 @@
 ## Channels
 From the channels page you can create and manage all added channels, streams, and external links
 
-###Channels	
+### Channels	
 * Search channel names by clicking in the "Name" column header
 * Search by channel group by clicking in the "Group" column header
 * Edit a channel by clicking the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> "Edit Channel" icon under the "Actions" column 
@@ -18,7 +18,7 @@ From the channels page you can create and manage all added channels, streams, an
     !!! warning
 		This feature is still under development
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
-###Streams
+### Streams
 * Search stream names by clicking in the "Name" column header
 * Search by M3U group by clicking in the "Group" column header
 * Search by M3U name by clicking the "M3U" column header
@@ -33,7 +33,7 @@ From the channels page you can create and manage all added channels, streams, an
         For every selected stream, a corresponding new channel will be created. For example, if 3 streams are selected, 3 new channels will be created.
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" to create a new stream not associated with any of your uploaded M3Us
 
-###Links
+### Links
 The "Links" section has buttons to see and copy the external links needed by a client
 
 * <i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Use this link for clients that use HD Homerun format
@@ -44,7 +44,7 @@ The "Links" section has buttons to see and copy the external links needed by a c
 
 ## M3U & EPG Manager
 From this page you can add and maintain your M3U accounts and EPGs
-###M3U accounts
+### M3U accounts
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add" - Click this button to add new M3U accounts 
     * Name - A name for your M3U account
 	* URL - The M3U URL (not required if uploading an M3U file)
@@ -121,7 +121,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 
-###Stream Profiles
+### Stream Profiles
 * There are 4 default stream profiles with the ability to create your own custom ones
     * ffmpeg - Dispatcharr will proxy streams via ffmpeg. No transcoding takes place with the default ffmpeg stream profile, it will just remux streams. Uses more system resources than proxy
     * Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg
@@ -133,7 +133,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html) or [streamlink](https://streamlink.github.io/cli.html) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
-###User-Agents
+### User-Agents
 * In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream.
 * Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate
 * Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
@@ -141,3 +141,154 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* User-Agent - The text to include for your user-agent string
 	* Description - (Optional) a description of the user-agent for your own use
 
+---
+
+## Advanced
+
+### Hardware Acceleration 
+- Dispatcharr does not currently support hardware acceleration directly, but you can use hardware acceleration with custom ffmpeg stream profiles. 
+- This will require mapping your hardware to the container and setting up a custom ffmpeg stream profile. 
+
+#### Mapping Hardware
+=== "NVIDIA"
+    - Install the [NVIDIA Container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
+    - Add a deploy section to your docker-compose.yml
+	??? example
+	    ```
+		services:
+		  dispatcharr:
+			# build:
+			#   context: .
+			#   dockerfile: Dockerfile
+			image: ghcr.io/dispatcharr/dispatcharr:latest
+			container_name: dispatcharr
+			ports:
+			  - 9191:9191
+			volumes:
+			  - dispatcharr_data:/data
+			environment:
+			  - DISPATCHARR_ENV=aio
+			  - REDIS_HOST=localhost
+			  - CELERY_BROKER_URL=redis://localhost:6379/0
+			deploy:
+			  resources:
+				reservations:
+				  devices:
+					- driver: nvidia
+					  count: all
+					  capabilities: [gpu]
+		volumes:
+		  dispatcharr_data:
+		```
+
+=== "Intel"  
+    - Add a devices section to your docker-compose.yml
+	??? example
+	    ```
+		services:
+		  dispatcharr:
+			# build:
+			#   context: .
+			#   dockerfile: Dockerfile
+			image: ghcr.io/dispatcharr/dispatcharr:latest
+			container_name: dispatcharr
+			ports:
+			  - 9191:9191
+			volumes:
+			  - dispatcharr_data:/data
+			environment:
+			  - DISPATCHARR_ENV=aio
+			  - REDIS_HOST=localhost
+			  - CELERY_BROKER_URL=redis://localhost:6379/0
+			devices:
+			  - /dev/dri:/dev/dri
+
+		volumes:
+		  dispatcharr_data:
+		```
+		
+=== "NVIDIA (Unraid)"
+    - Install the NVIDIA Driver Package plugin from community apps if not already installed
+    - Edit the Dispatcharr docker container in Unraid
+        - Toggle Advanced View On
+        - Go to Extra Parameters
+            - Add `--runtime=nvidia`
+        - Scroll down and click "Add another Path, Port, Variable, Label or Device"
+		    - Config Type: Variable
+		    - Name: `NVIDIA_VISIBLE_DEVICES`
+			- Key: `NVIDIA_VISIBLE_DEVICES`
+			- Value: `all`
+		- Click Save
+		- Again click "Add another Path, Port, Variable, Label or Device"
+		    - Config Type: Variable
+		    - Name: `NVIDIA_DRIVER_CAPABILITIES`
+			- Key: `NVIDIA_DRIVER_CAPABILITIES`
+			- Value: `all`
+		- Click Save
+
+=== "Intel (Unraid)"
+    - Edit the Dispatcharr docker container in Unraid
+	- Scroll down and click "Add another Path, Port, Variable, Label or Device"
+		- Config Type: Device
+		- Name: `/dev/dri`
+		- Key: `/dev/dri`
+		- Description: `Intel GPU`
+    - Click Save
+	
+#### Custom Stream Profiles
+- Open Dispatcharr
+- Navigate to Settings > Add Stream Profile
+    - Name it anything you like
+	- Command `ffmpeg`
+    - Parameters will vary based on your hardware type and streaming needs
+	    - See [ffmpeg docs](https://ffmpeg.org/ffmpeg.html) for more
+	=== "NVIDIA"
+	    !!! example
+	        - Parameters: `-user_agent {userAgent} -hwaccel cuda -i {streamUrl} -c:v h264_nvenc -c:a copy -f mpegts pipe:1`
+	
+	=== "Intel"
+		!!! example
+		    - Parameters: `-user_agent {userAgent} -hwaccel vaapi -hwaccel_output_format vaapi -i {streamUrl} -vf 'format=nv12,hwupload' -c:v h264_vaapi -c:a aac -fflags +genpts+discardcorrupt -f mpegts pipe:1`
+### Nginx reverse proxy
+HTTPS config example (streams only)
+```
+# Dispatcharr HTTPS DynuDNS
+server {
+	listen 44443 ssl;
+	server_name dispatcharr.yourdomain.com;  #Adjust for your domain
+
+	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+	ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+	
+	location /proxy/ts/stream/ {
+		allow all;  # Allow everyone else
+		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name or IP
+		proxy_set_header Host $host:44443;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+		# CORS settings
+		add_header 'Access-Control-Allow-Origin' '*';
+		add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+		add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
+	}
+
+	location / {
+		allow 10.0.0.0/22;  # Allow the entire network, adjust for your network
+		allow 10.1.0.0/24;  # Allow Wireguard, adjust for your network
+		deny all;  # Deny everyone else
+		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name or IP
+		# WebSocket headers
+		proxy_set_header Upgrade $http_upgrade;
+		proxy_set_header Connection "Upgrade";
+		proxy_set_header Host $host:44443;
+		proxy_set_header X-Real-IP $remote_addr;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header X-Forwarded-Proto $scheme;
+		# CORS settings
+		add_header 'Access-Control-Allow-Origin' '*';
+		add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+		add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
+	}
+}  
+```
