@@ -18,13 +18,13 @@ Create your user account by entering a username and password that you will remem
 ---
 
 ## Adding M3U and EPG
-1. Add your first M3U by clicking the "Add M3U" button on the right-hand side under "Getting started".  
+1. Add your first M3U by clicking the `Add M3U` button on the right-hand side under "Getting started".  
 2. This will take you to the M3U & EPG Manager (also accessible from the navbar on the left).  
 ??? info "Screenshot" 
     ![Getting started](assets/getting_started.png)
 
-1. Click the Add button under M3U Accounts to add an M3U  
-2. Click the Add EPG button under EPGs to add an episode guide
+1. Click the `Add` button under M3U Accounts to add an M3U  
+2. Click the `Add EPG` button under EPGs to add an episode guide
 
 ??? info "Screenshot"
     ![M3U & EPG Manager](assets/m3u_epg_manager.png)
@@ -33,12 +33,14 @@ Create your user account by entering a username and password that you will remem
 	- Enter a name for your M3U, then enter the M3U URL or upload your M3U file.  
 	- You can optionally set a max number of concurrent streams allowed, or leave at 0 for unlimited.  
 	- Click "Save". 
+	- Click the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon of the just added M3U account
+	- Click the `Groups` button and select which groups you'd like to add
 	- Depending on the size of your M3U, it may take some time to load.	
     ??? info "Screenshot"
 	    ![Adding M3U](assets/adding_m3u.png)
 	
 === "EPG"
-    - Add an episode guide by clicking the "Add EPG" button under the EPGs section. .
+    - Add an episode guide by clicking the `Add EPG` button under the EPGs section. .
     - Enter a name for your EPG, then enter the URL and if necessary, API key. 
     - Choose the source type, then hit "Submit".
     - Depending on the size of your EPG, it may take some time to load.
