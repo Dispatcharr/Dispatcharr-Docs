@@ -7,16 +7,21 @@ From the channels page you can create and manage all added channels, streams, an
 * Search channel names by clicking in the "Name" column header
 * Search by channel group by clicking in the "Group" column header
 * Edit a channel by clicking the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> "Edit Channel" icon under the "Actions" column 
+    * Channel Name - Edit the name for your Channel
+	* Channel Group - Edit the group for your channel. If you want to create and add to a new group, click the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon
+	* Stream Profile - Click here if you want to use something other than the default stream profile for this channel
+	* Logo - Choose a logo or upload a new one
+	* Channel # - Edit the channel number. Currently only integers are accepted
+	* TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field
+	* EPG - Click in the box to manually choose an EPG entry, or click "Use Dummy" to assign a dummy EPG entry
 * Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column 
-* Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: green; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
+* Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
     * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Remove" to bulk remove channels
 	* "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign" to assign channel numbers
     !!! warning
         Currently channel number will start with 1 and auto-increment by 1 for each selected channel. This feature is still under development
 	* "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
-    !!! warning
-		This feature is still under development
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
 ### Streams
 * Search stream names by clicking in the "Name" column header
