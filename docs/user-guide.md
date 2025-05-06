@@ -259,7 +259,7 @@ HTTPS config example (streams only)
 ```
 # Dispatcharr HTTPS DynuDNS
 server {
-	listen 44443 ssl;
+	listen 443 ssl;
 	server_name dispatcharr.yourdomain.com;  #Adjust for your domain
 
 	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
@@ -268,7 +268,7 @@ server {
 	location /proxy/ts/stream/ {
 		allow all;  # Allow everyone else
 		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name or IP
-		proxy_set_header Host $host:44443;
+		proxy_set_header Host $host:443;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header X-Forwarded-Proto $scheme;
@@ -286,7 +286,7 @@ server {
 		# WebSocket headers
 		proxy_set_header Upgrade $http_upgrade;
 		proxy_set_header Connection "Upgrade";
-		proxy_set_header Host $host:44443;
+		proxy_set_header Host $host:443;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 		proxy_set_header X-Forwarded-Proto $scheme;

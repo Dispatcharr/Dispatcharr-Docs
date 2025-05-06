@@ -32,12 +32,13 @@ Create your user account by entering a username and password that you will remem
 === "M3U"
 	- Enter a name for your M3U, then enter the M3U URL or upload your M3U file.  
 	- You can optionally set a max number of concurrent streams allowed, or leave at 0 for unlimited.  
-	- Click "Save". 
+	- Click `Save`. 
+    ??? info "Screenshot"
+	    ![Adding M3U](assets/adding_m3u.png)
 	- Click the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon of the just added M3U account
 	    - Click the `Groups` button and select which groups you'd like to add, then click `Save and Refresh`
 	- Depending on the size of your M3U, it may take some time to load.	
-    ??? info "Screenshot"
-	    ![Adding M3U](assets/adding_m3u.png)
+
 	
 === "EPG"
     - Add an episode guide by clicking the `Add EPG` button under the EPGs section. .
