@@ -13,6 +13,7 @@ From the channels page you can create and manage all added channels, streams, an
 	* Logo - Choose a logo or upload a new one
 	* Channel # - Edit the channel number. Currently only integers are accepted
 	* TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field
+	* Gracenote StationID - Edit the Gracenote ID for your channel. These are typically 5 or 6 digit numbers that Gracenote (a common EPG provider) can use to identify TV channels.
 	* EPG - Click in the box to manually choose an EPG entry, or click "Use Dummy" to assign a dummy EPG entry
 * Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column 
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
@@ -53,11 +54,13 @@ From this page you can add and maintain your M3U accounts and EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add" - Click this button to add new M3U accounts 
     * Name - A name for your M3U account
 	* URL - The M3U URL (not required if uploading an M3U file)
+	* Account Type - Standard for direct M3U URLs, Xtream Codes for panel-based services
 	* Upload files - If uploading a local M3U file (not required if M3U URL is used)
-	* Max Streams - Set a number for the max number of concurrent streams allowed for your M3U. For unlimited, set to 0
-	* User-Agent - If you want to set a specific user-agent for this M3U account
+	* Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
+	* User-Agent - If you want to set a specific user-agent for this account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
-	* Is Active - Toggle whether this M3U account is active or not
+	* Stale Stream Retention (days) - Streams not seen for this many days will be removed
+	* Is Active - Toggle whether this account is active or not
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
@@ -121,10 +124,21 @@ From this page you can add and maintain your M3U accounts and EPGs
 ---
 
 ## Settings
+
+### Stream Settings
 * Default User-Agent - Set the default User-Agent
 * Default Stream Profile - Set the default Stream Profile
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
+* M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
+
+### User-Agents
+* In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream.
+* Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate
+* Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
+    * Name - a name for your user-agent
+	* User-Agent - The text to include for your user-agent string
+	* Description - (Optional) a description of the user-agent for your own use
 
 ### Stream Profiles
 * There are 4 default stream profiles with the ability to create your own custom ones
@@ -138,14 +152,6 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html) or [streamlink](https://streamlink.github.io/cli.html) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
-### User-Agents
-* In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream.
-* Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate
-* Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
-    * Name - a name for your user-agent
-	* User-Agent - The text to include for your user-agent string
-	* Description - (Optional) a description of the user-agent for your own use
-
 ---
 
 ## Advanced
