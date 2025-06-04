@@ -261,13 +261,19 @@ From this page you can add and maintain your M3U accounts and EPGs
 	- Command `ffmpeg`
     - Parameters will vary based on your hardware type and streaming needs
 	    - See [ffmpeg docs](https://ffmpeg.org/ffmpeg.html) for more
+	- Visit our [discord](https://discord.gg/Sp45V5BcxU) for more user-submitted ffmpeg parameters
 	=== "NVIDIA"
 	    !!! example
 	        - Parameters: `-user_agent {userAgent} -hwaccel cuda -i {streamUrl} -c:v h264_nvenc -c:a copy -f mpegts pipe:1`
 	
-	=== "Intel"
+	=== "Intel VAAPI"
 		!!! example
 		    - Parameters: `-user_agent {userAgent} -hwaccel vaapi -hwaccel_output_format vaapi -i {streamUrl} -vf 'format=nv12,hwupload' -c:v h264_vaapi -c:a aac -fflags +genpts+discardcorrupt -f mpegts pipe:1`
+		
+    === "Intel QSV"
+		!!! example
+		    - Parameters: `-user_agent {userAgent} -hwaccel qsv -hwaccel_output_format qsv -i {streamUrl} -vf scale_qsv=format=nv12 -c:v h264_qsv -c:a aac -fflags +genpts+discardcorrupt -f mpegts pipe:1`
+
 ### Nginx reverse proxy
 HTTPS config example (streams only)
 ```
