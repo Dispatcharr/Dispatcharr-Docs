@@ -268,11 +268,11 @@ From this page you can add and maintain your M3U accounts and EPGs
 	
 	=== "Intel VAAPI"
 		!!! example
-		    - Parameters: `-user_agent {userAgent} -hwaccel vaapi -hwaccel_output_format vaapi -i {streamUrl} -vf 'format=nv12,hwupload' -c:v h264_vaapi -c:a aac -fflags +genpts+discardcorrupt -f mpegts pipe:1`
+		    - Parameters: `-user_agent {userAgent} -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -i {streamUrl} -c:a aac -c:v h264_vaapi -f mpegts pipe:1`
 		
     === "Intel QSV"
 		!!! example
-		    - Parameters: `-user_agent {userAgent} -hwaccel qsv -hwaccel_output_format qsv -i {streamUrl} -vf scale_qsv=format=nv12 -c:v h264_qsv -c:a aac -fflags +genpts+discardcorrupt -f mpegts pipe:1`
+		    - Parameters: `-hwaccel qsv -user_agent {userAgent} -i {streamUrl} -c:v h264_qsv -c:a aac -f mpegts pipe:1`
 
 ### Nginx reverse proxy
 HTTPS config example (streams only)
