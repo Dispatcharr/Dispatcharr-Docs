@@ -44,7 +44,15 @@ The "Links" section has buttons to see and copy the external links needed by a c
 
 * <i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Use this link for clients that use HD Homerun format
 * <i data-lucide="screen-share" style="color: SlateBlue; width: 18px;"></i> <span style="color: SlateBlue;">M3U</span> - Use this link for clients that use M3U format
+    * Advanced options
+	    1. Bypass logo caching by adding the following to your URL (useful for Plex) `?cachedlogos=false` 
+		2. Use Gracenote ID's for M3U TVG-ID's by adding the following to your URL (useful for Emby) `?tvg_id_source=gracenote`
+		3. Combine multiple options `?cachedlogos=false&tvg_id_source=gracenote`
 * <i data-lucide="scroll" style="color: Gray; width: 18px;"></i> <span style="color: Gray;">EPG</span> - Use this link to provide your client with episode guide data that matches your channels
+    * Advanced options
+	    1. Bypass logo caching by adding the following to your URL (useful for Plex) `?cachedlogos=false` 
+		2. Use Gracenote ID's for TVG-ID's by adding the following to your URL (useful for Emby) `?tvg_id_source=gracenote`
+		3. Combine multiple options `?cachedlogos=false&tvg_id_source=gracenote`
 
 ---
 
@@ -303,3 +311,4 @@ server {
 	}
 }  
 ```
+

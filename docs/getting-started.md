@@ -55,9 +55,10 @@ Create your user account by entering a username and password that you will remem
 - Go to the main Channels screen in the navbar. 
 - If an M3U was added and successfully scanned, you should see a list of streams on the right side of the page under "Streams".  
 - Find a stream in the list, or search for one by typing in the "Name" column header. 
-- Press the green [+] create new channel button to add the stream to a new channel.  
+- Press the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> "Create New Channel" button to add the stream to a new channel.  
 ??? info "Screenshot" 
     ![Adding a channel](assets/adding_channel.png)
+- If you'd like to add a backup stream from a different provider, find the corresponding stream in the streams list and press the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" button under the "Actions" column
 
 ---
 	
