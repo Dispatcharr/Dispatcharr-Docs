@@ -123,8 +123,33 @@ Create your user account by entering a username and password that you will remem
 ---
 
 #### ChannelsDVR
-add content here
+- In Dispatcharr, navigate to the "Channels" page then click the M3U button at the top of the page, and copy the provided URL. 
+??? info "Screenshot"
+	![Find M3U URL](assets/find_m3u_url.png)
+	
+- Navigate to your ChannelsDVR server page and go to "Settings" and select "Sources"
+??? info "Screenshot"
+	![ChannelsDVR Select Sources](assets/channelsdvr_sources.png)
+	
+- Under Live TV press the green button "Add Source"
+??? info "Screenshot"
+	![ChannelsDVR Add Source](assets/channelsdvr_addsource.png)
+	
+- On the popup choose Custom Channels
+??? info "Screenshot"
+	![ChannelsDVR Custom Channels](assets/channelsdvr_customchannels.png)
 
+- On the Custom Channels menu use the following options:
+    - Nickname: Add a name for your M3U
+    - Stream Format: MPEG-TS
+    - Source: Use URL and paste the M3U link from Dispatcharr
+    - Options: Use Channel Number from M3U, Logo is a preference, No Stream Limit since Disspatcharr manages that.
+    - XMLTV Guide Data:
+        - If you set a Gracenote ID in every channel and want ChannelsDVR to build a full 14 day guide using their data then do not add a guide and press Save.
+        - If you want to use the Guide Data from Dispatcharr then put the EPG link from Dispatcharr, select the refresh frequency, and press Save.
+		??? info "Screenshot"
+	        ![ChannelsDVR Custom Channels options](assets/channelsdvr_customchannels_2.png)
+		
 ---
 
 #### Emby
