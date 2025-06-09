@@ -143,7 +143,11 @@ Create your user account by entering a username and password that you will remem
     - Nickname: Add a name for your M3U
     - Stream Format: MPEG-TS
     - Source: Use URL and paste the M3U link from Dispatcharr
-    - Options: Use Channel Number from M3U, Logo is a preference, No Stream Limit since Dispatcharr manages that.
+    - Options: 
+	    - Refresh URL daily
+	    - Prefer channel-number from M3U
+		- Prefer channel logos from M3U if you want to use logos shown/managed in Dispatcharr
+		- No Stream Limit (Dispatcharr manages the stream limits)
     - XMLTV Guide Data:
         - If you set a Gracenote ID in every channel and want ChannelsDVR to build a full 14 day guide using their data then do not add a guide and press Save.
         - If you want to use the Guide Data from Dispatcharr then put the EPG link from Dispatcharr, select the refresh frequency, and press Save.
