@@ -71,6 +71,8 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
 	* Stale Stream Retention (days) - Streams not seen for this many days will be removed
 	* Is Active - Toggle whether this account is active or not
+	!!! note
+	    M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
@@ -97,6 +99,8 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* API Key - API key associated with your EPG, if required
 	* Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
+    !!! note
+	    EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder
 * You can click column headers to change the sort order of existing EPGs
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated EPG
