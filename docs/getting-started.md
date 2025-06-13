@@ -106,8 +106,6 @@ Create your user account by entering a username and password that you will remem
 - Plex should automatically find your Dispatcharr instance, but if it doesn't click the `Don't see your HDHomeRun device? Enter its network address manually` and enter the HDHR URL you copied from Dispatcharr and press `Connect`.
 ??? info "Screenshot" 
     ![Plex Live TV Automatic](assets/add_hdhr_plex.png){style="height:70vmin"}
-!!! note "Missing logos?"
-    Add `?cachedlogos=false` to the end of your HDHR URL to bypass logo caching which Plex does not currently support. 
 	
 - Plex will provide you with their EPG if they support your country and postal code. If they do not provide EPG for you or if you want to use your own you can add EPG from Dispatcharr.
 !!! warning
@@ -120,7 +118,9 @@ Create your user account by entering a username and password that you will remem
 ??? info "Screenshot"
     ![Map EPG Plex](assets/map_epg_plex.png){style="height:70vmin"}
 - Press `Continue` and plex will now load in the channels and EPG data
-
+!!! note "Missing logos?"
+    Add `?cachedlogos=false` to the end of your EPG to bypass logo caching which Plex does not currently support. 
+	
 ---
 
 #### ChannelsDVR
