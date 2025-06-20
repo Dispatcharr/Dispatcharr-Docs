@@ -24,4 +24,4 @@ search:
 * There must be at least one user set up with an [XC password](/Dispatcharr-Docs/user-guide/#users)
 * For URL, use your IP address and port `http://{your_ip_here}:9191`
 * Username is your user's username
-* Password is XC password set for the user
+* Password is the XC password set for the user
