@@ -25,7 +25,7 @@ Dispatcharr is a IPTV streaming playlist (m3u m3u8) editor and proxy. IPTV proxy
 
 Additional features, such as robust proxying and support for multiple clients on a single backend stream, make it a comprehensive solution for today’s streaming needs. 
 
-  - Proxy Streaming Engine - Stream more reliably, with fewer provider connections 
+  - Proxy Streaming Engine - Stream more reliably, with fewer provider connections and automatic stream switching when buffering is detected
   - Real-Time Stats Dashboard - Monitor stream health and client activity live. 
   - EPG Auto-Match - Automatically map guide data to your channels 
   - Output Compatibility - Works with Plex, Jellyfin, Emby, ChannelsDVR and more (HDHomeRun, M3U, XMLTV, Xtream Codes API)
