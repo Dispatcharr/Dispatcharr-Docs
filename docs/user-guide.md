@@ -149,17 +149,18 @@ From this page you can add and maintain your M3U accounts and EPGs
 
 ## Users
 From the Users page you can create and manage all Dispatcharr users. There are 3 types of users:
-    1. Admin
-	    * Has total access in Dispatcharr
-		* XC login enabled only if an XC Password is set for the user
-	2. Standard User
-	    * Has access to Dispatcharr UI, but only the Channels, TV Guide, and Settings pages
-		* May allow access to all Channel Profiles or restrict to a subset
-		* In Settings, only able to change UI settings
-		* XC login enabled only if an XC Password is set for the user
-	3. Streamer
-	    * No access to the Dispatcharr UI
-		* This user level is for XC login only
+
+1. Admin
+	* Has total access in Dispatcharr
+    * XC login enabled only if an XC Password is set for the user
+2. Standard User
+	* Has access to Dispatcharr UI, but only the Channels, TV Guide, and Settings pages
+	* May allow access to all Channel Profiles or restrict to a subset
+	* In Settings, only able to change UI settings
+	* XC login enabled only if an XC Password is set for the user
+3. Streamer
+	* No access to the Dispatcharr UI
+	* This user level is for XC login only
 
 ## Settings
 
