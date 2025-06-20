@@ -19,3 +19,9 @@ search:
 
 ## Logos are missing in Plex
 * Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
+
+## How do I output to XC API? 
+* There must be at least one user set up with an [XC password](/Dispatcharr-Docs/user-guide/#users)
+* For URL, use your IP address and port `http://{your_ip_here}:9191`
+* Username is your user's username
+* Password is XC password set for the user
