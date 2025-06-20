@@ -28,7 +28,7 @@ Additional features, such as robust proxying and support for multiple clients on
   - Proxy Streaming Engine - Stream more reliably, with fewer provider connections 
   - Real-Time Stats Dashboard - Monitor stream health and client activity live. 
   - EPG Auto-Match - Automatically map guide data to your channels 
-  - Output Compatibility - Works with Plex, Jellyfin, Emby, ChannelsDVR and more (HDHomeRun, M3U, XMLTV)
+  - Output Compatibility - Works with Plex, Jellyfin, Emby, ChannelsDVR and more (HDHomeRun, M3U, XMLTV, Xtream Codes API)
 
 ## License (CC BY-NC-SA)
 

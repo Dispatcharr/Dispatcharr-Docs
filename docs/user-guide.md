@@ -70,9 +70,9 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* User-Agent - If you want to set a specific user-agent for this account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
 	* Stale Stream Retention (days) - Streams not seen for this many days will be removed
-	* Is Active - Toggle whether this account is active or not
+	* Active - Toggle whether this account is active or not
 	!!! note
-	    M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder
+	    M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
@@ -100,7 +100,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
     !!! note
-	    EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder
+	    EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
 * You can click column headers to change the sort order of existing EPGs
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated EPG
@@ -127,8 +127,18 @@ From this page you can add and maintain your M3U accounts and EPGs
 ## Stats
 * The Stats page shows info on all active streams
     * Channel name
+	* Channel logo
 	* Stream profile
     * Stream uptime
+	* Active stream for each currently active channel (drop down selector allows you to change the active stream)
+	* Stream stats (only available for ffmpeg or custom ffmpeg stream profiles)
+	    * Video resolution
+		* Source frames per second
+		* Video codec
+		* Audio codec
+		* Audio channel configuration
+		* Stream type (MPEGTS, HLS)
+		* Current speed
 	* Stream speed (current and average)
 	* Stream total data served
 	* Number of watchers
@@ -136,6 +146,20 @@ From this page you can add and maintain your M3U accounts and EPGs
 * You can force stop any current streams by clicking the <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel" button
 
 ---
+
+## Users
+From the Users page you can create and manage all Dispatcharr users. There are 3 types of users:
+    1. Admin
+	    * Has total access in Dispatcharr
+		* XC login enabled only if an XC Password is set for the user
+	2. Standard User
+	    * Has access to Dispatcharr UI, but only the Channels, TV Guide, and Settings pages
+		* May allow access to all Channel Profiles or restrict to a subset
+		* In Settings, only able to change UI settings
+		* XC login enabled only if an XC Password is set for the user
+	3. Streamer
+	    * No access to the Dispatcharr UI
+		* This user level is for XC login only
 
 ## Settings
 
@@ -145,7 +169,11 @@ From this page you can add and maintain your M3U accounts and EPGs
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
-
+    * The default setting hashes on name, URL, and TVG-ID. That means that a provider change to a source stream that changes name, URL, or TVG-ID will result in a new stream being created in Dispatcharr. 
+	* The original stream will disappear from Dispatcharr according to your Stale Stream Retention (days) setting for your M3U account
+    !!! example
+        Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to `URL` and `TVG-ID` only
+	
 ### User-Agents
 * In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream.
 * Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate
@@ -166,6 +194,28 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html) or [streamlink](https://streamlink.github.io/cli.html) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
+### Network Access
+Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. Default 0.0.0.0/0 allows all IPs
+!!! example
+    | CIDR Range     | Number of IPs | Range example                 |
+	| -------------- | :-----------: | ----------------------------- |
+	| 192.168.1.0/32 | 1             | 192.168.1.0 (single IP)       |
+	| 192.168.1.0/24 | 256           | 192.168.1.0 - 192.168.1.255   |
+	| 192.168.1.0/16 | 65,536        | 192.168.0.0 - 192.168.255.255 |
+	
+* M3U / EPG Endpoints - Limit access to M3U, EPG, and HDHR URLs
+* Stream Endpoints - Limit network access to stream URLs, including XC stream URLs
+* XC API - Limit access to the XC API
+* UI - Limit access to the Dispatcharr UI 
+	
+### Proxy Settings
+These settings affect all stream profiles with the exception of redirect
+
+* Buffering Timeout - Maximum time (in seconds) to wait for buffering before switching streams
+* Buffering Speed - Speed threshold below which buffering is detected (1.0 = normal speed)
+* Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
+* Channel Shutdown Delay - Delay in seconds before shutting down a channel after last client disconnects
+* Channel Initialization Grace Period - Grace period in seconds during channel initialization 
 ---
 
 ## Advanced

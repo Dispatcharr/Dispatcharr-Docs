@@ -16,3 +16,6 @@ search:
 
 ## Does dispatcharr support hardware acceleration? 
 * You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/user-guide/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/user-guide/#custom-stream-profiles). 
+
+## Logos are missing in Plex
+* Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
