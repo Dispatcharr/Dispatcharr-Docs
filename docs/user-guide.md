@@ -4,6 +4,11 @@
 From the channels page you can create and manage all added channels, streams, and external links
 
 ### Channels	
+* Choose the "Channels Profile" by clicking the drop-down menu under the Channels header. The default profile is "All"
+    * Create a new Channels Profile by clicking the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon next to the drop-down menu
+	* Channels Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channels Profiles each user has access to
+	* To remove channels from a Channels Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off
+	    * For bulk toggling, use the channel check boxes to select multiple channels, then click the toggle icon
 * Search channel names by clicking in the "Name" column header
 * Search by channel group by clicking in the "Group" column header
 * Edit a channel by clicking the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> "Edit Channel" icon under the "Actions" column 
@@ -20,8 +25,6 @@ From the channels page you can create and manage all added channels, streams, an
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
     * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Remove" to bulk remove channels
 	* "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign" to assign channel numbers
-    !!! warning
-        Currently channel number will start with 1 and auto-increment by 1 for each selected channel. This feature is still under development
 	* "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
 ### Streams
