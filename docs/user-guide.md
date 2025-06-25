@@ -81,17 +81,18 @@ From this page you can add and maintain your M3U accounts and EPGs
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
 	    * "Groups" button - Allows you to filter streams from the M3U based on the listed groups
 		* "Profiles" button - Allows you to add a second set of credentials for the same provider. 
-        !!! example
+        !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
 	        1. Set up Provider-A as an M3U account in the M3U & EPG manager.  
 			2. Click the corresponding yellow edit icon under the Actions column.  
 			3. Click the "Profiles" button.  
 			4. Click the "New" button.  
 			5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  
-			6. Copy the "Sample Text" and paste into the "Search Pattern (Regex)" and "Replace Pattern" fields.  
-			7. Locate your provider account's username in the "Replace Pattern" field and replace it with the second account's username.  
-			8. Locate your provider account's password in the "Replace Pattern" field and replace it with the second account's password.  
-	
+			!!! example
+			    | Example URL | Search Pattern | Replace Pattern |
+				| --- | --- | --- |
+				| `http://provider.com/live/username1/password1/stream` | `username1/password1` | `username2/password2` |
+			
 	* <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
 	* <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
 	
