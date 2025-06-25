@@ -87,10 +87,10 @@ From this page you can add and maintain your M3U accounts and EPGs
 			2. Click the corresponding yellow edit icon under the Actions column.  
 			3. Click the "Profiles" button.  
 			4. Click the "New" button.  
-			5. Copy the text under "Search" at the bottom of the dialog box, and paste into the "Search" box.   
-			6. Paste the same text into the "Replace" box. Within the text, you should see something like "username=XXXXXXX&password=YYYYYYY".  
-			7. Replace the XXXXXXX and YYYYYYY with the username and password with the credentials from your second Provider-A account.  
-	
+			5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  
+			6. Copy the "Sample Text" and paste into the "Search Pattern (Regex)" and "Replace Pattern" fields.  
+			7. Locate your provider account's username in the "Replace Pattern" field and replace it with the second account's username.  
+			8. Locate your provider account's password in the "Replace Pattern" field and replace it with the second account's password.  
 	
 	* <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
 	* <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
