@@ -79,7 +79,10 @@ From this page you can add and maintain your M3U accounts and EPGs
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
-	    * "Groups" button - Allows you to filter streams from the M3U based on the listed groups
+	    * "Groups" button - Opens the Group Manager
+		    * Filter visible groups with the search box at the top of the group manager
+			* Ignore streams from groups by de-selecting them
+			* Auto Channel Sync: When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. Set a starting channel number for each group to organize your channels.
 		* "Profiles" button - Allows you to add a second set of credentials for the same provider. 
         !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
@@ -166,6 +169,15 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
 	* No access to the Dispatcharr UI
 	* This user level is for XC login only
 
+---
+
+## Logo Manager
+From the Logo Manager page you can upload and manage logos.  
+!!! info
+    Dispatcharr will also automatically scan `/data/logos` for existing files
+
+---
+	
 ## Settings
 
 ### Stream Settings
