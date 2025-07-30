@@ -82,7 +82,16 @@ From this page you can add and maintain your M3U accounts and EPGs
 	    * "Groups" button - Opens the Group Manager
 		    * Filter visible groups with the search box at the top of the group manager
 			* Ignore streams from groups by de-selecting them
-			* Auto Channel Sync: When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. Set a starting channel number for each group to organize your channels.
+			* Auto Channel Sync: When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
+			    * Start Channel #: Set a starting channel number for each group to organize your channels.
+			    * Advanced options:
+				    * Force Dummy EPG: Sets a dummy EPG for the channel that matches the channel name
+					* Override Channel Group: Set a channel group for the created channels that differs from the group you selected
+					* Channel Name Find & Replace (Regex): Search and replace to rename your channels. By default the channel name will match the stream name
+					* Channel Name Filter (Regex): Only create channels from streams which match your filter criteria
+					* Channel Profile Assignment: Allows you to choose which profile(s) to include the created channels in (default All)
+					* Channel Sort Order: Choose the sort order for your created channels (Provider order is default)
+					
 		* "Profiles" button - Allows you to add a second set of credentials for the same provider. 
         !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
