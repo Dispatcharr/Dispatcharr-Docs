@@ -80,13 +80,13 @@ From this page you can add and maintain your M3U accounts and EPGs
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
         * "Filters" button - Opens the Filters Manager
-            * Click 'New' to add filters.  Filters process in order, and once matched no additional rules are evaluated.  Filters may be ordered using the drag-and-drop anchor to the left of the rule, and edited/deleted using the icons to the right of the rule. 
+            * Click 'New' to add filters.  Filters process in order, and once matched no additional rules are evaluated.  Filters may be ordered using the drag-and-drop anchor to the left of the rule, and edited/deleted using the icons to the right of the rule
                 * Field: selects which stream attribute to filter on: "Group", "Stream Name" or "Stream URL"
                 * Regex Pattern: enter a valid regular expression to match the Field to
                 * Exclude: toggle to determine include/exclude based on the regular expression
                 * Case Sensitive: toggle to determine case sensitivity for the regular expression
             * Select 'Save' to add the newly created filter 
-            * Add additional filters to refine the selected Field values as needed.
+            * Add additional filters to refine the selected Field values as needed
 	    * "Groups" button - Opens the Group Manager
 		    * Filter visible groups with the search box at the top of the group manager
 			* Ignore streams from groups by de-selecting them
