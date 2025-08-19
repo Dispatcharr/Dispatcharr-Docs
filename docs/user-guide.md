@@ -72,7 +72,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
 	* User-Agent - If you want to set a specific user-agent for this account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
-	* Stale Stream Retention (days) - Streams not seen for this many days will be removed
+	* Stale Stream Retention (days) - Streams not seen for this many days will be removed.  For immediate deletion, set to 0
 	* Active - Toggle whether this account is active or not
 	!!! note
 	    M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
