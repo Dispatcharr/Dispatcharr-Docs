@@ -27,6 +27,10 @@ From the channels page you can create and manage all added channels, streams, an
 	* "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign" to assign channel numbers
 	* "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
+
+* Within Dispatcharr, a single channel can be composed of multiple streams. The system initiates playback using the first stream listed in the channel. According to the configured Proxy Settings, Dispatcharr monitors for buffering and, if detected, automatically switches to the next stream in the channel. This process of monitoring and switching continues until all streams are exhausted, ensuring consistent playback quality.
+* For each stream listed within a channel, Dispatcharr will display the source of the stream as defined in the M3U & EPG Manager, a direct link to stream, and an option to preview the stream <i data-lucide="eye" style="color: LightBlue; width: 18px;"></i> .
+    * Dispatcharr gathers statistics for each stream provided that the Default Stream Profile used for playback is configured for FFMPEG.   Once captured, stats such as video resolution, frames per second, video encoder format, audio format, audio codec, and stream bitrate will be displayed.  For each captured stream, clicking 'Show Advanced Options' provides even more detail on the quality of source stream.     
 ### Streams
 * Search stream names by clicking in the "Name" column header
 * Search by M3U group by clicking in the "Group" column header
