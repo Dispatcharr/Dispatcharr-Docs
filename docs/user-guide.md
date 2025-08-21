@@ -197,6 +197,11 @@ From the Logo Manager page you can upload and manage logos.
 	
 ## Settings
 
+### UI Settings
+* Table Size - Set the size of the channel rows in "Channels"
+* Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
+* Time format - Set the display of time to either 12 hour or 24 hour format
+
 ### Stream Settings
 * Default User-Agent - Set the default User-Agent
 * Default Stream Profile - Set the default Stream Profile
