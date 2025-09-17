@@ -10,6 +10,7 @@ From the channels page you can create and manage all added channels, streams, an
 	* To remove channels from a Channels Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off
 	    * For bulk toggling, use the channel check boxes to select multiple channels, then click the toggle icon
 * Search channel names by clicking in the "Name" column header
+* Filter by EPG by clicking in the "EPG" column header
 * Search by channel group by clicking in the "Group" column header
 * Edit a channel by clicking the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> "Edit Channel" icon under the "Actions" column 
     * Channel Name - Edit the name for your Channel
@@ -23,9 +24,14 @@ From the channels page you can create and manage all added channels, streams, an
 * Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column 
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
-    * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Remove" to bulk remove channels
-	* "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign" to assign channel numbers
-	* "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
+    * "<i data-lucide="square-pen" style="color: white; width: 18px;"></i> Edit" to bulk edit channels
+    * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to bulk delete channels
+    * "<i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add" to bulk Add channels. Select multiple Streams under the "Streams" table to create a new channel for each selected stream.
+	* "<i data-lucide="ellipsis-vertical" style="color: white; width: 18px;"></i>" to see additional bulk editing options
+        * "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign #s" to assign channel numbers
+        * "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
+        * "<i data-lucide="settings" style="color: white; width: 18px;"></i> Edit Groups" to open the Group Manager
+        
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
 ### Streams
 * Search stream names by clicking in the "Name" column header
@@ -61,6 +67,13 @@ The "Links" section has buttons to see and copy the external links needed by a c
 
 ---
 
+## VODs
+View, search, and play VOD content if available from your provider
+!!! note
+    To view VOD content you must have added at least one "VOD - Movies" or "VOD - Series" group in the M3U account manager
+
+---
+
 ## M3U & EPG Manager
 From this page you can add and maintain your M3U accounts and EPGs
 ### M3U accounts
@@ -79,10 +92,10 @@ From this page you can add and maintain your M3U accounts and EPGs
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
-	    * "Groups" button - Opens the Group Manager
+	    * "Groups" button - Opens the Group Manager. Tabs available to toggle groups for Live TV, VOD-Movies, or VOD-series.
 		    * Filter visible groups with the search box at the top of the group manager
 			* Ignore streams from groups by de-selecting them
-			* Auto Channel Sync: When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
+			* Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
 			    * Start Channel #: Set a starting channel number for each group to organize your channels.
 			    * Advanced options:
 				    * Force Dummy EPG: Sets a dummy EPG for the channel that matches the channel name
@@ -91,6 +104,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 					* Channel Name Filter (Regex): Only create channels from streams which match your filter criteria
 					* Channel Profile Assignment: Allows you to choose which profile(s) to include the created channels in (default All)
 					* Channel Sort Order: Choose the sort order for your created channels (Provider order is default)
+                    * Stream Profile Assignment: Allows you to change the stream profile for the created channels from default.
 					
 		* "Profiles" button - Allows you to add a second set of credentials for the same provider. 
         !!! info
@@ -163,6 +177,17 @@ From this page you can add and maintain your M3U accounts and EPGs
 
 ---
 
+## Plugins
+From the plugins page you can import, manage, and delete dispatcharr plugins. Plugin descriptions are available on [discord](https://discord.gg/Sp45V5BcxU)
+
+* Press the "Import Plugin" button to add a plugin, or load one into `/data/plugins` and reload.
+* Remove a plugin by clicking the <i data-lucide="trash-2" style="color: Pink; width: 18px;"></i> Delete plugin button
+* Enable/disable a plugin by clicking the Toggle icon to the right of the Delete plugin button
+!!! info
+    Interested in plugin development? View plugin development documentation on the [dispatcharr github](https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugins.md) 
+
+---
+
 ## Users
 From the Users page you can create and manage all Dispatcharr users. There are 3 types of users:
 
@@ -188,6 +213,20 @@ From the Logo Manager page you can upload and manage logos.
 ---
 	
 ## Settings
+
+### UI Settings
+* Table Size - Default, Compact, or Large sizes available
+* Time format - 12 hour or 24 hour time formats available
+* Date format - MM/DD/YYYY or DD/MM/YYYY
+
+### DVR
+* Enable Comskip (remove commercials after recording) - Toggle on or off
+* Start early (minutes) - Begin recording this many minutes before the scheduled start.
+* End late (minutes) - Continue recording this many minutes after the scheduled end.
+* TV Path Template - Supports `{show}`, `{season}`, `{episode}`, `{sub_title}`, `{channel}`, `{year}`, `{start}`, `{end}`. Use format specifiers like `{season:02d}`. Relative paths are under your library dir.
+* TV Fallback Template - Template used when an episode has no season/episode. Supports `{show}`, `{start}`, `{end}`, `{channel}`, `{year}`.
+* Movie Path Template - Supports `{title}`, `{year}`, `{channel}`, `{start}`, `{end}`. Relative paths are under your library dir.
+* Movie Fallback Template - Template used when movie metadata is incomplete. Supports `{start}`, `{end}`, `{channel}`.
 
 ### Stream Settings
 * Default User-Agent - Set the default User-Agent
