@@ -86,12 +86,14 @@ From this page you can add and maintain your M3U accounts and EPGs
     * Name - A name for your M3U account
 	* URL - The M3U URL (not required if uploading an M3U file)
 	* Account Type - Standard for direct M3U URLs, Xtream Codes for panel-based services
+    * Enable VOD Scanning - Toggle on/off scanning for VOD content
 	* Upload files - If uploading a local M3U file (not required if M3U URL is used)
 	* Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
 	* User-Agent - If you want to set a specific user-agent for this account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
 	* Stale Stream Retention (days) - Streams not seen for this many days will be removed.  For immediate deletion, set to 0
-	* Active - Toggle whether this account is active or not
+	* VOD Priority - Priority for VOD provider selection (higher numbers = higher priority). Used when multiple providers offer the same content.
+    * Is Active - Toggle whether this account is active or not
 	!!! note
 	    M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
 * You can click column headers to change the sort order of existing M3U accounts
