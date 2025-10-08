@@ -30,7 +30,8 @@ Create your user account by entering a username and password that you will remem
     ![M3U & EPG Manager](assets/m3u_epg_manager.png)
 	
 === "M3U"
-	- Enter a name for your M3U, then enter the M3U URL or upload your M3U file.  
+	- Enter a name for your M3U Account
+    - Choose the account type (Xtream Codes or Standard M3U) and enter the URL (if using Xtream Codes, enter the associated username and password)   
 	- You can optionally set a max number of concurrent streams allowed, or leave at 0 for unlimited.  
 	- Click `Save`. 
     ??? info "Screenshot"
