@@ -16,11 +16,12 @@ From the channels page you can create and manage all added channels, streams, an
     * Channel Name - Edit the name for your Channel
 	* Channel Group - Edit the group for your channel. If you want to create and add to a new group, click the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon
 	* Stream Profile - Click here if you want to use something other than the default stream profile for this channel
-	* Logo - Choose a logo or upload a new one
+    * User Level Access - Set which user types can access this channel via Xtream Codes output
+	* Logo - Choose a logo, upload a new one, or use logo from the assigned EPG
 	* Channel # - Edit the channel number. Currently only integers are accepted
 	* TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field
 	* Gracenote StationID - Edit the Gracenote ID for your channel. These are typically 5 or 6 digit numbers that Gracenote (a common EPG provider) can use to identify TV channels.
-	* EPG - Click in the box to manually choose an EPG entry, or click "Use Dummy" to assign a dummy EPG entry
+	* EPG - Click in the box to manually choose an EPG entry, click "Use Dummy" to assign a dummy EPG entry, or click "Auto Match" to attempt EPG auto-match
 * Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column 
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
