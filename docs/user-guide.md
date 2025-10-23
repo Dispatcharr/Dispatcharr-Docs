@@ -109,6 +109,7 @@ From this page you can add and maintain your M3U accounts and EPGs
             * Select 'Save' to add the newly created filter 
             * Add additional filters to refine the selected Field values as needed
 	    * "Groups" button - Opens the Group Manager
+            * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later.
 		    * Filter visible groups with the search box at the top of the group manager
 			* Ignore streams from groups by de-selecting them
 			* Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
@@ -140,13 +141,33 @@ From this page you can add and maintain your M3U accounts and EPGs
 	
 ### EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG
-    * Name - A name for your EPG
-	* URL - The URL for your EPG 
-	* API Key - API key associated with your EPG, if required
-	* Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
-	* Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
-    !!! note
-	    EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
+    * Standard EPG Source - To add a standard XMLTV EPG source
+        * Name - A name for your EPG
+        * URL - The URL for your EPG 
+        * API Key - API key associated with your EPG, if required
+        * Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
+        * Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
+        !!! note
+            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
+    * Dummy EPG Source - To add a customized dummy EPG          
+        * Name - A name for your custom dummy EPG
+        * Name Source (Required) - Choose whether to parse the channel name or a stream name assigned to the channel
+        * Title Pattern (Required) - Regex pattern to extract title information (e.g., team names, league). Example: `(?<league>\w+) \d+: (?<team1>.*) VS (?<team2>.*)`
+        * Time Pattern (Optional) - Extract time from channel titles. Required groups: 'hour' (1-12 or 0-23), 'minute' (0-59), 'ampm' (AM/PM - optional for 24-hour). Examples: `@ (?<hour>\d+):(?<minute>\d+)(?<ampm>AM|PM) for '8:30PM'` OR `@ (?<hour>\d{1,2}):(?<minute>\d{2}) for '20:30'`
+        * Date Pattern (Optional) - Extract date from channel titles. Groups: 'month' (name or number), 'day', 'year' (optional, defaults to current year). Examples: `@ (?<month>\w+) (?<day>\d+)` for 'Oct 17' OR `(?<month>\d+)/(?<day>\d+)/(?<year>\d+)` for '10/17/2025'
+        * Title Template (Optional) - Format the EPG title using extracted groups. Use {time} (12-hour: '10 PM') or {time24} (24-hour: '22:00'). Example: `{league} - {team1} vs {team2} @ {time}`
+        * Description Template (Optional) - Format the EPG description using extracted groups. Use {time} (12-hour) or {time24} (24-hour). Example: `Watch {team1} take on {team2} at {time}!`
+        * Upcoming Title Template (Optional) - Title for programs before the event starts. Use {time} (12-hour) or {time24} (24-hour). Example: `{team1} vs {team2} starting at {time}.`
+        * Upcoming Description Template (Optional) - Description for programs before the event. Use {time} (12-hour) or {time24} (24-hour). Example: `Upcoming: Watch the {league} match up where the {team1} take on the {team2} at {time}!`
+        * Ended Title Template (Optional) - Title for programs after the event has ended. Use {time} (12-hour) or {time24} (24-hour). Example: `{team1} vs {team2} started at {time}.`
+        * Ended Description Template (Optional) - Description for programs after the event. Use {time} (12-hour) or {time24} (24-hour). Example: `The {league} match between {team1} and {team2} started at {time}.`
+        * Event Timezone (Required) - The timezone of the event times in your channel titles. DST (Daylight Saving Time) is handled automatically! All timezones supported by pytz are available.
+        * Output Timezone (Optional) - Display times in a different timezone than the event timezone. Leave empty to use the event timezone. Example: Event at 10 PM ET displayed as 9 PM CT.
+        * Program Duration (minutes) (required) - Default duration for each program
+        * Categories (Optional) - EPG categories for these programs. Use commas to separate multiple (e.g., Sports, Live, HD). Note: Only added to the main event, not upcoming/ended filler programs.
+        * Include Date Tag - Include the <date> tag in EPG output with the program's start date (YYYY-MM-DD format). Added to all programs.
+        * Include Live Tag - Mark programs as live content with the <live /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.
+        * Sample Channel Name - Test your patterns and templates with a sample channel name to preview the output. Enter a sample channel name to test pattern matching and see the formatted output
 * You can click column headers to change the sort order of existing EPGs
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated EPG
@@ -411,6 +432,22 @@ These settings affect all stream profiles with the exception of redirect
 		!!! example
 		    - Parameters: `-hwaccel qsv -user_agent {userAgent} -i {streamUrl} -c:v h264_qsv -c:a aac -f mpegts pipe:1`
 
+### Process Priority Configuration
+Optional environment variables to adjust priority of various tasks. Lower values = higher priority. Range: -20 (highest) to 19 (lowest). Negative values require `cap_add: SYS_NICE`  
+
+- `UWSGI_NICE_LEVEL` - Set priority for uWSGI, FFmpeg, and streaming. Default priority is 0, recommend -5 for high priority 
+- `CELERY_NICE_LEVEL` - Set priority for Celery, EPG, and other background tasks. Default priority is 5 
+
+!!! example
+    ```yaml
+        environment:
+          - UWSGI_NICE_LEVEL=-5
+          - CELERY_NICE_LEVEL=5
+
+        cap_add:
+          - SYS_NICE
+    ```
+ 
 ### Nginx reverse proxy
 HTTPS config example (streams only)
 ```
