@@ -1,9 +1,6 @@
 
-<p align="center">
-  <a href="https://dispatcharr.github.io/Dispatcharr-Docs/getting-started/">
-    <img src="assets/dispatcharr_ui_beta.png" alt="Dispatcharr UI">
-  </a>
-</p>
+[![Dispatcharr UI](assets/dispatcharr_ui_beta.png)](getting-started.md)
+
 <div class="grid cards" markdown>
 
 - :material-github: [__Github__ repository](https://github.com/Dispatcharr/Dispatcharr)

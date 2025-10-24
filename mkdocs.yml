@@ -1,4 +1,4 @@
-site_name: Dispatcharr Docs
+﻿site_name: Dispatcharr Docs
 site_url: https://dispatcharr.github.io/Dispatcharr-Docs/
 theme:
   name: material
@@ -39,6 +39,23 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+
+#Plugins
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        - locale: en
+          name: English
+          default: true
+          build: true
+        - locale: es
+          name: Español
+          build: true
+      docs_structure: folder
+      default_language_only: false
+
 # Extensions
 markdown_extensions:
   - abbr
