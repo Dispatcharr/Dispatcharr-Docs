@@ -271,7 +271,7 @@ From the Logo Manager page you can upload and manage logos.
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
-    * The default setting hashes on name, URL, and TVG-ID. That means that a provider change to a source stream that changes name, URL, or TVG-ID will result in a new stream being created in Dispatcharr. 
+    * The default setting hashes on URL. That means that a provider change to a source stream that changes URL will result in a new stream being created in Dispatcharr. 
 	* The original stream will disappear from Dispatcharr according to your Stale Stream Retention (days) setting for your M3U account
     !!! example
         Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to `URL` and `TVG-ID` only
