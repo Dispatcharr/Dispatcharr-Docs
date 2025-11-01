@@ -3,65 +3,65 @@ search:
   boost: 2 # (1)!
 ---
 
-# Troubleshooting
-## Stream Failover not working
-* Check if the Stream Profile (default and/or for the channel) is set to redirect. Stream failover will not work for redirect
+# Resolución de Problemas
+## El failover de transmisión (streams) no funciona
+* Verifica que el Perfil "Profile" de Transmisión (stream) (tanto el predeterminado como el del canal) esté configurado en redirect. El failover de transmisión (Streams) no funcionará si está configurado en redirect.
 
 ---
 
-## Will you implement X new feature?
-* Check existing feature requests in our [discord](https://discord.gg/Sp45V5BcxU) or [github](https://github.com/Dispatcharr/Dispatcharr/issues). If it's not already requested, feel free to request. 
+## Pueden implementar X nueva función?
+* Revisa las solicitudes de funciones existentes en nuestro [discord](https://discord.gg/Sp45V5BcxU) or [github](https://github.com/Dispatcharr/Dispatcharr/issues). Si no ha sido solicitada, siéntete libre de solicitarla.. 
 
 ---
 
-## Does dispatcharr support hardware acceleration? 
-* You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/user-guide/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/user-guide/#custom-stream-profiles). 
+## ¿Dispatcharr soporta aceleración por hardware?
+* Puedes usar aceleración por hardware con perfiles de transmisión (streaming) personalizados en ffmpeg. Esto requerirá [mapear tu hardware](/Dispatcharr-Docs/user-guide/#mapping-hardware) al contenedor y configurar un perfil ffmpeg personalizado [custom ffmpeg stream profile](/Dispatcharr-Docs/user-guide/#custom-stream-profiles). 
 
 ---
 
-## Logos are missing in Plex
-* Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
+## Plex no muestra los Logos
+* Plex no soporta logos en caché. Agrega `?cachedlogos=false` al final de la URL de tu EPG para evitar el almacenamiento en caché de logos. 
 
 ---
 
-## How do I output to XC API? 
-* There must be at least one user set up with an [XC password](/Dispatcharr-Docs/user-guide/#users)
-* For URL, use your IP address and port `http://{your_ip_here}:9191`
-* Username is your user's username
-* Password is the XC password set for the user
+##¿Cómo genero configuraciones para el XC API?
+* Debe existir al menos un usuario configurado con [XC password](/Dispatcharr-Docs/user-guide/#users)
+* Para la URL, usa tu IP y puerto: `http://{your_ip_here}:9191`
+* El nombre de usuario es el username del usuario.
+* La contraseña es la contraseña XC asignada al usuario.
 
 ---
 
-## How do I turn on debug logs?
-* Add this to your compose/environmental variables: `DISPATCHARR_LOG_LEVEL=debug`
+## ¿Cómo activo los logs de debug?
+* Agrega la variable de entorno (compose/environmental): `DISPATCHARR_LOG_LEVEL=debug`
 
 ---
 
-## I got new credentials (or URL) from my provider, what should I do?
-1. Make a backup!
-2. Remove URL from Settings >>> Stream Settings >>> M3U Hash Key
-3. Once re-hashing has finished, change the settings in your M3U account
-4. Refresh the account
-5. Once refresh is complete, change your hash settings back
+## Recibí nuevas credenciales o URL de mi proveedor, ¿qué debo hacer?
+1. ¡Haz una copia de seguridad!
+2. Elimina el parámetro URL en Settings → Stream Settings → M3U Hash Key.
+3. Una vez terminado el re-hash, cambia los ajustes de tu cuenta M3U.
+4. Refresca la cuenta.
+5. Una vez finalizado el refresh, vuelve a configurar tus ajustes de hash.
 
 ---
 
-## I changed my network settings and accidently locked myself out. How can I reset it?
-1. Access the CLI of the container
-2. cd to /app
-3. Run the following command: `python manage.py reset_network_access`
+## Cambié la configuración de red y me bloqueé, ¿cómo la restablezco?
+1. Accede al CLI del contenedor.
+2. Ve al directorio /app
+3. Ejecuta el siguiente comando: `python manage.py reset_network_access`
 
 --- 
 
-## How can I make a backup of the database?
-1. Access the CLI of the container
-2. Run this command to make a new directory: `mkdir /data/manualbackups`
-3. Run this command to create the backup (change Backup-mm-dd-yy to a name you'd like):  
+## ¿Cómo hago una copia de seguridad de la base de datos?
+1. Accede al CLI del contenedor.
+2. Crea un directorio para las copias: `mkdir /data/manualbackups`
+3. Ejecuta la copia de seguridad (cambia Backup-mm-dd-yy por el nombre que quieras):  
 `pg_dump -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB -Fc -v -f "/data/manualbackups/Backup-mm-dd-yy"`  
 
-To Restore that backup follow these steps:  
+Para restaurar sigue estos pasos:  
 
-1. Access the CLI of the container  
-2. Run this command to restore the backup:  
+1. Accede al CLI del contenedor. 
+2. Ejecuta el siguiente comando:  
 `pg_restore --clean -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB -v "/data/manualbackups/Backup-mm-dd-yy"`  
-3. Restart the container  
+3. Reinicia el contenedor. 
