@@ -35,7 +35,7 @@ From the channels page you can create and manage all added channels, streams, an
         
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
 
-* Within Dispatcharr, a single channel can be composed of multiple streams. The system initiates playback using the first stream listed in the channel. According to the configured Proxy Settings, Dispatcharr monitors for buffering and, if detected, automatically switches to the next stream in the channel. This process of monitoring and switching continues until all streams are exhausted, ensuring consistent playback quality.
+* Within Dispatcharr, a single channel can be composed of multiple streams. The system initiates playback using the first stream listed in the channel. According to the configured Proxy Settings, Dispatcharr monitors for buffering and, if detected, automatically switches to the next stream in the channel. This process of monitoring and switching continues until all streams are exhausted, ensuring consistent playback quality. <span id="m3u-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#fallback-streams)
 * For each stream listed within a channel, Dispatcharr will display the source of the stream as defined in the M3U & EPG Manager, a direct link to stream, and an option to preview the stream <i data-lucide="eye" style="color: LightBlue; width: 18px;"></i> .
     * Dispatcharr gathers statistics for each stream provided that the Default Stream Profile used for playback is configured for FFMPEG.   Once captured, stats such as video resolution, frames per second, video encoder format, audio format, audio codec, and stream bitrate will be displayed.  For each captured stream, clicking 'Show Advanced Options' provides even more detail on the quality of source stream.  
     
@@ -285,6 +285,14 @@ From the Logo Manager page you can upload and manage logos.
 	* Description - (Optional) a description of the user-agent for your own use
 
 ### Stream Profiles
+| Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](#proxy-settings)          | [Fallback stream<br> support](#fallback-streams)                          | [Stream stats<br> support](#stats)                                        | System resources      | 
+| -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------: |
+| ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low                   |
+| Proxy          | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Very low              |
+| Redirect       | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Very low              |
+| streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Low                   |
+| Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low to Very High      |
+
 * There are 4 default stream profiles with the ability to create your own custom ones
     * ffmpeg - Dispatcharr will proxy streams via ffmpeg. No transcoding takes place with the default ffmpeg stream profile, it will just remux streams. Uses more system resources than proxy
     * Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg
@@ -449,19 +457,19 @@ Optional environment variables to adjust priority of various tasks. Lower values
     ```
  
 ### Nginx reverse proxy
-HTTPS config example (streams only)
-```
+HTTPS config example (streams only via https, WebUI via local network and Wireguard)
+```nginx
 # Dispatcharr HTTPS DynuDNS
 server {
 	listen 443 ssl;
-	server_name dispatcharr.yourdomain.com;  #Adjust for your domain
+	server_name dispatcharr.your.domain.com;  #Adjust for your domain
 
 	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
 	ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
 	
-	location /proxy/ts/stream/ {
+	location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/.*) { 
 		allow all;  # Allow everyone else
-		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name or IP
+		proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
 		proxy_set_header Host $host:443;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -473,10 +481,10 @@ server {
 	}
 
 	location / {
-		allow 10.0.0.0/22;  # Allow the entire network, adjust for your network
+		allow 10.0.0.0/22;  # Allow the local network, adjust for your network
 		allow 10.1.0.0/24;  # Allow Wireguard, adjust for your network
 		deny all;  # Deny everyone else
-		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name or IP
+		proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
 		# WebSocket headers
 		proxy_set_header Upgrade $http_upgrade;
 		proxy_set_header Connection "Upgrade";
