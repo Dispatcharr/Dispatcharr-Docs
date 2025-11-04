@@ -53,9 +53,15 @@ plugins:
         - locale: es
           name: Español
           build: true
+        - locale: "null"
+          name: Help Translating
+          build: false
+          fixed_link: https://discord.gg/wfeqTRRJru
       docs_structure: folder
       default_language_only: false
 
+
+      
 # Extensions
 markdown_extensions:
   - abbr
@@ -109,9 +115,10 @@ repo_url: https://github.com/Dispatcharr/
 
 nav:
   - Home: index.md
-  - Getting started:
+  - Setup:
     - Installation: installation.md
     - Getting Started: getting-started.md
+    - Migrations: migrations.md
   - User Guide: user-guide.md
   - FAQ/Troubleshooting: troubleshooting.md
   - API: api.md
