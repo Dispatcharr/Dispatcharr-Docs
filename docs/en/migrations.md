@@ -34,15 +34,16 @@
     * <b>Name</b>: Whatever you want. Many people use their provider's name for clarity
     * <b>URL</b>: Replace the URL from IPTV Editor with the M3U or Xtream Codes (XC) URL from your provider
     * <b>Account Type</b>: You can continue as Standard or change to Xtream Codes (VOD is only pulled when using Xtream Codes)
-    * <b>Create EPG</b>: If you’d like to use your provider’s EPG data, toggle this ON
     * <b>Enable VOD Scanning</b>: If you’d like to enable your provider’s VOD library, toggle this ON
     * <b>Username/Password</b>: Replace these with the username and password from your provider
     * <b>Max Streams</b>: Enter the maximum streams your provider allows
         * If you have multiple sets of credentials from the same provider, you can click Profiles at the bottom of this window to add them
     * Fill out the rest as you’d like
     * Click Save. This can take a few minutes. Wait until this is complete before moving forward
-18. Navigate to `Settings` > `Stream Settings` > `M3U Hash Key`
+18. Click the <i data-lucide="refresh" style="color: royalblue; width: 18px;"></i> (blue refresh) icon on your M3U
+19. To add an EPG source, click <i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add EPG and supply your provider’s EPG URL
+20. Navigate to `Settings` > `Stream Settings` > `M3U Hash Key`
     * This should still be set to URL only
     * Click Save
     * Click Rehash Streams. This can take a few minutes. Wait until this is complete before moving forward    
-19. You’ve successfully migrated from IPTV Editor to Dispatcharr. Be sure to check out the [Discord](https://discord.gg/wfeqTRRJru) for further support
+21. You’ve successfully migrated from IPTV Editor to Dispatcharr. Be sure to check out the [Discord](https://discord.gg/wfeqTRRJru) for further support
