@@ -40,7 +40,7 @@
         * If you have multiple sets of credentials from the same provider, you can click Profiles at the bottom of this window to add them
     * Fill out the rest as you’d like
     * Click Save. 
-18. Click the <i data-lucide="refresh" style="color: royalblue; width: 18px;"></i> (blue refresh) icon on your M3U. This can take a few minutes. Wait until this is complete before moving forward
+18. Click the <i data-lucide="refresh-ccw" style="color: royalblue; width: 18px;"></i> (blue refresh) icon on your M3U. This can take a few minutes. Wait until this is complete before moving forward
 19. To add an EPG source, click <i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add EPG and supply your provider’s EPG URL
 20. Navigate to `Settings` > `Stream Settings` > `M3U Hash Key`
     * This should still be set to URL only
