@@ -8,7 +8,7 @@
 2. Export your IPTV Editor playlist via M3U
     * Playlist manager > Menu (small down arrow) > Show playlist info > Choose Xtream API (at top of the popup window) > Copy the M3U URL here
 3. In Dispatcharr, navigate to `M3U & EPG Manager`
-4. Choose `Add M3U` at the top-right
+4. Click the green `Add M3U` at the top-right
     * <b>Name</b>: Whatever you want. Many people use their provider's name for clarity
     * <b>URL</b>: This is the URL from Step 2
     * <b>Account Type</b>: Standard
@@ -42,8 +42,4 @@
     * Click Save. 
 18. Click the <i data-lucide="refresh-ccw" style="color: royalblue; width: 18px;"></i> (blue refresh) icon on your M3U. This can take a few minutes. Wait until this is complete before moving forward
 19. To add an EPG source, click <i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add EPG and supply your provider’s EPG URL
-20. Navigate to `Settings` > `Stream Settings` > `M3U Hash Key`
-    * This should still be set to URL only
-    * Click Save
-    * Click Rehash Streams. This can take a few minutes. Wait until this is complete before moving forward    
-21. You’ve successfully migrated from IPTV Editor to Dispatcharr. Be sure to check out the [Discord](https://discord.gg/wfeqTRRJru) for further support
+20. You’ve successfully migrated from IPTV Editor to Dispatcharr. Check out the [Discord](https://discord.gg/wfeqTRRJru) for further support
