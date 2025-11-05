@@ -2,6 +2,9 @@
 
 ##IPTV Editor
 
+!!!Warning
+    This method is only advised if you have just one provider in IPTV Editor. If you have multiple, it will be easier to start from scratch in dispatcharr.
+
 1. In dispatcharr, navigate to `Settings` > `Stream Settings` > `M3U Hash Key`
     * Set this to `URL` only. Remove all others by clicking the small X
     * Click `Save`
