@@ -126,7 +126,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 		* "Profiles" button - Allows you to add a second set of credentials for the same provider. <span id="m3u-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#m3u-profiles)
         !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
-	        1. Set up Provider-A as an M3U account in the M3U & EPG manager.  
+	        1. Set up Provider-A as an M3U account (Standard or Xtream Codes) in the M3U & EPG manager.  
 			2. Click the corresponding yellow edit icon under the Actions column.  
 			3. Click the "Profiles" button.  
 			4. Click the "New" button.  
