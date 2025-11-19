@@ -472,7 +472,7 @@ server {
 	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
 	ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
 	
-	location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/.*) { 
+	location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*) { 
 		allow all;  # Allow everyone else
 		proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
 		proxy_set_header Host $host:443;
