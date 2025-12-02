@@ -198,6 +198,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 
 ## Stats
 The Stats page shows info on all active streams and the system event viewer
+
 * Active connections
     * Channel name
 	* Channel logo
