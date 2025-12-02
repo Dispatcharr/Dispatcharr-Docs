@@ -197,7 +197,8 @@ From this page you can add and maintain your M3U accounts and EPGs
 ---
 
 ## Stats
-* The Stats page shows info on all active streams
+The Stats page shows info on all active streams and the system event viewer
+* Active connections
     * Channel name
 	* Channel logo
 	* Stream profile
@@ -216,6 +217,9 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Number of watchers
 	* IP addresses and associated User-Agents
 * You can force stop any current streams by clicking the <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel" button
+* System Events
+    * Captures M3U refreshes, EPG updates, stream switches, authentication events, network access blocks, and errors.
+    * Allows filtering and reviewing historical events.
 
 ---
 
