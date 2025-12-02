@@ -217,7 +217,7 @@ The Stats page shows info on all active streams and the system event viewer
 	* Stream total data served
 	* Number of watchers
 	* IP addresses and associated User-Agents
-* You can force stop any current streams by clicking the <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel" button
+    * You can force stop any current streams by clicking the <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel" button
 * System Events
     * Captures M3U refreshes, EPG updates, stream switches, authentication events, network access blocks, and errors.
     * Allows filtering and reviewing historical events.
