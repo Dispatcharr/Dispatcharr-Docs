@@ -35,7 +35,7 @@ Desde la sección de Channels (Canales) puedes crear y administrar todos los can
         
     * Haz clic en el ícono <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" que se encuentra en la columna "Streams Actions" para agregar ese stream a los canales seleccionados.
 
-* Dentro de Dispatcharr, un solo canal puede estar compuesto por múltiples transmisiones (streams). El sistema inicia la reproducción utilizando la primera transmisión listada en el canal. De acuerdo con la configuración del "Proxy Settings", Dispatcharr monitorea si ocurre buffering y, en caso de detectarlo, cambia automáticamente a la siguiente transmisión del canal. Este proceso de monitoreo y cambio continúa hasta agotar todas las transmisiones disponibles, garantizando una calidad de reproducción constante.
+* Dentro de Dispatcharr, un solo canal puede estar compuesto por múltiples transmisiones (streams). El sistema inicia la reproducción utilizando la primera transmisión listada en el canal. De acuerdo con la configuración del "Proxy Settings", Dispatcharr monitorea si ocurre buffering y, en caso de detectarlo, cambia automáticamente a la siguiente transmisión del canal. Este proceso de monitoreo y cambio continúa hasta agotar todas las transmisiones disponibles, garantizando una calidad de reproducción constante. <span id="fallback-streams"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#fallback-streams)
 * Para cada transmisión (stream) listada dentro de un canal, Dispatcharr mostrará el origen de la transmisión tal como se define en el "M3U & EPG Manager", un enlace directo a la transmisión y una opción para previsualizarla (preview stream). <i data-lucide="eye" style="color: LightBlue; width: 18px;"></i> .
     * Dispatcharr recopila estadísticas de cada transmisión siempre que el perfil de transmisión predeterminado "Default Stream Profile" utilizado para la reproducción esté configurado para FFMPEG. Una vez obtenidos los datos, se mostrarán estadísticas como la resolución de video, cuadros por segundo, formato del codificador de video, formato de audio, códec de audio y bitrate de la transmisión. Para cada transmisión analizada, al hacer clic en "Show Advanced Options" se muestran detalles adicionales sobre la calidad de la fuente de la transmisión.  
     
@@ -123,10 +123,10 @@ Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
 					* Channel Sort Order: Define el orden de clasificación de los canales creados (por defecto, el orden del proveedor).
                     * Stream Profile Assignment: Permite cambiar el perfil de transmisión para los canales creados respecto al predeterminado.
 					
-		* Botón "Profiles" - Permite agregar un segundo conjunto de credenciales para el mismo proveedor. 
+		* Botón "Profiles" - Permite agregar un segundo conjunto de credenciales para el mismo proveedor. <span id="m3u-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#m3u-profiles)
         !!! info
             Por ejemplo, supongamos que tienes tres cuentas que deseas agregar a Dispatcharr: dos de Provider-A y una de Provider-B. En lugar de agregar tres cuentas M3U por separado, puedes agregar Provider-A una sola vez y configurar un perfil "Profile" para usar el nombre de usuario y la contraseña de cada cuenta de Provider-A dentro de la misma cuenta M3U.   
-	        1. Configura Provider-A como una cuenta M3U en el administrador "M3U & EPG Manager".   
+	        1. Configura Provider-A como una cuenta M3U (Standard o Xtream Codes) en el administrador "M3U & EPG Manager".   
 	        2. Haz clic en el ícono de edición amarillo correspondiente en la columna "Actions".    
 	        3. Haz clic en el botón "Profiles".       
 			4. Haz clic en el botón "New".    
@@ -192,7 +192,8 @@ Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
 ---
 
 ## Stats
-* La sección "Stats" muestra información sobre todas las transmisiones activas, incluyendo:
+* La sección "Stats" muestra información sobre todas las transmisiones activas, y el visualizador de eventos del sistema (System Event Viewer) incluyendo:
+
     * Nombre del canal "Channel Name"
 	* Logo del canal "Channel Logo"
 	* Perfil de transmisión "Stream Profile"
@@ -450,7 +451,7 @@ Variables de entorno opcionales para ajustar la prioridad de tareas. Valores má
     ```
  
 ### Nginx reverse proxy
-Ejemplo de configuración HTTPS (solo streams):
+Ejemplo de configuración HTTPS (solo streams vía HTTPS, WebUI a través de la red local y Wireguard)
 ```
 # Dispatcharr HTTPS DynuDNS
 server {
@@ -460,7 +461,7 @@ server {
 	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
 	ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
 	
-	location /proxy/ts/stream/ {
+	location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*) {
 		allow all;  # Allow everyone else
 		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name o IP
 		proxy_set_header Host $host:443;

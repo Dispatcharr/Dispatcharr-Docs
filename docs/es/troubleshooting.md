@@ -37,9 +37,10 @@ search:
 
 ---
 
-## Recibí nuevas credenciales o URL de mi proveedor, ¿qué debo hacer?
+## Recibí nuevas credenciales (o URL) de mi proveedor, ¿qué debo hacer?
 1. ¡Haz una copia de seguridad!
 2. Elimina el parámetro URL en Settings → Stream Settings → M3U Hash Key.
+   * Agrega todas las otras opciones hash. 
 3. Una vez terminado el re-hash, cambia los ajustes de tu cuenta M3U.
 4. Refresca la cuenta.
 5. Una vez finalizado el refresh, vuelve a configurar tus ajustes de hash.
