@@ -144,9 +144,11 @@ Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
     * Standard EPG Source - Para agregar una fuente estándar XMLTV EPG.
         * Name - Un nombre para tu EPG.
         * URL - La URL de tu EPG.
-        * API Key - Clave API asociada a tu EPG, si es requerida.
         * Source Type - Elige XMLTV o "Schedules Direct" dependiendo del formato que use tu proveedor de EPG.
+        * API Key - Clave API asociada a tu EPG, si es requerida.
         * Refresh Interval (hours) - Define cada cuántas horas se actualizará la EPG.
+        * Priority - Prioridad para mapeo de EPG (números altos = mayor prioridad).
+		Se utiliza cuando múltiples EPG contienen las mismas entradas para un canal. 
         !!! nota
             Las EPG pueden agregarse automáticamente a Dispatcharr colocando los archivos EPG dentro de la carpeta `/data/epgs`, siempre que la opción `Auto-Import Mapped Files` esté habilitada en Settings > Stream Settings.
     * Dummy EPG Source - Para agregar una EPG personalizada "Dummy EPG"          
