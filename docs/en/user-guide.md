@@ -350,7 +350,7 @@ Create, schedule, and restore backups
         `0 */6 * * *` - Every 6 hours  
         `30 14 1 * *` - 1st of every month at 2:30 PM  
         
-* Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.
+* Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.  
 
 ---
 
