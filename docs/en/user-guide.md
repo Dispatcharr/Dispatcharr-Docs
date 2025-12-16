@@ -337,6 +337,21 @@ These settings affect all stream profiles with the exception of redirect
 * Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
 * Channel Shutdown Delay - Delay in seconds before shutting down a channel after last client disconnects
 * Channel Initialization Grace Period - Grace period in seconds during channel initialization 
+
+### Backup & Restore
+Create, schedule, and restore backups
+
+* Schedule backups - Enable to set a regular backup schedule
+* Advanced (Cron Expression) - Enable to set a cron expression for scheduled backups. Cron expressions allow for more granular control over backup schedules.  
+
+    !!! examples
+        `0 3 * * *` - Every day at 3:00 AM  
+        `0 2 * * 0` - Every Sunday at 2:00 AM  
+        `0 */6 * * *` - Every 6 hours  
+        `30 14 1 * *` - 1st of every month at 2:30 PM  
+        
+* Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.
+
 ---
 
 ## Advanced
