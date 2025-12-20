@@ -55,14 +55,4 @@ search:
 --- 
 
 ## How can I make a backup of the database?
-1. Access the CLI of the container
-2. Run this command to make a new directory: `mkdir /data/manualbackups`
-3. Run this command to create the backup (change Backup-mm-dd-yy to a name you'd like):  
-`pg_dump -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB -Fc -v -f "/data/manualbackups/Backup-mm-dd-yy"`  
-
-To Restore that backup follow these steps:  
-
-1. Access the CLI of the container  
-2. Run this command to restore the backup:  
-`pg_restore --clean -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB -v "/data/manualbackups/Backup-mm-dd-yy"`  
-3. Restart the container  
+See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
