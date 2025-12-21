@@ -55,14 +55,4 @@ search:
 --- 
 
 ## ¿Cómo hago una copia de seguridad de la base de datos?
-1. Accede al CLI del contenedor.
-2. Crea un directorio para las copias: `mkdir /data/manualbackups`
-3. Ejecuta la copia de seguridad (cambia Backup-mm-dd-yy por el nombre que quieras):  
-`pg_dump -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB -Fc -v -f "/data/manualbackups/Backup-mm-dd-yy"`  
-
-Para restaurar sigue estos pasos:  
-
-1. Accede al CLI del contenedor. 
-2. Ejecuta el siguiente comando:  
-`pg_restore --clean -h $POSTGRES_HOST -p $POSTGRES_PORT -U $POSTGRES_USER -d $POSTGRES_DB -v "/data/manualbackups/Backup-mm-dd-yy"`  
-3. Reinicia el contenedor. 
+Consulta [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore) 

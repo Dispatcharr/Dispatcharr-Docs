@@ -321,7 +321,21 @@ These settings affect all stream profiles with the exception of redirect
 * Buffer Chunk TTL - Tiempo de vida (en segundos) de los fragmentos en búfer; define cuánto tiempo se cachea la transmisión.
 * Channel Shutdown Delay -Retardo (en segundos) antes de apagar un canal tras la desconexión del último cliente.
 * Channel Initialization Grace Period -  Período de gracia (en segundos) durante la inicialización del canal.
- 
+
+### Backup & Restore
+Crear, programar y restaurar respaldos (backups)
+
+* Schedule backups - Actívalo para configurar un programa regular de respaldos.
+* Advanced (Cron Expression) - Actívalo para definir una expresión cron para los respaldos programados. Las expresiones cron permiten un control más granular sobre la programación de los respaldos.  
+
+    !!! ejemplos
+        `0 3 * * *` - Todos los días a las 3:00 AM  
+        `0 2 * * 0` - Todos los Domingos a las 2:00 AM
+        `0 */6 * * *` - Cada 6 horas  
+        `30 14 1 * *` - El día 1 de cada mes a las 2:30 PM  
+        
+* Retention - Número de respaldos que se conservarán. El respaldo más antiguo se eliminará cuando se cree uno nuevo que exceda este límite. Configura el valor en 0 para conservar todos los respaldos antiguos.
+
 ---
 
 ## Avanzado
