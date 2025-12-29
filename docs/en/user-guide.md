@@ -269,6 +269,8 @@ From the Logo Manager page you can upload and manage logos.
 
 ### DVR
 * Enable Comskip (remove commercials after recording) - Toggle on or off
+* Custom comskip.ini path - Enter a custom path or leave blank to use the built-in defaults.
+* Select comskip.ini - Click this button to select, upload, and use a custom comskip.ini to dispatcharr
 * Start early (minutes) - Begin recording this many minutes before the scheduled start.
 * End late (minutes) - Continue recording this many minutes after the scheduled end.
 * TV Path Template - Supports `{show}`, `{season}`, `{episode}`, `{sub_title}`, `{channel}`, `{year}`, `{start}`, `{end}`. Use format specifiers like `{season:02d}`. Relative paths are under your library dir.
@@ -284,12 +286,17 @@ From the Logo Manager page you can upload and manage logos.
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
     * The default setting hashes on URL. That means that a provider change to a source stream that changes URL will result in a new stream being created in Dispatcharr. 
 	* The original stream will disappear from Dispatcharr according to your Stale Stream Retention (days) setting for your M3U account
+	!!! note
+	    Make sure to click the `Save` button after making any changes to the M3U Hash Key.
     !!! example
         Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to `URL` and `TVG-ID` only
+
+### System settings
+Configure how many system events (channel start/stop, buffering, etc.) to keep in the database. Events are displayed on the Stats page.
+* Maximum System Events - Number of events to retain (minimum: 10, maximum: 1000)
 	
 ### User-Agents
-* In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream.
-* Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate
+In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.
 * Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
     * Name - a name for your user-agent
 	* User-Agent - The text to include for your user-agent string
@@ -301,8 +308,9 @@ From the Logo Manager page you can upload and manage logos.
 | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low                   |
 | Proxy          | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Very low              |
 | Redirect       | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Very low              |
-| streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Low                   |
+| streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Partial                                                                   | Low                   |
 | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low to Very High      |
+| VLC            | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Partial                                                                   | Low                   |
 
 * There are 4 default stream profiles with the ability to create your own custom ones
     * ffmpeg - Dispatcharr will proxy streams via ffmpeg. No transcoding takes place with the default ffmpeg stream profile, it will just remux streams. Uses more system resources than proxy
