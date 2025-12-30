@@ -218,9 +218,9 @@ The Stats page shows info on all active streams and the system event viewer
         | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
 		| Custom VLC     | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
 		
-		!!! note on Custom VLC
-		    VLC can only output information it is affecting, so stats will depend on your custom parameters
-
+		!!! note "Note for Custom VLC"
+		    VLC can only output information it is affecting, so stats will depend on your [custom parameters](https://wiki.videolan.org/VLC_command-line_help/)
+			
 	* Stream bitrate (current and average)
 	* Stream total data served
 	* Number of watchers
