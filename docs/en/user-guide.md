@@ -216,7 +216,11 @@ The Stats page shows info on all active streams and the system event viewer
         | streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
         | VLC            | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
         | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
+		| Custom VLC     | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
 		
+		!!! note on Custom VLC
+		    VLC can only output information it is affecting, so stats will depend on your custom parameters
+
 	* Stream bitrate (current and average)
 	* Stream total data served
 	* Number of watchers
@@ -319,15 +323,16 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 	<i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i> = Partial support  
 	<i data-lucide="square-x" style="color: red; width: 18px;"></i> = Unsupported  
 
-* There are 4 default stream profiles with the ability to create your own custom ones
+* There are 5 default stream profiles with the ability to create your own custom ones
     * ffmpeg - Dispatcharr will proxy streams via ffmpeg. No transcoding takes place with the default ffmpeg stream profile, it will just remux streams. Uses more system resources than proxy
     * Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg
     * Redirect - Redirects the original M3U stream URL to your client. There is no proxying with this profile
     * streamlink - For custom streams based on the services supported by [streamlink](https://streamlink.github.io/)
+	* VLC - Dispatcharr will proxy streams via VLC. No transcoding takes place with the default VLC stream profile, it will just remux streams. Uses more system resources than proxy
 * Custom Stream Profiles - create your own custom stream profile by clicking the "Add Stream Profile" button on the Settings page
     * Name - a name for your stream profile
-	* Command - ffmpeg or streamlink
-	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html) or [streamlink](https://streamlink.github.io/cli.html) parameters
+	* Command - ffmpeg, streamlink, or cvlc
+	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html), [streamlink](https://streamlink.github.io/cli.html), or [VLC](https://wiki.videolan.org/VLC_command-line_help/) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
 ### Network Access
