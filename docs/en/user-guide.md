@@ -9,6 +9,9 @@ From the channels page you can create and manage all added channels, streams, an
 	* Channels Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channels Profiles each user has access to
 	* To remove channels from a Channels Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off
 	    * For bulk toggling, use the channel check boxes to select multiple channels, then click the toggle icon
+* Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
+    * Hide/Show Disabled - Selectable only when a Channel profile is active. Toggle to hide/show any channels which are disabled for the selected profile
+	* Only empty channels - Check the box to show only channels with no associated streams. 
 * Search channel names by clicking in the "Name" column header
 * Filter by EPG by clicking in the "EPG" column header
 * Search by channel group by clicking in the "Group" column header
