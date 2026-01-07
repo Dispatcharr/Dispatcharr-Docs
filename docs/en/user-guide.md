@@ -303,10 +303,12 @@ From the Logo Manager page you can upload and manage logos.
 
 ### System settings
 Configure how many system events (channel start/stop, buffering, etc.) to keep in the database. Events are displayed on the Stats page.
+
 * Maximum System Events - Number of events to retain (minimum: 10, maximum: 1000)
 	
 ### User-Agents
 In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
+
 * Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
     * Name - a name for your user-agent
 	* User-Agent - The text to include for your user-agent string
