@@ -336,7 +336,7 @@ En el contexto de IPTV, un user agent es una cadena de texto que identifica la a
     * VLC - Dispatcharr retransmitirá (proxy) los streams mediante VLC. No se realiza transcodificación con el perfil de transmisión predeterminado de VLC; únicamente se remultiplexan (remux) los streams. Utiliza más recursos del sistema que el perfil Proxy.
 * Custom Stream Profiles - Crea tu propio perfil de transmisión personalizado haciendo clic en el botón "Add Stream Profile" en la página Settings.
     * Name - Un nombre para tu perfil de transmisión.
-	* Command - ffmpeg o streamlink o vlc.
+	* Command - ffmpeg o streamlink o cvlc.
 	* Parameters – Define tus parámetros personalizados para [ffmpeg](https://ffmpeg.org/ffmpeg.html), [streamlink](https://streamlink.github.io/cli.html), o [VLC](https://wiki.videolan.org/VLC_command-line_help/)
 	* User-Agent - Define el User-Agent predeterminado para este perfil de transmisión.
 	
