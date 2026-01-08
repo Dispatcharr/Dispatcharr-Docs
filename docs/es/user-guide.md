@@ -9,6 +9,9 @@ Desde la sección de Channels (Canales) puedes crear y administrar todos los can
 	* Los perfiles de canales "Channels Profiles" pueden usarse para crear subconjuntos dentro de tu lista de canales "Channels". Cada perfil generará su propio enlace (HDHR, M3U y EPG). Al crear usuarios "XC User", puedes seleccionar a qué perfiles "Channels Profiles" tendrá acceso cada usuario.
 	* Para eliminar canales de un "Channels Profile", haz clic en el ícono de alternancia (activar/desactivar) correspondiente en la columna <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> para desactivarlo.
 	    * Para activar o desactivar varios canales al mismo tiempo, usa las casillas de verificación (check boxes) para seleccionar varios canales y luego haz clic en el ícono de activar o desactivar (toggle icon).
+* Haz clic en el ícono <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter para utilizar el filtrado avanzado.
+    * Hide/Show Disabled - Disponible solo cuando un Channel Profile está activo. Actívalo para ocultar o mostrar los canales que estén deshabilitados para el perfil seleccionado.
+	* Only empty channels - Marca esta opción para mostrar solo los canales que no tienen streams asociados.
 * Busca nombres de canales haciendo clic en el encabezado de columna "Name".
 * Filtra por la guía de programación "EPG" haciendo clic en el encabezado de columna "EPG".
 * Busca por grupo de canal "Channel Group" haciendo clic en el encabezado de columna "Group".
@@ -201,19 +204,31 @@ Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
 	* Perfil de transmisión "Stream Profile"
     * Tiempo de actividad de la transmisión "Stream Uptime"
 	* Transmisión activa para cada canal activo (el menú desplegable permite cambiar la transmisión activa)
-	* Estadísticas de la transmisión "Stream Stats" — disponibles solo para perfiles ffmpeg o personalizados basados en ffmpeg
-	    * Resolución de video "Video Resolution"
-		* Cuadros por segundo de origen "Source Frames per Second"
-		* Códec de video "Video Codec"
-		* Códec de audio "Audio Codec"
-		* Configuración de canales de audio "Audio Channel Configuration"
-		* Tipo de transmisión "Stream Type" — MPEGTS, HLS
-		* Velocidad actual "Current Speed"
-	* Velocidad de transmisión (actual y promedio) "Stream Speed — current and average"
+	* Estadísticas de la transmisión "Stream Stats" (solo disponible para ciertos [stream profiles](#stream-profiles))
+
+
+        | Stream profile | Video resolution                                                          | Source frames per second                                                  | Video codec                                                               | Audio codec                                                               | Audio channel configuration                                               | Stream type (MPEGTS, HLS)                                                 | Current speed                                                             |
+        | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
+        | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
+        | Proxy          | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | Redirect       | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | VLC            | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
+		| Custom VLC     | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | 
+		
+		!!! nota "Nota para VLC personalizados"
+		    VLC solo puede mostrar la información que está procesando, por lo que las estadísticas dependerán de tus [parámetros personalizados](https://wiki.videolan.org/VLC_command-line_help/)
+
+	* Velocidad de transmisión (actual y promedio) "Stream bitrate — current and average"
 	* Datos totales servidos por la transmisión "Total Data Served"
 	* Número de espectadores "Number of Watchers"
 	* Direcciones IP y User-Agents asociados
 * Puedes forzar la detención de cualquier transmisión (stream) activa haciendo clic en el botón <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel".
+* Eventos del Systema
+* Captura las actualizaciones de M3U, las actualizaciones de EPG, los cambios de stream, los eventos de autenticación, los bloqueos de acceso de red y los errores.
+* Permite filtrar y revisar eventos históricos.
+
 
 ---
 
@@ -261,6 +276,8 @@ Desde la página "Logo Manager" puedes subir y administrar logos.
 
 ### DVR
 * Enable Comskip (elimina los comerciales después de la grabación) – Activa o desactiva la opción.
+* Custom comskip.ini path – Ingresa una ruta personalizada o déjala en blanco para usar los valores predeterminados integrados.
+* Select comskip.ini – Haz clic en este botón para seleccionar, subir y utilizar un archivo comskip.ini personalizado en Dispatcharr.
 * Start early (minutos) - Comienza la grabación este número de minutos antes del inicio programado.
 * End late (minutos) - Continúa la grabación este número de minutos después del final programado.
 * TV Path Template - Admite las variables `{show}`, `{season}`, `{episode}`, `{sub_title}`, `{channel}`, `{year}`, `{start}`, `{end}`. Usa especificaciones de formato como `{season:02d}`. Las rutas relativas están dentro del directorio de tu biblioteca.
@@ -276,27 +293,51 @@ Desde la página "Logo Manager" puedes subir y administrar logos.
 * M3U Hash Key - Define cómo se generará el hash para tus listas M3U. Esto afecta la limpieza de transmisiones obsoletas "Stale Stream Cleanup".
     * La configuración predeterminada genera el hash utilizando los campos Name, URL y TVG-ID. Esto significa que si un proveedor cambia cualquiera de esos valores, Dispatcharr creará una nueva transmisión (stream). 
 	* La transmisión original desaparecerá de Dispatcharr de acuerdo con el valor definido en "Stale Stream Retention" (días) dentro de la cuenta M3U.
+  	!!! nota
+	    Asegúrate de hacer clic en el botón `Save` después de realizar cualquier cambio en M3U Hash Key.
+
     !!! Ejemplo
         Tu proveedor cambia regularmente los nombres de ciertos canales PPV, pero ya tienes canales configurados para esas transmisiones y no quieres que se eliminen por el proceso de limpieza de transmisiones obsoletas. Como el proveedor cambia el nombre, pero no la URL ni el TVG-ID, puedes configurar tu M3U Hash Key para que solo use `URL` y `TVG-ID`.
+
+### System settings
+Configura cuántos eventos del sistema (inicio/detención de canales, buffering, etc.) se conservarán en la base de datos. Los eventos se muestran en la página (Stats).
+* Maximum System Events - Número de eventos que se conservarán (mínimo: 10, máximo: 1000)
 	
 ### User-Agents
-* En el contexto de IPTV, un user-agent es una cadena de texto que identifica la aplicación cliente (por ejemplo, un reproductor como Kodi o VLC) ante el servidor IPTV. Se incluye en los encabezados HTTP de las solicitudes enviadas por el cliente al servidor, informando al servidor sobre el tipo de dispositivo y software que se está utilizando para acceder a la transmisión.
-* Dispatcharr incluye User-Agents predeterminados para VLC, Chrome y TiviMate.
+En el contexto de IPTV, un user agent es una cadena de texto que identifica la aplicación cliente (por ejemplo, un reproductor como Kodi o VLC) ante el servidor IPTV. Se incluye en los encabezados HTTP de las solicitudes enviadas por el cliente al servidor, informando al servidor sobre el tipo de dispositivo y el software utilizado para acceder a la transmisión IPTV. Dispatcharr incluye User-Agents predeterminados para VLC, Chrome y TiviMate.
+
 * Agrega tu propio User-Agent haciendo clic en el botón "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> "Add User-Agent" en la página "Settings"
     * Name - Un nombre para tu user-agent.
 	* User-Agent - El texto que se incluirá en la cadena user-agent.
 	* Description - (Opcional) una descripción del user-agent para tu referencia personal.
 
 ### Stream Profiles
-* Existen 4 perfiles de transmisión predeterminados, con la posibilidad de crear tus propios perfiles personalizados
+| Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](#proxy-settings)          | [Fallback stream<br> support](#fallback-streams)                          | [Stream stats<br> support](#stats)                                        | Recursos del Sistema      | 
+| -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------: |
+| ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Bajo                   |
+| Proxy          | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Muy bajo              |
+| Redirect       | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Muy bajo              |
+| streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | Bajo                   |
+| VLC            | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | Bajo                   |
+| Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Bajo a Muy Alto      |
+| Custom VLC     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | Bajo a Muy Alto      |
+!!! note
+    <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> = Soportado  
+	<i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i> = Parcialmente soportado  
+	<i data-lucide="square-x" style="color: red; width: 18px;"></i> = No soportado  
+
+	
+
+* Existen 5 perfiles de transmisión predeterminados, con la posibilidad de crear tus propios perfiles personalizados
     * ffmpeg - Dispatcharr usará ffmpeg para retransmitir (proxy) los streams. No se realiza transcodificación con el perfil predeterminado de ffmpeg; únicamente se remultiplexan los streams. Utiliza más recursos del sistema que el perfil proxy.
     * Proxy - Retransmite los streams originales, permitiendo aprovechar las funciones de Dispatcharr (como transmisiones redundantes por canal) y agregando un pequeño búfer para mejorar la estabilidad. Usa menos recursos del sistema que ffmpeg.
     * Redirect - Redirige directamente la URL del stream original del archivo M3U hacia el cliente. No hay retransmisión (proxying) con este perfil.
     * streamlink - Para streams personalizados basados en los servicios compatibles con [streamlink](https://streamlink.github.io/)
+    * VLC - Dispatcharr retransmitirá (proxy) los streams mediante VLC. No se realiza transcodificación con el perfil de transmisión predeterminado de VLC; únicamente se remultiplexan (remux) los streams. Utiliza más recursos del sistema que el perfil Proxy.
 * Custom Stream Profiles - Crea tu propio perfil de transmisión personalizado haciendo clic en el botón "Add Stream Profile" en la página Settings.
     * Name - Un nombre para tu perfil de transmisión.
-	* Command - ffmpeg o streamlink
-	* Parameters - Define tus parámetros personalizados de [ffmpeg](https://ffmpeg.org/ffmpeg.html) o [streamlink](https://streamlink.github.io/cli.html).
+	* Command - ffmpeg o streamlink o cvlc.
+	* Parameters – Define tus parámetros personalizados para [ffmpeg](https://ffmpeg.org/ffmpeg.html), [streamlink](https://streamlink.github.io/cli.html), o [VLC](https://wiki.videolan.org/VLC_command-line_help/)
 	* User-Agent - Define el User-Agent predeterminado para este perfil de transmisión.
 	
 ### Network Access
