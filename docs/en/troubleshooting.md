@@ -60,8 +60,8 @@ See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
 ---
 
 ## How can I password protect my M3U to share over the internet?
-1. Set up your reverse proxy as shown in the [docs](dispatcharr-docs/user-guide/#nginx-reverse-proxy)
-2. In dispatcharr at Settings > [Network Access](dispatcharr-docs/user-guide/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
-3. Set up a user with XC password on the [Users](dispatcharr-docs/user-guide.#users) page if you haven't already done so
+1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/user-guide/#nginx-reverse-proxy)
+2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/user-guide/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
+3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/user-guide/#users) page if you haven't already done so
 4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
 5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
