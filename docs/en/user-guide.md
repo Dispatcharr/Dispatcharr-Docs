@@ -510,6 +510,16 @@ Optional environment variables to adjust priority of various tasks. Lower values
  
 ### Nginx reverse proxy
 HTTPS config example (streams only via https, WebUI via local network and Wireguard)
+
+!!! note "Tip"
+    Even with a properly configured reverse proxy, your M3U output will by default be available over the internet. Follow these best practices to block standard M3U access and allow only with a specified username and password. 
+	
+    1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/user-guide/#nginx-reverse-proxy)
+    2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/user-guide/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
+    3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/user-guide/#users) page if you haven't already done so
+    4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
+    5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
+
 ```nginx
 # Dispatcharr HTTPS DynuDNS
 server {
