@@ -511,7 +511,7 @@ Optional environment variables to adjust priority of various tasks. Lower values
 ### Nginx reverse proxy
 HTTPS config example (streams only via https, WebUI via local network and Wireguard)
 
-!!! example
+??? example "Example (click to see)"
     ```nginx
     # Dispatcharr HTTPS DynuDNS
     server {
