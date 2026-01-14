@@ -4,11 +4,14 @@
 From the channels page you can create and manage all added channels, streams, and external links
 
 ### Channels	
-* Choose the "Channels Profile" by clicking the drop-down menu under the Channels header. The default profile is "All"
-    * Create a new Channels Profile by clicking the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon next to the drop-down menu
-	* Channels Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channels Profiles each user has access to
-	* To remove channels from a Channels Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off
+* Choose the "Channel Profile" by clicking the drop-down menu under the Channels header. The default profile is "All"
+    * Create a new Channel Profile by clicking the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon next to the drop-down menu
+	* Channel Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channel Profiles each user has access to
+	* To remove channels from a Channel Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off
 	    * For bulk toggling, use the channel check boxes to select multiple channels, then click the toggle icon
+    * To delete a Channel Profile, click the drop-down menu and select the <i data-lucide="square-minus" style="color: Red; width: 18px;"></i> icon next to the Channel Profile that you wish to delete
+    * To duplicate a Channel Profile, click the drop-down menu and select the <i data-lucide="copy" style="color: LimeGreen; width: 18px;"></i> icon next to the Channel Profile that you wish to duplicate. A dialog will pop up for you to name it
+    * To rename a Channel Profile, click the drop-down menu and select the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> icon next to the Channel Profile that you wish to rename
 * Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
     * Hide/Show Disabled - Selectable only when a Channel profile is active. Toggle to hide/show any channels which are disabled for the selected profile
 	* Only empty channels - Check the box to show only channels with no associated streams. 
@@ -90,12 +93,12 @@ From this page you can add and maintain your M3U accounts and EPGs
     * Name - A name for your M3U account
 	* URL - The M3U URL (not required if uploading an M3U file)
 	* Account Type - Standard for direct M3U URLs, Xtream Codes for panel-based services
-    * Enable VOD Scanning - Toggle on/off scanning for VOD content
+    * Enable VOD Scanning - Toggle on/off scanning for VOD content (only available with the `Xtream Codes` Account Type)
 	* Upload files - If uploading a local M3U file (not required if M3U URL is used)
 	* Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
 	* User-Agent - If you want to set a specific user-agent for this account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
-	* Stale Stream Retention (days) - Streams not seen for this many days will be removed.  For immediate deletion, set to 0
+	* Stale Stream Retention (days) - Streams (and Groups) not seen for this many days will be removed.  For immediate deletion, set to 0
 	* VOD Priority - Priority for VOD provider selection (higher numbers = higher priority). Used when multiple providers offer the same content.
     * Is Active - Toggle whether this account is active or not
 	!!! note

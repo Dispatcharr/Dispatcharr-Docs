@@ -65,3 +65,40 @@ See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
 3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/user-guide/#users) page if you haven't already done so
 4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
 5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
+
+---
+
+## Why are there connections showing on the dispatcharr stats page when no one is watching or connected?
+This is a tricky issue that the dispatcharr team has been trying to nail down, however there are some reasons that have been identified:
+
+* Passing dispatcharr through a Cloudflare tunnel. Some of our users have found chnanging the following Cloudflare settings to be helpful:
+    1. Idle Connection Expiration - 10 seconds
+    2. Max TCP Keepalives - 3 seconds
+    3. TCP Keepalive Interval - 10 seconds
+    4. In dispatcharr, set the [Channel Shutdown Delay](/Dispatcharr-Docs/user-guide/#proxy-settings) to 3 seconds
+    
+* A bug or error in the client that fails to close the connection to dispatcharr
+
+If you can reliably reproduce this issue and believe it isn't due to one of the reasons listed above, please reproduce it while capturing [debug logs](/Dispatcharr-Docs/troubleshooting/#how-do-i-turn-on-debug-logs) and submit an issue on our [Github](https://github.com/Dispatcharr/Dispatcharr) or share with the team in our [Discord](https://discord.gg/Sp45V5BcxU) channel
+
+---
+
+## How do I update my container (using compose)?
+1. Open a terminal on the host
+2. Run the following command: `docker compose -f /path/to/docker-compose.yml pull`
+3. Run the following command: `docker compose -f /path/to/docker-compose.yml up -d`
+
+---
+
+## I'm getting a message about hardware support for NumPy. What should I do?
+If you're running a QEMU/KVM based Hypervisor (such as Proxmox), change your VM hardware type to "Host" or to "x86_v2" from "q35"
+
+If you're running on old hardware (processor from ~2009 or older), add the following under your "environment" section in your docker compose:
+`      - USE_LEGACY_NUMPY=true`
+
+---
+
+## How do I access VOD?
+To use Video-on-Demand (VOD), you must import your IPTV account *into* Dispatcharr with the Xtream Codes [account type](/Dispatcharr-Docs/user-guide/#m3u-accounts) and credentials. Some sources refer to this as "API" as well.
+
+To use VOD in a third party client/app, you must also export *out of* Dispatcharr using Xtream Codes credentials. (see: [How do I output to XC API?](/Dispatcharr-Docs/troubleshooting/#how-do-i-output-to-xc-api))
