@@ -95,3 +95,10 @@ If you're running a QEMU/KVM based Hypervisor (such as Proxmox), change your VM 
 
 If you're running on old hardware (processor from ~2009 or older), add the following under your "environment" section in your docker compose:
 `      - USE_LEGACY_NUMPY=true`
+
+---
+
+## How do I access VOD?
+To use Video-on-Demand (VOD), you must import your IPTV account *into* Dispatcharr with the Xtream Codes [account type](/Dispatcharr-Docs/user-guide/#m3u-accounts) and credentials. Some sources refer to this as "API" as well.
+
+To use VOD in a third party client/app, you must also export *out of* Dispatcharr using Xtream Codes credentials. (see: [How do I output to XC API?](/Dispatcharr-Docs/troubleshooting/#how-do-i-output-to-xc-api))
