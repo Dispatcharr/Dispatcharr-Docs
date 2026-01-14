@@ -71,7 +71,7 @@ See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
 ## Why are there connections showing on the dispatcharr stats page when no one is watching or connected?
 This is a tricky issue that the dispatcharr team has been trying to nail down, however there are some reasons that have been identified:
 
-* Passing dispatcharr through a Cloudflare tunnel. Some of our users have found chnanging the following Cloudflare settings to be helpful:
+* Passing dispatcharr through a Cloudflare tunnel. Some of our users have found changing the following Cloudflare settings to be helpful:
     1. Idle Connection Expiration - 10 seconds
     2. Max TCP Keepalives - 3 seconds
     3. TCP Keepalive Interval - 10 seconds
