@@ -66,6 +66,8 @@ See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
 4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
 5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
 
+---
+
 ## Why are there connections showing on the dispatcharr stats page when no one is watching or connected?
 This is a tricky issue that the dispatcharr team has been trying to nail down, however there are some reasons that have been identified:
 
@@ -79,10 +81,14 @@ This is a tricky issue that the dispatcharr team has been trying to nail down, h
 
 If you can reliably reproduce this issue and believe it isn't due to one of the reasons listed above, please reproduce it while capturing [debug logs](/Dispatcharr-Docs/troubleshooting/#how-do-i-turn-on-debug-logs) and submit an issue on our [Github](https://github.com/Dispatcharr/Dispatcharr) or share with the team in our [Discord](https://discord.gg/Sp45V5BcxU) channel
 
+---
+
 ## How do I update my container (using compose)?
 1. Open a terminal on the host
 2. Run the following command: `docker compose -f /path/to/docker-compose.yml pull`
 3. Run the following command: `docker compose -f /path/to/docker-compose.yml up -d`
+
+---
 
 ## I'm getting a message about hardware support for NumPy. What should I do?
 If you're running a QEMU/KVM based Hypervisor (such as Proxmox), change your VM hardware type to "Host" or to "x86_v2" from "q35"
