@@ -111,5 +111,4 @@ Multicast streams require dispatcharr to be run in [host network mode](https://d
 Additionally, if multiple network interfaces are available, you should add `?localaddr=[interface-ip]` to the end of your stream URL.
 
 !!! example
-    ```curl
-    udp://239.1.2.3:4567?localaddr=0.0.0.0```
+    `udp://239.1.2.3:4567?localaddr=0.0.0.0`
