@@ -227,8 +227,8 @@ The Stats page shows info on all active streams and the system event viewer
 		!!! note "Note for Custom VLC"
 		    VLC can only output information it is affecting, so stats will depend on your [custom parameters](https://wiki.videolan.org/VLC_command-line_help/)
 		
-        !!! info
-            The Current Speed stat is essentially a calculation of current FPS vs source FPS. When it drops below 1 you know there will be buffering. <span id="current-speed"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#curent-speed)
+        !!! info "Info <span id="current-speed"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#curent-speed)"
+            The Current Speed stat is essentially a calculation of current FPS vs source FPS. When it drops below 1 you know there will be buffering. 
         
 	* Stream bitrate (current and average)
 	* Stream total data served
