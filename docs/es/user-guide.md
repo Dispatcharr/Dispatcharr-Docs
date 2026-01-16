@@ -4,11 +4,14 @@
 Desde la sección de Channels (Canales) puedes crear y administrar todos los canales agregados, los streams y los enlaces externos.
 
 ### Channels
-* Selecciona el perfil de canales "Channels Profile" haciendo clic en el menú desplegable debajo del encabezado "Channels". El perfil predeterminado es "All".
-    * Crea un nuevo perfil de canales "Channels Profile" haciendo clic en el <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> ícono que se encuentra junto al menú desplegable.
-	* Los perfiles de canales "Channels Profiles" pueden usarse para crear subconjuntos dentro de tu lista de canales "Channels". Cada perfil generará su propio enlace (HDHR, M3U y EPG). Al crear usuarios "XC User", puedes seleccionar a qué perfiles "Channels Profiles" tendrá acceso cada usuario.
-	* Para eliminar canales de un "Channels Profile", haz clic en el ícono de alternancia (activar/desactivar) correspondiente en la columna <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> para desactivarlo.
+* Selecciona el perfil de canales "Channel Profile" haciendo clic en el menú desplegable debajo del encabezado "Channels". El perfil predeterminado es "All".
+    * Crea un nuevo perfil de canales "Channel Profile" haciendo clic en el <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> ícono que se encuentra junto al menú desplegable.
+	* Los perfiles de canales "Channel Profiles" pueden usarse para crear subconjuntos dentro de tu lista de canales. Cada perfil generará su propio enlace (HDHR, M3U y EPG). Al crear usuarios "XC User", puedes seleccionar a qué perfiles "Channel Profiles" tendrá acceso cada usuario.
+	* Para eliminar canales de un "Channel Profile", haz clic en el ícono de alternancia (activar/desactivar) correspondiente en la columna <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> para desactivarlo.
 	    * Para activar o desactivar varios canales al mismo tiempo, usa las casillas de verificación (check boxes) para seleccionar varios canales y luego haz clic en el ícono de activar o desactivar (toggle icon).
+	* Para eliminar un Channel Profile, haz clic en el menú desplegable y selecciona el ícono <i data-lucide="square-minus" style="color: Red; width: 18px;"></i> junto al Channel Profile que deseas eliminar.
+    * Para duplicar un Channel Profile, haz clic en el menú desplegable y selecciona el ícono <i data-lucide="copy" style="color: LimeGreen; width: 18px;"></i> junto al Channel Profile que deseas duplicar. Se abrirá un cuadro de diálogo para asignarle un nombre.
+    * Para renombrar un Channel Profile, haz clic en el menú desplegable y selecciona el ícono <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> junto al Channel Profile que deseas renombrar. 
 * Haz clic en el ícono <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter para utilizar el filtrado avanzado.
     * Hide/Show Disabled - Disponible solo cuando un Channel Profile está activo. Actívalo para ocultar o mostrar los canales que estén deshabilitados para el perfil seleccionado.
 	* Only empty channels - Marca esta opción para mostrar solo los canales que no tienen streams asociados.
@@ -38,9 +41,9 @@ Desde la sección de Channels (Canales) puedes crear y administrar todos los can
         
     * Haz clic en el ícono <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" que se encuentra en la columna "Streams Actions" para agregar ese stream a los canales seleccionados.
 
-* Dentro de Dispatcharr, un solo canal puede estar compuesto por múltiples transmisiones (streams). El sistema inicia la reproducción utilizando la primera transmisión listada en el canal. De acuerdo con la configuración del "Proxy Settings", Dispatcharr monitorea si ocurre buffering y, en caso de detectarlo, cambia automáticamente a la siguiente transmisión del canal. Este proceso de monitoreo y cambio continúa hasta agotar todas las transmisiones disponibles, garantizando una calidad de reproducción constante. <span id="fallback-streams"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#fallback-streams)
-* Para cada transmisión (stream) listada dentro de un canal, Dispatcharr mostrará el origen de la transmisión tal como se define en el "M3U & EPG Manager", un enlace directo a la transmisión y una opción para previsualizarla (preview stream). <i data-lucide="eye" style="color: LightBlue; width: 18px;"></i> .
-    * Dispatcharr recopila estadísticas de cada transmisión siempre que el perfil de transmisión predeterminado "Default Stream Profile" utilizado para la reproducción esté configurado para FFMPEG. Una vez obtenidos los datos, se mostrarán estadísticas como la resolución de video, cuadros por segundo, formato del codificador de video, formato de audio, códec de audio y bitrate de la transmisión. Para cada transmisión analizada, al hacer clic en "Show Advanced Options" se muestran detalles adicionales sobre la calidad de la fuente de la transmisión.  
+* Dentro de Dispatcharr, un solo canal puede estar compuesto por múltiples transmisiones (streams). El sistema inicia la reproducción utilizando la primera transmisión listada en el canal. De acuerdo con la configuración del [Proxy Settings](/Dispatcharr-Docs/user-guide/#proxy-settings), Dispatcharr monitorea si ocurre buffering y, en caso de detectarlo, cambia automáticamente a la siguiente transmisión del canal. Este proceso de monitoreo y cambio continúa hasta agotar todas las transmisiones disponibles, garantizando una calidad de reproducción constante. <span id="fallback-streams"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#fallback-streams)
+* Para cada transmisión (stream) listada dentro de un canal, Dispatcharr mostrará el origen de la transmisión tal como se define en el "M3U & EPG Manager", un enlace directo a la transmisión y una opción para previsualizarla (preview stream). <i data-lucide="eye" style="color: LightSkyBlue; width: 18px;"></i> .
+    * Dispatcharr recopila estadísticas para cada stream siempre que se utilice un [Stream Profile](/Dispatcharr-Docs/user-guide/#stream-profiles) compatible. Una vez capturadas, se mostrarán las, estadísticas [stats](/Dispatcharr-Docs/user-guide/#stats) como la resolución de video, fotogramas por segundo, formato del codificador de video, formato de audio, códec de audio y bitrate del stream. Para cada stream capturado, al hacer clic en ‘Show Advanced Options’ se obtiene aún más detalle sobre la calidad del stream de origen.  
     
 ### Streams
 * Busca nombres de transmisiones (streams) haciendo clic en el encabezado de columna "Name".
@@ -90,12 +93,12 @@ Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
     * Name - Un nombre para tu cuenta M3U.
 	* URL - La URL M3U (no es obligatorio si estás subiendo un archivo M3U).
 	* Account Type - Selecciona "Standard" para URLs M3U directas o "Xtream Codes" para servicios basados en panel.
-    * Enable VOD Scanning - Activa o desactiva el escaneo de contenido VOD.
+    * Enable VOD Scanning - Activa o desactiva el escaneo de contenido VOD (solo disponible con el tipo de cuenta Xtream Codes).
 	* Upload files - Si estás subiendo un archivo M3U local (no requerido si se usa una URL M3U).
 	* Max Streams - Establece un número máximo de transmisiones simultáneas permitidas para tu cuenta. Para ilimitadas, configura el valor en 0.
 	* User-Agent - Si deseas definir un User-Agent específico para esta cuenta.
 	* Refresh Interval (hours) - Define cada cuántas horas se actualizará la URL M3U.
-	* Stale Stream Retention (days) - Las transmisiones (streams) que no se detecten durante esta cantidad de días serán eliminadas. Para eliminarlas de inmediato, configura el valor en 0.
+	* Stale Stream Retention (days) - Las transmisiones (streams) y grupos que no se detecten durante esta cantidad de días serán eliminadas. Para eliminarlas de inmediato, configura el valor en 0.
 	* VOD Priority - Define la prioridad del proveedor VOD (números más altos = mayor prioridad). Se usa cuando varios proveedores ofrecen el mismo contenido.
     * Is Active - Activa o desactiva la cuenta M3U.
 	!!! nota
@@ -509,45 +512,55 @@ Variables de entorno opcionales para ajustar la prioridad de tareas. Valores má
  
 ### Nginx reverse proxy
 Ejemplo de configuración HTTPS (solo streams vía HTTPS, WebUI a través de la red local y Wireguard)
-```
-# Dispatcharr HTTPS DynuDNS
-server {
-	listen 443 ssl;
-	server_name dispatcharr.yourdomain.com;  #Adjust for your domain
 
-	ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
-	ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+??? example "Example (click to see)"
+    ```nginx
+    # Dispatcharr HTTPS DynuDNS
+    server {
+        listen 443 ssl;
+        server_name dispatcharr.your.domain.com;  #Adjust for your domain
+
+        ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
+        
+        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*) { 
+            allow all;  # Allow everyone else
+            proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
+            proxy_set_header Host $host:443;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            # CORS settings
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
+        }
+
+        location / {
+            allow 10.0.0.0/22;  # Allow the local network, adjust for your network
+            allow 10.1.0.0/24;  # Allow Wireguard, adjust for your network
+            deny all;  # Deny everyone else
+            proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
+            # WebSocket headers
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header Host $host:443;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            # CORS settings
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
+        }
+    }  
+    ```
+
+!!! nota "Tip"
+    Incluso con un reverse proxy configurado correctamente, la salida M3U estará disponible por defecto a través de internet. Sigue estas buenas prácticas para bloquear el acceso M3U estándar y permitirlo únicamente mediante un usuario y contraseña específicos.
 	
-	location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*) {
-		allow all;  # Allow everyone else
-		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name o IP
-		proxy_set_header Host $host:443;
-		proxy_set_header X-Real-IP $remote_addr;
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_set_header X-Forwarded-Proto $scheme;
-		# CORS settings
-		add_header 'Access-Control-Allow-Origin' '*';
-		add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-		add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
-	}
-
-	location / {
-		allow 10.0.0.0/22;  # Allow the entire network, adjust for your network
-		allow 10.1.0.0/24;  # Allow Wireguard, adjust for your network
-		deny all;  # Deny everyone else
-		proxy_pass http://ubuntuserver:9191;  # Adjust for your server name o IP
-		# WebSocket headers
-		proxy_set_header Upgrade $http_upgrade;
-		proxy_set_header Connection "Upgrade";
-		proxy_set_header Host $host:443;
-		proxy_set_header X-Real-IP $remote_addr;
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		proxy_set_header X-Forwarded-Proto $scheme;
-		# CORS settings
-		add_header 'Access-Control-Allow-Origin' '*';
-		add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-		add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
-	}
-}  
-```
-
+    1. Configura tu reverse proxy como se muestra en la [documentación](/Dispatcharr-Docs/user-guide/#nginx-reverse-proxy)
+    2. En Dispatcharr, ve a > [Network Access](/Dispatcharr-Docs/user-guide/#network-access), y restringe M3U / EPG Endpoints únicamente a tu red local (ejemplo: `192.168.1.0/24`)
+    3. Crea un usuario con XC password en la página[Users](/Dispatcharr-Docs/user-guide/#users) si aún no lo has hecho 
+    4. Usa el siguiente formato de enlace M3U para compartir con tus usuarios: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
+    5. Y este formato para EPG: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
