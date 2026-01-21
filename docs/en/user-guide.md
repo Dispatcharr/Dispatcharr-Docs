@@ -214,6 +214,8 @@ The Stats page shows info on all active streams and the system event viewer
 	* Active stream for each currently active channel (drop down selector allows you to change the active stream)
     * Currently playing program title
         * Expandable program description via chevron button
+        * Progress bar showing elapsed and remaining time for curently playing programs
+    * Channel preview button <i data-lucide="circle-play" style="color: LimeGreen; width: 18px;"></i> (click to preview currently active streams)
 	* Stream stats (only available with certain [stream profiles](#stream-profiles)) 
 
         | Stream profile | Video resolution                                                          | Source frames per second                                                  | Video codec                                                               | Audio codec                                                               | Audio channel configuration                                               | Stream type (MPEGTS, HLS)                                                 | [Current speed](/Dispatcharr-Docs/user-guide/#current-speed)              |
@@ -282,6 +284,7 @@ From the Logo Manager page you can upload and manage logos.
 
 ### UI Settings
 * Table Size - Set the size of the channel rows in "Channels"
+* Pin Table Headers - Toggles whether to keep table headers visible when scrolling
 * Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
 * Time format - Set the display of time to either 12 hour or 24 hour format
 
