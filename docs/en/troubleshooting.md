@@ -112,3 +112,14 @@ Additionally, if multiple network interfaces are available, you should add `?loc
 
 !!! example
     `udp://239.1.2.3:4567?localaddr=0.0.0.0`
+    
+---
+
+## How do I remove all VOD from dispatcharr?
+1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
+2. Toggle `Enable VOD Scanning` on
+3. Click the `Groups` button
+4. Under the `VOD - Movies` and `VOD - Series` tabs, deselect all Groups`
+5. Click `Save and Refresh`
+6. After the refresh completes, toggle the `Enable VOD Scanning` option off
+7. Repeat for any other accounts if necessary
