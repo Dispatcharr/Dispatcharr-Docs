@@ -24,6 +24,7 @@ From the channels page you can create and manage all added channels, streams, an
 	* Stream Profile - Click here if you want to use something other than the default stream profile for this channel
     * User Level Access - Set which user types can access this channel via Xtream Codes output
 	* Logo - Choose a logo, upload a new one, or use logo from the assigned EPG
+    * Mature Content - Toggle whether to set a channel as mature content. Mature content can be hidden from non-admin users via "Hide Mature Content" toggle in [user settings](/Dispatcharr-Docs/user-guide/#users)
 	* Channel # - Edit the channel number. Currently only integers are accepted
 	* TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field
 	* Gracenote StationID - Edit the Gracenote ID for your channel. These are typically 5 or 6 digit numbers that Gracenote (a common EPG provider) can use to identify TV channels.
@@ -35,6 +36,8 @@ From the channels page you can create and manage all added channels, streams, an
     * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to bulk delete channels
     * "<i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add" to bulk Add channels. Select multiple Streams under the "Streams" table to create a new channel for each selected stream.
 	* "<i data-lucide="ellipsis-vertical" style="color: white; width: 18px;"></i>" to see additional bulk editing options
+        * "<i data-lucide="pin-off" style="color: white; width: 18px;"></i> Pin Headers" to pin column headers so they are visible even while scrolling
+        * "<i data-lucide="lock" style="color: white; width: 18px;"></i> Unlock for Editing" to unlock the Channels table, allowing users to quickly edit channel fields (name, number, group, EPG, logo) directly in the table without opening a modal. This also allows re-ordering of channels (and associated channel numbers) with drag-and-drop.
         * "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign #s" to assign channel numbers
         * "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
         * "<i data-lucide="settings" style="color: white; width: 18px;"></i> Edit Groups" to open the Group Manager
@@ -58,6 +61,9 @@ From the channels page you can create and manage all added channels, streams, an
 	* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Channels" to create a new channel for each selected stream
     !!! note
         For every selected stream, a corresponding new channel will be created. For example, if 3 streams are selected, 3 new channels will be created.
+* Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
+    * Only Unassociated - Only show streams which are currently not assigned to any Channels
+	* Hide Stale - Hide any streams which are stale (not available as of the last M3U account refresh).
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" to create a new stream not associated with any of your uploaded M3Us
 
 ### Links
@@ -267,9 +273,11 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
 	* May allow access to all Channel Profiles or restrict to a subset
 	* In Settings, only able to change UI settings
 	* XC login enabled only if an XC Password is set for the user
+    * Optionally hide channels marked as "Mature Content" in user settings
 3. Streamer
 	* No access to the Dispatcharr UI
 	* This user level is for XC login only
+    * Optionally hide channels marked as "Mature Content" in user settings
 
 ---
 
