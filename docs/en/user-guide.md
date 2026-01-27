@@ -33,6 +33,17 @@ From the channels page you can create and manage all added channels, streams, an
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
     * "<i data-lucide="square-pen" style="color: white; width: 18px;"></i> Edit" to bulk edit channels
+        * Channel Name - Find and replace (regex compatible) within the channel name in all selected channels
+        * EPG Operations
+            * Set Names from EPG - set the channel name for all selected channels to match the channel name from the currently assigned EPG
+            * Set Logos from EPG - set the logo for all selected channels to match the channel logo from the currently assigned EPG
+            * Set TVG-IDs from EPG - set the TVG-ID for all selected channels to match the channel TVG-ID from the currently assigned EPG
+            * Assign Dummy EPG - set a [dummy EPG](/Dispatcharr-Docs/user-guide/#epgs) or clear EPG assignment for all selected channels 
+        * Channel Group - Set the channel group for all selected channels
+        * Logo - Set the logo for all selected channels
+        * Stream Profile - Set the stream profile for all selected channels
+        * User Level Access - Set the user level access for all selected channels
+        * Mature Content - Set the mature content flag for all selected channels
     * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to bulk delete channels
     * "<i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add" to bulk Add channels. Select multiple Streams under the "Streams" table to create a new channel for each selected stream.
 	* "<i data-lucide="ellipsis-vertical" style="color: white; width: 18px;"></i>" to see additional bulk editing options
