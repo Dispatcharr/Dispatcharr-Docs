@@ -71,13 +71,12 @@ See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
 ## Why are there connections showing on the dispatcharr stats page when no one is watching or connected?
 This is a tricky issue that the dispatcharr team has been trying to nail down, however there are some reasons that have been identified:
 
-* Passing dispatcharr through a Cloudflare tunnel. Some of our users have found changing the following Cloudflare settings to be helpful:
-    1. Idle Connection Expiration - 10 seconds
-    2. Max TCP Keepalives - 3 seconds
-    3. TCP Keepalive Interval - 10 seconds
-    4. In dispatcharr, set the [Channel Shutdown Delay](/Dispatcharr-Docs/user-guide/#proxy-settings) to 3 seconds
-    
 * A bug or error in the client that fails to close the connection to dispatcharr
+* Passing dispatcharr through a Cloudflare tunnel. Some of our users have found changing the following Cloudflare settings to be helpful:
+    * Idle Connection Expiration - 10 seconds
+    * Max TCP Keepalives - 3 seconds
+    * TCP Keepalive Interval - 10 seconds
+    * In dispatcharr, set the [Channel Shutdown Delay](/Dispatcharr-Docs/user-guide/#proxy-settings) to 3 seconds
 
 If you can reliably reproduce this issue and believe it isn't due to one of the reasons listed above, please reproduce it while capturing [debug logs](/Dispatcharr-Docs/troubleshooting/#how-do-i-turn-on-debug-logs) and submit an issue on our [Github](https://github.com/Dispatcharr/Dispatcharr) or share with the team in our [Discord](https://discord.gg/Sp45V5BcxU) channel
 
@@ -112,3 +111,14 @@ Additionally, if multiple network interfaces are available, you should add `?loc
 
 !!! example
     `udp://239.1.2.3:4567?localaddr=0.0.0.0`
+    
+---
+
+## How do I remove all VOD from dispatcharr?
+1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
+2. Toggle `Enable VOD Scanning` on
+3. Click the `Groups` button
+4. Under the `VOD - Movies` and `VOD - Series` tabs, deselect all Groups
+5. Click `Save and Refresh`
+6. After the refresh completes, toggle the `Enable VOD Scanning` option off
+7. Repeat for any other accounts if necessary

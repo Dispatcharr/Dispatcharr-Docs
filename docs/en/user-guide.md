@@ -24,6 +24,7 @@ From the channels page you can create and manage all added channels, streams, an
 	* Stream Profile - Click here if you want to use something other than the default stream profile for this channel
     * User Level Access - Set which user types can access this channel via Xtream Codes output
 	* Logo - Choose a logo, upload a new one, or use logo from the assigned EPG
+    * Mature Content - Toggle whether to set a channel as mature content. Mature content can be hidden from non-admin users via "Hide Mature Content" toggle in [user settings](/Dispatcharr-Docs/user-guide/#users)
 	* Channel # - Edit the channel number. Currently only integers are accepted
 	* TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field
 	* Gracenote StationID - Edit the Gracenote ID for your channel. These are typically 5 or 6 digit numbers that Gracenote (a common EPG provider) can use to identify TV channels.
@@ -32,9 +33,22 @@ From the channels page you can create and manage all added channels, streams, an
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
     * "<i data-lucide="square-pen" style="color: white; width: 18px;"></i> Edit" to bulk edit channels
+        * Channel Name - Find and replace (regex compatible) within the channel name in all selected channels
+        * EPG Operations
+            * Set Names from EPG - set the channel name for all selected channels to match the channel name from the currently assigned EPG
+            * Set Logos from EPG - set the logo for all selected channels to match the channel logo from the currently assigned EPG
+            * Set TVG-IDs from EPG - set the TVG-ID for all selected channels to match the channel TVG-ID from the currently assigned EPG
+            * Assign Dummy EPG - set a [dummy EPG](/Dispatcharr-Docs/user-guide/#epgs) or clear EPG assignment for all selected channels 
+        * Channel Group - Set the channel group for all selected channels
+        * Logo - Set the logo for all selected channels
+        * Stream Profile - Set the stream profile for all selected channels
+        * User Level Access - Set the user level access for all selected channels
+        * Mature Content - Set the mature content flag for all selected channels
     * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to bulk delete channels
     * "<i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add" to bulk Add channels. Select multiple Streams under the "Streams" table to create a new channel for each selected stream.
 	* "<i data-lucide="ellipsis-vertical" style="color: white; width: 18px;"></i>" to see additional bulk editing options
+        * "<i data-lucide="pin-off" style="color: white; width: 18px;"></i> Pin Headers" to pin column headers so they are visible even while scrolling
+        * "<i data-lucide="lock" style="color: white; width: 18px;"></i> Unlock for Editing" to unlock the Channels table, allowing users to quickly edit channel fields (name, number, group, EPG, logo) directly in the table without opening a modal. This also allows re-ordering of channels (and associated channel numbers) with drag-and-drop.
         * "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign #s" to assign channel numbers
         * "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
         * "<i data-lucide="settings" style="color: white; width: 18px;"></i> Edit Groups" to open the Group Manager
@@ -58,6 +72,9 @@ From the channels page you can create and manage all added channels, streams, an
 	* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Channels" to create a new channel for each selected stream
     !!! note
         For every selected stream, a corresponding new channel will be created. For example, if 3 streams are selected, 3 new channels will be created.
+* Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
+    * Only Unassociated - Only show streams which are currently not assigned to any Channels
+	* Hide Stale - Hide any streams which are stale (not available as of the last M3U account refresh).
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" to create a new stream not associated with any of your uploaded M3Us
 
 ### Links
@@ -212,6 +229,10 @@ The Stats page shows info on all active streams and the system event viewer
 	* Stream profile
     * Stream uptime
 	* Active stream for each currently active channel (drop down selector allows you to change the active stream)
+    * Currently playing program title
+        * Expandable program description via chevron button
+        * Progress bar showing elapsed and remaining time for curently playing programs
+    * Channel preview button <i data-lucide="circle-play" style="color: LimeGreen; width: 18px;"></i> (click to preview currently active streams)
 	* Stream stats (only available with certain [stream profiles](#stream-profiles)) 
 
         | Stream profile | Video resolution                                                          | Source frames per second                                                  | Video codec                                                               | Audio codec                                                               | Audio channel configuration                                               | Stream type (MPEGTS, HLS)                                                 | [Current speed](/Dispatcharr-Docs/user-guide/#current-speed)              |
@@ -263,9 +284,11 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
 	* May allow access to all Channel Profiles or restrict to a subset
 	* In Settings, only able to change UI settings
 	* XC login enabled only if an XC Password is set for the user
+    * Optionally hide channels marked as "Mature Content" in user settings
 3. Streamer
 	* No access to the Dispatcharr UI
 	* This user level is for XC login only
+    * Optionally hide channels marked as "Mature Content" in user settings
 
 ---
 
@@ -280,6 +303,7 @@ From the Logo Manager page you can upload and manage logos.
 
 ### UI Settings
 * Table Size - Set the size of the channel rows in "Channels"
+* Pin Table Headers - Toggles whether to keep table headers visible when scrolling
 * Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
 * Time format - Set the display of time to either 12 hour or 24 hour format
 
