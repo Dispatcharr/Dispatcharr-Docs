@@ -610,7 +610,7 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
 * The "Action" will be "Bypass Auth" for all of them
 * The "Match Type" will be "Path" for all of them
 
-??? example "Bypass rules" (click to see)
+??? example "Bypass rules (click to see)"
 
     * ```/player_api.php/*```
     * ```/get.php/*```
