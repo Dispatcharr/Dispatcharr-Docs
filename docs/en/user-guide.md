@@ -607,8 +607,8 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
 
 To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or another IdP you've added, you need to create Bypass Rules. See below for the list of rules required. Once you save the below rules, Dispatcharr's WebUI will be secured behind your SSO while apps and services will be able to connect via XC
 
-* The "Action" will be "Bypass Auth" for all of them
-* The "Match Type" will be "Path" for all of them
+* The "Action" will be `Bypass Auth` for all of them
+* The "Match Type" will be `Path` for all of them
 
 ??? example "Bypass rules (click to see)"
 
