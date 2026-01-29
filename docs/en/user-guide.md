@@ -608,22 +608,22 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
 * The "Match Type" will be "Path" for all of them
 
 !!! example "Bypass rules"
-    `/player_api.php/*`
-    `/get.php/*`
-    `/xmltv.php/*`
-    `/*/*/*.ts`
-    `/proxy/ts/stream/*`
-    `/proxy/vod/episode/*`
-    `/proxy/vod/movie/*`
-    `/api/channels/logos/*/cache/`
-    `/live/*/*`
-    `/movie/*/*`
-    `/series/*/*`
+    * ```/player_api.php/*```
+    * ```/get.php/*```
+    * ```/xmltv.php/*```
+    * ```/*/*/*.ts```
+    * ```/proxy/ts/stream/*```
+    * ```/proxy/vod/episode/*```
+    * ```/proxy/vod/movie/*```
+    * ```/api/channels/logos/*/cache/```
+    * ```/live/*/*```
+    * ```/movie/*/*```
+    * ```/series/*/*```
 
     **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, you need for further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/user-guide/#network-access)**
-    `/hdhr/*`
-    `/output/m3u/*`
-    `/output/epg/*`
+    * ```/hdhr/*```
+    * ```/output/m3u/*```
+    * ```/output/epg/*```
 
 * If you'd like to set up GeoBlock for any/all resources, refer to Pangolin's [official documentation](https://docs.pangolin.net/self-host/advanced/enable-geoblocking) for guidance
 
