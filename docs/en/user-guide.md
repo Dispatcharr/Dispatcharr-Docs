@@ -361,7 +361,10 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 
 * There are 5 default stream profiles with the ability to create your own custom ones
     * ffmpeg - Dispatcharr will proxy streams via ffmpeg. No transcoding takes place with the default ffmpeg stream profile, it will just remux streams. Uses more system resources than proxy
-    * Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg
+    * Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg. 
+        !!! note
+            Proxy falls back to the ffmpeg default stream profile if the source is not mpegts.
+            
     * Redirect - Redirects the original M3U stream URL to your client. There is no proxying with this profile
     * streamlink - For custom streams based on the services supported by [streamlink](https://streamlink.github.io/)
 	* VLC - Dispatcharr will proxy streams via VLC. No transcoding takes place with the default VLC stream profile, it will just remux streams. Uses more system resources than proxy
