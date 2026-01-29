@@ -624,7 +624,7 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
     * ```/movie/*/*```
     * ```/series/*/*```
 
-    **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, you need for further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/user-guide/#network-access)**  
+    **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, M3U, or EPG, you should further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/user-guide/#network-access). Otherwise, your HDHR, M3U, and/or EPG links will be publicly accessible over the internet** 
     
     * ```/hdhr/*```
     * ```/output/m3u/*```
