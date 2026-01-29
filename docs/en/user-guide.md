@@ -364,7 +364,7 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg. 
         
         !!! note
-            Proxy falls back to the ffmpeg default stream profile if the source stream is not mpegts.
+            Proxy falls back to the ffmpeg default stream profile if the source stream is not mpegts
             
     * Redirect - Redirects the original M3U stream URL to your client. There is no proxying with this profile
     * streamlink - For custom streams based on the services supported by [streamlink](https://streamlink.github.io/)
@@ -542,7 +542,8 @@ Optional environment variables to adjust priority of various tasks. Lower values
           - SYS_NICE
     ```
  
-### Nginx reverse proxy
+### Reverse Proxies
+#### Nginx
 HTTPS config example (streams only via https, WebUI via local network and Wireguard)
 
 ??? example "Example (click to see)"
@@ -596,3 +597,35 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
     3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/user-guide/#users) page if you haven't already done so
     4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
     5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
+    
+#### Pangolin
+* Create your resource just as you would any other in Pangolin
+* If you're hosting Dispatcharr on the same VPS (if you're using a VPS) as Pangolin, be sure to set it as a local resource and use 172.XX.X.X as the IP, then enter the port. Otherwise set it up normally
+* If you'd like to enable Pangolin's SSO for this resource for security, do so in the Authentication tab of your new Dispatcharr resource
+
+To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or another IdP you've added, you need to create Bypass Rules. See below for the list of rules required. Once you save the below rules, Dispatcharr's WebUI will be secured behind your SSO while apps and services will be able to connect via XC
+* The "Action" will be "Bypass Auth" for all of them
+* The "Match Type" will be "Path" for all of them
+
+!!! example "Bypass rules"
+    `/player_api.php/*`
+    `/get.php/*`
+    `/xmltv.php/*`
+    `/*/*/*.ts`
+    `/proxy/ts/stream/*`
+    `/proxy/vod/episode/*`
+    `/proxy/vod/movie/*`
+    `/api/channels/logos/*/cache/`
+    `/live/*/*`
+    `/movie/*/*`
+    `/series/*/*`
+
+    **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, you need for further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/user-guide/#network-access)**
+    `/hdhr/*`
+    `/output/m3u/*`
+    `/output/epg/*`
+
+* If you'd like to set up GeoBlock for any/all resources, refer to Pangolin's [official documentation](https://docs.pangolin.net/self-host/advanced/enable-geoblocking) for guidance
+
+* Test your new setup by navigating to Dispatcharr in an incognito or private window. You should now be met with your Pangolin login dashboard when accessing the WebUI when you're not authenticated, however your clients will still be able to connect to allow streaming
+
