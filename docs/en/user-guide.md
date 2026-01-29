@@ -604,6 +604,7 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
 * If you'd like to enable Pangolin's SSO for this resource for security, do so in the Authentication tab of your new Dispatcharr resource
 
 To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or another IdP you've added, you need to create Bypass Rules. See below for the list of rules required. Once you save the below rules, Dispatcharr's WebUI will be secured behind your SSO while apps and services will be able to connect via XC
+
 * The "Action" will be "Bypass Auth" for all of them
 * The "Match Type" will be "Path" for all of them
 
@@ -620,7 +621,8 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
     * ```/movie/*/*```
     * ```/series/*/*```
 
-    **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, you need for further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/user-guide/#network-access)**
+    **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, you need for further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/user-guide/#network-access)**  
+    
     * ```/hdhr/*```
     * ```/output/m3u/*```
     * ```/output/epg/*```
