@@ -597,6 +597,8 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
     3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/user-guide/#users) page if you haven't already done so
     4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
     5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
+
+---
     
 #### Pangolin
 * Create your resource just as you would any other in Pangolin
