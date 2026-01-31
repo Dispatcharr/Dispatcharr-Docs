@@ -137,6 +137,9 @@ Create your user account by entering a username and password that you will remem
 !!! warning "Plex only supports one EPG source"
     Plex can only use one EPG source—either the built-in zipcode-based OTA guide OR an XMLTV file, not both simultaneously. If you have both HDHomeRun OTA channels and IPTV channels, you'll need to provide all EPG data via Dispatcharr's XMLTV output. ([#633](https://github.com/Dispatcharr/Dispatcharr/issues/633))
 
+!!! warning "Using Tunarr with Dispatcharr?"
+    If you use Tunarr alongside Dispatcharr, you must disable "Auto-Update Guide" and "Auto-Update Channels" in Tunarr's Plex source settings. Otherwise, Plex will periodically lose channel matching. ([#344](https://github.com/Dispatcharr/Dispatcharr/issues/344))
+
 ---
 
 #### ChannelsDVR
