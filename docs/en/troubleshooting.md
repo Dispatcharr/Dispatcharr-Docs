@@ -152,6 +152,39 @@ See [Channel Profiles](/Dispatcharr-Docs/user-guide/#channels) for more details 
 
 ---
 
+## Xtream Codes apps not working through reverse proxy
+
+Some IPTV apps using Xtream Codes API (like IPTV Smarters, TiviMate) may fail when accessing Dispatcharr through a reverse proxy, especially from outside your network.
+
+**Symptoms**:
+
+* App works on local network but fails remotely
+* Login works but channels don't play
+* Streams timeout or show connection errors
+
+**Cause**: These apps construct URLs using `/live/username/password/` paths that your reverse proxy may not be forwarding.
+
+**Solution**: Update your nginx configuration to include the `/live/` endpoint:
+
+```nginx
+location /live/ {
+    proxy_pass http://dispatcharr:9191/live/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Port $server_port;
+}
+```
+
+Make sure you also have the standard proxy location blocks for `/`, `/api/`, `/proxy/`, etc.
+
+!!! note
+    The example nginx config in the [Reverse Proxies](/Dispatcharr-Docs/user-guide/#reverse-proxies) section should work for most setups. If you've customized it, ensure all required endpoints are being proxied.
+
+---
+
 ## How do I remove all VOD from dispatcharr?
 1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
 2. Toggle `Enable VOD Scanning` on
