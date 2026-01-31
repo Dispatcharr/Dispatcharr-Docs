@@ -187,6 +187,8 @@ Make sure you also have the standard proxy location blocks for `/`, `/api/`, `/p
 !!! note
     The example nginx config in the [Reverse Proxies](/Dispatcharr-Docs/user-guide/#reverse-proxies) section should work for most setups. If you've customized it, ensure all required endpoints are being proxied.
 
+*Related: [#839](https://github.com/Dispatcharr/Dispatcharr/issues/839)*
+
 ---
 
 ## How do I remove all VOD from dispatcharr?
