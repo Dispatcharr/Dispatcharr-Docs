@@ -131,6 +131,9 @@ Jellyfin requires the EPG channel ID to match a specific format. If your EPG dat
 
 *Related: [#583](https://github.com/Dispatcharr/Dispatcharr/issues/583)*
 
+!!! note "Jellyfin categories"
+    Jellyfin categories (Sports, News, Movies, etc.) are passed through automatically if your source EPG includes them—no special configuration is needed in Dispatcharr. ([#538](https://github.com/Dispatcharr/Dispatcharr/issues/538))
+
 ---
 
 ## Adding multiple Dispatcharr instances to Plex
