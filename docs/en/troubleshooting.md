@@ -131,6 +131,27 @@ Jellyfin requires the EPG channel ID to match a specific format. If your EPG dat
 
 ---
 
+## Adding multiple Dispatcharr instances to Plex
+
+Plex identifies tuners by their device ID. If you're running multiple Dispatcharr instances (e.g., one with VPN, one without), Plex may have trouble distinguishing them or hang during tuner setup.
+
+**Recommended Solution**: Use Channel Profiles instead of multiple Dispatcharr instances
+
+1. In Dispatcharr, go to the Channels page
+2. Create a new Channel Profile for each "virtual tuner" you need
+3. Add each Channel Profile to Plex as a separate HDHR device
+4. Each profile generates its own unique HDHR, M3U, and EPG URLs
+
+**Alternative workaround**: If you must use multiple instances:
+
+1. Use the M3U output from one instance as an M3U source in the other
+2. Add only one instance directly to Plex via HDHR
+3. The consolidated instance will contain channels from both
+
+See [Channel Profiles](/Dispatcharr-Docs/user-guide/#channels) for more details on setting up profiles.
+
+---
+
 ## How do I remove all VOD from dispatcharr?
 1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
 2. Toggle `Enable VOD Scanning` on
