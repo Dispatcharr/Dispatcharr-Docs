@@ -114,6 +114,23 @@ Additionally, if multiple network interfaces are available, you should add `?loc
     
 ---
 
+## Jellyfin EPG not importing or shows "No guide data"
+
+Jellyfin requires the EPG channel ID to match a specific format. If your EPG data isn't appearing:
+
+1. **Check the TVG-ID format**: Jellyfin prefers descriptive channel IDs like `BBC1.uk` rather than numeric IDs like `1`
+2. In Dispatcharr, go to Channels and set the **TVG-ID Source** to use TVG-ID instead of channel number
+3. Alternatively, add `?tvg_id_source=tvg_id` to your EPG URL:
+    ```
+    http://your-dispatcharr:9191/output/epg?tvg_id_source=tvg_id
+    ```
+4. Refresh your guide data in Jellyfin after making changes
+
+!!! tip
+    If channels have no tvg-id set, Dispatcharr will use the channel number by default. Ensure your channels have proper TVG-IDs assigned for best Jellyfin compatibility.
+
+---
+
 ## How do I remove all VOD from dispatcharr?
 1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
 2. Toggle `Enable VOD Scanning` on

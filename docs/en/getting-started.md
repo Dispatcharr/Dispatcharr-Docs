@@ -94,6 +94,13 @@ Create your user account by entering a username and password that you will remem
 - Choose 'XMLTV' and paste the URL
 - EPG data will be automatically mapped.
 
+!!! tip "EPG not showing in Jellyfin?"
+    Jellyfin is particular about channel ID formats. If your guide data isn't appearing:
+
+    1. Try adding `?tvg_id_source=tvg_id` to your EPG URL
+    2. Ensure your channels have proper TVG-IDs set (not just channel numbers)
+    3. See [Troubleshooting: Jellyfin EPG](/Dispatcharr-Docs/troubleshooting/#jellyfin-epg-not-importing-or-shows-no-guide-data) for more details.
+
 ---
 
 #### Plex
