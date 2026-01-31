@@ -194,6 +194,26 @@ Make sure you also have the standard proxy location blocks for `/`, `/api/`, `/p
 
 ---
 
+## EPG shows wrong data or is "off-by-one"
+
+If your EPG data appears correct in Dispatcharr but shows the wrong programs in your client (e.g., displaying data from a different channel), this is usually caused by **overlapping channel numbers**.
+
+**Cause**: When using Auto Channel Sync, the default starting channel number is 1 for all groups. If multiple groups start at 1, channels will have duplicate numbers, confusing clients when matching EPG data.
+
+**Solution**:
+
+1. Go to M3U & EPG Manager
+2. Edit your M3U account and click "Groups"
+3. For each group using Auto Channel Sync, set a unique **Start Channel #** (e.g., Group A starts at 1, Group B at 100, Group C at 200)
+4. Save and refresh
+
+!!! tip
+    Plan your channel number ranges ahead of time to avoid overlaps. For example, allocate 1-99 for local channels, 100-199 for sports, 200-299 for movies, etc.
+
+*Related: [#563](https://github.com/Dispatcharr/Dispatcharr/issues/563)*
+
+---
+
 ## How do I remove all VOD from dispatcharr?
 1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
 2. Toggle `Enable VOD Scanning` on
