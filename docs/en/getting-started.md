@@ -129,8 +129,11 @@ Create your user account by entering a username and password that you will remem
     ![Map EPG Plex](assets/map_epg_plex.png){style="height:70vmin"}
 - Press `Continue` and plex will now load in the channels and EPG data
 !!! note "Missing logos?"
-    Add `?cachedlogos=false` to the end of your EPG to bypass logo caching which Plex does not currently support. 
-	
+    Add `?cachedlogos=false` to the end of your EPG to bypass logo caching which Plex does not currently support.
+
+!!! warning "Plex does not support VOD"
+    Plex does not support Video on Demand content from Dispatcharr. If you need VOD, use Jellyfin or an Xtream Codes-compatible app instead. ([#470](https://github.com/Dispatcharr/Dispatcharr/issues/470))
+
 ---
 
 #### ChannelsDVR
