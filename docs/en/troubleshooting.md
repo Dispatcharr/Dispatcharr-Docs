@@ -129,6 +129,8 @@ Jellyfin requires the EPG channel ID to match a specific format. If your EPG dat
 !!! tip
     If channels have no tvg-id set, Dispatcharr will use the channel number by default. Ensure your channels have proper TVG-IDs assigned for best Jellyfin compatibility.
 
+*Related: [#583](https://github.com/Dispatcharr/Dispatcharr/issues/583)*
+
 ---
 
 ## Adding multiple Dispatcharr instances to Plex

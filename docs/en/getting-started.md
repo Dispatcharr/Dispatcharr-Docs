@@ -101,6 +101,8 @@ Create your user account by entering a username and password that you will remem
     2. Ensure your channels have proper TVG-IDs set (not just channel numbers)
     3. See [Troubleshooting: Jellyfin EPG](/Dispatcharr-Docs/troubleshooting/#jellyfin-epg-not-importing-or-shows-no-guide-data) for more details.
 
+    *Related: [#583](https://github.com/Dispatcharr/Dispatcharr/issues/583)*
+
 ---
 
 #### Plex
