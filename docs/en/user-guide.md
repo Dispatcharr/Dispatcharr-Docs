@@ -166,6 +166,8 @@ From this page you can add and maintain your M3U accounts and EPGs
 
             **For connection pooling**: Use M3U Profiles when you have multiple logins for the same provider and want Dispatcharr to use them as a combined pool of connections.
 
+            *Related: [#710](https://github.com/Dispatcharr/Dispatcharr/issues/710)*
+
 	* <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
 	* <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
 	
