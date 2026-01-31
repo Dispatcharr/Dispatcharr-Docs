@@ -134,6 +134,9 @@ Create your user account by entering a username and password that you will remem
 !!! warning "Plex does not support VOD"
     Plex does not support Video on Demand content from Dispatcharr. If you need VOD, use Jellyfin or an Xtream Codes-compatible app instead. ([#470](https://github.com/Dispatcharr/Dispatcharr/issues/470))
 
+!!! warning "Plex only supports one EPG source"
+    Plex can only use one EPG source—either the built-in zipcode-based OTA guide OR an XMLTV file, not both simultaneously. If you have both HDHomeRun OTA channels and IPTV channels, you'll need to provide all EPG data via Dispatcharr's XMLTV output. ([#633](https://github.com/Dispatcharr/Dispatcharr/issues/633))
+
 ---
 
 #### ChannelsDVR
