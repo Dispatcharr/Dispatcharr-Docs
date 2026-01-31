@@ -152,6 +152,8 @@ Plex identifies tuners by their device ID. If you're running multiple Dispatchar
 
 See [Channel Profiles](/Dispatcharr-Docs/user-guide/#channels) for more details on setting up profiles.
 
+*Related: [#734](https://github.com/Dispatcharr/Dispatcharr/issues/734)*
+
 ---
 
 ## Xtream Codes apps not working through reverse proxy
