@@ -94,6 +94,15 @@ Create your user account by entering a username and password that you will remem
 - Choose 'XMLTV' and paste the URL
 - EPG data will be automatically mapped.
 
+!!! tip "EPG not showing in Jellyfin?"
+    Jellyfin is particular about channel ID formats. If your guide data isn't appearing:
+
+    1. Try adding `?tvg_id_source=tvg_id` to your EPG URL
+    2. Ensure your channels have proper TVG-IDs set (not just channel numbers)
+    3. See [Troubleshooting: Jellyfin EPG](/Dispatcharr-Docs/troubleshooting/#jellyfin-epg-not-importing-or-shows-no-guide-data) for more details.
+
+    *Related: [#583](https://github.com/Dispatcharr/Dispatcharr/issues/583)*
+
 ---
 
 #### Plex
@@ -120,8 +129,17 @@ Create your user account by entering a username and password that you will remem
     ![Map EPG Plex](assets/map_epg_plex.png){style="height:70vmin"}
 - Press `Continue` and plex will now load in the channels and EPG data
 !!! note "Missing logos?"
-    Add `?cachedlogos=false` to the end of your EPG to bypass logo caching which Plex does not currently support. 
-	
+    Add `?cachedlogos=false` to the end of your EPG to bypass logo caching which Plex does not currently support.
+
+!!! warning "Plex does not support VOD"
+    Plex does not support Video on Demand content from Dispatcharr. If you need VOD, use Jellyfin or an Xtream Codes-compatible app instead. ([#470](https://github.com/Dispatcharr/Dispatcharr/issues/470))
+
+!!! warning "Plex only supports one EPG source"
+    Plex can only use one EPG source—either the built-in zipcode-based OTA guide OR an XMLTV file, not both simultaneously. If you have both HDHomeRun OTA channels and IPTV channels, you'll need to provide all EPG data via Dispatcharr's XMLTV output. ([#633](https://github.com/Dispatcharr/Dispatcharr/issues/633))
+
+!!! warning "Using Tunarr with Dispatcharr?"
+    If you use Tunarr alongside Dispatcharr, you must disable "Auto-Update Guide" and "Auto-Update Channels" in Tunarr's Plex source settings. Otherwise, Plex will periodically lose channel matching. ([#344](https://github.com/Dispatcharr/Dispatcharr/issues/344))
+
 ---
 
 #### ChannelsDVR
