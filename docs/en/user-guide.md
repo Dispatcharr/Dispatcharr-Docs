@@ -51,8 +51,8 @@ From the channels page you can create and manage all added channels, streams, an
         * "<i data-lucide="lock" style="color: white; width: 18px;"></i> Unlock for Editing" to unlock the Channels table, allowing users to quickly edit channel fields (name, number, group, EPG, logo) directly in the table without opening a modal. This also allows re-ordering of channels (and associated channel numbers) with drag-and-drop.
         * "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign #s" to assign channel numbers
         * "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
-            * Matching mode "Use default settings" - Recommended for most users. Handles standard channel name variations automatically.
-            * Matching mode "Configure advanced options: - Add custom prefixes, suffixes, or strings to ignore.
+            * Matching mode "Use default settings" - Recommended for most users. Handles standard channel name variations automatically
+            * Matching mode "Configure advanced options: - Add custom prefixes, suffixes, or strings to ignore
                 * Ignore Prefixes - Removed from START of channel names (e.g., Prime:, Sling:, US:)
                 * Ignore Suffixes - Removed from END of channel names (e.g., HD, 4K, +1)
                 * Ignore Custom Strings - Removed from ANYWHERE in channel names (e.g., 24/7, LIVE)
@@ -333,7 +333,12 @@ From the Logo Manager page you can upload and manage logos.
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
-    * The default setting hashes on URL. That means that a provider change to a source stream that changes URL will result in a new stream being created in Dispatcharr. 
+    * The default setting hashes on URL. Available options include:
+        * Name
+        * URL - For XC accounts, the stream hash uses the stable stream_id instead of the URL when hashing, ensuring XC streams maintain their identity and channel associations even when account credentials or server URLs change
+        * TVG-ID
+        * M3U ID
+        * Group
 	* The original stream will disappear from Dispatcharr according to your Stale Stream Retention (days) setting for your M3U account
 	!!! note
 	    Make sure to click the `Save` button after making any changes to the M3U Hash Key.
@@ -385,7 +390,7 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 	* User-Agent - Set the default user-agent for this stream profile
 	
 ### Network Access
-Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. Default 0.0.0.0/0 allows all IPs
+Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
 !!! example
     | CIDR Range     | Number of IPs | Range example                 |
 	| -------------- | :-----------: | ----------------------------- |
@@ -393,7 +398,7 @@ Allows you to restrict access to Dispatcharr by CIDR range. You may enter multip
 	| 192.168.1.0/24 | 256           | 192.168.1.0 - 192.168.1.255   |
 	| 192.168.1.0/16 | 65,536        | 192.168.0.0 - 192.168.255.255 |
 	
-* M3U / EPG Endpoints - Limit access to M3U, EPG, and HDHR URLs
+* M3U / EPG Endpoints - Limit access to M3U, EPG, and HDHR URLs (default setting allows access on local networks only)
 * Stream Endpoints - Limit network access to stream URLs, including XC stream URLs
 * XC API - Limit access to the XC API
 * UI - Limit access to the Dispatcharr UI 
