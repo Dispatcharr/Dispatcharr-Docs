@@ -32,8 +32,8 @@ From the channels page you can create and manage all added channels, streams, an
 * Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column 
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
-    * "<i data-lucide="square-pen" style="color: white; width: 18px;"></i> Edit" to bulk edit channels
-        * Channel Name - Find and replace (regex compatible) within the channel name in all selected channels
+    * "<i data-lucide="square-pen" style="color: white; width: 18px;"></i> Edit" to bulk edit channels <span id="bulk-editor"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#bulk-editor)
+        * Channel Name - Find and replace (regex compatible) within the channel name in all selected channels 
         * EPG Operations
             * Set Names from EPG - set the channel name for all selected channels to match the channel name from the currently assigned EPG
             * Set Logos from EPG - set the logo for all selected channels to match the channel logo from the currently assigned EPG
@@ -51,6 +51,15 @@ From the channels page you can create and manage all added channels, streams, an
         * "<i data-lucide="lock" style="color: white; width: 18px;"></i> Unlock for Editing" to unlock the Channels table, allowing users to quickly edit channel fields (name, number, group, EPG, logo) directly in the table without opening a modal. This also allows re-ordering of channels (and associated channel numbers) with drag-and-drop.
         * "<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign #s" to assign channel numbers
         * "<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG
+            * Matching mode "Use default settings" - Recommended for most users. Handles standard channel name variations automatically
+            * Matching mode "Configure advanced options: - Add custom prefixes, suffixes, or strings to ignore
+                * Ignore Prefixes - Removed from START of channel names (e.g., Prime:, Sling:, US:)
+                * Ignore Suffixes - Removed from END of channel names (e.g., HD, 4K, +1)
+                * Ignore Custom Strings - Removed from ANYWHERE in channel names (e.g., 24/7, LIVE)
+
+                !!! note
+                    Channel display names are not modified. These settings only affect the matching algorithm. To modify channel names, use the [bulk editor](/Dispatcharr-Docs/user-guide/bulk-editor)
+
         * "<i data-lucide="settings" style="color: white; width: 18px;"></i> Edit Groups" to open the Group Manager
         
     * Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels
@@ -60,22 +69,22 @@ From the channels page you can create and manage all added channels, streams, an
     * Dispatcharr gathers statistics for each stream provided that a compatible [Stream Profile](/Dispatcharr-Docs/user-guide/#stream-profiles) is used. Once captured, [stats](/Dispatcharr-Docs/user-guide/#stats) such as video resolution, frames per second, video encoder format, audio format, audio codec, and stream bitrate will be displayed.  For each captured stream, clicking 'Show Advanced Options' provides even more detail on the quality of source stream.  
     
 ### Streams
-* Search stream names by clicking in the "Name" column header
-* Search by M3U group by clicking in the "Group" column header
-* Search by M3U name by clicking the "M3U" column header
 * Create a new channel by clicking the corresponding <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> "Create New Channel" icon under the "Actions" column 
 * Add a stream to an existing channel by clicking the corresponding <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" button under the "Actions" column 
 * Preview (play) a stream by clicking the corresponding <i data-lucide="ellipsis-vertical" style="color: LightSkyBlue; width: 18px;"></i> icon under the "Actions" column, then press "Preview Stream"
 * Toggle the stream check boxes to use the bulk editing buttons above the grid on the selected streams
-    * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add streams to channel" to add the checked streams to the checked channel(s) 
-    * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Remove" to bulk remove streams
 	* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Channels" to create a new channel for each selected stream
-    !!! note
-        For every selected stream, a corresponding new channel will be created. For example, if 3 streams are selected, 3 new channels will be created.
+    * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to delete the selected stream(s)
 * Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
     * Only Unassociated - Only show streams which are currently not assigned to any Channels
 	* Hide Stale - Hide any streams which are stale (not available as of the last M3U account refresh).
-* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" to create a new stream not associated with any of your uploaded M3Us
+* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" - Create a new stream not associated with any of your uploaded M3Us
+* <i data-lucide="ellipsis-vertical" style="color: White; width: 18px;"></i> (Table Settings) - Toggle Streams table columns on/off. Available columns:
+    * Name (click in the column header to search)
+    * Group (click in the column header to search)
+    * M3U (click in the column header to search)
+    * TVG-ID (click in the column header to search)
+    * Stats (mouse over to see additional stats)
 
 ### Links
 The "Links" section has buttons to see and copy the external links needed by a client
@@ -324,7 +333,12 @@ From the Logo Manager page you can upload and manage logos.
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
-    * The default setting hashes on URL. That means that a provider change to a source stream that changes URL will result in a new stream being created in Dispatcharr. 
+    * The default setting hashes on URL. Available options include:
+        * Name
+        * URL - For XC accounts, the stream hash uses the stable stream_id instead of the URL when hashing, ensuring XC streams maintain their identity and channel associations even when account credentials or server URLs change
+        * TVG-ID
+        * M3U ID
+        * Group
 	* The original stream will disappear from Dispatcharr according to your Stale Stream Retention (days) setting for your M3U account
 	!!! note
 	    Make sure to click the `Save` button after making any changes to the M3U Hash Key.
@@ -376,7 +390,7 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 	* User-Agent - Set the default user-agent for this stream profile
 	
 ### Network Access
-Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. Default 0.0.0.0/0 allows all IPs
+Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
 !!! example
     | CIDR Range     | Number of IPs | Range example                 |
 	| -------------- | :-----------: | ----------------------------- |
@@ -384,7 +398,7 @@ Allows you to restrict access to Dispatcharr by CIDR range. You may enter multip
 	| 192.168.1.0/24 | 256           | 192.168.1.0 - 192.168.1.255   |
 	| 192.168.1.0/16 | 65,536        | 192.168.0.0 - 192.168.255.255 |
 	
-* M3U / EPG Endpoints - Limit access to M3U, EPG, and HDHR URLs
+* M3U / EPG Endpoints - Limit access to M3U, EPG, and HDHR URLs (default setting allows access on local networks only)
 * Stream Endpoints - Limit network access to stream URLs, including XC stream URLs
 * XC API - Limit access to the XC API
 * UI - Limit access to the Dispatcharr UI 
@@ -411,6 +425,14 @@ Create, schedule, and restore backups
         `30 14 1 * *` - 1st of every month at 2:30 PM  
         
 * Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.  
+
+---
+
+## Notifications <i data-lucide="bell" style="color: White; width: 20px;"></i>
+* Real-time notifications for system events and alerts
+* Per-user notification management and dismissal
+* Update check on startup and every 24 hours to notify users of available versions
+* Automatic cleanup of expired notifications
 
 ---
 
@@ -590,7 +612,7 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
     ```
 
 !!! note "Tip"
-    Even with a properly configured reverse proxy, your M3U output will by default be available over the internet. Follow these best practices to block standard M3U access and allow only with a specified username and password. 
+    Even with a properly configured reverse proxy, your M3U output may be available over the internet. Follow these best practices to block standard M3U access and allow only with a specified username and password. 
 	
     1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/user-guide/#nginx-reverse-proxy)
     2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/user-guide/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
