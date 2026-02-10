@@ -404,7 +404,8 @@ Allows you to restrict access to Dispatcharr by CIDR range. You may enter multip
 * UI - Limit access to the Dispatcharr UI 
 	
 !!! tip
-    To block access entirely for any of the above, use the address `127.0.0.1/32`
+    To block access entirely for any of the above, use the address `127.0.0.1/32` (do NOT use for UI!)
+    
     
 ### Proxy Settings
 These settings affect all stream profiles with the exception of redirect
