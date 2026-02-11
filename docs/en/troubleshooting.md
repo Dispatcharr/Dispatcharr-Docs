@@ -122,3 +122,8 @@ Additionally, if multiple network interfaces are available, you should add `?loc
 5. Click `Save and Refresh`
 6. After the refresh completes, toggle the `Enable VOD Scanning` option off
 7. Repeat for any other accounts if necessary
+
+---
+
+## Why do XC accounts created in dispatcharr show a 90 day expiration and how can I fix this?
+* There is no need to fix or change this. The 90 day expiration is perpetual, renewing on every refresh.
