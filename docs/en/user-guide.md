@@ -150,9 +150,9 @@ From this page you can add and maintain your M3U accounts and EPGs
 			* Ignore streams from groups by de-selecting them
 			* Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
                 * Channel Numbering Mode
-                    * Fixed Start Number: Start at a specified number and increment sequentially (default)
-                    * Use Provider Number: Use channel numbers from the M3U source (tvg-chno), with configurable fallback if provider number is missing
-                    * Next Available: Auto-assign starting from 1, skipping all used channel numbers
+                    * **Fixed Start Number**  (default): Start at a specified number and increment sequentially
+                    * **Use Provider Number**: Use channel numbers from the M3U source (tvg-chno), with configurable fallback if provider number is missing
+                    * **Next Available**: Auto-assign starting from 1, skipping all used channel numbers
 			    * Start Channel #: Set a starting channel number for each group to organize your channels.
 			    * Advanced options:
 				    * Force Dummy EPG: Sets a dummy EPG for the channel that matches the channel name
