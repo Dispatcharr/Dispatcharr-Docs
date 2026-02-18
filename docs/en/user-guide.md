@@ -183,7 +183,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG
     * Standard EPG Source - To add a standard XMLTV EPG source
         * Name - A name for your EPG
-        * URL - The URL for your EPG 
+        * URL - The URL for your EPG (may be xml or compressed xml as .gz or .zip)
         * Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
         * API Key - API key for services that require authentication
         * Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
@@ -193,7 +193,7 @@ From this page you can add and maintain your M3U accounts and EPGs
             * Open Cron Builder: Opens the user-friendly interactive cron expression builder with preset buttons and custom field editors
         * Priority - Priority for EPG matching (higher numbers = higher priority). Used when multiple EPG sources have matching entries for a channel.
         !!! note
-            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
+            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings ((file type must be xml or compressed xml as .gz or .zip))
     * Dummy EPG Source - To add a customized dummy EPG          
         * Name - A name for your custom dummy EPG
         * Name Source (Required) - Choose whether to parse the channel name or a stream name assigned to the channel
