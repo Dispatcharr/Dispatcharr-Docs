@@ -124,6 +124,10 @@ From this page you can add and maintain your M3U accounts and EPGs
 	* Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
 	* User-Agent - If you want to set a specific user-agent for this account
 	* Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
+        * Use cron schedule: Click to switch over to `Cron Expression` option
+    * Cron Expression: Enter a cron expression to define the M3U account refresh interval, or click `Open Cron Builder` for user-friendly assistance
+        * Use interval schedule: Click to switch over to `Refresh Interval (hours)`
+        * Open Cron Builder: Opens the user-friendly interactive cron expression builder with preset buttons and custom field editors
 	* Stale Stream Retention (days) - Streams (and Groups) not seen for this many days will be removed.  For immediate deletion, set to 0
 	* VOD Priority - Priority for VOD provider selection (higher numbers = higher priority). Used when multiple providers offer the same content.
     * Is Active - Toggle whether this account is active or not
@@ -145,6 +149,10 @@ From this page you can add and maintain your M3U accounts and EPGs
 		    * Filter visible groups with the search box at the top of the group manager
 			* Ignore streams from groups by de-selecting them
 			* Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
+                * Channel Numbering Mode
+                    * **Fixed Start Number**  (default): Start at a specified number and increment sequentially
+                    * **Use Provider Number**: Use channel numbers from the M3U source (tvg-chno), with configurable fallback if provider number is missing
+                    * **Next Available**: Auto-assign starting from 1, skipping all used channel numbers
 			    * Start Channel #: Set a starting channel number for each group to organize your channels.
 			    * Advanced options:
 				    * Force Dummy EPG: Sets a dummy EPG for the channel that matches the channel name
@@ -175,13 +183,17 @@ From this page you can add and maintain your M3U accounts and EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG
     * Standard EPG Source - To add a standard XMLTV EPG source
         * Name - A name for your EPG
-        * URL - The URL for your EPG 
+        * URL - The URL for your EPG (may be xml or compressed xml as .gz or .zip)
         * Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
         * API Key - API key for services that require authentication
         * Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
+            * Use cron schedule: Click to switch over to `Cron Expression` option
+        * Cron Expression: Enter a cron expression to define the EPG account refresh interval, or click `Open Cron Builder` for user-friendly assistance
+            * Use interval schedule: Click to switch over to `Refresh Interval (hours)`
+            * Open Cron Builder: Opens the user-friendly interactive cron expression builder with preset buttons and custom field editors
         * Priority - Priority for EPG matching (higher numbers = higher priority). Used when multiple EPG sources have matching entries for a channel.
         !!! note
-            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
+            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings ((file type must be xml or compressed xml as .gz or .zip))
     * Dummy EPG Source - To add a customized dummy EPG          
         * Name - A name for your custom dummy EPG
         * Name Source (Required) - Choose whether to parse the channel name or a stream name assigned to the channel
@@ -403,6 +415,10 @@ Allows you to restrict access to Dispatcharr by CIDR range. You may enter multip
 * XC API - Limit access to the XC API
 * UI - Limit access to the Dispatcharr UI 
 	
+!!! tip
+    To block access entirely for any of the above, use the address `127.0.0.1/32` (do NOT use for UI!)
+    
+    
 ### Proxy Settings
 These settings affect all stream profiles with the exception of redirect
 
