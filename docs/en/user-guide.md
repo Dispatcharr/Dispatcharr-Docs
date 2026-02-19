@@ -175,7 +175,16 @@ From this page you can add and maintain your M3U accounts and EPGs
 			    | Example URL | Search Pattern | Replace Pattern |
 				| --- | --- | --- |
 				| `http://provider.com/live/username1/password1/stream` | `username1/password1` | `username2/password2` |
-			
+
+        !!! warning "M3U Profiles are NOT for stream failover"
+            M3U Profiles are designed for managing **multiple accounts from the same provider** to increase your total connection limit. They are NOT used for automatic failover between streams.
+
+            **For stream failover**: Add multiple streams to a single channel. Dispatcharr will automatically switch to the next stream if the current one fails. See [Fallback Streams](/Dispatcharr-Docs/user-guide/#fallback-streams) for details.
+
+            **For connection pooling**: Use M3U Profiles when you have multiple logins for the same provider and want Dispatcharr to use them as a combined pool of connections.
+
+            *Related: [#710](https://github.com/Dispatcharr/Dispatcharr/issues/710)*
+
 	* <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
 	* <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
 	

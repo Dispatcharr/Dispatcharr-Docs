@@ -126,6 +126,106 @@ Additionally, if multiple network interfaces are available, you should add `?loc
     
 ---
 
+## Jellyfin EPG not importing or shows "No guide data"
+
+Jellyfin requires the EPG channel ID to match a specific format. If your EPG data isn't appearing:
+
+1. **Check the TVG-ID format**: Jellyfin prefers descriptive channel IDs like `BBC1.uk` rather than numeric IDs like `1`
+2. In Dispatcharr, go to Channels and set the **TVG-ID Source** to use TVG-ID instead of channel number
+3. Alternatively, add `?tvg_id_source=tvg_id` to your EPG URL:
+    ```
+    http://your-dispatcharr:9191/output/epg?tvg_id_source=tvg_id
+    ```
+4. Refresh your guide data in Jellyfin after making changes
+
+!!! tip
+    If channels have no tvg-id set, Dispatcharr will use the channel number by default. Ensure your channels have proper TVG-IDs assigned for best Jellyfin compatibility.
+
+*Related: [#583](https://github.com/Dispatcharr/Dispatcharr/issues/583)*
+
+!!! note "Jellyfin categories"
+    Jellyfin categories (Sports, News, Movies, etc.) are passed through automatically if your source EPG includes them—no special configuration is needed in Dispatcharr. ([#538](https://github.com/Dispatcharr/Dispatcharr/issues/538))
+
+---
+
+## Adding multiple Dispatcharr instances to Plex
+
+Plex identifies tuners by their device ID. If you're running multiple Dispatcharr instances (e.g., one with VPN, one without), Plex may have trouble distinguishing them or hang during tuner setup.
+
+**Recommended Solution**: Use Channel Profiles instead of multiple Dispatcharr instances
+
+1. In Dispatcharr, go to the Channels page
+2. Create a new Channel Profile for each "virtual tuner" you need
+3. Add each Channel Profile to Plex as a separate HDHR device
+4. Each profile generates its own unique HDHR, M3U, and EPG URLs
+
+**Alternative workaround**: If you must use multiple instances:
+
+1. Use the M3U output from one instance as an M3U source in the other
+2. Add only one instance directly to Plex via HDHR
+3. The consolidated instance will contain channels from both
+
+See [Channel Profiles](/Dispatcharr-Docs/user-guide/#channels) for more details on setting up profiles.
+
+*Related: [#734](https://github.com/Dispatcharr/Dispatcharr/issues/734)*
+
+---
+
+## Xtream Codes apps not working through reverse proxy
+
+Some IPTV apps using Xtream Codes API (like IPTV Smarters, TiviMate) may fail when accessing Dispatcharr through a reverse proxy, especially from outside your network.
+
+**Symptoms**:
+
+* App works on local network but fails remotely
+* Login works but channels don't play
+* Streams timeout or show connection errors
+
+**Cause**: These apps construct URLs using `/live/username/password/` paths that your reverse proxy may not be forwarding.
+
+**Solution**: Update your nginx configuration to include the `/live/` endpoint:
+
+```nginx
+location /live/ {
+    proxy_pass http://dispatcharr:9191/live/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-Port $server_port;
+}
+```
+
+Make sure you also have the standard proxy location blocks for `/`, `/api/`, `/proxy/`, etc.
+
+!!! note
+    The example nginx config in the [Reverse Proxies](/Dispatcharr-Docs/user-guide/#reverse-proxies) section should work for most setups. If you've customized it, ensure all required endpoints are being proxied.
+
+*Related: [#839](https://github.com/Dispatcharr/Dispatcharr/issues/839)*
+
+---
+
+## EPG shows wrong data or is "off-by-one"
+
+If your EPG data appears correct in Dispatcharr but shows the wrong programs in your client (e.g., displaying data from a different channel), this is usually caused by **overlapping channel numbers**.
+
+**Cause**: When using Auto Channel Sync, the default starting channel number is 1 for all groups. If multiple groups start at 1, channels will have duplicate numbers, confusing clients when matching EPG data.
+
+**Solution**:
+
+1. Go to M3U & EPG Manager
+2. Edit your M3U account and click "Groups"
+3. For each group using Auto Channel Sync, set a unique **Start Channel #** (e.g., Group A starts at 1, Group B at 100, Group C at 200)
+4. Save and refresh
+
+!!! tip
+    Plan your channel number ranges ahead of time to avoid overlaps. For example, allocate 1-99 for local channels, 100-199 for sports, 200-299 for movies, etc.
+
+*Related: [#563](https://github.com/Dispatcharr/Dispatcharr/issues/563)*
+
+---
+
 ## How do I remove all VOD from dispatcharr?
 1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
 2. Toggle `Enable VOD Scanning` on
