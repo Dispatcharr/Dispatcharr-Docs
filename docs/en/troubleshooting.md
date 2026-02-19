@@ -38,17 +38,20 @@ search:
 ---
 
 ## I got new credentials (or URL) from my provider, what should I do?
-For M3U account types and Dispatcharr Version < 0.19.0:
+
+### For M3U account types and Dispatcharr Version < 0.19.0:
 1. Make a backup!
 2. Remove URL from Settings >>> Stream Settings >>> M3U Hash Key
-    * Add all other hash options
+    1. Add all other hash options
+    2. Save
 3. Once re-hashing has finished, change the settings in your M3U account
 4. Refresh the account
 5. Once refresh is complete, change your hash settings back
 
-For XC account type and Dispatcharr Version >= 0.19.0
+### For XC account type and Dispatcharr Version >= 0.19.0
 1. Change settings for your XC account (either URL, credentials or both)
-2. Save and refresh
+2. Save and refresh 
+
 
 ---
 
@@ -107,6 +110,10 @@ To use Video-on-Demand (VOD), you must import your IPTV account *into* Dispatcha
 
 To use VOD in a third party client/app, you must also export *out of* Dispatcharr using Xtream Codes credentials. (see: [How do I output to XC API?](/Dispatcharr-Docs/troubleshooting/#how-do-i-output-to-xc-api))
 
+Dispatcharr's XC credentials can be setup in the Users tab. Create/edit a new/existing user and enter a password in the field labeled XC Password.
+
+If your client/app supports the use of XC credentials, it will ask for an API or URL, username, and password. Enter the URL you use to access Dispatcharr (LAN IP:Port or reverse proxy), the username from the Users tab, and the XC Password created for the user. 
+
 ---
 
 ## Multicast streams are not working
@@ -127,3 +134,38 @@ Additionally, if multiple network interfaces are available, you should add `?loc
 5. Click `Save and Refresh`
 6. After the refresh completes, toggle the `Enable VOD Scanning` option off
 7. Repeat for any other accounts if necessary
+
+---
+
+## How do I create and set a systemwide custom profile in Dispatcharr?
+
+1. Within the Dispatcharr GUI, select Settings on the left side of the screen.
+2. Follow these steps:
+    1. Click Streaming Profiles.
+    2. Click Add Stream Profile.
+    3. In the Name section, provide a unique name.
+    4. In the Command section, enter ffmpeg, streamlink, or cvlc.
+    5. In the Parameters section, enter your desired parameters.
+    > :memo: **Note:** Community ffmpeg profiles can be found in the ⁠🔀・stream-profiles section of the Dispatcharr Discord
+    6. In the User-Agent field, leave it blank.
+    7. Click Submit to save your changes.
+4. Select Stream Settings, then use the drop-down menu on the right under Default Stream Profile.
+5. Select the newly created stream profile you created in Step 2.
+6. Click Save.
+
+---
+
+## Use of Auto Channel Sync
+
+Auto channel sync should ONLY be used for event groups where the channel names are updated to show the event name.  Using on regular channel groups might feel like a cheat code to add all your channels but you lose the ability to customize name, logo, epg etc. as the next refresh will wipe all the changes.  You also lose the ability to add backup and failover streams.
+
+If you want all the channels from a regular group added select the group on the streams table, select all then press Create Channels at the top. 
+
+---
+
+## I'm getting a message about hardware support for NumPy. What should I do?
+
+Upgrade your Dispatcharr - this was fixed in 0.18.0.
+
+---
+
