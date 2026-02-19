@@ -38,12 +38,17 @@ search:
 ---
 
 ## I got new credentials (or URL) from my provider, what should I do?
+For M3U account types and Dispatcharr Version < 0.19.0:
 1. Make a backup!
 2. Remove URL from Settings >>> Stream Settings >>> M3U Hash Key
     * Add all other hash options
 3. Once re-hashing has finished, change the settings in your M3U account
 4. Refresh the account
 5. Once refresh is complete, change your hash settings back
+
+For XC account type and Dispatcharr Version >= 0.19.0
+1. Change settings for your XC account (either URL, credentials or both)
+2. Save and refresh
 
 ---
 
