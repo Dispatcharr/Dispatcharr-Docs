@@ -1,0 +1,2297 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dispatcharr.github.io/Dispatcharr-Docs/user-guide/">
+      
+      
+        <link rel="prev" href="../migrations/">
+      
+      
+        <link rel="next" href="../troubleshooting/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../es/user-guide/" hreflang="es">
+        
+          <link rel="alternate" href="https://discord.gg/wfeqTRRJru" hreflang="null">
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>User Guide - Dispatcharr Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Dispatcharr Docs" class="md-header__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dispatcharr Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              User Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../es/user-guide/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://discord.gg/wfeqTRRJru" hreflang="null" class="md-select__link">
+              Help Translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Dispatcharr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../installation/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ/Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dispatcharr Docs" class="md-nav__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Dispatcharr Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Dispatcharr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#channels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channels
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Channels">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channels_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Channels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Streams
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Links
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VODs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#m3u-epg-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M3U &amp; EPG Manager
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="M3U &amp; EPG Manager">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#m3u-accounts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        M3U accounts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EPGs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tv-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TV Guide
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DVR
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stats" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stats
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plugins" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plugins
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logo-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logo Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dvr_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DVR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User-Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup &amp; Restore
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notifications
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Advanced">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#hardware-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hardware Acceleration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hardware Acceleration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mapping-hardware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mapping Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-stream-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Stream Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#process-priority-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Process Priority Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reverse-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reverse Proxies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reverse Proxies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Nginx
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pangolin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pangolin
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join Discord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Dispatcharr/edit/master/docs/en/user-guide.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Dispatcharr/raw/master/docs/en/user-guide.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="user-guide">User Guide<a class="headerlink" href="#user-guide" title="Permanent link">&para;</a></h1>
+<h2 id="channels">Channels<a class="headerlink" href="#channels" title="Permanent link">&para;</a></h2>
+<p>From the channels page you can create and manage all added channels, streams, and external links</p>
+<h3 id="channels_1">Channels<a class="headerlink" href="#channels_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Choose the "Channel Profile" by clicking the drop-down menu under the Channels header. The default profile is "All"<ul>
+<li>Create a new Channel Profile by clicking the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon next to the drop-down menu</li>
+<li>Channel Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channel Profiles each user has access to</li>
+<li>To remove channels from a Channel Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off<ul>
+<li>For bulk toggling, use the channel check boxes to select multiple channels, then click the toggle icon</li>
+</ul>
+</li>
+<li>To delete a Channel Profile, click the drop-down menu and select the <i data-lucide="square-minus" style="color: Red; width: 18px;"></i> icon next to the Channel Profile that you wish to delete</li>
+<li>To duplicate a Channel Profile, click the drop-down menu and select the <i data-lucide="copy" style="color: LimeGreen; width: 18px;"></i> icon next to the Channel Profile that you wish to duplicate. A dialog will pop up for you to name it</li>
+<li>To rename a Channel Profile, click the drop-down menu and select the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> icon next to the Channel Profile that you wish to rename</li>
+</ul>
+</li>
+<li>Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering<ul>
+<li>Hide/Show Disabled - Selectable only when a Channel profile is active. Toggle to hide/show any channels which are disabled for the selected profile</li>
+<li>Only empty channels - Check the box to show only channels with no associated streams. </li>
+</ul>
+</li>
+<li>Search channel names by clicking in the "Name" column header</li>
+<li>Filter by EPG by clicking in the "EPG" column header</li>
+<li>Search by channel group by clicking in the "Group" column header</li>
+<li>Edit a channel by clicking the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> "Edit Channel" icon under the "Actions" column <ul>
+<li>Channel Name - Edit the name for your Channel</li>
+<li>Channel Group - Edit the group for your channel. If you want to create and add to a new group, click the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon</li>
+<li>Stream Profile - Click here if you want to use something other than the default stream profile for this channel</li>
+<li>User Level Access - Set which user types can access this channel via Xtream Codes output</li>
+<li>Logo - Choose a logo, upload a new one, or use logo from the assigned EPG</li>
+<li>Mature Content - Toggle whether to set a channel as mature content. Mature content can be hidden from non-admin users via "Hide Mature Content" toggle in <a href="/Dispatcharr-Docs/user-guide/#users">user settings</a></li>
+<li>Channel # - Edit the channel number. Currently only integers are accepted</li>
+<li>TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field</li>
+<li>Gracenote StationID - Edit the Gracenote ID for your channel. These are typically 5 or 6 digit numbers that Gracenote (a common EPG provider) can use to identify TV channels.</li>
+<li>EPG - Click in the box to manually choose an EPG entry, click "Use Dummy" to assign a dummy EPG entry, or click "Auto Match" to attempt EPG auto-match</li>
+</ul>
+</li>
+<li>Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column </li>
+<li>Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column </li>
+<li>
+<p>Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels</p>
+<ul>
+<li>"<i data-lucide="square-pen" style="color: white; width: 18px;"></i> Edit" to bulk edit channels <span id="bulk-editor"></span> <a href="#bulk-editor"><i data-lucide="link" style="color: Grey; width: 18px;"></i></a><ul>
+<li>Channel Name - Find and replace (regex compatible) within the channel name in all selected channels </li>
+<li>EPG Operations<ul>
+<li>Set Names from EPG - set the channel name for all selected channels to match the channel name from the currently assigned EPG</li>
+<li>Set Logos from EPG - set the logo for all selected channels to match the channel logo from the currently assigned EPG</li>
+<li>Set TVG-IDs from EPG - set the TVG-ID for all selected channels to match the channel TVG-ID from the currently assigned EPG</li>
+<li>Assign Dummy EPG - set a <a href="/Dispatcharr-Docs/user-guide/#epgs">dummy EPG</a> or clear EPG assignment for all selected channels </li>
+</ul>
+</li>
+<li>Channel Group - Set the channel group for all selected channels</li>
+<li>Logo - Set the logo for all selected channels</li>
+<li>Stream Profile - Set the stream profile for all selected channels</li>
+<li>User Level Access - Set the user level access for all selected channels</li>
+<li>Mature Content - Set the mature content flag for all selected channels</li>
+</ul>
+</li>
+<li>"<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to bulk delete channels</li>
+<li>"<i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add" to bulk Add channels. Select multiple Streams under the "Streams" table to create a new channel for each selected stream.</li>
+<li>
+<p>"<i data-lucide="ellipsis-vertical" style="color: white; width: 18px;"></i>" to see additional bulk editing options</p>
+<ul>
+<li>"<i data-lucide="pin-off" style="color: white; width: 18px;"></i> Pin Headers" to pin column headers so they are visible even while scrolling</li>
+<li>"<i data-lucide="lock" style="color: white; width: 18px;"></i> Unlock for Editing" to unlock the Channels table, allowing users to quickly edit channel fields (name, number, group, EPG, logo) directly in the table without opening a modal. This also allows re-ordering of channels (and associated channel numbers) with drag-and-drop.</li>
+<li>"<i data-lucide="arrow-down-0-1" style="color: white; width: 18px;"></i> Assign #s" to assign channel numbers</li>
+<li>
+<p>"<i data-lucide="binary" style="color: white; width: 18px;"></i> Auto-Match" to auto match channels to EPG</p>
+<ul>
+<li>Matching mode "Use default settings" - Recommended for most users. Handles standard channel name variations automatically</li>
+<li>
+<p>Matching mode "Configure advanced options: - Add custom prefixes, suffixes, or strings to ignore</p>
+<ul>
+<li>Ignore Prefixes - Removed from START of channel names (e.g., Prime:, Sling:, US:)</li>
+<li>Ignore Suffixes - Removed from END of channel names (e.g., HD, 4K, +1)</li>
+<li>Ignore Custom Strings - Removed from ANYWHERE in channel names (e.g., 24/7, LIVE)</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Channel display names are not modified. These settings only affect the matching algorithm. To modify channel names, use the <a href="/Dispatcharr-Docs/user-guide/bulk-editor">bulk editor</a></p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>"<i data-lucide="settings" style="color: white; width: 18px;"></i> Edit Groups" to open the Group Manager</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Click the <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to channel" icon under the Streams Actions column to add that stream to the selected channels</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Within Dispatcharr, a single channel can be composed of multiple streams. The system initiates playback using the first stream listed in the channel. According to the configured <a href="/Dispatcharr-Docs/user-guide/#proxy-settings">Proxy Settings</a>, Dispatcharr monitors for buffering and, if detected, automatically switches to the next stream in the channel. This process of monitoring and switching continues until all streams are exhausted, ensuring consistent playback quality. <span id="fallback-streams"></span> <a href="#fallback-streams"><i data-lucide="link" style="color: Grey; width: 18px;"></i></a></p>
+</li>
+<li>For each stream listed within a channel, Dispatcharr will display the source of the stream as defined in the M3U &amp; EPG Manager, a direct link to stream, and an option to preview the stream <i data-lucide="eye" style="color: LightSkyBlue; width: 18px;"></i> .<ul>
+<li>Dispatcharr gathers statistics for each stream provided that a compatible <a href="/Dispatcharr-Docs/user-guide/#stream-profiles">Stream Profile</a> is used. Once captured, <a href="/Dispatcharr-Docs/user-guide/#stats">stats</a> such as video resolution, frames per second, video encoder format, audio format, audio codec, and stream bitrate will be displayed.  For each captured stream, clicking 'Show Advanced Options' provides even more detail on the quality of source stream.  </li>
+</ul>
+</li>
+</ul>
+<h3 id="streams">Streams<a class="headerlink" href="#streams" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Create a new channel by clicking the corresponding <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> "Create New Channel" icon under the "Actions" column </li>
+<li>Add a stream to an existing channel by clicking the corresponding <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" button under the "Actions" column </li>
+<li>Preview (play) a stream by clicking the corresponding <i data-lucide="ellipsis-vertical" style="color: LightSkyBlue; width: 18px;"></i> icon under the "Actions" column, then press "Preview Stream"</li>
+<li>Toggle the stream check boxes to use the bulk editing buttons above the grid on the selected streams<ul>
+<li>"<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Channels" to create a new channel for each selected stream</li>
+<li>"<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to delete the selected stream(s)</li>
+</ul>
+</li>
+<li>Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering<ul>
+<li>Only Unassociated - Only show streams which are currently not assigned to any Channels</li>
+<li>Hide Stale - Hide any streams which are stale (not available as of the last M3U account refresh).</li>
+</ul>
+</li>
+<li>"<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" - Create a new stream not associated with any of your uploaded M3Us</li>
+<li><i data-lucide="ellipsis-vertical" style="color: White; width: 18px;"></i> (Table Settings) - Toggle Streams table columns on/off. Available columns:<ul>
+<li>Name (click in the column header to search)</li>
+<li>Group (click in the column header to search)</li>
+<li>M3U (click in the column header to search)</li>
+<li>TVG-ID (click in the column header to search)</li>
+<li>Stats (mouse over to see additional stats)</li>
+</ul>
+</li>
+</ul>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h3>
+<p>The "Links" section has buttons to see and copy the external links needed by a client</p>
+<ul>
+<li><i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Use this link for clients that use HD Homerun format</li>
+<li><i data-lucide="screen-share" style="color: SlateBlue; width: 18px;"></i> <span style="color: SlateBlue;">M3U</span> - Use this link for clients that use M3U format<ul>
+<li>Advanced options<ol>
+<li>Bypass logo caching by adding the following to your URL <code>?cachedlogos=false</code> (Default true)</li>
+<li>Set what is used for the TVG-ID field (Options: channel_number (default), tvg_id, gracenote) <code>?tvg_id_source=gracenote</code></li>
+<li>URLs output in the M3U will be the direct URL from the first stream in the channel list <code>?direct=true</code> (Default false)</li>
+<li>Combine multiple options <code>?cachedlogos=false&amp;tvg_id_source=gracenote</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><i data-lucide="scroll" style="color: Gray; width: 18px;"></i> <span style="color: Gray;">EPG</span> - Use this link to provide your client with episode guide data that matches your channels<ul>
+<li>Advanced options<ol>
+<li>Bypass logo caching by adding the following to your URL (useful for Plex) <code>?cachedlogos=false</code> </li>
+<li>Use Gracenote ID's for TVG-ID's by adding the following to your URL (useful for Emby) <code>?tvg_id_source=gracenote</code></li>
+<li>Number of days to output the epg for <code>?days=4</code> (Default 0 = all)</li>
+<li>Combine multiple options <code>?cachedlogos=false&amp;tvg_id_source=gracenote&amp;days=7</code></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="vods">VODs<a class="headerlink" href="#vods" title="Permanent link">&para;</a></h2>
+<p>View, search, and play VOD content if available from your provider</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To view VOD content you must have added at least one "VOD - Movies" or "VOD - Series" group in the M3U account manager</p>
+</div>
+<hr />
+<h2 id="m3u-epg-manager">M3U &amp; EPG Manager<a class="headerlink" href="#m3u-epg-manager" title="Permanent link">&para;</a></h2>
+<p>From this page you can add and maintain your M3U accounts and EPGs</p>
+<h3 id="m3u-accounts">M3U accounts<a class="headerlink" href="#m3u-accounts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add" - Click this button to add new M3U accounts <ul>
+<li>Name - A name for your M3U account</li>
+<li>URL - The M3U URL (not required if uploading an M3U file)</li>
+<li>Account Type - Standard for direct M3U URLs, Xtream Codes for panel-based services</li>
+<li>Enable VOD Scanning - Toggle on/off scanning for VOD content (only available with the <code>Xtream Codes</code> Account Type)</li>
+<li>Upload files - If uploading a local M3U file (not required if M3U URL is used)</li>
+<li>Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0</li>
+<li>User-Agent - If you want to set a specific user-agent for this account</li>
+<li>Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL<ul>
+<li>Use cron schedule: Click to switch over to <code>Cron Expression</code> option</li>
+</ul>
+</li>
+<li>Cron Expression: Enter a cron expression to define the M3U account refresh interval, or click <code>Open Cron Builder</code> for user-friendly assistance<ul>
+<li>Use interval schedule: Click to switch over to <code>Refresh Interval (hours)</code></li>
+<li>Open Cron Builder: Opens the user-friendly interactive cron expression builder with preset buttons and custom field editors</li>
+</ul>
+</li>
+<li>Stale Stream Retention (days) - Streams (and Groups) not seen for this many days will be removed.  For immediate deletion, set to 0</li>
+<li>VOD Priority - Priority for VOD provider selection (higher numbers = higher priority). Used when multiple providers offer the same content.</li>
+<li>Is Active - Toggle whether this account is active or not</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>M3Us can be automatically added into dispatcharr by adding M3U file(s) into the <code>/data/m3us</code> folder and if <code>Auto-Import Mapped Files</code> is enabled under Settings &gt; Stream Settings</p>
+</div>
+</li>
+<li>You can click column headers to change the sort order of existing M3U accounts</li>
+<li>
+<p>Actions column</p>
+<ul>
+<li>
+<p><i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account</p>
+<ul>
+<li>"Filters" button - Opens the Filters Manager<ul>
+<li>Click 'New' to add filters.  Filters process in order, and once matched no additional rules are evaluated.  Filters may be ordered using the drag-and-drop anchor to the left of the rule, and edited/deleted using the icons to the right of the rule<ul>
+<li>Field: selects which stream attribute to filter on: "Group", "Stream Name" or "Stream URL"</li>
+<li>Regex Pattern: enter a valid regular expression to match the Field to</li>
+<li>Exclude: toggle to determine include/exclude based on the regular expression</li>
+<li>Case Sensitive: toggle to determine case sensitivity for the regular expression</li>
+</ul>
+</li>
+<li>Select 'Save' to add the newly created filter </li>
+<li>Add additional filters to refine the selected Field values as needed</li>
+</ul>
+</li>
+<li>
+<p>"Groups" button - Opens the Group Manager</p>
+<ul>
+<li>Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later.</li>
+<li>Filter visible groups with the search box at the top of the group manager</li>
+<li>Ignore streams from groups by de-selecting them</li>
+<li>Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. <ul>
+<li>Channel Numbering Mode<ul>
+<li><strong>Fixed Start Number</strong>  (default): Start at a specified number and increment sequentially</li>
+<li><strong>Use Provider Number</strong>: Use channel numbers from the M3U source (tvg-chno), with configurable fallback if provider number is missing</li>
+<li><strong>Next Available</strong>: Auto-assign starting from 1, skipping all used channel numbers</li>
+</ul>
+</li>
+<li>Start Channel #: Set a starting channel number for each group to organize your channels.</li>
+<li>Advanced options:<ul>
+<li>Force Dummy EPG: Sets a dummy EPG for the channel that matches the channel name</li>
+<li>Override Channel Group: Set a channel group for the created channels that differs from the group you selected</li>
+<li>Channel Name Find &amp; Replace (Regex): Search and replace to rename your channels. By default the channel name will match the stream name</li>
+<li>Channel Name Filter (Regex): Only create channels from streams which match your filter criteria</li>
+<li>Channel Profile Assignment: Allows you to choose which profile(s) to include the created channels in (default All)</li>
+<li>Channel Sort Order: Choose the sort order for your created channels (Provider order is default)</li>
+<li>Stream Profile Assignment: Allows you to change the stream profile for the created channels from default.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>"Profiles" button - Allows you to add a second set of credentials for the same provider. <span id="m3u-profiles"></span> <a href="#m3u-profiles"><i data-lucide="link" style="color: Grey; width: 18px;"></i></a></p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.<br />
+1. Set up Provider-A as an M3U account (Standard or Xtream Codes) in the M3U &amp; EPG manager.<br />
+2. Click the corresponding yellow edit icon under the Actions column.<br />
+3. Click the "Profiles" button.<br />
+4. Click the "New" button.<br />
+5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<table>
+<thead>
+<tr>
+<th>Example URL</th>
+<th>Search Pattern</th>
+<th>Replace Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http://provider.com/live/username1/password1/stream</code></td>
+<td><code>username1/password1</code></td>
+<td><code>username2/password2</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li>
+<p><i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account</p>
+</li>
+<li><i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account</li>
+</ul>
+</li>
+</ul>
+<h3 id="epgs">EPGs<a class="headerlink" href="#epgs" title="Permanent link">&para;</a></h3>
+<ul>
+<li>"<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG<ul>
+<li>Standard EPG Source - To add a standard XMLTV EPG source<ul>
+<li>Name - A name for your EPG</li>
+<li>URL - The URL for your EPG (may be xml or compressed xml as .gz or .zip)</li>
+<li>Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format</li>
+<li>API Key - API key for services that require authentication</li>
+<li>Refresh Interval (hours) - How often (in number of hours) to refresh the EPG<ul>
+<li>Use cron schedule: Click to switch over to <code>Cron Expression</code> option</li>
+</ul>
+</li>
+<li>Cron Expression: Enter a cron expression to define the EPG account refresh interval, or click <code>Open Cron Builder</code> for user-friendly assistance<ul>
+<li>Use interval schedule: Click to switch over to <code>Refresh Interval (hours)</code></li>
+<li>Open Cron Builder: Opens the user-friendly interactive cron expression builder with preset buttons and custom field editors</li>
+</ul>
+</li>
+<li>Priority - Priority for EPG matching (higher numbers = higher priority). Used when multiple EPG sources have matching entries for a channel.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EPGs can be automatically added into dispatcharr by adding EPG file(s) into the <code>/data/epgs</code> folder and if <code>Auto-Import Mapped Files</code> is enabled under Settings &gt; Stream Settings ((file type must be xml or compressed xml as .gz or .zip))</p>
+</div>
+</li>
+<li>Dummy EPG Source - To add a customized dummy EPG          <ul>
+<li>Name - A name for your custom dummy EPG</li>
+<li>Name Source (Required) - Choose whether to parse the channel name or a stream name assigned to the channel</li>
+<li>Title Pattern (Required) - Regex pattern to extract title information (e.g., team names, league). Example: <code>(?&lt;league&gt;\w+) \d+: (?&lt;team1&gt;.*) VS (?&lt;team2&gt;.*)</code></li>
+<li>Time Pattern (Optional) - Extract time from channel titles. Required groups: 'hour' (1-12 or 0-23), 'minute' (0-59), 'ampm' (AM/PM - optional for 24-hour). Examples: <code>@ (?&lt;hour&gt;\d+):(?&lt;minute&gt;\d+)(?&lt;ampm&gt;AM|PM) for '8:30PM'</code> OR <code>@ (?&lt;hour&gt;\d{1,2}):(?&lt;minute&gt;\d{2}) for '20:30'</code></li>
+<li>Date Pattern (Optional) - Extract date from channel titles. Groups: 'month' (name or number), 'day', 'year' (optional, defaults to current year). Examples: <code>@ (?&lt;month&gt;\w+) (?&lt;day&gt;\d+)</code> for 'Oct 17' OR <code>(?&lt;month&gt;\d+)/(?&lt;day&gt;\d+)/(?&lt;year&gt;\d+)</code> for '10/17/2025'</li>
+<li>Title Template (Optional) - Format the EPG title using extracted groups. Use {time} (12-hour: '10 PM') or {time24} (24-hour: '22:00'). Example: <code>{league} - {team1} vs {team2} @ {time}</code></li>
+<li>Description Template (Optional) - Format the EPG description using extracted groups. Use {time} (12-hour) or {time24} (24-hour). Example: <code>Watch {team1} take on {team2} at {time}!</code></li>
+<li>Upcoming Title Template (Optional) - Title for programs before the event starts. Use {time} (12-hour) or {time24} (24-hour). Example: <code>{team1} vs {team2} starting at {time}.</code></li>
+<li>Upcoming Description Template (Optional) - Description for programs before the event. Use {time} (12-hour) or {time24} (24-hour). Example: <code>Upcoming: Watch the {league} match up where the {team1} take on the {team2} at {time}!</code></li>
+<li>Ended Title Template (Optional) - Title for programs after the event has ended. Use {time} (12-hour) or {time24} (24-hour). Example: <code>{team1} vs {team2} started at {time}.</code></li>
+<li>Ended Description Template (Optional) - Description for programs after the event. Use {time} (12-hour) or {time24} (24-hour). Example: <code>The {league} match between {team1} and {team2} started at {time}.</code></li>
+<li>Fallback Title Template (Optional) - Custom title when patterns don't match. If empty, uses the channel/stream name.</li>
+<li>Fallback Description Template (Optional) - Custom description when patterns don't match. If empty, uses built-in placeholder messages.</li>
+<li>Event Timezone (Required) - The timezone of the event times in your channel titles. DST (Daylight Saving Time) is handled automatically! All timezones supported by pytz are available.</li>
+<li>Output Timezone (Optional) - Display times in a different timezone than the event timezone. Leave empty to use the event timezone. Example: Event at 10 PM ET displayed as 9 PM CT.</li>
+<li>Program Duration (minutes) (required) - Default duration for each program</li>
+<li>Categories (Optional) - EPG categories for these programs. Use commas to separate multiple (e.g., Sports, Live, HD). Note: Only added to the main event, not upcoming/ended filler programs.</li>
+<li>Channel Logo URL (Optional) - Build a URL for the channel logo using regex groups. Example: https://example.com/logos/{league_normalize}/{team1_normalize}.png. Use {groupname_normalize} for cleaner URLs (alphanumeric-only, lowercase). This will be used as the channel <icon> in the EPG output.</li>
+<li>Program Poster URL (Optional) - Build a URL for the program poster/icon using regex groups. Example: https://example.com/posters/{team1_normalize}-vs-{team2_normalize}.jpg. Use {groupname_normalize} for cleaner URLs (alphanumeric-only, lowercase). This will be used as the program <icon> in the EPG output.</li>
+<li>Include Date Tag - Include the <date> tag in EPG output with the program's start date (YYYY-MM-DD format). Added to all programs.</li>
+<li>Include Live Tag - Mark programs as live content with the <live /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.</li>
+<li>Include New Tag - Mark programs as new content with the <new /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.</li>
+<li>Sample Channel Name - Test your patterns and templates with a sample channel name to preview the output. Enter a sample channel name to test pattern matching and see the formatted output</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>You can click column headers to change the sort order of existing EPGs</li>
+<li>Actions column<ul>
+<li><i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated EPG</li>
+<li><i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated EPG</li>
+<li><i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated EPG</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="tv-guide">TV Guide<a class="headerlink" href="#tv-guide" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The TV Guide page will by default display channels for which there is EPG data loaded. </li>
+<li>You can search by channel name and/or filter by channel groups and profiles.</li>
+<li>Click a channel logo to preview the channel. </li>
+<li>Click guide entries to expand guide data, preview the channel, or set to record.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can record by channel and time from the DVR page</p>
+</div>
+<hr />
+<h2 id="dvr">DVR<a class="headerlink" href="#dvr" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The DVR page allows you to manage your current and future recordings and set new recordings based on channel and time.</li>
+</ul>
+<hr />
+<h2 id="stats">Stats<a class="headerlink" href="#stats" title="Permanent link">&para;</a></h2>
+<p>The Stats page shows info on all active streams and the system event viewer</p>
+<ul>
+<li>
+<p>Active connections</p>
+<ul>
+<li>Channel name</li>
+<li>Channel logo</li>
+<li>Stream profile</li>
+<li>Stream uptime</li>
+<li>Active stream for each currently active channel (drop down selector allows you to change the active stream)</li>
+<li>Currently playing program title<ul>
+<li>Expandable program description via chevron button</li>
+<li>Progress bar showing elapsed and remaining time for curently playing programs</li>
+</ul>
+</li>
+<li>Channel preview button <i data-lucide="circle-play" style="color: LimeGreen; width: 18px;"></i> (click to preview currently active streams)</li>
+<li>
+<p>Stream stats (only available with certain <a href="#stream-profiles">stream profiles</a>) </p>
+<table>
+<thead>
+<tr>
+<th>Stream profile</th>
+<th style="text-align: center;">Video resolution</th>
+<th style="text-align: center;">Source frames per second</th>
+<th style="text-align: center;">Video codec</th>
+<th style="text-align: center;">Audio codec</th>
+<th style="text-align: center;">Audio channel configuration</th>
+<th style="text-align: center;">Stream type (MPEGTS, HLS)</th>
+<th style="text-align: center;"><a href="/Dispatcharr-Docs/user-guide/#current-speed">Current speed</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ffmpeg</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+</tr>
+<tr>
+<td>Redirect</td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+</tr>
+<tr>
+<td>streamlink</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+</tr>
+<tr>
+<td>VLC</td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+</tr>
+<tr>
+<td>Custom ffmpeg</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+</tr>
+<tr>
+<td>Custom VLC</td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note for Custom VLC</p>
+<p>VLC can only output information it is affecting, so stats will depend on your <a href="https://wiki.videolan.org/VLC_command-line_help/">custom parameters</a></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info <span id="current-speed"></span> <a href="#curent-speed"><i data-lucide="link" style="color: Grey; width: 18px;"></i></a></p>
+<p>The Current Speed stat is essentially a calculation of current FPS vs source FPS. When it drops below 1 you know there will be buffering. </p>
+</div>
+</li>
+<li>
+<p>Stream bitrate (current and average)</p>
+</li>
+<li>Stream total data served</li>
+<li>Number of watchers</li>
+<li>IP addresses and associated User-Agents</li>
+<li>You can force stop any current streams by clicking the <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel" button</li>
+<li>System Events</li>
+<li>Captures M3U refreshes, EPG updates, stream switches, authentication events, network access blocks, and errors.</li>
+<li>Allows filtering and reviewing historical events.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="plugins">Plugins<a class="headerlink" href="#plugins" title="Permanent link">&para;</a></h2>
+<p>From the plugins page you can import, manage, and delete dispatcharr plugins. Plugin descriptions are available on <a href="https://discord.gg/Sp45V5BcxU">discord</a></p>
+<ul>
+<li>Press the "Import Plugin" button to add a plugin, or load one into <code>/data/plugins</code> and reload.</li>
+<li>Remove a plugin by clicking the <i data-lucide="trash-2" style="color: Pink; width: 18px;"></i> Delete plugin button</li>
+<li>Enable/disable a plugin by clicking the Toggle icon to the right of the Delete plugin button</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Interested in plugin development? View plugin development documentation on the <a href="https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugins.md">dispatcharr github</a> </p>
+</div>
+<hr />
+<h2 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h2>
+<p>From the Users page you can create and manage all Dispatcharr users. There are 3 types of users:</p>
+<ol>
+<li>Admin<ul>
+<li>Has total access in Dispatcharr</li>
+<li>XC login enabled only if an XC Password is set for the user</li>
+</ul>
+</li>
+<li>Standard User<ul>
+<li>Has access to Dispatcharr UI, but only the Channels, TV Guide, and Settings pages</li>
+<li>May allow access to all Channel Profiles or restrict to a subset</li>
+<li>In Settings, only able to change UI settings</li>
+<li>XC login enabled only if an XC Password is set for the user</li>
+<li>Optionally hide channels marked as "Mature Content" in user settings</li>
+</ul>
+</li>
+<li>Streamer<ul>
+<li>No access to the Dispatcharr UI</li>
+<li>This user level is for XC login only</li>
+<li>Optionally hide channels marked as "Mature Content" in user settings</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="logo-manager">Logo Manager<a class="headerlink" href="#logo-manager" title="Permanent link">&para;</a></h2>
+<p>From the Logo Manager page you can upload and manage logos.  </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Dispatcharr will also automatically scan <code>/data/logos</code> for existing files</p>
+</div>
+<hr />
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h3 id="ui-settings">UI Settings<a class="headerlink" href="#ui-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Table Size - Set the size of the channel rows in "Channels"</li>
+<li>Pin Table Headers - Toggles whether to keep table headers visible when scrolling</li>
+<li>Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year</li>
+<li>Time format - Set the display of time to either 12 hour or 24 hour format</li>
+</ul>
+<h3 id="dvr_1">DVR<a class="headerlink" href="#dvr_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Enable Comskip (remove commercials after recording) - Toggle on or off</li>
+<li>Custom comskip.ini path - Enter a custom path or leave blank to use the built-in defaults.</li>
+<li>Select comskip.ini - Click this button to select, upload, and use a custom comskip.ini to dispatcharr</li>
+<li>Start early (minutes) - Begin recording this many minutes before the scheduled start.</li>
+<li>End late (minutes) - Continue recording this many minutes after the scheduled end.</li>
+<li>TV Path Template - Supports <code>{show}</code>, <code>{season}</code>, <code>{episode}</code>, <code>{sub_title}</code>, <code>{channel}</code>, <code>{year}</code>, <code>{start}</code>, <code>{end}</code>. Use format specifiers like <code>{season:02d}</code>. Relative paths are under your library dir.</li>
+<li>TV Fallback Template - Template used when an episode has no season/episode. Supports <code>{show}</code>, <code>{start}</code>, <code>{end}</code>, <code>{channel}</code>, <code>{year}</code>.</li>
+<li>Movie Path Template - Supports <code>{title}</code>, <code>{year}</code>, <code>{channel}</code>, <code>{start}</code>, <code>{end}</code>. Relative paths are under your library dir.</li>
+<li>Movie Fallback Template - Template used when movie metadata is incomplete. Supports <code>{start}</code>, <code>{end}</code>, <code>{channel}</code>.</li>
+</ul>
+<h3 id="stream-settings">Stream Settings<a class="headerlink" href="#stream-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Default User-Agent - Set the default User-Agent</li>
+<li>Default Stream Profile - Set the default Stream Profile</li>
+<li>Preferred Region - Set your preferred region</li>
+<li>Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us</li>
+<li>M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.<ul>
+<li>The default setting hashes on URL. Available options include:<ul>
+<li>Name</li>
+<li>URL - For XC accounts, the stream hash uses the stable stream_id instead of the URL when hashing, ensuring XC streams maintain their identity and channel associations even when account credentials or server URLs change</li>
+<li>TVG-ID</li>
+<li>M3U ID</li>
+<li>Group</li>
+</ul>
+</li>
+<li>The original stream will disappear from Dispatcharr according to your Stale Stream Retention (days) setting for your M3U account</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure to click the <code>Save</code> button after making any changes to the M3U Hash Key.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to <code>URL</code> and <code>TVG-ID</code> only</p>
+</div>
+</li>
+</ul>
+<h3 id="system-settings">System settings<a class="headerlink" href="#system-settings" title="Permanent link">&para;</a></h3>
+<p>Configure how many system events (channel start/stop, buffering, etc.) to keep in the database. Events are displayed on the Stats page.</p>
+<ul>
+<li>Maximum System Events - Number of events to retain (minimum: 10, maximum: 1000)</li>
+</ul>
+<h3 id="user-agents">User-Agents<a class="headerlink" href="#user-agents" title="Permanent link">&para;</a></h3>
+<p>In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  </p>
+<ul>
+<li>Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page<ul>
+<li>Name - a name for your user-agent</li>
+<li>User-Agent - The text to include for your user-agent string</li>
+<li>Description - (Optional) a description of the user-agent for your own use</li>
+</ul>
+</li>
+</ul>
+<h3 id="stream-profiles">Stream Profiles<a class="headerlink" href="#stream-profiles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stream Profile</th>
+<th style="text-align: center;"><a href="#proxy-settings">Proxy support <br>(buffer, VPN support, etc.)</a></th>
+<th style="text-align: center;"><a href="#fallback-streams">Fallback stream<br> support</a></th>
+<th style="text-align: center;"><a href="#stats">Stream stats<br> support</a></th>
+<th style="text-align: center;">System resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ffmpeg</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td>Redirect</td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td>streamlink</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>VLC</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Custom ffmpeg</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;">Low to Very High</td>
+</tr>
+<tr>
+<td>Custom VLC</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;">Low to Very High</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> = Full support<br />
+<i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i> = Partial support<br />
+<i data-lucide="square-x" style="color: red; width: 18px;"></i> = Unsupported  </p>
+</div>
+<ul>
+<li>
+<p>There are 5 default stream profiles with the ability to create your own custom ones</p>
+<ul>
+<li>ffmpeg - Dispatcharr will proxy streams via ffmpeg. No transcoding takes place with the default ffmpeg stream profile, it will just remux streams. Uses more system resources than proxy</li>
+<li>
+<p>Proxy - Proxies the original streams, allowing you to use Dispatcharr features (redundant streams per channel), and adds a slight buffer to help with stream stability. Uses fewer system resources than ffmpeg. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Proxy falls back to the ffmpeg default stream profile if the source stream is not mpegts</p>
+</div>
+</li>
+<li>
+<p>Redirect - Redirects the original M3U stream URL to your client. There is no proxying with this profile</p>
+</li>
+<li>streamlink - For custom streams based on the services supported by <a href="https://streamlink.github.io/">streamlink</a></li>
+<li>VLC - Dispatcharr will proxy streams via VLC. No transcoding takes place with the default VLC stream profile, it will just remux streams. Uses more system resources than proxy</li>
+<li>Custom Stream Profiles - create your own custom stream profile by clicking the "Add Stream Profile" button on the Settings page</li>
+<li>Name - a name for your stream profile</li>
+<li>Command - <code>ffmpeg</code>, <code>streamlink</code>, or <code>cvlc</code> (for custom VLC stream profiles)</li>
+<li>Parameters - Set your custom <a href="https://ffmpeg.org/ffmpeg.html">ffmpeg</a>, <a href="https://streamlink.github.io/cli.html">streamlink</a>, or <a href="https://wiki.videolan.org/VLC_command-line_help/">VLC</a> parameters</li>
+<li>User-Agent - Set the default user-agent for this stream profile</li>
+</ul>
+</li>
+</ul>
+<h3 id="network-access">Network Access<a class="headerlink" href="#network-access" title="Permanent link">&para;</a></h3>
+<p>Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<table>
+<thead>
+<tr>
+<th>CIDR Range</th>
+<th style="text-align: center;">Number of IPs</th>
+<th>Range example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.0/32</td>
+<td style="text-align: center;">1</td>
+<td>192.168.1.0 (single IP)</td>
+</tr>
+<tr>
+<td>192.168.1.0/24</td>
+<td style="text-align: center;">256</td>
+<td>192.168.1.0 - 192.168.1.255</td>
+</tr>
+<tr>
+<td>192.168.1.0/16</td>
+<td style="text-align: center;">65,536</td>
+<td>192.168.0.0 - 192.168.255.255</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>M3U / EPG Endpoints - Limit access to M3U, EPG, and HDHR URLs (default setting allows access on local networks only)</li>
+<li>Stream Endpoints - Limit network access to stream URLs, including XC stream URLs</li>
+<li>XC API - Limit access to the XC API</li>
+<li>UI - Limit access to the Dispatcharr UI </li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>To block access entirely for any of the above, use the address <code>127.0.0.1/32</code> (do NOT use for UI!)</p>
+</div>
+<h3 id="proxy-settings">Proxy Settings<a class="headerlink" href="#proxy-settings" title="Permanent link">&para;</a></h3>
+<p>These settings affect all stream profiles with the exception of redirect</p>
+<ul>
+<li>Buffering Timeout - Maximum time (in seconds) to wait for buffering before switching streams</li>
+<li>Buffering Speed - Speed threshold below which buffering is detected (1.0 = normal speed)</li>
+<li>Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)</li>
+<li>Channel Shutdown Delay - Delay in seconds before shutting down a channel after last client disconnects</li>
+<li>Channel Initialization Grace Period - Grace period in seconds during channel initialization </li>
+</ul>
+<h3 id="backup-restore">Backup &amp; Restore<a class="headerlink" href="#backup-restore" title="Permanent link">&para;</a></h3>
+<p>Create, schedule, and restore backups</p>
+<ul>
+<li>Schedule backups - Enable to set a regular backup schedule</li>
+<li>
+<p>Advanced (Cron Expression) - Enable to set a cron expression for scheduled backups. Cron expressions allow for more granular control over backup schedules.  </p>
+<div class="admonition examples">
+<p class="admonition-title">Examples</p>
+<p><code>0 3 * * *</code> - Every day at 3:00 AM<br />
+<code>0 2 * * 0</code> - Every Sunday at 2:00 AM<br />
+<code>0 */6 * * *</code> - Every 6 hours<br />
+<code>30 14 1 * *</code> - 1<sup>st</sup> of every month at 2:30 PM  </p>
+</div>
+</li>
+<li>
+<p>Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.  </p>
+</li>
+</ul>
+<hr />
+<h2 id="notifications">Notifications <i data-lucide="bell" style="color: White; width: 20px;"></i><a class="headerlink" href="#notifications" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Real-time notifications for system events and alerts</li>
+<li>Per-user notification management and dismissal</li>
+<li>Update check on startup and every 24 hours to notify users of available versions</li>
+<li>Automatic cleanup of expired notifications</li>
+</ul>
+<hr />
+<h2 id="advanced">Advanced<a class="headerlink" href="#advanced" title="Permanent link">&para;</a></h2>
+<h3 id="hardware-acceleration">Hardware Acceleration<a class="headerlink" href="#hardware-acceleration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dispatcharr does not currently support hardware acceleration directly, but you can use hardware acceleration with custom ffmpeg stream profiles. </li>
+<li>This will require mapping your hardware to the container and setting up a custom ffmpeg stream profile. </li>
+</ul>
+<h4 id="mapping-hardware">Mapping Hardware<a class="headerlink" href="#mapping-hardware" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="mapping-hardware-nvidia" name="__tabbed_1" type="radio" /><input id="mapping-hardware-intel" name="__tabbed_1" type="radio" /><input id="mapping-hardware-nvidia-unraid" name="__tabbed_1" type="radio" /><input id="mapping-hardware-intel-unraid" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="mapping-hardware-nvidia">NVIDIA</label><label for="mapping-hardware-intel">Intel</label><label for="mapping-hardware-nvidia-unraid">NVIDIA (Unraid)</label><label for="mapping-hardware-intel-unraid">Intel (Unraid)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Install the <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html">NVIDIA Container toolkit</a></li>
+<li>Add a deploy section to your docker-compose.yml</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>services:
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  dispatcharr:
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    # build:
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    #   context: .
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    #   dockerfile: Dockerfile
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    image: ghcr.io/dispatcharr/dispatcharr:latest
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    container_name: dispatcharr
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ports:
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      - 9191:9191
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    volumes:
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      - dispatcharr_data:/data
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    environment:
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      - DISPATCHARR_ENV=aio
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>      - REDIS_HOST=localhost
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      - CELERY_BROKER_URL=redis://localhost:6379/0
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    deploy:
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      resources:
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        reservations:
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>          devices:
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            - driver: nvidia
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>              count: all
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>              capabilities: [gpu]
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>volumes:
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>  dispatcharr_data:
+</span></code></pre></div>
+</details>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Add a devices section to your docker-compose.yml</li>
+</ul>
+<details class="example">
+<summary>Example</summary>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>services:
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  dispatcharr:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    # build:
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    #   context: .
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    #   dockerfile: Dockerfile
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    image: ghcr.io/dispatcharr/dispatcharr:latest
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    container_name: dispatcharr
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    ports:
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>      - 9191:9191
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    volumes:
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      - dispatcharr_data:/data
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    environment:
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>      - DISPATCHARR_ENV=aio
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>      - REDIS_HOST=localhost
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      - CELERY_BROKER_URL=redis://localhost:6379/0
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    devices:
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>      - /dev/dri:/dev/dri
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>volumes:
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  dispatcharr_data:
+</span></code></pre></div>
+</details>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Install the NVIDIA Driver Package plugin from community apps if not already installed</li>
+<li>Edit the Dispatcharr docker container in Unraid<ul>
+<li>Toggle Advanced View On</li>
+<li>Go to Extra Parameters<ul>
+<li>Add <code>--runtime=nvidia</code></li>
+</ul>
+</li>
+<li>Scroll down and click "Add another Path, Port, Variable, Label or Device"<ul>
+<li>Config Type: Variable</li>
+<li>Name: <code>NVIDIA_VISIBLE_DEVICES</code></li>
+<li>Key: <code>NVIDIA_VISIBLE_DEVICES</code></li>
+<li>Value: <code>all</code></li>
+</ul>
+</li>
+<li>Click Save</li>
+<li>Again click "Add another Path, Port, Variable, Label or Device"<ul>
+<li>Config Type: Variable</li>
+<li>Name: <code>NVIDIA_DRIVER_CAPABILITIES</code></li>
+<li>Key: <code>NVIDIA_DRIVER_CAPABILITIES</code></li>
+<li>Value: <code>all</code></li>
+</ul>
+</li>
+<li>Click Save</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Edit the Dispatcharr docker container in Unraid</li>
+<li>Scroll down and click "Add another Path, Port, Variable, Label or Device"<ul>
+<li>Config Type: Device</li>
+<li>Name: <code>/dev/dri</code></li>
+<li>Key: <code>/dev/dri</code></li>
+<li>Description: <code>Intel GPU</code></li>
+</ul>
+</li>
+<li>Click Save</li>
+</ul>
+</div>
+</div>
+</div>
+<h4 id="custom-stream-profiles">Custom Stream Profiles<a class="headerlink" href="#custom-stream-profiles" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Open Dispatcharr</li>
+<li>
+<p>Navigate to Settings &gt; Add Stream Profile</p>
+<ul>
+<li>Name it anything you like</li>
+<li>Command <code>ffmpeg</code></li>
+<li>Parameters will vary based on your hardware type and streaming needs<ul>
+<li>See <a href="https://ffmpeg.org/ffmpeg.html">ffmpeg docs</a> for more</li>
+</ul>
+</li>
+<li>Visit our <a href="https://discord.gg/Sp45V5BcxU">discord</a> for more user-submitted ffmpeg parameters</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:3"><input checked="checked" id="custom-stream-profiles-nvidia" name="__tabbed_2" type="radio" /><input id="custom-stream-profiles-intel-vaapi" name="__tabbed_2" type="radio" /><input id="custom-stream-profiles-intel-qsv" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="custom-stream-profiles-nvidia">NVIDIA</label><label for="custom-stream-profiles-intel-vaapi">Intel VAAPI</label><label for="custom-stream-profiles-intel-qsv">Intel QSV</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>Parameters: <code>-user_agent {userAgent} -hwaccel cuda -i {streamUrl} -c:v h264_nvenc -c:a copy -f mpegts pipe:1</code></li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>Parameters: <code>-user_agent {userAgent} -hwaccel vaapi -hwaccel_output_format vaapi -hwaccel_device /dev/dri/renderD128 -i {streamUrl} -c:a aac -c:v h264_vaapi -f mpegts pipe:1</code></li>
+</ul>
+</div>
+</div>
+<div class="tabbed-block">
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li>Parameters: <code>-hwaccel qsv -user_agent {userAgent} -i {streamUrl} -c:v h264_qsv -c:a aac -f mpegts pipe:1</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<h3 id="process-priority-configuration">Process Priority Configuration<a class="headerlink" href="#process-priority-configuration" title="Permanent link">&para;</a></h3>
+<p>Optional environment variables to adjust priority of various tasks. Lower values = higher priority. Range: -20 (highest) to 19 (lowest). Negative values require <code>cap_add: SYS_NICE</code>  </p>
+<ul>
+<li><code>UWSGI_NICE_LEVEL</code> - Set priority for uWSGI, FFmpeg, and streaming. Default priority is 0, recommend -5 for high priority </li>
+<li><code>CELERY_NICE_LEVEL</code> - Set priority for Celery, EPG, and other background tasks. Default priority is 5 </li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">UWSGI_NICE_LEVEL=-5</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CELERY_NICE_LEVEL=5</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">cap_add</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SYS_NICE</span>
+</span></code></pre></div>
+</div>
+<h3 id="reverse-proxies">Reverse Proxies<a class="headerlink" href="#reverse-proxies" title="Permanent link">&para;</a></h3>
+<h4 id="nginx">Nginx<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h4>
+<p>HTTPS config example (streams only via https, WebUI via local network and Wireguard)</p>
+<details class="example">
+<summary>Example (click to see)</summary>
+<div class="language-nginx highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Dispatcharr HTTPS DynuDNS</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">server</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="kn">listen</span><span class="w"> </span><span class="mi">443</span><span class="w"> </span><span class="s">ssl</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kn">server_name</span><span class="w"> </span><span class="s">dispatcharr.your.domain.com</span><span class="p">;</span><span class="w">  </span><span class="c1">#Adjust for your domain</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="kn">ssl_certificate</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/yourdomain.com/fullchain.pem</span><span class="p">;</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kn">ssl_certificate_key</span><span class="w"> </span><span class="s">/etc/letsencrypt/live/yourdomain.com/privkey.pem</span><span class="p">;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="p">~</span><span class="w"> </span><span class="sr">^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="kn">allow</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w">  </span><span class="c1"># Allow everyone else</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://dispatcharrserver:9191</span><span class="p">;</span><span class="w">  </span><span class="c1"># Adjust for your server name or IP</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host:443</span><span class="p">;</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">        </span><span class="c1"># CORS settings</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">&#39;Access-Control-Allow-Origin&#39;</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">;</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">&#39;Access-Control-Allow-Methods&#39;</span><span class="w"> </span><span class="s">&#39;GET,</span><span class="w"> </span><span class="s">POST,</span><span class="w"> </span><span class="s">OPTIONS&#39;</span><span class="p">;</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">&#39;Access-Control-Allow-Headers&#39;</span><span class="w"> </span><span class="s">&#39;Origin,</span><span class="w"> </span><span class="s">Content-Type,</span><span class="w"> </span><span class="s">Accept&#39;</span><span class="p">;</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">    </span><span class="kn">location</span><span class="w"> </span><span class="s">/</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="kn">allow</span><span class="w"> </span><span class="mi">10</span><span class="s">.0.0.0/22</span><span class="p">;</span><span class="w">  </span><span class="c1"># Allow the local network, adjust for your network</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">        </span><span class="kn">allow</span><span class="w"> </span><span class="mi">10</span><span class="s">.1.0.0/24</span><span class="p">;</span><span class="w">  </span><span class="c1"># Allow Wireguard, adjust for your network</span>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">        </span><span class="kn">deny</span><span class="w"> </span><span class="s">all</span><span class="p">;</span><span class="w">  </span><span class="c1"># Deny everyone else</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="kn">proxy_pass</span><span class="w"> </span><span class="s">http://dispatcharrserver:9191</span><span class="p">;</span><span class="w">  </span><span class="c1"># Adjust for your server name or IP</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="c1"># WebSocket headers</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Upgrade</span><span class="w"> </span><span class="nv">$http_upgrade</span><span class="p">;</span>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Connection</span><span class="w"> </span><span class="s">&quot;Upgrade&quot;</span><span class="p">;</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">Host</span><span class="w"> </span><span class="nv">$host:443</span><span class="p">;</span>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Real-IP</span><span class="w"> </span><span class="nv">$remote_addr</span><span class="p">;</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-For</span><span class="w"> </span><span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">        </span><span class="kn">proxy_set_header</span><span class="w"> </span><span class="s">X-Forwarded-Proto</span><span class="w"> </span><span class="nv">$scheme</span><span class="p">;</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">        </span><span class="c1"># CORS settings</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">&#39;Access-Control-Allow-Origin&#39;</span><span class="w"> </span><span class="s">&#39;*&#39;</span><span class="p">;</span>
+</span><span id="__span-3-36"><a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">&#39;Access-Control-Allow-Methods&#39;</span><span class="w"> </span><span class="s">&#39;GET,</span><span class="w"> </span><span class="s">POST,</span><span class="w"> </span><span class="s">OPTIONS&#39;</span><span class="p">;</span>
+</span><span id="__span-3-37"><a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">        </span><span class="kn">add_header</span><span class="w"> </span><span class="s">&#39;Access-Control-Allow-Headers&#39;</span><span class="w"> </span><span class="s">&#39;Origin,</span><span class="w"> </span><span class="s">Content-Type,</span><span class="w"> </span><span class="s">Accept&#39;</span><span class="p">;</span>
+</span><span id="__span-3-38"><a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-39"><a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="p">}</span><span class="w">  </span>
+</span></code></pre></div>
+</details>
+<div class="admonition note">
+<p class="admonition-title">Tip</p>
+<p>Even with a properly configured reverse proxy, your M3U output may be available over the internet. Follow these best practices to block standard M3U access and allow only with a specified username and password. </p>
+<ol>
+<li>Set up your reverse proxy as shown in the <a href="/Dispatcharr-Docs/user-guide/#nginx-reverse-proxy">docs</a></li>
+<li>In dispatcharr at Settings &gt; <a href="/Dispatcharr-Docs/user-guide/#network-access">Network Access</a>, restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)</li>
+<li>Set up a user with XC password on the <a href="/Dispatcharr-Docs/user-guide/#users">Users</a> page if you haven't already done so</li>
+<li>Use the following m3u link format to share with your users: <code>https://hostname/get.php?username=XCUSERNAME&amp;password=XCPASSWORD</code></li>
+<li>And this format for epg: <code>https://hostname/xmltv.php?username=XCUSERNAME&amp;password=XCPASSWORD</code></li>
+</ol>
+</div>
+<hr />
+<h4 id="pangolin">Pangolin<a class="headerlink" href="#pangolin" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Create your resource just as you would any other in Pangolin</li>
+<li>If you're hosting Dispatcharr on the same VPS (if you're using a VPS) as Pangolin, be sure to set it as a local resource and use 172.XX.X.X as the IP, then enter the port. Otherwise set it up normally</li>
+<li>If you'd like to enable Pangolin's SSO for this resource for security, do so in the Authentication tab of your new Dispatcharr resource</li>
+</ul>
+<p>To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or another IdP you've added, you need to create Bypass Rules. See below for the list of rules required. Once you save the below rules, Dispatcharr's WebUI will be secured behind your SSO while apps and services will be able to connect via XC</p>
+<ul>
+<li>The "Action" will be <code>Bypass Auth</code> for all of them</li>
+<li>The "Match Type" will be <code>Path</code> for all of them</li>
+</ul>
+<details class="example">
+<summary>Bypass rules (click to see)</summary>
+<ul>
+<li><code>/player_api.php/*</code></li>
+<li><code>/get.php/*</code></li>
+<li><code>/xmltv.php/*</code></li>
+<li><code>/*/*/*.ts</code></li>
+<li><code>/proxy/ts/stream/*</code></li>
+<li><code>/proxy/vod/episode/*</code></li>
+<li><code>/proxy/vod/movie/*</code></li>
+<li><code>/api/channels/logos/*/cache/</code></li>
+<li><code>/live/*/*</code></li>
+<li><code>/movie/*/*</code></li>
+<li><code>/series/*/*</code></li>
+</ul>
+<p><strong>(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, M3U, or EPG, you should further restrict it in dispatcharr's <a href="/Dispatcharr-Docs/user-guide/#network-access">Settings &gt; Network Access &gt; M3U / EPG Endpoints)</a>. Otherwise, your HDHR, M3U, and/or EPG links will be publicly accessible over the internet</strong> </p>
+<ul>
+<li><code>/hdhr/*</code></li>
+<li><code>/output/m3u/*</code></li>
+<li><code>/output/epg/*</code></li>
+</ul>
+</details>
+<ul>
+<li>
+<p>If you'd like to set up GeoBlock for any/all resources, refer to Pangolin's <a href="https://docs.pangolin.net/self-host/advanced/enable-geoblocking">official documentation</a> for guidance</p>
+</li>
+<li>
+<p>Test your new setup by navigating to Dispatcharr in an incognito or private window. You should now be met with your Pangolin login dashboard when accessing the WebUI when you're not authenticated, however your clients will still be able to connect to allow streaming</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../migrations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Migrations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Migrations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: FAQ/Troubleshooting">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                FAQ/Troubleshooting
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+      
+        <script src="../javascripts/lucide-init.js"></script>
+      
+    
+  </body>
+</html>

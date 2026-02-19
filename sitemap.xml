@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/api/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/api/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/api/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/getting-started/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/installation/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/installation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/installation/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/migrations/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/migrations/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/migrations/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/troubleshooting/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/troubleshooting/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/troubleshooting/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/user-guide/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/user-guide/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/user-guide/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/api/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/api/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/getting-started/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/installation/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/installation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/installation/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/migrations/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/migrations/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/migrations/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/troubleshooting/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/troubleshooting/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/troubleshooting/"/>
+    </url>
+    <url>
+        <loc>https://dispatcharr.github.io/Dispatcharr-Docs/es/user-guide/</loc>
+        <lastmod>2026-02-19</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/user-guide/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://dispatcharr.github.io/Dispatcharr-Docs/user-guide/"/>
+    </url>
+</urlset>

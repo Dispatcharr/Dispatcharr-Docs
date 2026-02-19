@@ -1,0 +1,1316 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/getting-started/">
+      
+      
+        <link rel="prev" href="../installation/">
+      
+      
+        <link rel="next" href="../migrations/">
+      
+      
+        
+          <link rel="alternate" href="../../getting-started/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="https://discord.gg/wfeqTRRJru" hreflang="null">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>Getting Started - Dispatcharr Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#guia-de-inicio" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="Dispatcharr Docs" class="md-header__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dispatcharr Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Getting Started
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../getting-started/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://discord.gg/wfeqTRRJru" hreflang="null" class="md-select__link">
+              Help Translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Dispatcharr/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../installation/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../user-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ/Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Dispatcharr Docs" class="md-nav__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Dispatcharr Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Dispatcharr/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Instalación
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inicio
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agregando-m3u-y-epg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agregando M3U y EPG
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Agregando M3U y EPG">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creando-tu-primer-canal-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creando tu primer canal (channel)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-de-reproduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuración de Reproducción
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuración de Reproducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jellyfin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Jellyfin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jellyfin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agregar-proveedor-de-tv" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agregar proveedor de TV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregar-lista-de-programacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agregar lista de programación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Plex
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channelsdvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ChannelsDVR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emby" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emby
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Emby">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#agregar-proveedor-de-tv_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agregar proveedor de TV
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agregar-lista-de-programacion_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agregar lista de programación
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join Discord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Dispatcharr/edit/master/docs/es/getting-started.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Dispatcharr/raw/master/docs/es/getting-started.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="guia-de-inicio">Guía de Inicio<a class="headerlink" href="#guia-de-inicio" title="Permanent link">&para;</a></h1>
+<p>Dispatcharr puede instalarse en varias plataformas a través del uso de Docker, incluyendo Windows, macOS, Proxmox y Unraid.
+Esta guía proporciona instrucciones detalladas para cada método.</p>
+<h2 id="instalacion">Instalación<a class="headerlink" href="#instalacion" title="Permanent link">&para;</a></h2>
+<p>Mira <a href="../installation/">guia de instalación</a>.</p>
+<hr />
+<h2 id="inicio">Inicio<a class="headerlink" href="#inicio" title="Permanent link">&para;</a></h2>
+<p>Después de la instalación y ejecución, abre tu navegador web y visita: <code>http://{your_ip_here}:9191</code>
+Crea tu cuenta de usuario ingresando un nombre de usuario y una contraseña que puedas recordar. Opcionalmente, puedes añadir una dirección de correo electrónico.</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>Las direcciones de correo electrónico actualmente no se utilizan, pero podrían implementarse en versiones futuras.</p>
+</div>
+<hr />
+<h2 id="agregando-m3u-y-epg">Agregando M3U y EPG<a class="headerlink" href="#agregando-m3u-y-epg" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Agrega tu primera lista M3U haciendo clic en el botón <code>Add M3U</code> ubicado en el lado derecho, en la sección "Getting Started".  </li>
+<li>Esto te llevará a la sección de administración "M3U &amp; EPG Manager" (también accesible desde la barra de navegación en el lado izquierdo).  </li>
+</ol>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Getting started" src="../../assets/getting_started.png" /></p>
+</details>
+<ol>
+<li>Haz clic en <code>Add</code> dentro de M3U Accounts para añadir una lista M3U  </li>
+<li>Haz clic en <code>Add EPG</code> dentro de EPGs para añadir la guía EPG</li>
+</ol>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="M3U &amp; EPG Manager" src="../../assets/m3u_epg_manager.png" /></p>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="agregando-m3u-y-epg-m3u" name="__tabbed_1" type="radio" /><input id="agregando-m3u-y-epg-epg" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="agregando-m3u-y-epg-m3u">M3U</label><label for="agregando-m3u-y-epg-epg">EPG</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Ingresa un nombre para tu cuenta M3U.</li>
+<li>Elige el tipo de cuenta (Xtream Codes o Standard M3U) e ingresa la URL (Si estás usando Xtream Codes, ingresa también el nombre de usuario y la contraseña asociados).   </li>
+<li>Opcionalmente, puedes establecer un número máximo de transmisiones (streams) simultáneas permitidas, o dejarlo en 0 para que sea ilimitado.  </li>
+<li>Clic <code>Save</code>. </li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Adding M3U" src="../../assets/adding_m3u.png" /></p>
+</details>
+<ul>
+<li>Haz clic en el ícono de edición <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> correspondiente a la cuenta M3U que acabas de agregar.<ul>
+<li>Haz clic en el botón <code>Groups</code> y selecciona los grupos que deseas agregar, luego haz click en <code>Save and Refresh</code></li>
+</ul>
+</li>
+<li>Dependiendo del tamaño de tu lista M3U, el proceso de carga puede tomar algo de tiempo.   </li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Haz clic en el botón <code>Add EPG</code> en la sección EPGs para agregar una guía de programación.</li>
+<li>Ingresa un nombre para tu EPG, luego ingresa la URL y, si es necesario, la clave API. </li>
+<li>Elige el tipo de fuente y haz clic en "Submit".</li>
+<li>Dependiendo del tamaño de tu EPG, la carga puede tardar un poco.</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Adding EPG" src="../../assets/adding_epg.png" /></p>
+</details>
+</div>
+</div>
+</div>
+<hr />
+<h3 id="creando-tu-primer-canal-channel">Creando tu primer canal (channel)<a class="headerlink" href="#creando-tu-primer-canal-channel" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ve a la pantalla principal de Channels en la barra de navegación. </li>
+<li>Si se agregó y escaneó correctamente alguna lista M3U, deberías ver una lista de transmisiones (streams) en el lado derecho de la página, bajo "Streams"..  </li>
+<li>Busca una transmisión (stream) en la lista, o utiliza el buscador escribiendo en el encabezado de la columna "Name". </li>
+<li>Haz clic en el botón <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> "Create New Channel" para agregar la transmisión (stream) a un canal nuevo.  </li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Adding a channel" src="../../assets/adding_channel.png" /></p>
+</details>
+<ul>
+<li>Si deseas añadir una transmisión (stream) de respaldo desde otro proveedor, busca la transmisión (stream) correspondiente en la lista de streams y haz click en el botón <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" debajo de la columna "Actions".</li>
+</ul>
+<hr />
+<h3 id="configuracion-de-reproduccion">Configuración de Reproducción<a class="headerlink" href="#configuracion-de-reproduccion" title="Permanent link">&para;</a></h3>
+<h4 id="jellyfin">Jellyfin<a class="headerlink" href="#jellyfin" title="Permanent link">&para;</a></h4>
+<h5 id="agregar-proveedor-de-tv">Agregar proveedor de TV<a class="headerlink" href="#agregar-proveedor-de-tv" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Jellyfin acepta formato HDHR o M3U.</li>
+<li>En Dispatcharr, navega a la página "Channels" y haz clic en los botones HDHR o M3U en la parte superior de la página. Luego, copia la URL que se muestra.  </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="agregar-proveedor-de-tv-hdhr" name="__tabbed_2" type="radio" /><input id="agregar-proveedor-de-tv-m3u" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="agregar-proveedor-de-tv-hdhr">HDHR</label><label for="agregar-proveedor-de-tv-m3u">M3U</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Find HDHR URL" src="../../assets/find_hdhr_url.png" /></p>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Find M3U URL" src="../../assets/find_m3u_url.png" /></p>
+</details>
+</div>
+</div>
+</div>
+<ul>
+<li>Navega a tu instancia de Jellyfin y haz clic en el ícono del Panel de Administración (Admin Panel Icon) para gestionar tu servidor Jellyfin.  </li>
+<li>Haz clic en "Live TV" dentro de la sección Live TV, luego presiona el botón ‘+’ junto a "Tuner Devices".  </li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Jellyfin LiveTV Setup Tuner" src="../../assets/jellyfin_livetv_setup_tuner.png" /></p>
+</details>
+<ul>
+<li>En "Tuner Type", selecciona HDHomeRun si estás usando la URL HDHR, o M3U Tuner si estás usando la URL M3U de Dispatcharr.  </li>
+<li>Agrega la URL y guarda los cambios.  </li>
+</ul>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>Si lo agregas como M3U, deja el límite de transmisiones simultáneas en "0", ya que los límites de reproducción serán manejados por Dispatcharr..  </p>
+</div>
+<h5 id="agregar-lista-de-programacion">Agregar lista de programación<a class="headerlink" href="#agregar-lista-de-programacion" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Para agregar datos de guía de programación desde Dispatcharr, navega a la página "Channels" en Dispatcharr, luego haz clic en el botón EPG en la parte superior de la página y copia la URL proporcionada.</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Find EPG URL" src="../../assets/find_epg_url.png" /></p>
+</details>
+<ul>
+<li>En la página de configuración de Live TV en Jellyfin, haz clic en el botón ‘+’ junto a "TV Guide Data Providers".</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Jellyfin Add EPG" src="../../assets/jellyfin_add_epg.png" /></p>
+</details>
+<ul>
+<li>Elige XMLTV y agrega la URL.</li>
+<li>Los datos de la EPG se asignarán automáticamente.</li>
+</ul>
+<hr />
+<h4 id="plex">Plex<a class="headerlink" href="#plex" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Plex acepta el formato HDHR y generalmente puede detectar unidades HDHR automáticamente. </li>
+<li>En Dispatcharr, navega a la página "Channels", luego haz clic en el botón HDHR en la parte superior de la página y copia la URL generada.  </li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="HDHR URL" src="../../assets/find_hdhr_url.png" /></p>
+</details>
+<ul>
+<li>Navega a tu instancia de Plex y haz clic en el ícono de Settings para administrar tu servidor Plex.  </li>
+<li>Desplázate hacia abajo hasta <code>Manage</code> y haz clic en <code>Live TV &amp; DVR</code>, luego selecciona <code>Set Up Plex Tuner</code>.</li>
+<li>Plex debería detectar automáticamente tu instancia de Dispatcharr, pero si no lo hace, haz clic en
+ <code>Don't see your HDHomeRun device? Enter its network address manually</code> ingresa la URL HDHR que copiaste desde Dispatcharr y presiona <code>Connect</code>.</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Plex Live TV Automatic" src="../../assets/add_hdhr_plex.png" style="height:70vmin" /></p>
+</details>
+<ul>
+<li>Plex proporcionará su propia EPG si admite tu país y código postal. Si Plex no proporciona la EPG para tu región o si prefieres usar la tuya, puedes agregar la EPG desde Dispatcharr..</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Advertencia</p>
+<p>Si Plex no tiene EPG disponible para tu zona, deberás proporcionar tu propia guía antes de continuar.</p>
+</div>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Plex Add EPG" src="../../assets/add_epg_plex.png" style="height:70vmin" /></p>
+</details>
+<ul>
+<li>Ahora podrás asignar la EPG a los canales en caso de que alguno no se haya mapeado automáticamente..</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Map EPG Plex" src="../../assets/map_epg_plex.png" style="height:70vmin" /></p>
+</details>
+<ul>
+<li>Haz clic en <code>Continue</code> y Plex cargará los canales y la programación de la EPG</li>
+</ul>
+<div class="admonition nota">
+<p class="admonition-title">Falta de logos?</p>
+<p>Agrega <code>?cachedlogos=false</code> al final de tu URL de EPG para evitar el almacenamiento en caché de logos, el cual Plex no soporta actualmente. </p>
+</div>
+<hr />
+<h4 id="channelsdvr">ChannelsDVR<a class="headerlink" href="#channelsdvr" title="Permanent link">&para;</a></h4>
+<ul>
+<li>En Dispatcharr, navega a la página "Channels", luego haz clic en el botón M3U en la parte superior de la página y copia la URL generada. </li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Find M3U URL" src="../../assets/find_m3u_url.png" /></p>
+</details>
+<ul>
+<li>Navega a la página de tu servidor ChannelsDVR, ve a "Settings" y selecciona "Sources".</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="ChannelsDVR Select Sources" src="../../assets/channelsdvr_sources.png" /></p>
+</details>
+<ul>
+<li>En la sección Live TV, haz clic en el botón verde "Add Source".</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="ChannelsDVR Add Source" src="../../assets/channelsdvr_addsource.png" /></p>
+</details>
+<ul>
+<li>En la ventana emergente, elige Custom Channels.</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="ChannelsDVR Custom Channels" src="../../assets/channelsdvr_customchannels.png" /></p>
+</details>
+<ul>
+<li>En el menú Custom Channels, utiliza las siguientes opciones:<ul>
+<li>Nickname: Agrega un nombre para tu lista M3U.</li>
+<li>Stream Format: MPEG-TS.</li>
+<li>Source: Selecciona "Use URL" y pega el enlace M3U desde Dispatcharr.</li>
+<li>Opciones: <ul>
+<li>Refresh URL daily - (Actualizar URL diariamente)</li>
+<li>Prefer channel-number from M3U - (Preferir número de canal desde M3U)</li>
+<li>Prefer channel logos from M3U - (Si deseas usar los logos gestionados en Dispatcharr)</li>
+<li>No Stream Limit - (Dispatcharr gestiona los límites de transmisión)</li>
+</ul>
+</li>
+<li>XMLTV Guide Data:<ul>
+<li>Si configuraste Gracenote ID para cada uno de los canales y deseas que ChannelsDVR genere una guía completa de 14 días utilizando sus datos, no agregues una guía y haz clic en Save (Guardar).</li>
+<li>Si deseas usar la EPG desde Dispatcharr, agrega el enlace EPG de Dispatcharr, selecciona la frecuencia de actualización y haz clic en Save (Guardar).</li>
+</ul>
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="ChannelsDVR Custom Channels options" src="../../assets/channelsdvr_customchannels_2.png" /></p>
+</details>
+</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h4 id="emby">Emby<a class="headerlink" href="#emby" title="Permanent link">&para;</a></h4>
+<h5 id="agregar-proveedor-de-tv_1">Agregar proveedor de TV<a class="headerlink" href="#agregar-proveedor-de-tv_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Emby puede aceptar formato HDHR o M3U. </li>
+<li>En Dispatcharr, navega a la página "Channels", luego haz clic en las opciones HDHR o M3U en la parte superior de la página y copia la URL generada.  </li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="agregar-proveedor-de-tv_1-hdhr" name="__tabbed_3" type="radio" /><input id="agregar-proveedor-de-tv_1-m3u" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="agregar-proveedor-de-tv_1-hdhr">HDHR</label><label for="agregar-proveedor-de-tv_1-m3u">M3U</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Find HDHR URL" src="../../assets/find_hdhr_url.png" /></p>
+</details>
+</div>
+<div class="tabbed-block">
+<details class="info">
+<summary>Captura de pantalla</summary>
+<p><img alt="Find M3U URL" src="../../assets/find_m3u_url.png" /></p>
+</details>
+</div>
+</div>
+</div>
+<ul>
+<li>Navega a tu instancia de Emby y haz clic en el ícono de Settings para administrar tu servidor Emby.  </li>
+<li>Haz clic en "Live TV", luego en "Add TV source".</li>
+<li>Selecciona HDHomeRun si estás usando la URL HDHR, o M3U si estás usando la URL M3U desde Dispatcharr.  </li>
+<li>Agrega la URL y guarda los cambios.  </li>
+</ul>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<div class="language-text highlight"><pre><span></span><code>Si lo agregas como M3U, deja el límite de transmisiones (streams) simultáneas en &quot;0&quot;, ya que los límites serán manejados por Dispatcharr.
+</code></pre></div>
+</div>
+<h5 id="agregar-lista-de-programacion_1">Agregar lista de programación<a class="headerlink" href="#agregar-lista-de-programacion_1" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Puedes usar la guía de programación proporcionada por Emby, la guía de programación de Dispatcharr, o una combinación de ambos.</li>
+<li>Para usar la guía de programación proporcionada por Emby, haz clic en "Add Guide Data Source", elige tu país, luego selecciona "Emby Guide Data" y presiona Next.</li>
+<li>Sigue las indicaciones para encontrar los datos de canales que necesites. Puedes agregar múltiples fuentes de guía de Emby si es necesario.</li>
+<li>Emby intentará asignar automáticamente los canales a la guía de programación pero es posible que tengas que hacer el mapeo manualmente. Puedes hacerlo en "Live TV" &gt; Channels, o en el administrador de metadatos de Emby.</li>
+<li>Para agregar la guía de programación desde Dispatcharr, navega a la página "Channels" en Dispatcharr, haz clic en el botón EPG y copia la URL generada.</li>
+<li>En la página de configuración de Live TV en Emby, haz clic en "Add Guide Data Source", elige tu país, luego elige "XMLTV" como fuente de guía y presiona Next.</li>
+<li>Los datos de la EPG se asignarán automáticamente.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../installation/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Installation">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Installation
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../migrations/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Migrations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Migrations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+      
+        <script src="../../javascripts/lucide-init.js"></script>
+      
+    
+  </body>
+</html>

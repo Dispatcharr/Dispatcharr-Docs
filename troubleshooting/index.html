@@ -1,0 +1,1255 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dispatcharr.github.io/Dispatcharr-Docs/troubleshooting/">
+      
+      
+        <link rel="prev" href="../user-guide/">
+      
+      
+        <link rel="next" href="../api/">
+      
+      
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../es/troubleshooting/" hreflang="es">
+        
+          <link rel="alternate" href="https://discord.gg/wfeqTRRJru" hreflang="null">
+        
+      
+      
+      <link rel="icon" href="../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>FAQ/Troubleshooting - Dispatcharr Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Dispatcharr Docs" class="md-header__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dispatcharr Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAQ/Troubleshooting
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../es/troubleshooting/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://discord.gg/wfeqTRRJru" hreflang="null" class="md-select__link">
+              Help Translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Dispatcharr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../installation/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../user-guide/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  User Guide
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ/Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Dispatcharr Docs" class="md-nav__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Dispatcharr Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Dispatcharr/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stream-failover-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Failover not working
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#will-you-implement-x-new-feature" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Will you implement X new feature?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#does-dispatcharr-support-hardware-acceleration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Does dispatcharr support hardware acceleration?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logos-are-missing-in-plex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logos are missing in Plex
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-output-to-xc-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I output to XC API?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-turn-on-debug-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I turn on debug logs?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-got-new-credentials-or-url-from-my-provider-what-should-i-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I got new credentials (or URL) from my provider, what should I do?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I got new credentials (or URL) from my provider, what should I do?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-m3u-account-types-and-dispatcharr-version-0190" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For M3U account types and Dispatcharr Version &lt; 0.19.0:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-xc-account-type-and-dispatcharr-version-0190" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        For XC account type and Dispatcharr Version &gt;= 0.19.0
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-changed-my-network-settings-and-accidently-locked-myself-out-how-can-i-reset-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I changed my network settings and accidently locked myself out. How can I reset it?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-can-i-make-a-backup-of-the-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How can I make a backup of the database?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-can-i-password-protect-my-m3u-to-share-over-the-internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How can I password protect my M3U to share over the internet?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-are-there-connections-showing-on-the-dispatcharr-stats-page-when-no-one-is-watching-or-connected" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why are there connections showing on the dispatcharr stats page when no one is watching or connected?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-update-my-container-using-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I update my container (using compose)?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#im-getting-a-message-about-hardware-support-for-numpy-what-should-i-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I'm getting a message about hardware support for NumPy. What should I do?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-access-vod" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I access VOD?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multicast-streams-are-not-working" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Multicast streams are not working
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-remove-all-vod-from-dispatcharr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I remove all VOD from dispatcharr?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-i-create-and-set-a-systemwide-custom-profile-in-dispatcharr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How do I create and set a systemwide custom profile in Dispatcharr?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-of-auto-channel-sync" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use of Auto Channel Sync
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-xc-accounts-created-in-dispatcharr-show-a-90-day-expiration-and-how-can-i-fix-this" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why do XC accounts created in dispatcharr show a 90 day expiration and how can I fix this?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join Discord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Dispatcharr/edit/master/docs/en/troubleshooting.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Dispatcharr/raw/master/docs/en/troubleshooting.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<h2 id="stream-failover-not-working">Stream Failover not working<a class="headerlink" href="#stream-failover-not-working" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Check if the Stream Profile (default and/or for the channel) is set to redirect. Stream failover will not work for redirect</li>
+</ul>
+<hr />
+<h2 id="will-you-implement-x-new-feature">Will you implement X new feature?<a class="headerlink" href="#will-you-implement-x-new-feature" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Check existing feature requests in our <a href="https://discord.gg/Sp45V5BcxU">discord</a> or <a href="https://github.com/Dispatcharr/Dispatcharr/issues">github</a>. If it's not already requested, feel free to request. </li>
+</ul>
+<hr />
+<h2 id="does-dispatcharr-support-hardware-acceleration">Does dispatcharr support hardware acceleration?<a class="headerlink" href="#does-dispatcharr-support-hardware-acceleration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>You can use hardware acceleration with custom ffmpeg stream profiles. This will require <a href="/Dispatcharr-Docs/user-guide/#mapping-hardware">mapping your hardware</a> to the container and setting up a <a href="/Dispatcharr-Docs/user-guide/#custom-stream-profiles">custom ffmpeg stream profile</a>. </li>
+</ul>
+<hr />
+<h2 id="logos-are-missing-in-plex">Logos are missing in Plex<a class="headerlink" href="#logos-are-missing-in-plex" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Plex does not support cached logos. Add <code>?cachedlogos=false</code> to the end of your EPG to bypass logo caching. </li>
+</ul>
+<hr />
+<h2 id="how-do-i-output-to-xc-api">How do I output to XC API?<a class="headerlink" href="#how-do-i-output-to-xc-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li>There must be at least one user set up with an <a href="/Dispatcharr-Docs/user-guide/#users">XC password</a></li>
+<li>For URL, use your IP address and port <code>http://{your_ip_here}:9191</code></li>
+<li>Username is your user's username</li>
+<li>Password is the XC password set for the user</li>
+</ul>
+<hr />
+<h2 id="how-do-i-turn-on-debug-logs">How do I turn on debug logs?<a class="headerlink" href="#how-do-i-turn-on-debug-logs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add this to your compose/environmental variables: <code>DISPATCHARR_LOG_LEVEL=debug</code></li>
+</ul>
+<hr />
+<h2 id="i-got-new-credentials-or-url-from-my-provider-what-should-i-do">I got new credentials (or URL) from my provider, what should I do?<a class="headerlink" href="#i-got-new-credentials-or-url-from-my-provider-what-should-i-do" title="Permanent link">&para;</a></h2>
+<h3 id="for-m3u-account-types-and-dispatcharr-version-0190">For M3U account types and Dispatcharr Version &lt; 0.19.0:<a class="headerlink" href="#for-m3u-account-types-and-dispatcharr-version-0190" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Make a backup!</li>
+<li>Remove URL from Settings &gt;&gt;&gt; Stream Settings &gt;&gt;&gt; M3U Hash Key<ol>
+<li>Add all other hash options</li>
+<li>Save</li>
+</ol>
+</li>
+<li>Once re-hashing has finished, change the settings in your M3U account</li>
+<li>Refresh the account</li>
+<li>Once refresh is complete, change your hash settings back</li>
+</ol>
+<h3 id="for-xc-account-type-and-dispatcharr-version-0190">For XC account type and Dispatcharr Version &gt;= 0.19.0<a class="headerlink" href="#for-xc-account-type-and-dispatcharr-version-0190" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Change settings for your XC account (either URL, credentials or both)</li>
+<li>Save and refresh </li>
+</ol>
+<hr />
+<h2 id="i-changed-my-network-settings-and-accidently-locked-myself-out-how-can-i-reset-it">I changed my network settings and accidently locked myself out. How can I reset it?<a class="headerlink" href="#i-changed-my-network-settings-and-accidently-locked-myself-out-how-can-i-reset-it" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Access the CLI of the container</li>
+<li>cd to /app</li>
+<li>Run the following command: <code>python manage.py reset_network_access</code></li>
+</ol>
+<hr />
+<h2 id="how-can-i-make-a-backup-of-the-database">How can I make a backup of the database?<a class="headerlink" href="#how-can-i-make-a-backup-of-the-database" title="Permanent link">&para;</a></h2>
+<p>See <a href="/Dispatcharr-Docs/user-guide/#backup-restore">Backup &amp; Restore</a></p>
+<hr />
+<h2 id="how-can-i-password-protect-my-m3u-to-share-over-the-internet">How can I password protect my M3U to share over the internet?<a class="headerlink" href="#how-can-i-password-protect-my-m3u-to-share-over-the-internet" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Set up your reverse proxy as shown in the <a href="/Dispatcharr-Docs/user-guide/#reverse-proxies">docs</a></li>
+<li>In dispatcharr at Settings &gt; <a href="/Dispatcharr-Docs/user-guide/#network-access">Network Access</a>, restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)</li>
+<li>Set up a user with XC password on the <a href="/Dispatcharr-Docs/user-guide/#users">Users</a> page if you haven't already done so</li>
+<li>Use the following m3u link format to share with your users: <code>https://hostname/get.php?username=XCUSERNAME&amp;password=XCPASSWORD</code></li>
+<li>And this format for epg: <code>https://hostname/xmltv.php?username=XCUSERNAME&amp;password=XCPASSWORD</code></li>
+</ol>
+<hr />
+<h2 id="why-are-there-connections-showing-on-the-dispatcharr-stats-page-when-no-one-is-watching-or-connected">Why are there connections showing on the dispatcharr stats page when no one is watching or connected?<a class="headerlink" href="#why-are-there-connections-showing-on-the-dispatcharr-stats-page-when-no-one-is-watching-or-connected" title="Permanent link">&para;</a></h2>
+<p>This is a tricky issue that the dispatcharr team has been trying to nail down, however there are some reasons that have been identified:</p>
+<ul>
+<li>A bug or error in the client that fails to close the connection to dispatcharr</li>
+<li>Passing dispatcharr through a Cloudflare tunnel. Some of our users have found changing the following Cloudflare settings to be helpful:<ul>
+<li>Idle Connection Expiration - 10 seconds</li>
+<li>Max TCP Keepalives - 3 seconds</li>
+<li>TCP Keepalive Interval - 10 seconds</li>
+<li>In dispatcharr, set the <a href="/Dispatcharr-Docs/user-guide/#proxy-settings">Channel Shutdown Delay</a> to 3 seconds</li>
+</ul>
+</li>
+</ul>
+<p>If you can reliably reproduce this issue and believe it isn't due to one of the reasons listed above, please reproduce it while capturing <a href="/Dispatcharr-Docs/troubleshooting/#how-do-i-turn-on-debug-logs">debug logs</a> and submit an issue on our <a href="https://github.com/Dispatcharr/Dispatcharr">Github</a> or share with the team in our <a href="https://discord.gg/Sp45V5BcxU">Discord</a> channel</p>
+<hr />
+<h2 id="how-do-i-update-my-container-using-compose">How do I update my container (using compose)?<a class="headerlink" href="#how-do-i-update-my-container-using-compose" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open a terminal on the host</li>
+<li>Run the following command: <code>docker compose -f /path/to/docker-compose.yml pull</code></li>
+<li>Run the following command: <code>docker compose -f /path/to/docker-compose.yml up -d</code></li>
+</ol>
+<hr />
+<h2 id="im-getting-a-message-about-hardware-support-for-numpy-what-should-i-do">I'm getting a message about hardware support for NumPy. What should I do?<a class="headerlink" href="#im-getting-a-message-about-hardware-support-for-numpy-what-should-i-do" title="Permanent link">&para;</a></h2>
+<p>If you're running a QEMU/KVM based Hypervisor (such as Proxmox), change your VM hardware type to "Host" or to "x86_v2" from "q35"</p>
+<p>If you're running on old hardware (processor from ~2009 or older), add the following under your "environment" section in your docker compose:
+<code>- USE_LEGACY_NUMPY=true</code></p>
+<hr />
+<h2 id="how-do-i-access-vod">How do I access VOD?<a class="headerlink" href="#how-do-i-access-vod" title="Permanent link">&para;</a></h2>
+<p>To use Video-on-Demand (VOD), you must import your IPTV account <em>into</em> Dispatcharr with the Xtream Codes <a href="/Dispatcharr-Docs/user-guide/#m3u-accounts">account type</a> and credentials. Some sources refer to this as "API" as well.</p>
+<p>To use VOD in a third party client/app, you must also export <em>out of</em> Dispatcharr using Xtream Codes credentials. (see: <a href="/Dispatcharr-Docs/troubleshooting/#how-do-i-output-to-xc-api">How do I output to XC API?</a>)</p>
+<p>Dispatcharr's XC credentials can be setup in the Users tab. Create/edit a new/existing user and enter a password in the field labeled XC Password.</p>
+<p>If your client/app supports the use of XC credentials, it will ask for an API or URL, username, and password. Enter the URL you use to access Dispatcharr (LAN IP:Port or reverse proxy), the username from the Users tab, and the XC Password created for the user. </p>
+<hr />
+<h2 id="multicast-streams-are-not-working">Multicast streams are not working<a class="headerlink" href="#multicast-streams-are-not-working" title="Permanent link">&para;</a></h2>
+<p>Multicast streams require dispatcharr to be run in <a href="https://docs.docker.com/engine/network/drivers/host/">host network mode</a> or use <a href="https://docs.docker.com/engine/network/drivers/macvlan/">macvlan</a>. </p>
+<p>Additionally, if multiple network interfaces are available, you should add <code>?localaddr=[interface-ip]</code> to the end of your stream URL.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><code>udp://239.1.2.3:4567?localaddr=0.0.0.0</code></p>
+</div>
+<hr />
+<h2 id="how-do-i-remove-all-vod-from-dispatcharr">How do I remove all VOD from dispatcharr?<a class="headerlink" href="#how-do-i-remove-all-vod-from-dispatcharr" title="Permanent link">&para;</a></h2>
+<ol>
+<li>In the <a href="/Dispatcharr-Docs/user-guide/#m3u-epg-manager">M3U &amp; EPG manager</a> page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)</li>
+<li>Toggle <code>Enable VOD Scanning</code> on</li>
+<li>Click the <code>Groups</code> button</li>
+<li>Under the <code>VOD - Movies</code> and <code>VOD - Series</code> tabs, deselect all Groups</li>
+<li>Click <code>Save and Refresh</code></li>
+<li>After the refresh completes, toggle the <code>Enable VOD Scanning</code> option off</li>
+<li>Repeat for any other accounts if necessary</li>
+</ol>
+<hr />
+<h2 id="how-do-i-create-and-set-a-systemwide-custom-profile-in-dispatcharr">How do I create and set a systemwide custom profile in Dispatcharr?<a class="headerlink" href="#how-do-i-create-and-set-a-systemwide-custom-profile-in-dispatcharr" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Within the Dispatcharr GUI, select Settings on the left side of the screen.</li>
+<li>Follow these steps:<ol>
+<li>Click Streaming Profiles.</li>
+<li>Click Add Stream Profile.</li>
+<li>In the Name section, provide a unique name.</li>
+<li>In the Command section, enter ffmpeg, streamlink, or cvlc.</li>
+<li>In the Parameters section, enter your desired parameters.<blockquote>
+<p><img alt="📝" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4dd.svg" title=":memo:" /> <strong>Note:</strong> Community ffmpeg profiles can be found in the ⁠🔀・stream-profiles section of the Dispatcharr Discord</p>
+</blockquote>
+</li>
+<li>In the User-Agent field, leave it blank.</li>
+<li>Click Submit to save your changes.</li>
+</ol>
+</li>
+<li>Select Stream Settings, then use the drop-down menu on the right under Default Stream Profile.</li>
+<li>Select the newly created stream profile you created in Step 2.</li>
+<li>Click Save.</li>
+</ol>
+<hr />
+<h2 id="use-of-auto-channel-sync">Use of Auto Channel Sync<a class="headerlink" href="#use-of-auto-channel-sync" title="Permanent link">&para;</a></h2>
+<p>Auto channel sync should ONLY be used for event groups where the channel names are updated to show the event name.  Using on regular channel groups might feel like a cheat code to add all your channels but you lose the ability to customize name, logo, epg etc. as the next refresh will wipe all the changes.  You also lose the ability to add backup and failover streams.</p>
+<p>If you want all the channels from a regular group added select the group on the streams table, select all then press Create Channels at the top. </p>
+<hr />
+<h2 id="why-do-xc-accounts-created-in-dispatcharr-show-a-90-day-expiration-and-how-can-i-fix-this">Why do XC accounts created in dispatcharr show a 90 day expiration and how can I fix this?<a class="headerlink" href="#why-do-xc-accounts-created-in-dispatcharr-show-a-90-day-expiration-and-how-can-i-fix-this" title="Permanent link">&para;</a></h2>
+<ul>
+<li>There is no need to fix or change this. The 90 day expiration is perpetual, renewing on every refresh.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../user-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: User Guide">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                User Guide
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../api/" class="md-footer__link md-footer__link--next" aria-label="Next: API">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                API
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["toc.integrate", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+      
+        <script src="../javascripts/lucide-init.js"></script>
+      
+    
+  </body>
+</html>
