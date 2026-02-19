@@ -163,11 +163,5 @@ If you want all the channels from a regular group added select the group on the 
 
 ---
 
-## I'm getting a message about hardware support for NumPy. What should I do?
-
-Upgrade your Dispatcharr - this was fixed in 0.18.0.
-
----
-
 ## Why do XC accounts created in dispatcharr show a 90 day expiration and how can I fix this?
 * There is no need to fix or change this. The 90 day expiration is perpetual, renewing on every refresh.
