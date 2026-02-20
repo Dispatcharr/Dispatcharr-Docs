@@ -422,8 +422,9 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 	* VLC - Dispatcharr will proxy streams via VLC. No transcoding takes place with the default VLC stream profile, it will just remux streams. Uses more system resources than proxy
 * Custom Stream Profiles - create your own custom stream profile by clicking the "Add Stream Profile" button on the Settings page
     * Name - a name for your stream profile
-	* Command - `ffmpeg`, `streamlink`, or `cvlc` (for custom VLC stream profiles)
-	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html), [streamlink](https://streamlink.github.io/cli.html), or [VLC](https://wiki.videolan.org/VLC_command-line_help/) parameters
+	* Command - FFmpeg, Streamlink, VLC, yt-dlp, or Custom
+    * Custom Command (only for Custom) - Enter the executable name (e.g. ffmpeg) or full path (e.g. /usr/local/bin/mycmd)
+	* Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
 #### Network Access
