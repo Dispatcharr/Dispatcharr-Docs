@@ -308,12 +308,12 @@ From the Connections page you can create and manage event-driven webhooks and sc
 
 Click <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection to create a new webhook or event-driven script execution
 
-Supports multiple event types including:
-* Channel lifecycle (start, stop, reconnect, error, failover)
-* Stream operations (switch), 
-* Recording events (start, end)
-* Data refreshes (EPG, M3U)
-* Client activity (connect, disconnect) 
+* Supports multiple event types including:
+    * Channel lifecycle (start, stop, reconnect, error, failover)
+    * Stream operations (switch), 
+    * Recording events (start, end)
+    * Data refreshes (EPG, M3U)
+    * Client activity (connect, disconnect) 
 
 Event data is available as environment variables in scripts (prefixed with DISPATCHARR_), POST payloads for webhooks, and plugin execution payloads
 
