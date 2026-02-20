@@ -144,6 +144,10 @@ From this page you can add and maintain your M3U accounts and EPGs
                 * Case Sensitive: toggle to determine case sensitivity for the regular expression
             * Select 'Save' to add the newly created filter 
             * Add additional filters to refine the selected Field values as needed
+            
+            !!! note
+                Keep in mind this is a *stream* filter so you will still see the groups/categories show up for the M3U. However, excluded streams will not appear in the streams table
+
 	    * "Groups" button - Opens the Group Manager
             * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later.
 		    * Filter visible groups with the search box at the top of the group manager
