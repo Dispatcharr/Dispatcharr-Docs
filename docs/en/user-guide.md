@@ -324,48 +324,48 @@ Event data is available as environment variables in scripts (prefixed with DISPA
 !!! info
     Scripts should be placed in `data/scripts` and must be given execute permissions
 
-??? example "Example (click to see)
+??? example "Example (click to see)"
     ```
     #!/usr/bin/env python3
 
-import requests
-import json
-import os
-import re
+    import requests
+    import json
+    import os
+    import re
 
-webhook_url = ""
+    webhook_url = ""
 
-message = ["Test event from Dispatcharr!"]
+    message = ["Test event from Dispatcharr!"]
 
-for key, value in os.environ.items():
-#    if not re.search(r"DISPATCHARR_", key):
-#        continue
+    for key, value in os.environ.items():
+    #    if not re.search(r"DISPATCHARR_", key):
+    #        continue
 
-    key = key.replace("DISPATCHARR_", "").replace("_", " ").lower()
-    message.append(f"{key} = {value}")
+        key = key.replace("DISPATCHARR_", "").replace("_", " ").lower()
+        message.append(f"{key} = {value}")
 
-# The data to be sent in the POST request
-# 'content' is the key for a basic message.
-# Please leave this thats how the project works!
-data = {
-    "content": "\n".join(message)
-}
+    # The data to be sent in the POST request
+    # 'content' is the key for a basic message.
+    # Please leave this thats how the project works!
+    data = {
+        "content": "\n".join(message)
+    }
 
-# The headers to specify the content type
-headers = {
-    "Content-Type": "application/json"
-}
+    # The headers to specify the content type
+    headers = {
+        "Content-Type": "application/json"
+    }
 
-# Send the POST request
-response = requests.post(webhook_url, data=json.dumps(data), headers=headers)
+    # Send the POST request
+    response = requests.post(webhook_url, data=json.dumps(data), headers=headers)
 
-# Check if the request was successful
-if response.status_code == 204:
-    print("Message sent successfully!")
-else:
-    print(f"Failed to send message. Status code: {response.status_code}")
-    print(response.text)
-```
+    # Check if the request was successful
+    if response.status_code == 204:
+        print("Message sent successfully!")
+    else:
+        print(f"Failed to send message. Status code: {response.status_code}")
+        print(response.text)
+    ```
 
 ### Logs
 Triggered connections, their responses, and any errors will be logged here
