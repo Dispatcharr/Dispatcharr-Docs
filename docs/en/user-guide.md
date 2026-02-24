@@ -324,8 +324,8 @@ Event data is available as environment variables in scripts (prefixed with DISPA
 !!! info
     Scripts should be placed in `data/scripts` and must be given execute permissions
 
-??? example "Example (click to see)"
-    ```
+??? example "Example Script (click to see)"
+    ```python
     #!/usr/bin/env python3
 
     import requests
