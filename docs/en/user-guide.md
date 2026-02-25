@@ -305,7 +305,7 @@ From the plugins page you can import, manage, and delete dispatcharr plugins. Pl
 
 ---
 
-## Connect
+## Integrations
 
 ### Connections
 From the Connections page you can create and manage event-driven webhooks and script execution
@@ -372,7 +372,7 @@ Triggered connections, their responses, and any errors will be logged here
 
 ---
 	
-## Settings
+## System
 
 ### Users
 From the Users page you can create and manage all Dispatcharr users. There are 3 types of users:
@@ -396,7 +396,7 @@ From the Logo Manager page you can upload and manage logos.
 !!! info
     Dispatcharr will also automatically scan `/data/logos` for existing files
 
-### System
+### Settings
 
 #### UI Settings
 * Table Size - Set the size of the channel rows in "Channels"
