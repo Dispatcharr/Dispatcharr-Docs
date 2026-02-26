@@ -1,0 +1,32 @@
+## Stats
+* La sección "Stats" muestra información sobre todas las transmisiones activas, y el visualizador de eventos del sistema (System Event Viewer) incluyendo:
+
+    * Nombre del canal "Channel Name"
+    * Logo del canal "Channel Logo"
+    * Perfil de transmisión "Stream Profile"
+    * Tiempo de actividad de la transmisión "Stream Uptime"
+    * Transmisión activa para cada canal activo (el menú desplegable permite cambiar la transmisión activa)
+    * Estadísticas de la transmisión "Stream Stats" (solo disponible para ciertos [stream profiles](/Dispatcharr-Docs/system/#stream-profiles))
+
+
+        | Stream profile | Video resolution                                                          | Source frames per second                                                  | Video codec                                                               | Audio codec                                                               | Audio channel configuration                                               | Stream type (MPEGTS, HLS)                                                 | Current speed                                                             |
+        | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: |
+        | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
+        | Proxy          | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | Redirect       | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | streamlink     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | VLC            | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
+        | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
+        | Custom VLC     | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | 
+        
+        !!! nota "Nota para VLC personalizados"
+            VLC solo puede mostrar la información que está procesando, por lo que las estadísticas dependerán de tus [parámetros personalizados](https://wiki.videolan.org/VLC_command-line_help/)
+
+    * Velocidad de transmisión (actual y promedio) "Stream bitrate — current and average"
+    * Datos totales servidos por la transmisión "Total Data Served"
+    * Número de espectadores "Number of Watchers"
+    * Direcciones IP y User-Agents asociados
+* Puedes forzar la detención de cualquier transmisión (stream) activa haciendo clic en el botón <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel".
+* Eventos del Systema
+* Captura las actualizaciones de M3U, las actualizaciones de EPG, los cambios de stream, los eventos de autenticación, los bloqueos de acceso de red y los errores.
+* Permite filtrar y revisar eventos históricos.
