@@ -73,7 +73,7 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * Description - (Optional) a description of the user-agent for your own use
 
 #### Stream Profiles
-| Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](#proxy-settings)          | [Fallback stream<br> support](#fallback-streams)                          | [Stream stats<br> support](#stats)                                        | System resources      | 
+| Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](/Dispatcharr-Docs/system/#proxy-settings)          | [Fallback stream<br> support](/Dispatcharr-Docs/channels/#fallback-streams)                          | [Stream stats<br> support](/Dispatcharr-Docs/stats/#stats)                                        | System resources      | 
 | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------: |
 | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low                   |
 | Proxy          | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | Very low              |

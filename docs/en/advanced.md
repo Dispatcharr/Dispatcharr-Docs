@@ -9,7 +9,7 @@
     - Install the [NVIDIA Container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
     - Add a deploy section to your docker-compose.yml
 	??? example
-	    ```
+	    ```yaml
 		services:
 		  dispatcharr:
 			# build:
@@ -39,7 +39,7 @@
 === "Intel"  
     - Add a devices section to your docker-compose.yml
 	??? example
-	    ```
+	    ```yaml
 		services:
 		  dispatcharr:
 			# build:

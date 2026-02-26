@@ -11,7 +11,7 @@ The Stats page shows info on all active streams and the system event viewer
         * Expandable program description via chevron button
         * Progress bar showing elapsed and remaining time for curently playing programs
     * Channel preview button <i data-lucide="circle-play" style="color: LimeGreen; width: 18px;"></i> (click to preview currently active streams)
-    * Stream stats (only available with certain [stream profiles](#stream-profiles)) 
+    * Stream stats (only available with certain [stream profiles](/Dispatcharr-Docs/system/#stream-profiles)) 
 
         | Stream profile | Video resolution                                                          | Source frames per second                                                  | Video codec                                                               | Audio codec                                                               | Audio channel configuration                                               | Stream type (MPEGTS, HLS)                                                 | [Current speed](/Dispatcharr-Docs/stats/#current-speed)              |
         | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: |

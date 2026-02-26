@@ -36,7 +36,7 @@ From the channels page you can create and manage all added channels, streams, an
             * Set Names from EPG - set the channel name for all selected channels to match the channel name from the currently assigned EPG
             * Set Logos from EPG - set the logo for all selected channels to match the channel logo from the currently assigned EPG
             * Set TVG-IDs from EPG - set the TVG-ID for all selected channels to match the channel TVG-ID from the currently assigned EPG
-            * Assign Dummy EPG - set a [dummy EPG](/Dispatcharr-Docs/channels/#epgs) or clear EPG assignment for all selected channels 
+            * Assign Dummy EPG - set a [dummy EPG](/Dispatcharr-Docs/m3u-epg-manager/#epgs) or clear EPG assignment for all selected channels 
         * Channel Group - Set the channel group for all selected channels
         * Logo - Set the logo for all selected channels
         * Stream Profile - Set the stream profile for all selected channels

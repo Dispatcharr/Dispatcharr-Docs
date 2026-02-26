@@ -25,7 +25,7 @@ search:
 ---
 
 ## How do I output to XC API? 
-* There must be at least one user set up with an [XC password](/Dispatcharr-Docs/users/#users)
+* There must be at least one user set up with an [XC password](/Dispatcharr-Docs/system/#users)
 * For URL, use your IP address and port `http://{your_ip_here}:9191`
 * Username is your user's username
 * Password is the XC password set for the user
@@ -70,7 +70,7 @@ See [Backup & Restore](/Dispatcharr-Docs/system/#backup-restore)
 ## How can I password protect my M3U to share over the internet?
 1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/advanced/#reverse-proxies)
 2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
-3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/users/#users) page if you haven't already done so
+3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/system/#users) page if you haven't already done so
 4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
 5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
 
@@ -146,7 +146,7 @@ Additionally, if multiple network interfaces are available, you should add `?loc
     3. In the Name section, provide a unique name.
     4. In the Command section, enter ffmpeg, streamlink, or cvlc.
     5. In the Parameters section, enter your desired parameters.
-    > :memo: **Note:** Community ffmpeg profiles can be found in the ⁠🔀・stream-profiles section of the Dispatcharr Discord
+    > :memo: **Note:** Community ffmpeg profiles can be found in the ⁠🔀・stream-profiles section of the Dispatcharr [discord](https://discord.gg/Sp45V5BcxU)
     6. In the User-Agent field, leave it blank.
     7. Click Submit to save your changes.
 4. Select Stream Settings, then use the drop-down menu on the right under Default Stream Profile.
@@ -160,12 +160,6 @@ Additionally, if multiple network interfaces are available, you should add `?loc
 Auto channel sync should ONLY be used for event groups where the channel names are updated to show the event name.  Using on regular channel groups might feel like a cheat code to add all your channels but you lose the ability to customize name, logo, epg etc. as the next refresh will wipe all the changes.  You also lose the ability to add backup and failover streams.
 
 If you want all the channels from a regular group added select the group on the streams table, select all then press Create Channels at the top. 
-
----
-
-## I'm getting a message about hardware support for NumPy. What should I do?
-
-Upgrade your Dispatcharr - this was fixed in 0.18.0.
 
 ---
 
