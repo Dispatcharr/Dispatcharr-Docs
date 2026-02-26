@@ -15,7 +15,7 @@ search:
 ---
 
 ## Does dispatcharr support hardware acceleration? 
-* You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/user-guide/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/user-guide/#custom-stream-profiles). 
+* You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/advanced/#custom-stream-profiles). 
 
 ---
 
@@ -25,7 +25,7 @@ search:
 ---
 
 ## How do I output to XC API? 
-* There must be at least one user set up with an [XC password](/Dispatcharr-Docs/user-guide/#users)
+* There must be at least one user set up with an [XC password](/Dispatcharr-Docs/users/#users)
 * For URL, use your IP address and port `http://{your_ip_here}:9191`
 * Username is your user's username
 * Password is the XC password set for the user
@@ -63,14 +63,14 @@ search:
 --- 
 
 ## How can I make a backup of the database?
-See [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore)
+See [Backup & Restore](/Dispatcharr-Docs/system/#backup-restore)
 
 ---
 
 ## How can I password protect my M3U to share over the internet?
-1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/user-guide/#reverse-proxies)
-2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/user-guide/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
-3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/user-guide/#users) page if you haven't already done so
+1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/advanced/#reverse-proxies)
+2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
+3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/users/#users) page if you haven't already done so
 4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
 5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
 
@@ -84,7 +84,7 @@ This is a tricky issue that the dispatcharr team has been trying to nail down, h
     * Idle Connection Expiration - 10 seconds
     * Max TCP Keepalives - 3 seconds
     * TCP Keepalive Interval - 10 seconds
-    * In dispatcharr, set the [Channel Shutdown Delay](/Dispatcharr-Docs/user-guide/#proxy-settings) to 3 seconds
+    * In dispatcharr, set the [Channel Shutdown Delay](/Dispatcharr-Docs/system/#proxy-settings) to 3 seconds
 
 If you can reliably reproduce this issue and believe it isn't due to one of the reasons listed above, please reproduce it while capturing [debug logs](/Dispatcharr-Docs/troubleshooting/#how-do-i-turn-on-debug-logs) and submit an issue on our [Github](https://github.com/Dispatcharr/Dispatcharr) or share with the team in our [Discord](https://discord.gg/Sp45V5BcxU) channel
 
@@ -106,7 +106,7 @@ If you're running on old hardware (processor from ~2009 or older), add the follo
 ---
 
 ## How do I access VOD?
-To use Video-on-Demand (VOD), you must import your IPTV account *into* Dispatcharr with the Xtream Codes [account type](/Dispatcharr-Docs/user-guide/#m3u-accounts) and credentials. Some sources refer to this as "API" as well.
+To use Video-on-Demand (VOD), you must import your IPTV account *into* Dispatcharr with the Xtream Codes [account type](/Dispatcharr-Docs/m3u-epg-manager/#m3u-accounts) and credentials. Some sources refer to this as "API" as well.
 
 To use VOD in a third party client/app, you must also export *out of* Dispatcharr using Xtream Codes credentials. (see: [How do I output to XC API?](/Dispatcharr-Docs/troubleshooting/#how-do-i-output-to-xc-api))
 
@@ -127,7 +127,7 @@ Additionally, if multiple network interfaces are available, you should add `?loc
 ---
 
 ## How do I remove all VOD from dispatcharr?
-1. In the [M3U & EPG manager](/Dispatcharr-Docs/user-guide/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
+1. In the [M3U & EPG manager](/Dispatcharr-Docs/m3u-epg-manager/#m3u-epg-manager) page, click the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon for any account that provides VOD (only XC account types can provide it)
 2. Toggle `Enable VOD Scanning` on
 3. Click the `Groups` button
 4. Under the `VOD - Movies` and `VOD - Series` tabs, deselect all Groups

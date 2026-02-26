@@ -119,7 +119,18 @@ nav:
     - Installation: installation.md
     - Getting Started: getting-started.md
     - Migrations: migrations.md
-  - User Guide: user-guide.md
+  - User Guide: 
+    - Channels: channels.md
+    - VODs: vods.md
+    - M3U & EPG Manager: m3u-epg-manager.md
+    - TV Guide: tv-guide.md
+    - DVR: dvr.md
+    - Stats: stats.md
+    - Plugins: plugins.md
+    - Integrations: integrations.md
+    - System: system.md
+    - Notifications: notifications.md
+    - Advanced: advanced.md
   - FAQ/Troubleshooting: troubleshooting.md
   - API: api.md
   - Join Discord: https://discord.gg/wfeqTRRJru
