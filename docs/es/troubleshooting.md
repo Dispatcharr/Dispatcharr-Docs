@@ -15,7 +15,7 @@ search:
 ---
 
 ## ¿Dispatcharr soporta aceleración por hardware?
-* Puedes usar aceleración por hardware con perfiles de transmisión (streaming) personalizados en ffmpeg. Esto requerirá [mapear tu hardware](/Dispatcharr-Docs/user-guide/#mapping-hardware) al contenedor y configurar un perfil ffmpeg personalizado [custom ffmpeg stream profile](/Dispatcharr-Docs/user-guide/#custom-stream-profiles). 
+* Puedes usar aceleración por hardware con perfiles de transmisión (streaming) personalizados en ffmpeg. Esto requerirá [mapear tu hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) al contenedor y configurar un perfil ffmpeg personalizado [custom ffmpeg stream profile](/Dispatcharr-Docs/system/#custom-stream-profiles). 
 
 ---
 
@@ -25,7 +25,7 @@ search:
 ---
 
 ## ¿Cómo genero configuraciones para el XC API?
-* Debe existir al menos un usuario configurado con [XC password](/Dispatcharr-Docs/user-guide/#users)
+* Debe existir al menos un usuario configurado con [XC password](/Dispatcharr-Docs/system/#users)
 * Para la URL, usa tu IP y puerto: `http://{your_ip_here}:9191`
 * El nombre de usuario es el username del usuario.
 * La contraseña es la contraseña XC asignada al usuario.
@@ -55,14 +55,14 @@ search:
 --- 
 
 ## ¿Cómo hago una copia de seguridad de la base de datos?
-Consulta [Backup & Restore](/Dispatcharr-Docs/user-guide/#backup-restore) 
+Consulta [Backup & Restore](/Dispatcharr-Docs/system/#backup-restore) 
 
 --- 
 
 ## ¿Cómo puedo proteger con contraseña mi M3U para compartirlo por internet??
-1. Configura tu reverse proxy como se muestra en la [documentación](/Dispatcharr-Docs/user-guide/#nginx-reverse-proxy)
-2. En Dispatcharr, ve a Settings > [Network Access](/Dispatcharr-Docs/user-guide/#network-access), y restringe M3U / EPG Endpoints únicamente a tu red local (ejemplo: 192.168.1.0/24)
-3. Crea un usuario con XC password en la página [Users](/Dispatcharr-Docs/user-guide/#users) si aún no lo has hecho.
+1. Configura tu reverse proxy como se muestra en la [documentación](/Dispatcharr-Docs/advanced/#nginx-reverse-proxy)
+2. En Dispatcharr, ve a Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), y restringe M3U / EPG Endpoints únicamente a tu red local (ejemplo: 192.168.1.0/24)
+3. Crea un usuario con XC password en la página [Users](/Dispatcharr-Docs/system/#users) si aún no lo has hecho.
 4. Usa el siguiente formato de enlace M3U para compartir con tus usuarios: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
 5. Y este formato para epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
 
@@ -75,7 +75,7 @@ Este es un problema complejo que el equipo de Dispatcharr ha estado investigando
     1. Idle Connection Expiration - 10 segundos
     2. Max TCP Keepalives - 3 segundos
     3. TCP Keepalive Interval - 10 segundos
-    4. En Dispatcharr, configurar [Channel Shutdown Delay](/Dispatcharr-Docs/user-guide/#proxy-settings) en 3 segundos
+    4. En Dispatcharr, configurar [Channel Shutdown Delay](/Dispatcharr-Docs/system/#proxy-settings) en 3 segundos
     
 * Un bug o error en el cliente que no cierra correctamente la conexión con Dispatcharr.
 
@@ -99,6 +99,6 @@ Si estás ejecutando Dispatcharr en hardware antiguo (procesadores de ~2009 o an
 ---
 
 ## ¿Cómo accedo a VOD??
-Para usar Video-on-Demand (VOD), debes importar tu cuenta IPTV dentro de Dispatcharr utilizando el tipo de cuenta Xtream Codes y sus credenciales [account type](/Dispatcharr-Docs/user-guide/#m3u-accounts). Algunas fuentes también se refieren a esto como “API” as well.
+Para usar Video-on-Demand (VOD), debes importar tu cuenta IPTV dentro de Dispatcharr utilizando el tipo de cuenta Xtream Codes y sus credenciales [account type](/Dispatcharr-Docs/m3u-epg-manager/#m3u-accounts). Algunas fuentes también se refieren a esto como “API” as well.
 
 Para usar VOD en un cliente o aplicación de terceros, también debes exportar desde Dispatcharr usando credenciales de Xtream Codes. (mira: [Cómo genero configuraciones para el XC API](/Dispatcharr-Docs/troubleshooting/#how-do-i-output-to-xc-api))

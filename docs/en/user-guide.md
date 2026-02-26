@@ -144,6 +144,10 @@ From this page you can add and maintain your M3U accounts and EPGs
                 * Case Sensitive: toggle to determine case sensitivity for the regular expression
             * Select 'Save' to add the newly created filter 
             * Add additional filters to refine the selected Field values as needed
+            
+            !!! note
+                Keep in mind this is a *stream* filter so you will still see the groups/categories show up for the M3U. However, excluded streams will not appear in the streams table
+
 	    * "Groups" button - Opens the Group Manager
             * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later.
 		    * Filter visible groups with the search box at the top of the group manager
@@ -196,27 +200,33 @@ From this page you can add and maintain your M3U accounts and EPGs
             EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings ((file type must be xml or compressed xml as .gz or .zip))
     * Dummy EPG Source - To add a customized dummy EPG          
         * Name - A name for your custom dummy EPG
-        * Name Source (Required) - Choose whether to parse the channel name or a stream name assigned to the channel
-        * Title Pattern (Required) - Regex pattern to extract title information (e.g., team names, league). Example: `(?<league>\w+) \d+: (?<team1>.*) VS (?<team2>.*)`
-        * Time Pattern (Optional) - Extract time from channel titles. Required groups: 'hour' (1-12 or 0-23), 'minute' (0-59), 'ampm' (AM/PM - optional for 24-hour). Examples: `@ (?<hour>\d+):(?<minute>\d+)(?<ampm>AM|PM) for '8:30PM'` OR `@ (?<hour>\d{1,2}):(?<minute>\d{2}) for '20:30'`
-        * Date Pattern (Optional) - Extract date from channel titles. Groups: 'month' (name or number), 'day', 'year' (optional, defaults to current year). Examples: `@ (?<month>\w+) (?<day>\d+)` for 'Oct 17' OR `(?<month>\d+)/(?<day>\d+)/(?<year>\d+)` for '10/17/2025'
-        * Title Template (Optional) - Format the EPG title using extracted groups. Use {time} (12-hour: '10 PM') or {time24} (24-hour: '22:00'). Example: `{league} - {team1} vs {team2} @ {time}`
-        * Description Template (Optional) - Format the EPG description using extracted groups. Use {time} (12-hour) or {time24} (24-hour). Example: `Watch {team1} take on {team2} at {time}!`
-        * Upcoming Title Template (Optional) - Title for programs before the event starts. Use {time} (12-hour) or {time24} (24-hour). Example: `{team1} vs {team2} starting at {time}.`
-        * Upcoming Description Template (Optional) - Description for programs before the event. Use {time} (12-hour) or {time24} (24-hour). Example: `Upcoming: Watch the {league} match up where the {team1} take on the {team2} at {time}!`
-        * Ended Title Template (Optional) - Title for programs after the event has ended. Use {time} (12-hour) or {time24} (24-hour). Example: `{team1} vs {team2} started at {time}.`
-        * Ended Description Template (Optional) - Description for programs after the event. Use {time} (12-hour) or {time24} (24-hour). Example: `The {league} match between {team1} and {team2} started at {time}.`
-        * Fallback Title Template (Optional) - Custom title when patterns don't match. If empty, uses the channel/stream name.
-        * Fallback Description Template (Optional) - Custom description when patterns don't match. If empty, uses built-in placeholder messages.
-        * Event Timezone (Required) - The timezone of the event times in your channel titles. DST (Daylight Saving Time) is handled automatically! All timezones supported by pytz are available.
-        * Output Timezone (Optional) - Display times in a different timezone than the event timezone. Leave empty to use the event timezone. Example: Event at 10 PM ET displayed as 9 PM CT.
-        * Program Duration (minutes) (required) - Default duration for each program
-        * Categories (Optional) - EPG categories for these programs. Use commas to separate multiple (e.g., Sports, Live, HD). Note: Only added to the main event, not upcoming/ended filler programs.
-        * Channel Logo URL (Optional) - Build a URL for the channel logo using regex groups. Example: https://example.com/logos/{league_normalize}/{team1_normalize}.png. Use {groupname_normalize} for cleaner URLs (alphanumeric-only, lowercase). This will be used as the channel <icon> in the EPG output.
-        * Program Poster URL (Optional) - Build a URL for the program poster/icon using regex groups. Example: https://example.com/posters/{team1_normalize}-vs-{team2_normalize}.jpg. Use {groupname_normalize} for cleaner URLs (alphanumeric-only, lowercase). This will be used as the program <icon> in the EPG output.
-        * Include Date Tag - Include the <date> tag in EPG output with the program's start date (YYYY-MM-DD format). Added to all programs.
-        * Include Live Tag - Mark programs as live content with the <live /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.
-        * Include New Tag - Mark programs as new content with the <new /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.
+        * Pattern configuration
+            * Name Source (Required) - Choose whether to parse the channel name or a stream name assigned to the channel
+            * Title Pattern (Required) - Regex pattern to extract title information (e.g., team names, league). Example: `(?<league>\w+) \d+: (?<team1>.*) VS (?<team2>.*)`
+            * Time Pattern (Optional) - Extract time from channel titles. Required groups: 'hour' (1-12 or 0-23), 'minute' (0-59), 'ampm' (AM/PM - optional for 24-hour). Examples: `@ (?<hour>\d+):(?<minute>\d+)(?<ampm>AM|PM) for '8:30PM'` OR `@ (?<hour>\d{1,2}):(?<minute>\d{2}) for '20:30'`
+            * Date Pattern (Optional) - Extract date from channel titles. Groups: 'month' (name or number), 'day', 'year' (optional, defaults to current year). Examples: `@ (?<month>\w+) (?<day>\d+)` for 'Oct 17' OR `(?<month>\d+)/(?<day>\d+)/(?<year>\d+)` for '10/17/2025'
+        * Output templates
+            * Title Template (Optional) - Format the EPG title using extracted groups. Use {time} (12-hour: '10 PM') or {time24} (24-hour: '22:00'). Example: `{league} - {team1} vs {team2} @ {time}`
+            * Subtitle Template (Optional) - Format the EPG subtitle using extracted groups. Example: `{starttime} - {endtime}`
+            * Description Template (Optional) - Format the EPG description using extracted groups. Use {time} (12-hour) or {time24} (24-hour). Example: `Watch {team1} take on {team2} at {time}!`
+        * Upcoming/Ended Templates
+            * Upcoming Title Template (Optional) - Title for programs before the event starts. Use {time} (12-hour) or {time24} (24-hour). Example: `{team1} vs {team2} starting at {time}.`
+            * Upcoming Description Template (Optional) - Description for programs before the event. Use {time} (12-hour) or {time24} (24-hour). Example: `Upcoming: Watch the {league} match up where the {team1} take on the {team2} at {time}!`
+            * Ended Title Template (Optional) - Title for programs after the event has ended. Use {time} (12-hour) or {time24} (24-hour). Example: `{team1} vs {team2} started at {time}.`
+            * Ended Description Template (Optional) - Description for programs after the event. Use {time} (12-hour) or {time24} (24-hour). Example: `The {league} match between {team1} and {team2} started at {time}.`
+        * Fallback Templates
+            * Fallback Title Template (Optional) - Custom title when patterns don't match. If empty, uses the channel/stream name.
+            * Fallback Description Template (Optional) - Custom description when patterns don't match. If empty, uses built-in placeholder messages.
+        * EPG Settings
+            * Event Timezone (Required) - The timezone of the event times in your channel titles. DST (Daylight Saving Time) is handled automatically! All timezones supported by pytz are available.
+            * Output Timezone (Optional) - Display times in a different timezone than the event timezone. Leave empty to use the event timezone. Example: Event at 10 PM ET displayed as 9 PM CT.
+            * Program Duration (minutes) (required) - Default duration for each program
+            * Categories (Optional) - EPG categories for these programs. Use commas to separate multiple (e.g., Sports, Live, HD). Note: Only added to the main event, not upcoming/ended filler programs.
+            * Channel Logo URL (Optional) - Build a URL for the channel logo using regex groups. Example: https://example.com/logos/{league_normalize}/{team1_normalize}.png. Use {groupname_normalize} for cleaner URLs (alphanumeric-only, lowercase). This will be used as the channel <icon> in the EPG output.
+            * Program Poster URL (Optional) - Build a URL for the program poster/icon using regex groups. Example: https://example.com/posters/{team1_normalize}-vs-{team2_normalize}.jpg. Use {groupname_normalize} for cleaner URLs (alphanumeric-only, lowercase). This will be used as the program <icon> in the EPG output.
+            * Include Date Tag - Include the <date> tag in EPG output with the program's start date (YYYY-MM-DD format). Added to all programs.
+            * Include Live Tag - Mark programs as live content with the <live /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.
+            * Include New Tag - Mark programs as new content with the <new /> tag in EPG output. Note: Only added to the main event, not upcoming/ended filler programs.
         * Sample Channel Name - Test your patterns and templates with a sample channel name to preview the output. Enter a sample channel name to test pattern matching and see the formatted output
 * You can click column headers to change the sort order of existing EPGs
 * Actions column
@@ -265,7 +275,8 @@ The Stats page shows info on all active streams and the system event viewer
         | VLC            | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
         | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
 		| Custom VLC     | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           | <i data-lucide="square-x" style="color: red; width: 18px;"></i>           |
-		
+		| yt-dlp         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
+        
 		!!! note "Note for Custom VLC"
 		    VLC can only output information it is affecting, so stats will depend on your [custom parameters](https://wiki.videolan.org/VLC_command-line_help/)
 		
@@ -294,7 +305,76 @@ From the plugins page you can import, manage, and delete dispatcharr plugins. Pl
 
 ---
 
-## Users
+## Integrations
+
+### Connections
+From the Connections page you can create and manage event-driven webhooks and script execution
+
+Click <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection to create a new webhook or event-driven script execution
+
+* Supports multiple event types including:
+    * Channel lifecycle (start, stop, reconnect, error, failover)
+    * Stream operations (switch), 
+    * Recording events (start, end)
+    * Data refreshes (EPG, M3U)
+    * Client activity (connect, disconnect) 
+
+Event data is available as environment variables in scripts (prefixed with DISPATCHARR_), POST payloads for webhooks, and plugin execution payloads
+
+!!! info
+    Scripts should be placed in `data/scripts` and must be given execute permissions
+
+??? example "Example Script (click to see)"
+    ```python
+    #!/usr/bin/env python3
+
+    import requests
+    import json
+    import os
+    import re
+
+    webhook_url = ""
+
+    message = ["Test event from Dispatcharr!"]
+
+    for key, value in os.environ.items():
+    #    if not re.search(r"DISPATCHARR_", key):
+    #        continue
+
+        key = key.replace("DISPATCHARR_", "").replace("_", " ").lower()
+        message.append(f"{key} = {value}")
+
+    # The data to be sent in the POST request
+    # 'content' is the key for a basic message.
+    # Please leave this thats how the project works!
+    data = {
+        "content": "\n".join(message)
+    }
+
+    # The headers to specify the content type
+    headers = {
+        "Content-Type": "application/json"
+    }
+
+    # Send the POST request
+    response = requests.post(webhook_url, data=json.dumps(data), headers=headers)
+
+    # Check if the request was successful
+    if response.status_code == 204:
+        print("Message sent successfully!")
+    else:
+        print(f"Failed to send message. Status code: {response.status_code}")
+        print(response.text)
+    ```
+
+### Logs
+Triggered connections, their responses, and any errors will be logged here
+
+---
+	
+## System
+
+### Users
 From the Users page you can create and manage all Dispatcharr users. There are 3 types of users:
 
 1. Admin
@@ -311,24 +391,20 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
 	* This user level is for XC login only
     * Optionally hide channels marked as "Mature Content" in user settings
 
----
-
-## Logo Manager
+### Logo Manager
 From the Logo Manager page you can upload and manage logos.  
 !!! info
     Dispatcharr will also automatically scan `/data/logos` for existing files
 
----
-	
-## Settings
+### Settings
 
-### UI Settings
+#### UI Settings
 * Table Size - Set the size of the channel rows in "Channels"
 * Pin Table Headers - Toggles whether to keep table headers visible when scrolling
 * Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
 * Time format - Set the display of time to either 12 hour or 24 hour format
 
-### DVR
+#### DVR
 * Enable Comskip (remove commercials after recording) - Toggle on or off
 * Custom comskip.ini path - Enter a custom path or leave blank to use the built-in defaults.
 * Select comskip.ini - Click this button to select, upload, and use a custom comskip.ini to dispatcharr
@@ -339,7 +415,7 @@ From the Logo Manager page you can upload and manage logos.
 * Movie Path Template - Supports `{title}`, `{year}`, `{channel}`, `{start}`, `{end}`. Relative paths are under your library dir.
 * Movie Fallback Template - Template used when movie metadata is incomplete. Supports `{start}`, `{end}`, `{channel}`.
 
-### Stream Settings
+#### Stream Settings
 * Default User-Agent - Set the default User-Agent
 * Default Stream Profile - Set the default Stream Profile
 * Preferred Region - Set your preferred region
@@ -357,12 +433,12 @@ From the Logo Manager page you can upload and manage logos.
     !!! example
         Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to `URL` and `TVG-ID` only
 
-### System settings
+#### System settings
 Configure how many system events (channel start/stop, buffering, etc.) to keep in the database. Events are displayed on the Stats page.
 
 * Maximum System Events - Number of events to retain (minimum: 10, maximum: 1000)
 	
-### User-Agents
+#### User-Agents
 In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
 
 * Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
@@ -370,7 +446,7 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 	* User-Agent - The text to include for your user-agent string
 	* Description - (Optional) a description of the user-agent for your own use
 
-### Stream Profiles
+#### Stream Profiles
 | Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](#proxy-settings)          | [Fallback stream<br> support](#fallback-streams)                          | [Stream stats<br> support](#stats)                                        | System resources      | 
 | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------: |
 | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low                   |
@@ -380,6 +456,8 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 | VLC            | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | Low                   |
 | Custom ffmpeg  | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low to Very High      |
 | Custom VLC     | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i>  | Low to Very High      |
+| yt-dlp         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low                   |
+
 !!! note
     <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> = Full support  
 	<i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i> = Partial support  
@@ -397,11 +475,12 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 	* VLC - Dispatcharr will proxy streams via VLC. No transcoding takes place with the default VLC stream profile, it will just remux streams. Uses more system resources than proxy
 * Custom Stream Profiles - create your own custom stream profile by clicking the "Add Stream Profile" button on the Settings page
     * Name - a name for your stream profile
-	* Command - `ffmpeg`, `streamlink`, or `cvlc` (for custom VLC stream profiles)
-	* Parameters - Set your custom [ffmpeg](https://ffmpeg.org/ffmpeg.html), [streamlink](https://streamlink.github.io/cli.html), or [VLC](https://wiki.videolan.org/VLC_command-line_help/) parameters
+	* Command - FFmpeg, Streamlink, VLC, yt-dlp, or Custom
+    * Custom Command (only for Custom) - Enter the executable name (e.g. ffmpeg) or full path (e.g. /usr/local/bin/mycmd)
+	* Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
 	* User-Agent - Set the default user-agent for this stream profile
 	
-### Network Access
+#### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
 !!! example
     | CIDR Range     | Number of IPs | Range example                 |
@@ -419,7 +498,7 @@ Allows you to restrict access to Dispatcharr by CIDR range. You may enter multip
     To block access entirely for any of the above, use the address `127.0.0.1/32` (do NOT use for UI!)
     
     
-### Proxy Settings
+#### Proxy Settings
 These settings affect all stream profiles with the exception of redirect
 
 * Buffering Timeout - Maximum time (in seconds) to wait for buffering before switching streams
@@ -428,7 +507,7 @@ These settings affect all stream profiles with the exception of redirect
 * Channel Shutdown Delay - Delay in seconds before shutting down a channel after last client disconnects
 * Channel Initialization Grace Period - Grace period in seconds during channel initialization 
 
-### Backup & Restore
+#### Backup & Restore
 Create, schedule, and restore backups
 
 * Schedule backups - Enable to set a regular backup schedule
@@ -594,7 +673,7 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
         ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
         
-        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*) { 
+        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
             allow all;  # Allow everyone else
             proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
             proxy_set_header Host $host:443;

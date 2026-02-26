@@ -6,7 +6,7 @@
 - :material-github: [__Github__ repository](https://github.com/Dispatcharr/Dispatcharr)
 - :octicons-container-16: [__GH Container__ images](https://github.com/Dispatcharr/Dispatcharr/pkgs/container/dispatcharr)
 - :fontawesome-regular-circle-play: [__Getting__ started](installation.md)
-- :material-cog: [__Configuration__](user-guide.md)
+- :material-cog: [__Configuration__](system.md)
 
 
 </div>
