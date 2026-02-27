@@ -1,4 +1,3 @@
-## TV Guide
 * La sección "TV Guide" mostrará por defecto los canales que tengan datos de EPG cargados. 
 * Puedes buscar por nombre de canal y/o filtrar por grupos y perfiles de canales.
 * Haz clic en el logo de un canal para previsualizarlo. 

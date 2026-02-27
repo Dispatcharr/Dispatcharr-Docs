@@ -1,4 +1,3 @@
-## Plugins
 Desde la página "Plugins" puedes importar, administrar y eliminar los complementos (plugins) de Dispatcharr. Las descripciones de los plugins están disponibles en [discord](https://discord.gg/Sp45V5BcxU)
 
 * Presiona el botón "Import Plugin" para agregar un plugin, o coloca uno en la carpeta `/data/plugins` y recarga la página.

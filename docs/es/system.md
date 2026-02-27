@@ -1,6 +1,4 @@
-## System
-
-### Users
+## Users
 Desde la página "Users" puedes crear y administrar todos los usuarios de Dispatcharr. Existen tres tipos de usuarios:
 
 1. Admin
@@ -17,21 +15,21 @@ Desde la página "Users" puedes crear y administrar todos los usuarios de Dispat
 
 ---
 
-### Logo Manager
+## Logo Manager
 Desde la página "Logo Manager" puedes subir y administrar logos.  
 !!! info
     Dispatcharr también escaneará automáticamente la carpeta `/data/logos` para detectar archivos existentes.
 
 ---
     
-### Settings
+## Settings
 
-#### UI Settings
+### UI Settings
 * Table Size - Define el tamaño de las filas de los canales "Channels".
 * Date format - Configura el formato de las fechas para mostrarlas como Día/Mes/Año o Mes/Día/Año.
 * Time format - Configura el formato de la hora para mostrarlas en formato de 12 horas o 24 horas.
 
-#### DVR
+### DVR
 * Enable Comskip (elimina los comerciales después de la grabación) – Activa o desactiva la opción.
 * Custom comskip.ini path – Ingresa una ruta personalizada o déjala en blanco para usar los valores predeterminados integrados.
 * Select comskip.ini – Haz clic en este botón para seleccionar, subir y utilizar un archivo comskip.ini personalizado en Dispatcharr.
@@ -42,7 +40,7 @@ Desde la página "Logo Manager" puedes subir y administrar logos.
 * Movie Path Template - Admite `{title}`, `{year}`, `{channel}`, `{start}`, `{end}`. Las rutas relativas están dentro del directorio de tu biblioteca.
 * Movie Fallback Template - Plantilla usada cuando los metadatos de la película están incompletos. Admite `{start}`, `{end}`, `{channel}`.
 
-#### Stream Settings
+### Stream Settings
 * Default User-Agent - Define el User-Agent predeterminado.
 * Default Stream Profile - Define el perfil de transmisión "Stream Profile" predeterminado.
 * Preferred Region - Establece tu región preferida.
@@ -56,11 +54,11 @@ Desde la página "Logo Manager" puedes subir y administrar logos.
     !!! Ejemplo
         Tu proveedor cambia regularmente los nombres de ciertos canales PPV, pero ya tienes canales configurados para esas transmisiones y no quieres que se eliminen por el proceso de limpieza de transmisiones obsoletas. Como el proveedor cambia el nombre, pero no la URL ni el TVG-ID, puedes configurar tu M3U Hash Key para que solo use `URL` y `TVG-ID`.
 
-#### System settings
+### System settings
 Configura cuántos eventos del sistema (inicio/detención de canales, buffering, etc.) se conservarán en la base de datos. Los eventos se muestran en la página (Stats).
 * Maximum System Events - Número de eventos que se conservarán (mínimo: 10, máximo: 1000)
     
-#### User-Agents
+### User-Agents
 En el contexto de IPTV, un user agent es una cadena de texto que identifica la aplicación cliente (por ejemplo, un reproductor como Kodi o VLC) ante el servidor IPTV. Se incluye en los encabezados HTTP de las solicitudes enviadas por el cliente al servidor, informando al servidor sobre el tipo de dispositivo y el software utilizado para acceder a la transmisión IPTV. Dispatcharr incluye User-Agents predeterminados para VLC, Chrome y TiviMate.
 
 * Agrega tu propio User-Agent haciendo clic en el botón "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> "Add User-Agent" en la página "Settings"
@@ -68,7 +66,7 @@ En el contexto de IPTV, un user agent es una cadena de texto que identifica la a
     * User-Agent - El texto que se incluirá en la cadena user-agent.
     * Description - (Opcional) una descripción del user-agent para tu referencia personal.
 
-#### Stream Profiles
+### Stream Profiles
 | Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](/Dispatcharr-Docs/system/#proxy-settings)          | [Fallback stream<br> support](/Dispatcharr-Docs/channels/#fallback-streams)                          | [Stream stats<br> support](/Dispatcharr-Docs/stats/#stats)                                        | Recursos del Sistema      | 
 | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------: |
 | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Bajo                   |
@@ -97,7 +95,7 @@ En el contexto de IPTV, un user agent es una cadena de texto que identifica la a
     * Parameters – Define tus parámetros personalizados para [ffmpeg](https://ffmpeg.org/ffmpeg.html), [streamlink](https://streamlink.github.io/cli.html), o [VLC](https://wiki.videolan.org/VLC_command-line_help/)
     * User-Agent - Define el User-Agent predeterminado para este perfil de transmisión.
     
-#### Network Access
+### Network Access
 Permite restringir el acceso a Dispatcharr mediante un rango CIDR. Puedes ingresar varios rangos CIDR separados por comas. El valor predeterminado 0.0.0.0/0 permite el acceso desde todas las direcciones IP.
 !!! Ejemplo
     | Rango CIDR     | Número de IPs |  Ejemplo Rango                |
@@ -111,7 +109,7 @@ Permite restringir el acceso a Dispatcharr mediante un rango CIDR. Puedes ingres
 * XC API - Restringe el acceso a la API de XC.
 * UI - Restringe el acceso a la interfaz de usuario (Dispatcharr UI).
     
-#### Proxy Settings
+### Proxy Settings
 These settings affect all stream profiles with the exception of redirect
 
 * Buffering Timeout - Tiempo máximo (en segundos) que se espera ante buffering antes de cambiar de stream.
@@ -120,7 +118,7 @@ These settings affect all stream profiles with the exception of redirect
 * Channel Shutdown Delay -Retardo (en segundos) antes de apagar un canal tras la desconexión del último cliente.
 * Channel Initialization Grace Period -  Período de gracia (en segundos) durante la inicialización del canal.
 
-#### Backup & Restore
+### Backup & Restore
 Crear, programar y restaurar respaldos (backups)
 
 * Schedule backups - Actívalo para configurar un programa regular de respaldos.

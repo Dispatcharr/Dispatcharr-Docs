@@ -1,10 +1,8 @@
-## Avanzado
-
-### Hardware Acceleration 
+## Hardware Acceleration 
 - Dispatcharr actualmente no admite aceleración por hardware de forma directa, pero puedes habilitarla utilizando perfiles de transmisión personalizados con ffmpeg.
 - Esto requiere mapear tu hardware al contenedor y configurar un perfil personalizado de ffmpeg para aprovechar la aceleración. 
 
-#### Mapping Hardware
+### Mapping Hardware
 === "NVIDIA"
     - Instala el [NVIDIA Container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
     - Agrega una sección deploy a tu docker-compose.yml
@@ -90,7 +88,7 @@
 		- Description: `Intel GPU`
     - Clic Save
 	
-#### Custom Stream Profiles
+### Custom Stream Profiles
 - Abre Dispatcharr.
 - Ve a Settings > Add Stream Profile.
     - Nombralo con el nombre que prefieras
@@ -110,7 +108,7 @@
 		!!! Ejemplo
 		    - Parameters: `-hwaccel qsv -user_agent {userAgent} -i {streamUrl} -c:v h264_qsv -c:a aac -f mpegts pipe:1`
 
-### Process Priority Configuration
+## Process Priority Configuration
 Variables de entorno opcionales para ajustar la prioridad de tareas. Valores más bajos = mayor prioridad. Rango: -20 (máxima) a 19 (mínima). Los valores negativos requieren `cap_add: SYS_NICE`  
 
 - `UWSGI_NICE_LEVEL` - Prioridad para uWSGI, FFmpeg y streaming. Predeterminado 0; recomendado -5 para alta prioridad. 
@@ -126,7 +124,7 @@ Variables de entorno opcionales para ajustar la prioridad de tareas. Valores má
           - SYS_NICE
     ```
  
-### Nginx reverse proxy
+## Nginx reverse proxy
 Ejemplo de configuración HTTPS (solo streams vía HTTPS, WebUI a través de la red local y Wireguard)
 
 ??? example "Example (click to see)"

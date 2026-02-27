@@ -1,7 +1,6 @@
-## Channels
 From the channels page you can create and manage all added channels, streams, and external links
 
-### Channels	
+## Channels	
 * Choose the "Channel Profile" by clicking the drop-down menu under the Channels header. The default profile is "All"
     * Create a new Channel Profile by clicking the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon next to the drop-down menu
     * Channel Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channel Profiles each user has access to
@@ -66,7 +65,7 @@ From the channels page you can create and manage all added channels, streams, an
 * For each stream listed within a channel, Dispatcharr will display the source of the stream as defined in the M3U & EPG Manager, a direct link to stream, and an option to preview the stream <i data-lucide="eye" style="color: LightSkyBlue; width: 18px;"></i> .
     * Dispatcharr gathers statistics for each stream provided that a compatible [Stream Profile](/Dispatcharr-Docs/system/#stream-profiles) is used. Once captured, [stats](/Dispatcharr-Docs/stats/#stats) such as video resolution, frames per second, video encoder format, audio format, audio codec, and stream bitrate will be displayed.  For each captured stream, clicking 'Show Advanced Options' provides even more detail on the quality of source stream.  
     
-### Streams
+## Streams
 * Create a new channel by clicking the corresponding <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> "Create New Channel" icon under the "Actions" column 
 * Add a stream to an existing channel by clicking the corresponding <i data-lucide="list-plus" style="color: RoyalBlue; width: 18px;"></i> "Add to Channel" button under the "Actions" column 
 * Preview (play) a stream by clicking the corresponding <i data-lucide="ellipsis-vertical" style="color: LightSkyBlue; width: 18px;"></i> icon under the "Actions" column, then press "Preview Stream"
@@ -84,7 +83,7 @@ From the channels page you can create and manage all added channels, streams, an
     * TVG-ID (click in the column header to search)
     * Stats (mouse over to see additional stats)
 
-### Links
+## Links
 The "Links" section has buttons to see and copy the external links needed by a client
 
 * <i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Use this link for clients that use HD Homerun format

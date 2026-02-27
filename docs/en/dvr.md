@@ -1,2 +1,1 @@
-## DVR
-* The DVR page allows you to manage your current and future recordings and set new recordings based on channel and time.
+The DVR page allows you to manage your current and future recordings and set new recordings based on channel and time.

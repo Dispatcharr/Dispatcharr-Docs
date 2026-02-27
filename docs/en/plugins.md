@@ -1,4 +1,3 @@
-## Plugins
 From the plugins page you can import, manage, and delete dispatcharr plugins. Plugin descriptions are available on [discord](https://discord.gg/Sp45V5BcxU)
 
 * Press the "Import Plugin" button to add a plugin, or load one into `/data/plugins` and reload.

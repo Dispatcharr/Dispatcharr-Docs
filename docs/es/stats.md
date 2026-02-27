@@ -1,5 +1,4 @@
-## Stats
-* La sección "Stats" muestra información sobre todas las transmisiones activas, y el visualizador de eventos del sistema (System Event Viewer) incluyendo:
+La sección "Stats" muestra información sobre todas las transmisiones activas, y el visualizador de eventos del sistema (System Event Viewer) incluyendo:
 
     * Nombre del canal "Channel Name"
     * Logo del canal "Channel Logo"

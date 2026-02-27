@@ -1,7 +1,6 @@
-## Channels
 Desde la sección de Channels (Canales) puedes crear y administrar todos los canales agregados, los streams y los enlaces externos.
 
-### Channels
+## Channels
 * Selecciona el perfil de canales "Channel Profile" haciendo clic en el menú desplegable debajo del encabezado "Channels". El perfil predeterminado es "All".
     * Crea un nuevo perfil de canales "Channel Profile" haciendo clic en el <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> ícono que se encuentra junto al menú desplegable.
     * Los perfiles de canales "Channel Profiles" pueden usarse para crear subconjuntos dentro de tu lista de canales. Cada perfil generará su propio enlace (HDHR, M3U y EPG). Al crear usuarios "XC User", puedes seleccionar a qué perfiles "Channel Profiles" tendrá acceso cada usuario.
@@ -43,7 +42,7 @@ Desde la sección de Channels (Canales) puedes crear y administrar todos los can
 * Para cada transmisión (stream) listada dentro de un canal, Dispatcharr mostrará el origen de la transmisión tal como se define en el "M3U & EPG Manager", un enlace directo a la transmisión y una opción para previsualizarla (preview stream). <i data-lucide="eye" style="color: LightSkyBlue; width: 18px;"></i> .
     * Dispatcharr recopila estadísticas para cada stream siempre que se utilice un [Stream Profile](/Dispatcharr-Docs/system/#stream-profiles) compatible. Una vez capturadas, se mostrarán las, estadísticas [stats](/Dispatcharr-Docs/stats/#stats) como la resolución de video, fotogramas por segundo, formato del codificador de video, formato de audio, códec de audio y bitrate del stream. Para cada stream capturado, al hacer clic en ‘Show Advanced Options’ se obtiene aún más detalle sobre la calidad del stream de origen.  
     
-### Streams
+## Streams
 * Busca nombres de transmisiones (streams) haciendo clic en el encabezado de columna "Name".
 * Busca por grupo de M3U haciendo clic en el encabezado de columna "Group".
 * Busca por nombre de M3U haciendo clic en el encabezado de columna "M3U".
@@ -58,7 +57,7 @@ Desde la sección de Channels (Canales) puedes crear y administrar todos los can
         Por cada transmisión (stream) seleccionada, se creará un nuevo canal correspondiente. Por ejemplo, si seleccionas 3 transmisiones (streams), se crearán 3 canales nuevos.
 * <i data-lucide="square-plus" style="color: White; width: 18px;"></i> Selecciona "Create Stream" para crear una nueva transmisión que no esté asociada a ninguno de tus archivos M3U cargados.
 
-### Links
+## Links
 La sección "Links" contiene opciones para ver y copiar los enlaces externos que necesita un cliente.
 
 * <i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Usa este enlace para los clientes que utilizan el formato HD Homerun.

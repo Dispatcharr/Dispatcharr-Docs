@@ -1,4 +1,3 @@
-## Stats
 The Stats page shows info on all active streams and the system event viewer
 
 * Active connections
