@@ -1,6 +1,6 @@
-## M3U & EPG Manager
 Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
-### M3U accounts 
+
+## M3U accounts 
 * <i data-lucide="square-plus" style="color: White; width: 18px;"></i> "Add" - Haz clic en el botón para agregar nuevas cuentas M3U.
     * Name - Un nombre para tu cuenta M3U.
     * URL - La URL M3U (no es obligatorio si estás subiendo un archivo M3U).
@@ -57,7 +57,7 @@ Desde esta sección puedes agregar y administrar tus cuentas M3U y tus EPGs.
     * <i data-lucide="square-minus" style="color: red; width: 18px;"></i> ícono de eliminación "delete icon" para eliminar la cuenta M3U asociada.
     * <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> Ícono de actualización "refresh icon" para actualizar o sincronizar manualmente la cuenta M3U asociada.
     
-### EPGs
+## EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Haz clic en esta opción para agregar una nueva fuente EPG.
     * Standard EPG Source - Para agregar una fuente estándar XMLTV EPG.
         * Name - Un nombre para tu EPG.

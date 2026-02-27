@@ -1,4 +1,3 @@
-## TV Guide
 * The TV Guide page will by default display channels for which there is EPG data loaded. 
 * You can search by channel name and/or filter by channel groups and profiles.
 * Click a channel logo to preview the channel. 

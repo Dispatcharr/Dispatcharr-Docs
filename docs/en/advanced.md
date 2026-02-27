@@ -1,10 +1,8 @@
-## Advanced
-
-### Hardware Acceleration 
+## Hardware Acceleration 
 - Dispatcharr does not currently support hardware acceleration directly, but you can use hardware acceleration with custom ffmpeg stream profiles. 
 - This will require mapping your hardware to the container and setting up a custom ffmpeg stream profile. 
 
-#### Mapping Hardware
+### Mapping Hardware
 === "NVIDIA"
     - Install the [NVIDIA Container toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html)
     - Add a deploy section to your docker-compose.yml
@@ -90,7 +88,7 @@
 		- Description: `Intel GPU`
     - Click Save
 	
-#### Custom Stream Profiles
+### Custom Stream Profiles
 - Open Dispatcharr
 - Navigate to Settings > Add Stream Profile
     - Name it anything you like
@@ -110,7 +108,7 @@
 		!!! example
 		    - Parameters: `-hwaccel qsv -user_agent {userAgent} -i {streamUrl} -c:v h264_qsv -c:a aac -f mpegts pipe:1`
 
-### Process Priority Configuration
+## Process Priority Configuration
 Optional environment variables to adjust priority of various tasks. Lower values = higher priority. Range: -20 (highest) to 19 (lowest). Negative values require `cap_add: SYS_NICE`  
 
 - `UWSGI_NICE_LEVEL` - Set priority for uWSGI, FFmpeg, and streaming. Default priority is 0, recommend -5 for high priority 
@@ -126,8 +124,8 @@ Optional environment variables to adjust priority of various tasks. Lower values
           - SYS_NICE
     ```
  
-### Reverse Proxies
-#### Nginx
+## Reverse Proxies
+### Nginx
 HTTPS config example (streams only via https, WebUI via local network and Wireguard)
 
 ??? example "Example (click to see)"
@@ -184,7 +182,7 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
 
 ---
     
-#### Pangolin
+### Pangolin
 * Create your resource just as you would any other in Pangolin
 * If you're hosting Dispatcharr on the same VPS (if you're using a VPS) as Pangolin, be sure to set it as a local resource and use 172.XX.X.X as the IP, then enter the port. Otherwise set it up normally
 * If you'd like to enable Pangolin's SSO for this resource for security, do so in the Authentication tab of your new Dispatcharr resource

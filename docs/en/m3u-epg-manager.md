@@ -1,6 +1,6 @@
-## M3U & EPG Manager
 From this page you can add and maintain your M3U accounts and EPGs
-### M3U accounts
+
+## M3U accounts
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add" - Click this button to add new M3U accounts 
     * Name - A name for your M3U account
     * URL - The M3U URL (not required if uploading an M3U file)
@@ -69,7 +69,7 @@ From this page you can add and maintain your M3U accounts and EPGs
     * <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
     * <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
     
-### EPGs
+## EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG
     * Standard EPG Source - To add a standard XMLTV EPG source
         * Name - A name for your EPG
