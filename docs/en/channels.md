@@ -12,7 +12,7 @@ From the channels page you can create and manage all added channels, streams, an
 * Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
     * Hide/Show Disabled - Selectable only when a Channel profile is active. Toggle to hide/show any channels which are disabled for the selected profile
     * Only Empty Channels - Check the box to show only channels with no associated streams.
-    * Only Containing Stale Streams - Check the box to show only channels with stale streams.
+    * Has Stale Streams - Check the box to show only channels with stale streams.
 * Search channel names by clicking in the "Name" column header
 * Filter by EPG by clicking in the "EPG" column header
 * Search by channel group by clicking in the "Group" column header
