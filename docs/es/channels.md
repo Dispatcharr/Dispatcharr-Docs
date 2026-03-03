@@ -11,7 +11,8 @@ Desde la sección de Channels (Canales) puedes crear y administrar todos los can
     * Para renombrar un Channel Profile, haz clic en el menú desplegable y selecciona el ícono <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> junto al Channel Profile que deseas renombrar. 
 * Haz clic en el ícono <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter para utilizar el filtrado avanzado.
     * Hide/Show Disabled - Disponible solo cuando un Channel Profile está activo. Actívalo para ocultar o mostrar los canales que estén deshabilitados para el perfil seleccionado.
-    * Only empty channels - Marca esta opción para mostrar solo los canales que no tienen streams asociados.
+    * Only Empty Channels - Marca esta opción para mostrar solo los canales que no tienen streams asociados.
+    * Has Stale Streams - Marca esta opción para mostrar solo los canales con streams obsoletas.
 * Busca nombres de canales haciendo clic en el encabezado de columna "Name".
 * Filtra por la guía de programación "EPG" haciendo clic en el encabezado de columna "EPG".
 * Busca por grupo de canal "Channel Group" haciendo clic en el encabezado de columna "Group".
