@@ -121,8 +121,8 @@ Multicast streams require dispatcharr to be run in [host network mode](https://d
 
 Additionally, if multiple network interfaces are available, you will need to specify an interface with one of the two following methods:
 
-1. Add `-localaddr [interface_ip]` argument to a custom ffmpeg stream profile
-2. Append `?localaddr=[interface-ip]` to existing `-i {streamUrl}` argument in custom ffmpeg stream profile
+1. Add `-localaddr [interface-ip]` argument to a custom ffmpeg stream profile
+2. Append `?localaddr=[interface-ip]` to existing `-i {streamUrl}` argument in a custom ffmpeg stream profile
 
 !!! example "Example 1"
     `-localaddr 192.168.86.1 -i {streamUrl} -user_agent {userAgent} -i {streamUrl} -c copy -f mpegts pipe:1`
