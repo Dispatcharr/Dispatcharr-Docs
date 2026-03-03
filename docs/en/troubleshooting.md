@@ -121,8 +121,8 @@ Multicast streams require dispatcharr to be run in [host network mode](https://d
 
 Additionally, if multiple network interfaces are available, you will need to specify an interface with one of the two following methods:
 
-    1. add `-localaddr [interface_ip]` argument to a stream profile
-    2. append `?localaddr=[interface-ip]` to existing `-i {streamUrl}` argument in stream profile
+1. add `-localaddr [interface_ip]` argument to a stream profile
+2. append `?localaddr=[interface-ip]` to existing `-i {streamUrl}` argument in stream profile
 
 !!! example "Example 1"
     `-localaddr 192.168.86.1 -i {streamUrl} -user_agent {userAgent} -i {streamUrl} -c copy -f mpegts pipe:1`
