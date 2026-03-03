@@ -119,10 +119,16 @@ If your client/app supports the use of XC credentials, it will ask for an API or
 ## Multicast streams are not working
 Multicast streams require dispatcharr to be run in [host network mode](https://docs.docker.com/engine/network/drivers/host/) or use [macvlan](https://docs.docker.com/engine/network/drivers/macvlan/). 
 
-Additionally, if multiple network interfaces are available, you should add `?localaddr=[interface-ip]` to the end of your stream URL.
+Additionally, if multiple network interfaces are available, you will need to specify an interface with one of the two following methods:
 
-!!! example
-    `udp://239.1.2.3:4567?localaddr=0.0.0.0`
+1. Add `-localaddr [interface-ip]` argument to a custom ffmpeg stream profile
+2. Append `?localaddr=[interface-ip]` to existing `-i {streamUrl}` argument in a custom ffmpeg stream profile
+
+!!! example "Example 1"
+    `-localaddr 192.168.86.1 -i {streamUrl} -user_agent {userAgent} -i {streamUrl} -c copy -f mpegts pipe:1`
+
+!!! example "Example 2"
+    `-i {streamUrl}?localaddr=192.168.86.1 -user_agent {userAgent} -i {streamUrl} -c copy -f mpegts pipe:1`
     
 ---
 
