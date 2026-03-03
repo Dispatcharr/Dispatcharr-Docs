@@ -120,6 +120,7 @@ If your client/app supports the use of XC credentials, it will ask for an API or
 Multicast streams require dispatcharr to be run in [host network mode](https://docs.docker.com/engine/network/drivers/host/) or use [macvlan](https://docs.docker.com/engine/network/drivers/macvlan/). 
 
 Additionally, if multiple network interfaces are available, you will need to specify an interface with one of the two following methods:
+
     1. add `-localaddr [interface_ip]` argument to a stream profile
     2. append `?localaddr=[interface-ip]` to existing `-i {streamUrl}` argument in stream profile
 
