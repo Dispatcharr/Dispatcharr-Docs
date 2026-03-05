@@ -6,7 +6,9 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
     * XC login enabled only if an XC Password is set for the user
 2. Standard User
     * Has access to Dispatcharr UI, but only the Channels, TV Guide, and Settings pages
+        * Dispatcharr UI access is granted for all channels
     * May allow access to all Channel Profiles or restrict to a subset
+        * Restrictions apply only for access via XC
     * In Settings, only able to change UI settings
     * XC login enabled only if an XC Password is set for the user
     * Optionally hide channels marked as "Mature Content" in user settings
