@@ -28,7 +28,7 @@ Funciones adicionales, como un proxy robusto y soporte para múltiples clientes 
   - Asignación Automática de EPG  - Asigna automaticamente la guía de programación a tus canales. 
   - Compatibilidad - Funciona con Plex, Jellyfin, Emby, ChannelsDVR y más (HDHomeRun, M3U, XMLTV, Xtream Codes API).
 
-## Licencia (CC BY-NC-SA)
+## Licencia (GNU AGPL v3.0)
 
 Este proyecto se distribuye bajo la licencia [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 

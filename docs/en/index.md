@@ -27,7 +27,7 @@ Additional features, such as robust proxying and support for multiple clients on
   - EPG Auto-Match - Automatically map guide data to your channels 
   - Output Compatibility - Works with Plex, Jellyfin, Emby, ChannelsDVR and more (HDHomeRun, M3U, XMLTV, Xtream Codes API)
 
-## License (CC BY-NC-SA)
+## License (GNU AGPL v3.0)
 
 This project is licensed under [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
