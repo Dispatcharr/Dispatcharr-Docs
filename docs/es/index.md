@@ -30,11 +30,7 @@ Funciones adicionales, como un proxy robusto y soporte para múltiples clientes 
 
 ## Licencia (CC BY-NC-SA)
 
-Este proyecto se distribuye bajo la licencia Creative Commons BY-NC-SA.
-
-Por (Atribucíón): Debes proporcionar el crédito adecuado si compartes, reutilizas o modificas este proyecto.
-NC (No Comercial): No puedes utilizar este proyecto con fines comerciales.
-SA (ShareAlike): Si modificas o reutilizas este proyecto, debes distribuir tus aportes y/o versiones bajo la misma licencia.
+Este proyecto se distribuye bajo la licencia [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
 ## Contribuciones
 Las solicitudes (Pull requests), reportes de problemas, y solicitudes de mejoras o recomendaciones son bienvenidas! Solo pedimos que:

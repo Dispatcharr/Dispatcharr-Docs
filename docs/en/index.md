@@ -29,11 +29,7 @@ Additional features, such as robust proxying and support for multiple clients on
 
 ## License (CC BY-NC-SA)
 
-This project is released under the Creative Commons BY-NC-SA license.
-
-BY (Attribution): You must give appropriate credit if you share or modify this project.
-NC (Non-Commercial): You may not use this work for commercial purposes.
-SA (ShareAlike): If you remix or transform it, you must distribute your contributions under the same license.
+This project is licensed under [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
 ## Contributing
 Pull requests, issue reports, and feature suggestions are welcome! We only ask that:
