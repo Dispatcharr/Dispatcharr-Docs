@@ -215,3 +215,62 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
 * If you'd like to set up GeoBlock for any/all resources, refer to Pangolin's [official documentation](https://docs.pangolin.net/self-host/advanced/enable-geoblocking) for guidance
 
 * Test your new setup by navigating to Dispatcharr in an incognito or private window. You should now be met with your Pangolin login dashboard when accessing the WebUI when you're not authenticated, however your clients will still be able to connect to allow streaming
+
+
+### Nginx Proxy Manager (NPM)
+Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager (NPM).  This guide assumes that NPM is already setup and has SSL certifates configured.
+
+1. Create DNS entry resolving Dispatcharr domain name to NPM IP
+1. Create new proxy host in NPM
+1. Enter the domain name created in step 1
+1. Scheme: `http`
+1. Forward Hostname/IP: `<IP address of Dispatcharr server>`  
+1. Forward port: `9191`
+1. Select `Websockets support`
+1. Select SSL then choose your SSL certificate
+1. Select `Force SSL`
+1. Select `Details` tab
+1. Select the gear icon for custom Nginx configuration
+1. Paste in the below config example, making sure to change the variable names as needed.  Variables are in <> and ALL CAPS
+
+
+    ```npm
+    # Dispatcharr HTTPS NPM
+    location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$ {
+        allow all;
+        proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
+    Accept';
+    }
+
+    # Restrict access.  In this instance all traffic to Dispatcharr flows through proxy.  You can add another allow block if you want to allow traffic not through the proxy. 
+    location / {
+        allow <NPM IP ADDRESS>/32;
+        deny all;
+
+        proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
+
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "Upgrade";
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        add_header 'Access-Control-Allow-Origin' '*';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
+    Accept';
+    }
+    ```
+
+- Verify access by visting Dispatcharr DNS name in browser and making sure you can login 
+- Note: if you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry. 
