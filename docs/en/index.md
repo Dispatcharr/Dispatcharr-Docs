@@ -31,6 +31,10 @@ Additional features, such as robust proxying and support for multiple clients on
 
 This project is licensed under [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
+* Use & Modify - Anyone can use, study, and modify the software.
+* Share Source - If you distribute the software or run a modified version as a service, the corresponding source code must be made available.
+* Keep It Open - Derivative works must remain under the same AGPL license.
+
 ## Contributing
 Pull requests, issue reports, and feature suggestions are welcome! We only ask that:
 
