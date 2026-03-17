@@ -27,8 +27,12 @@ From the Logo Manager page you can upload and manage logos.
 ### UI Settings
 * Table Size - Set the size of the channel rows in "Channels"
 * Pin Table Headers - Toggles whether to keep table headers visible when scrolling
-* Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
 * Time format - Set the display of time to either 12 hour or 24 hour format
+* Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
+* Time Zone - Set your preferred time zone
+* Navigation - Drag and drop to reorder the sidebar navigation items, or click the <i data-lucide="eye" style="color: LightGray; width: 18px;"></i> to toggle visibility
+    * System cannot be hidden
+    * Click the `Reset to Default` button at the bottom of the Navigation section to restore defaults
 
 ### DVR
 * Enable Comskip (remove commercials after recording) - Toggle on or off
@@ -132,6 +136,7 @@ These settings affect all stream profiles with the exception of redirect
 * Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
 * Channel Shutdown Delay - Delay in seconds before shutting down a channel after last client disconnects
 * Channel Initialization Grace Period - Grace period in seconds during channel initialization 
+* New Client Buffer (seconds) - Seconds of received buffer to start behind live when a new client connects (0 = start at live). Note: this is chunk receive time, not video duration
 
 ### Backup & Restore
 Create, schedule, and restore backups
