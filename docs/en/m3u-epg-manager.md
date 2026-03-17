@@ -7,6 +7,7 @@ From this page you can add and maintain your M3U accounts and EPGs
     * Account Type - Standard for direct M3U URLs, Xtream Codes for panel-based services
     * Enable VOD Scanning - Toggle on/off scanning for VOD content (only available with the `Xtream Codes` Account Type)
     * Upload files - If uploading a local M3U file (not required if M3U URL is used)
+    * Expiration Date - Set an expiration date to receive a warning notification (only available with `Standard` Account Type. Xtream Codes expiration is pulled automatically)
     * Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
     * User-Agent - If you want to set a specific user-agent for this account
     * Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
