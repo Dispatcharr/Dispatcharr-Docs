@@ -21,6 +21,7 @@ search:
 
 ## Logos are missing in Plex
 * Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
+    * If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies) set up.
 
 ---
 
@@ -163,9 +164,9 @@ Additionally, if multiple network interfaces are available, you will need to spe
 
 ## Use of Auto Channel Sync
 
-Auto channel sync should ONLY be used for event groups where the channel names are updated to show the event name.  Using on regular channel groups might feel like a cheat code to add all your channels but you lose the ability to customize name, logo, epg etc. as the next refresh will wipe all the changes.  You also lose the ability to add backup and failover streams.
+Auto channel sync is recommended for event groups where channel names are updated to show the event name. Use on regular channel groups might feel like a cheat code to quickly add all your channels, but you lose the ability to customize the channel (name, logo, EPG, failover streams, etc.) as the next refresh will wipe all the changes.
 
-If you want all the channels from a regular group added select the group on the streams table, select all then press Create Channels at the top. 
+If you want to quickly add all the channels from a regular group, filter to the group in the streams table, select all, then press `Create Channels` at the top. 
 
 ---
 
