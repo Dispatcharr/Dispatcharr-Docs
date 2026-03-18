@@ -46,7 +46,7 @@ From the Logo Manager page you can upload and manage logos.
 * Movie Fallback Template - Template used when movie metadata is incomplete. Supports `{start}`, `{end}`, `{channel}`.
 
 !!! note 
-    [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#recording-location) Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
+    <span id="recording-location"></span>[<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#recording-location) Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
 
     !!! example
         ```yaml
