@@ -5,23 +5,23 @@ search:
 
 # Troubleshooting
 ## Stream Failover not working
-* Check if the Stream Profile (default and/or for the channel) is set to redirect. Stream failover will not work for redirect
+Check if the Stream Profile (default and/or for the channel) is set to redirect. Stream failover will not work for redirect
 
 ---
 
 ## Will you implement X new feature?
-* Check existing feature requests in our [discord](https://discord.gg/Sp45V5BcxU) or [github](https://github.com/Dispatcharr/Dispatcharr/issues). If it's not already requested, feel free to request. 
+Check existing feature requests in our [discord](https://discord.gg/Sp45V5BcxU) or [github](https://github.com/Dispatcharr/Dispatcharr/issues). If it's not already requested, feel free to request. 
 
 ---
 
 ## Does dispatcharr support hardware acceleration? 
-* You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/advanced/#custom-stream-profiles). 
+You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/advanced/#custom-stream-profiles). 
 
 ---
 
 ## Logos are missing in Plex
-* Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
-    * If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies) set up.
+Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
+  * If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies) set up.
 
 ---
 
@@ -171,4 +171,16 @@ If you want to quickly add all the channels from a regular group, filter to the 
 ---
 
 ## Why do XC accounts created in dispatcharr show a 90 day expiration and how can I fix this?
-* There is no need to fix or change this. The 90 day expiration is perpetual, renewing on every refresh.
+There is no need to fix or change this. The 90 day expiration is perpetual, renewing on every refresh.
+
+---
+
+## Where are DVR recordings saved?
+Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
+
+    !!! example
+        ```yaml
+        volumes:
+          - dispatcharr_data:/data
+          - host_path/media:/data/recordings
+        ```
