@@ -45,8 +45,8 @@ From the Logo Manager page you can upload and manage logos.
 * Movie Path Template - Supports `{title}`, `{year}`, `{channel}`, `{start}`, `{end}`. Relative paths are under your library dir.
 * Movie Fallback Template - Template used when movie metadata is incomplete. Supports `{start}`, `{end}`, `{channel}`.
 
-!!! note
-    Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
+!!! note 
+    [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#recording-location) Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
 
     !!! example
         ```yaml
