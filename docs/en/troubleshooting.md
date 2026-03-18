@@ -176,7 +176,7 @@ There is no need to fix or change this. The 90 day expiration is perpetual, rene
 ---
 
 ## Where are DVR recordings saved?
-Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
+Recordings are saved in the `/data/recordings` folder according to your [template settings](/Dispatcharr-Docs/system/#dvr). You may wish to use docker compose bind mounts to save recordings to a different location on your host
 
 !!! example
     ```yaml
