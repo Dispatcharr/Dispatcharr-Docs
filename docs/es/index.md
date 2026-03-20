@@ -35,7 +35,7 @@ Este proyecto se distribuye bajo la licencia [GNU AGPL v3.0](https://www.gnu.org
 ## Contribuciones
 Las solicitudes (Pull requests), reportes de problemas, y solicitudes de mejoras o recomendaciones son bienvenidas! Solo pedimos que:
 
-Aceptes y respetes la licencia CC BY-NC-SA.
+Aceptes y respetes la licencia GNU AGPL v3.0.
 Sigas las buenas prácticas y los estándares de programación
  utilizados en el proyecto.
 Mantengas una comunicación respetuosa con todos los colaboradores.

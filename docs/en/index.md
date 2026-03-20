@@ -38,7 +38,7 @@ This project is licensed under [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl
 ## Contributing
 Pull requests, issue reports, and feature suggestions are welcome! We only ask that:
 
-You agree to respect the CC BY-NC-SA license.
+You agree to respect the GNU AGPL v3.0 license.
 You follow best practices and the coding standards used in the project.
 You’re respectful of all contributors in your communications.
 
