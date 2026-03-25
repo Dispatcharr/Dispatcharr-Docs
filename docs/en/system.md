@@ -78,6 +78,16 @@ Configure how many system events (channel start/stop, buffering, etc.) to keep i
 
 * Maximum System Events - Number of events to retain (minimum: 10, maximum: 1000)
     
+### Connection Security
+Displays the current TLS encryption status for Redis and PostgreSQL connections. This section is only visible in [modular deployment mode](/Dispatcharr-Docs/installation/#modular-deployment).
+
+* **Encryption** - Whether TLS is enabled for the connection
+* **Server Verification** (Redis) / **Verification Mode** (PostgreSQL) - Whether the server's identity is verified using a CA certificate
+* **Mutual TLS** - Whether Dispatcharr authenticates to the server using a client certificate
+
+!!! note
+    Connection Security is read-only. TLS is configured via environment variables in the docker compose file. See [Connection Security](/Dispatcharr-Docs/advanced/#connection-security) in the Advanced section for configuration details.
+
 ### User-Agents
 In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
 
