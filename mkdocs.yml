@@ -53,9 +53,15 @@ plugins:
         - locale: es
           name: Español
           build: true
+        - locale: "null"
+          name: Help Translating
+          build: false
+          fixed_link: https://discord.gg/wfeqTRRJru
       docs_structure: folder
       default_language_only: false
 
+
+      
 # Extensions
 markdown_extensions:
   - abbr
@@ -109,12 +115,25 @@ repo_url: https://github.com/Dispatcharr/
 
 nav:
   - Home: index.md
-  - Getting started:
+  - Setup:
     - Installation: installation.md
     - Getting Started: getting-started.md
-  - User Guide: user-guide.md
+    - Migrations: migrations.md
+  - User Guide: 
+    - Channels: channels.md
+    - VODs: vods.md
+    - M3U & EPG Manager: m3u-epg-manager.md
+    - TV Guide: tv-guide.md
+    - DVR: dvr.md
+    - Stats: stats.md
+    - Plugins: plugins.md
+    - Integrations: integrations.md
+    - System: system.md
+    - Notifications: notifications.md
+    - Advanced: advanced.md
   - FAQ/Troubleshooting: troubleshooting.md
   - API: api.md
+  - Plugins: plugin-listing.md
   - Join Discord: https://discord.gg/wfeqTRRJru
   
 extra_javascript:

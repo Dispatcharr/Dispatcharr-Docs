@@ -1,21 +1,21 @@
 ## Connections
-Desde la página Connections puedes crear y gestionar webhooks basados en eventos y la ejecución de scripts.
+From the Connections page you can create and manage event-driven webhooks and script execution
 
-Haz clic en <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection para crear un nuevo webhook o una ejecución de script basada en eventos.
+Click <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection to create a new webhook or event-driven script execution
 
-* Admite múltiples tipos de eventos, incluyendo:
-    * Ciclo de vida del canal (start, stop, reconnect, error, failover)
-    * Operaciones de stream (switch) 
-    * Eventos de grabación (start, end)
-    * Actualizaciones de datos (EPG, M3U)
-    * Actividad del cliente (connect, disconnect)
+* Supports multiple event types including:
+    * Channel lifecycle (start, stop, reconnect, error, failover)
+    * Stream operations (switch), 
+    * Recording events (start, end)
+    * Data refreshes (EPG, M3U)
+    * Client activity (connect, disconnect) 
 
-Los datos del evento están disponibles como variables de entorno en scripts (con el prefijo DISPATCHARR_), como payloads POST para webhooks, y como payloads de ejecución para plugins.
+Event data is available as environment variables in scripts (prefixed with DISPATCHARR_), POST payloads for webhooks, and plugin execution payloads
 
 !!! info
-    Los scripts deben colocarse en `data/scripts` y deben tener permisos de ejecución.
+    Scripts should be placed in `data/scripts` and must be given execute permissions
 
-??? example "Ejemplo Script (clic para ver)"
+??? example "Example Script (click to see)"
     ```python
     #!/usr/bin/env python3
 
@@ -59,4 +59,4 @@ Los datos del evento están disponibles como variables de entorno en scripts (co
     ```
 
 ## Logs
-Las conexiones activadas, sus respuestas y cualquier error se registrarán aquí.
+Triggered connections, their responses, and any errors will be logged here

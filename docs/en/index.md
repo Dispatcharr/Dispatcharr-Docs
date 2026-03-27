@@ -6,7 +6,7 @@
 - :material-github: [__Github__ repository](https://github.com/Dispatcharr/Dispatcharr)
 - :octicons-container-16: [__GH Container__ images](https://github.com/Dispatcharr/Dispatcharr/pkgs/container/dispatcharr)
 - :fontawesome-regular-circle-play: [__Getting__ started](installation.md)
-- :material-cog: __Configuration__
+- :material-cog: [__Configuration__](system.md)
 
 
 </div>
@@ -27,18 +27,18 @@ Additional features, such as robust proxying and support for multiple clients on
   - EPG Auto-Match - Automatically map guide data to your channels 
   - Output Compatibility - Works with Plex, Jellyfin, Emby, ChannelsDVR and more (HDHomeRun, M3U, XMLTV, Xtream Codes API)
 
-## License (CC BY-NC-SA)
+## License (GNU AGPL v3.0)
 
-This project is released under the Creative Commons BY-NC-SA license.
+This project is licensed under [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
-BY (Attribution): You must give appropriate credit if you share or modify this project.
-NC (Non-Commercial): You may not use this work for commercial purposes.
-SA (ShareAlike): If you remix or transform it, you must distribute your contributions under the same license.
+* Use & Modify - Anyone can use, study, and modify the software.
+* Share Source - If you distribute the software or run a modified version as a service, the corresponding source code must be made available.
+* Keep It Open - Derivative works must remain under the same AGPL license.
 
 ## Contributing
 Pull requests, issue reports, and feature suggestions are welcome! We only ask that:
 
-You agree to respect the CC BY-NC-SA license.
+You agree to respect the GNU AGPL v3.0 license.
 You follow best practices and the coding standards used in the project.
 You’re respectful of all contributors in your communications.
 
