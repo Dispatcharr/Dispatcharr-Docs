@@ -10,36 +10,36 @@
 
 
 </div>
-## Overview
-Dispatcharr helps you...
+## Descripción
+Dispatcharr te ayuda a...
 
-- Collect, organize, and serve your IPTV streams.
-- Manage EPG (Electronic Program Guide) data.
-- Perform advanced filtering, playlist (M3U) importing, and re-streaming.
-- Expose a friendly front-end for interfacing with your streams, all from a single self-hosted solution.
+- Recopilar, organizar, y distribuir tus transmisiones (streams) IPTV.
+- Gestionar la información de la Guia Electrónica de Programación (EPG) .
+- Realizar filtrado avanzado, importe de lista (M3U), y  re-transmición.
+- Ofrece una interfaz amigable para gestionar tus transmisiones (streams), todo desde tu propio servidor.
 
-Dispatcharr is a IPTV streaming playlist (m3u m3u8) editor and proxy. IPTV proxy application that enables users to curate complex M3U playlists, manage them, and proxy them to various applications like Emby, Plex, Jellyfin, or any other compatible streaming platform. It offers the flexibility to import an unlimited number of M3U and EPG files, supporting a wide range of streaming content. Dispatcharr delivers fast and reliable streaming across multiple operating systems. 
+Dispatcharr es un proxy y editor de listas (m3u m3u8) IPTV. Es una aplicación proxy de IPTV que les permite a los usuarios organizar listas M3U complejas, administrarlas y retransmitirlas a varias aplicaciones como por ejemplo, Emby, Plex, Jellyfin o cualquier otra aplicación y/o plataforma de transmisión compatible. 
 
-Additional features, such as robust proxying and support for multiple clients on a single backend stream, make it a comprehensive solution for today’s streaming needs. 
+Funciones adicionales, como un proxy robusto y soporte para múltiples clientes desde una transmisión única de origen, convierten a Dispatcharr en una solución completa e integral para las necesidades actuales de transmisión. 
 
-  - Proxy Streaming Engine - Stream more reliably, with fewer provider connections and automatic stream switching when buffering is detected
-  - Real-Time Stats Dashboard - Monitor stream health and client activity live. 
-  - EPG Auto-Match - Automatically map guide data to your channels 
-  - Output Compatibility - Works with Plex, Jellyfin, Emby, ChannelsDVR and more (HDHomeRun, M3U, XMLTV, Xtream Codes API)
+  - Motor Proxy de Transmisión - Transmisión más estable, con menos conexiones desde el proveedor y cambio automático cuando se detecta alguna inestabilidad (buffering) de la transimisión. 
+  - Panel de Estadísticas en Tiempo Real - Monitorea la salud de las transmisiones y la activiad de los clientes en vivo. 
+  - Asignación Automática de EPG  - Asigna automaticamente la guía de programación a tus canales. 
+  - Compatibilidad - Funciona con Plex, Jellyfin, Emby, ChannelsDVR y más (HDHomeRun, M3U, XMLTV, Xtream Codes API).
 
-## License (CC BY-NC-SA)
+## Licencia (GNU AGPL v3.0)
 
-This project is released under the Creative Commons BY-NC-SA license.
+Este proyecto se distribuye bajo la licencia [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
-BY (Attribution): You must give appropriate credit if you share or modify this project.
-NC (Non-Commercial): You may not use this work for commercial purposes.
-SA (ShareAlike): If you remix or transform it, you must distribute your contributions under the same license.
+* Use & Modify - Cualquiera puede usar, estudiar y modificar el software.
+* Share Source - Si distribuyes el software o ejecutas una versión modificada como servicio, el código fuente correspondiente debe ponerse a disposición.
+* Keep It Open - Los trabajos derivados deben permanecer bajo la misma licencia AGPL.
 
-## Contributing
-Pull requests, issue reports, and feature suggestions are welcome! We only ask that:
+## Contribuciones
+Las solicitudes (Pull requests), reportes de problemas, y solicitudes de mejoras o recomendaciones son bienvenidas! Solo pedimos que:
 
-You agree to respect the CC BY-NC-SA license.
-You follow best practices and the coding standards used in the project.
-You’re respectful of all contributors in your communications.
+Aceptes y respetes la licencia GNU AGPL v3.0.
+Sigas las buenas prácticas y los estándares de programación utilizados en el proyecto.
+Mantengas una comunicación respetuosa con todos los colaboradores.
 
-Your contributions—code, documentation, or even bug reports—are greatly appreciated!
+¡Tus contribuciones —ya sean código, documentación o incluso reportes de errores— son muy apreciadas!

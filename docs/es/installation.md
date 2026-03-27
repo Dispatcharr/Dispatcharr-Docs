@@ -1,22 +1,23 @@
-# Installation
+# Instalación
 
-Dispatcharr can be installed using Docker on various platforms, including Windows, macOS, Proxmox, and Unraid. This guide provides detailed instructions for each method.
+Dispatcharr puede instalarse en varias plataformas a través del uso de Docker, incluyendo Windows, macOS, Proxmox y Unraid.
+Esta guía proporciona instrucciones detalladas para cada método.
 
-## Prerequisites
+## Requisitos
 
-Ensure Docker and Docker Compose are installed on your platform.
+Asegúrate de que Docker y Docker Compose estén instalados en tu plataforma.
 
-- [Docker Desktop for Windows](https://docs.docker.com/docker-for-windows/install/)
-- [Docker Desktop for Mac](https://docs.docker.com/docker-for-mac/install/)
-- [Docker on Linux](https://docs.docker.com/engine/install/)
-- [Docker on Proxmox (LXC)](https://pve.proxmox.com/wiki/Linux_Container)
-- [Docker on Unraid](https://docs.unraid.net/unraid-os/manual/docker-management/)
+- [Docker Escritorio (Desktop) en Windows](https://docs.docker.com/docker-for-windows/install/)
+- [Docker Escritorio (Deskptop) para Mac](https://docs.docker.com/docker-for-mac/install/)
+- [Docker en Linux](https://docs.docker.com/engine/install/)
+- [Docker en Proxmox (LXC)](https://pve.proxmox.com/wiki/Linux_Container)
+- [Docker en Unraid](https://docs.unraid.net/unraid-os/manual/docker-management/)
 
 ---
 
 ## Docker Compose
 
-Dispatcharr is deployed using the following `docker-compose.yml`:
+Dispatcharr es distribuido utilizando el siguiente `docker-compose.yml`:
 
 ```yaml
 --8<-- "https://raw.githubusercontent.com/Dispatcharr/Dispatcharr/refs/heads/main/docker/docker-compose.aio.yml"
@@ -24,14 +25,14 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
 
 ---
 
-## Installation Steps
+## Pasos de Instalación
 
 ### Windows Docker
 
-1. Install and open Docker Desktop.
-2. Create a directory, e.g., `C:\Dispatcharr`, and inside it create a `docker-compose.yml` with the provided content.
-3. Open a PowerShell or Command Prompt window in this directory.
-4. Start Dispatcharr with:
+1. Instala y ejecuta Docker para Escritorio (Desktop).
+2. Crea un directorio, por ejemplo: `C:\Dispatcharr`, y dentro del directorio crea un archivo con el nombre `docker-compose.yml` con el contenido proporcionado.
+3. Abre una consola/ventana de PowerShell o de Comandos (CMD) en el directario creado.
+4. Inicia Dispatcharr con:
 
     ```shell
     docker compose up -d
@@ -41,16 +42,16 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
 
 ### macOS Docker
 
-1. Install and start Docker Desktop.
-2. Create a directory for Dispatcharr, e.g., `~/Dispatcharr`.
-3. Create a `docker-compose.yml` file with the provided content.
-4. Launch Terminal and navigate to your directory:
+1. Instala e inicia Docker para Escritorio (Desktop)
+2. Crea un directorio para Dispatcharr, por ejemplo: `~/Dispatcharr`.
+3. Crea un archivo con el nombre`docker-compose.yml` y el contenido proporcionado.
+4. Ejecuta una Terminal y navega al directorio creado:
 
     ```shell
     cd ~/Dispatcharr
     ```
 
-5. Run the container:
+5. Ejecuta del Contenedor (Container):
 
     ```shell
     docker compose up -d
@@ -60,29 +61,29 @@ Dispatcharr is deployed using the following `docker-compose.yml`:
 
 ### Linux Docker
 
-!!! warning
-    Some distros use outdated versions of Docker so it is recommended to install directly from Docker
+!!! warning "Advertencia"
+    Algunas distribuciones utilizan versiones desactualizadas de Docker, por lo que se recomienda instalarlo directamente desde Docker.
 
-Install Docker using the official instructions, such as those for [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+Instala Docker siguiendo las instrucciones oficiales, como las disponibles para [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-??? example "Ubuntu example"
-    1. Uninstall old versions.
+??? example "Ejemplo Ubuntu"
+    1. Desinstala versiones desactualizadas.
 
     ```shell
     for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
     ```
 
-    2. Setup Dockers own apt repository for up-to-date versions.
+    2. Configura el repositorio apt oficial de Docker para asegurarte de instalar la versión más reciente.
 
     ```shell
-    # Add Docker's official GPG key:
+    # Agrega la clave GPG oficial de Docker:
     sudo apt-get update
     sudo apt-get install ca-certificates curl
     sudo install -m 0755 -d /etc/apt/keyrings
     sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
     sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-    # Add the repository to Apt sources:
+    # Agrega el repositorio a las fuentes de Apt.:
     echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
     $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
@@ -90,45 +91,45 @@ Install Docker using the official instructions, such as those for [Ubuntu](https
     sudo apt-get update
     ```
 
-    3. Install Docker.
+    3. Instala Docker.
 
     ```shell
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
 
-1. Create and navigate to your Dispatcharr directory.
+1. Crea y navega hacia tu directorio de Dispatcharr.
     ```shell
     mkdir ~/dispatcharr && cd ~/dispatcharr
     ```
 
-2. Add your own `docker-compose.yml` or use the provided example.
+2. Agrega tu propio `docker-compose.yml` o utiliza el ejemplo proporcionado.
 
-3. Launch Dispatcharr:
+3. Inicia Dispatcharr:
 
     ```shell
     docker compose up -d
     ```
 
-!!! note
-    If you wish to use the `docker compose` commands without sudo you may need to follow Dockers official guide [here](https://docs.docker.com/engine/install/linux-postinstall/).
+!!! nota
+    Si deseas utilizar los comandos de `docker compose` sin sudo, es recomendable que sigas la guia oficial de Docker [aquí](https://docs.docker.com/engine/install/linux-postinstall/).
 
 ---
 ### Proxmox
 
-1. Create an Ubuntu LXC container or VM with Docker and Docker Compose installed.
+1. Crea un contenedor LXC o VM con Docker y Docker Compose instalados.
 
     ```shell
     apt install docker.io docker-compose -y
     ```
 
-2. Create and navigate to your Dispatcharr directory:
+2. Crea y navega hacia tu directorio de Dispatcharr:
 
     ```shell
     mkdir ~/dispatcharr && cd ~/dispatcharr
     ```
 
-3. Add your `docker-compose.yml`.
-4. Launch Dispatcharr:
+3. Agrega tu archivo `docker-compose.yml`.
+4. Inicia Dispatcharr:
 
     ```shell
     docker compose up -d
@@ -138,54 +139,54 @@ Install Docker using the official instructions, such as those for [Ubuntu](https
 
 ### Unraid
 
-1. Select the "Apps" tab of your Unraid server
-2. Search "Dispatcharr" and Select Install
-3. Leave the defaults unless you need to change them
+1. Ve a la pestaña “Apps” en tu servidor Unraid.
+2. Busca “Dispatcharr” y selecciona "Install".
+3. Mantén los valores predeterminados, a menos que necesites modificarlos.
 
 ---
 
-### Building from Source (Unsupported)
+### Compilación desde el código fuente (No Soportado)
 
-1. Clone this repository:
+1. Clona este repositorio:
     ```bash
     git clone https://github.com/Dispatcharr/Dispatcharr.git
     cd Dispatcharr
     ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. Crea y activa un entorno virtual (opcional pero recomendado):
     ```bash
     python -m venv venv
     source venv/bin/activate
     ```
 
-3. Install required dependencies:
+3. Instala las dependencias requeridas:
     ```bash
     pip install -r requirements.txt
     ```
 
-4. Run database migrations and start the server (Django + React front-end):
+4. Ejecuta la migración de la base de datos e inicia el servidor (Django + front-end React):
 
     ```bash
     python manage.py migrate
     python manage.py runserver
     ```
 
-5. For the front-end, navigate to the frontend/ folder and run:
+5. Para el front-end, navega al directorio frontend/ y ejecuta:
 
     ```
     npm install
     npm run build
     ```
    
-6. Once running, visit [http://localhost:9191](http://localhost:9191/) (or the port you exposed) in your browser.
+6. Una vez en ejecución, visita, [http://localhost:9191](http://localhost:9191/) (o el puerto que hayas configurado) en tu navegador.
 
 ---
 
-## Accessing Dispatcharr
+## Acceso a Dispatcharr
 
-Open your web browser and navigate to:
+Abre tu navegador y navega a:
 
 [http://localhost:9191](http://localhost:9191/)
 
-Replace `localhost` with your server's IP address if accessing remotely.
+Si estas accediendo de forma remota, reemplaza `localhost` por la direccion IP de tu servidor.
 
