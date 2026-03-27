@@ -252,7 +252,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_data.png)
 
-1. Select SSL (on the top tap under `Edit Proxt Host`)
+1. Select SSL (on the top tap under `Edit Proxy Host`)
 
 1. Choose your SSL certificate
 
