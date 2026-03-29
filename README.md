@@ -4,7 +4,7 @@
   </a>
 </p>
 
-This repository contains the documentation for the Dispatcharr project.
+hiThis repository contains the documentation for the Dispatcharr project.
 
 Visit the actual docs here!
 [https://dispatcharr.github.io/Dispatcharr-Docs/](https://dispatcharr.github.io/Dispatcharr-Docs/)
