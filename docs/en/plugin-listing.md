@@ -6,6 +6,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | Plugin | Version | Author | License | Description |
 |--------|---------|-------|---------|-------------|
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `2.4.1` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
+| [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 
 ---
 
@@ -27,6 +28,22 @@ Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitori
 
 ---
 
+### [Stream Dripper](https://github.com/Dispatcharr/Plugins/blob/releases/zips/stream-dripper/README.md)
+
+**Version:** `1.0.0` | **Author:** Megamannen | **Last Updated:** Mar 29 2026, 15:51 UTC
+
+Automatically drops all active streams once per day at a configured time, with a manual drop-now button.
+
+**License:** [Artistic-2.0](https://spdx.org/licenses/Artistic-2.0.html)
+
+**Downloads:**
+ [Latest Release (`1.0.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/stream-dripper/stream-dripper-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/stream-dripper)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/stream-dripper) | **Last Change:** [`4e8f1b1`](https://github.com/Dispatcharr/Plugins/commit/4e8f1b108c1e84f60520710d13e54eb2fb519648)
+
+---
+
 ## Using the Manifest
 
 Fetch `manifest.json` to programmatically access plugin metadata and download URLs:
@@ -37,4 +54,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Mar 27 2026, 17:16 UTC*
+*Last updated: Mar 29 2026, 15:51 UTC*
