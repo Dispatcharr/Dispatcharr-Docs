@@ -5,14 +5,14 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 
 | Plugin | Version | Author | License | Description |
 |--------|---------|-------|---------|-------------|
-| [`Dispatcharr Exporter`](#dispatcharr-exporter) | `2.4.1` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
+| [`Dispatcharr Exporter`](#dispatcharr-exporter) | `2.4.2` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 
 ---
 
 ### [Dispatcharr Exporter](https://github.com/Dispatcharr/Plugins/blob/releases/zips/dispatcharr-exporter/README.md)
 
-**Version:** `2.4.1` | **Author:** sethwv | **Last Updated:** Mar 26 2026, 18:07 UTC
+**Version:** `2.4.2` | **Author:** sethwv | **Last Updated:** Mar 30 2026, 19:09 UTC
 
 Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring
 
@@ -21,10 +21,10 @@ Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitori
 **Dispatcharr Compatibility:** v0.19.0+
 
 **Downloads:**
- [Latest Release (`2.4.1`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/dispatcharr-exporter/dispatcharr-exporter-latest.zip)
-- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/dispatcharr-exporter)
+ [Latest Release (`2.4.2`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/dispatcharr-exporter/dispatcharr-exporter-latest.zip)
+- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/dispatcharr-exporter)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatcharr-exporter) | **Last Change:** [`6746a9a`](https://github.com/Dispatcharr/Plugins/commit/6746a9af622de4adf5cfd6b7d959594808ed5482)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatcharr-exporter) | **Last Change:** [`38c7af8`](https://github.com/Dispatcharr/Plugins/commit/38c7af86f91d7c642ceeab658d2a4689aed0fad8)
 
 ---
 
@@ -54,4 +54,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Mar 29 2026, 15:51 UTC*
+*Last updated: Mar 30 2026, 19:09 UTC*
