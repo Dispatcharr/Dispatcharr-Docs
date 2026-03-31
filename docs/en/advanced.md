@@ -228,14 +228,14 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 1. Setup Nginx Proxy Manager.  See above link for instructions
 
 1. Create DNS entry resolving Dispatcharr domain name to Nginx Proxy Manager LAN IP
-
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_ip.png)
 
 
     1. This step is dependent what router you use
 
 1. Create new proxy host in Nginx Proxy Manager
-
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/add_proxy_host.png)
 
 1. Enter the domain name created in step 2
@@ -249,8 +249,8 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 1. Select `Websockets Support`
 
     1. Note: the custom SSL config added in step 14 also sets the Websocket support.  I've tested with `Websocket Support` both toggled on and off and have not noticed a difference
-
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_data.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_data.png)
 
 1. Select SSL (on the top tap under `Edit Proxy Host`)
 
@@ -261,19 +261,20 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
     1. Recommend setting up wildcard SSL certs for your domain.  If using Cloudflare for your domain, see [this guide](https://blog.jverkamp.com/2023/03/27/wildcard-lets-encrypt-certificates-with-nginx-proxy-manager-and-cloudflare/) for instructions
 
 1. Select `Force SSL`
-
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/ssl.png)
 
 1. Select `Details` tab
 
 1. Select the gear icon for custom Nginx configuration
-
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/details.png)
 
 
 1. Paste in the below config example, making sure to change the variable names as needed.  Variables are in <> and ALL CAPS.  Values to change are the Nginx Proxy Manager IP and the Dispatcharr IP
 
-    ```
+??? example "Example (click to see)"
+    ```nginx
     # Dispatcharr HTTPS Nginx Proxy Manager
     location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$ {
         allow all;
@@ -311,17 +312,18 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
     }
     ```
 
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/custom_nginx_config.png)
 
 
 1. Select `Save`
 
 1. Verify access by visiting Dispatcharr DNS name in browser.  Verify that the SSL certificate is valid.
-
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/cert.png)
 
 1. Login and enjoy!
-
+??? info "Screenshot" 
     ![Add Proxy Host](../assets/nginx-proxy-manager-images/login.png)
 
 
