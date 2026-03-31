@@ -227,12 +227,10 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 1. Setup Nginx Proxy Manager.  See above link for instructions
 
 1. Create DNS entry resolving Dispatcharr domain name to Nginx Proxy Manager LAN IP
+    * This step is dependent on what router you use
 
     ??? info "Screenshot" 
         ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_ip.png)
-
-
-    1. This step is dependent on what router you use
 
 1. Create new proxy host in Nginx Proxy Manager
 
@@ -259,9 +257,9 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 
 1. Choose your SSL certificate
 
-    1. Creating SSL certs is outside the scope of this guide.  See [above link](https://nginxproxymanager.com/guide/) for the Nginx Proxy Manager install documentation
+    * Creating SSL certs is outside the scope of this guide.  See [above link](https://nginxproxymanager.com/guide/) for the Nginx Proxy Manager install documentation
 
-    1. Recommend setting up wildcard SSL certs for your domain.  If using Cloudflare for your domain, see [this guide](https://blog.jverkamp.com/2023/03/27/wildcard-lets-encrypt-certificates-with-nginx-proxy-manager-and-cloudflare/) for instructions
+    * Recommend setting up wildcard SSL certs for your domain.  If using Cloudflare for your domain, see [this guide](https://blog.jverkamp.com/2023/03/27/wildcard-lets-encrypt-certificates-with-nginx-proxy-manager-and-cloudflare/) for instructions
 
 1. Select `Force SSL`
 
