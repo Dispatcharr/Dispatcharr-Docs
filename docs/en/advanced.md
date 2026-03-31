@@ -221,22 +221,21 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
 
 Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  This guide assumes that Nginx Proxy Manager is already setup and has SSL certificates configured.  Setting up Nginx Proxy Manager and certs is out of scope for this guide.  You can find setup info at the [Nginx Proxy Manager](https://nginxproxymanager.com/guide/) install guide and at [this blog](https://medium.com/@life-is-short-so-enjoy-it/homelab-nginx-proxy-manager-setup-ssl-certificate-with-domain-name-in-cloudflare-dns-732af64ddc0b).
 
-- Note: this was created on version 2.14.0 of Nginx Proxy Manager.  Other versions have not been tested
-
-- Note: domain is blurred out for privacy.  You can purchase a domain or create a local use domain.  Setting up a domain is out of scope, but there are lots of guides that cover this
+* This was created on version 2.14.0 of Nginx Proxy Manager.  Other versions have not been tested
+* Domain is blurred out for privacy.  You can purchase a domain or create a local use domain.  Setting up a domain is out of scope, but there are lots of guides that cover this
 
 1. Setup Nginx Proxy Manager.  See above link for instructions
 
 1. Create DNS entry resolving Dispatcharr domain name to Nginx Proxy Manager LAN IP
+    * This step is dependent on what router you use
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_ip.png)
-
-
-    1. This step is dependent what router you use
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_ip.png)
 
 1. Create new proxy host in Nginx Proxy Manager
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/add_proxy_host.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/add_proxy_host.png)
 
 1. Enter the domain name created in step 2
 
@@ -248,83 +247,91 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 
 1. Select `Websockets Support`
 
-    1. Note: the custom SSL config added in step 14 also sets the Websocket support.  I've tested with `Websocket Support` both toggled on and off and have not noticed a difference
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_data.png)
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_data.png)
+    !!! note
+        The custom SSL config added in step 14 also sets the Websocket support.  We've tested with `Websocket Support` toggled on and off and have not noticed a difference
 
 1. Select SSL (on the top tap under `Edit Proxy Host`)
 
 1. Choose your SSL certificate
 
-    1. Creating SSL certs is outside the scope of this guide.  See [above link](https://nginxproxymanager.com/guide/) for the Nginx Proxy Manager install documentation
+    * Creating SSL certs is outside the scope of this guide.  See [above link](https://nginxproxymanager.com/guide/) for the Nginx Proxy Manager install documentation
 
-    1. Recommend setting up wildcard SSL certs for your domain.  If using Cloudflare for your domain, see [this guide](https://blog.jverkamp.com/2023/03/27/wildcard-lets-encrypt-certificates-with-nginx-proxy-manager-and-cloudflare/) for instructions
+    * Recommend setting up wildcard SSL certs for your domain.  If using Cloudflare for your domain, see [this guide](https://blog.jverkamp.com/2023/03/27/wildcard-lets-encrypt-certificates-with-nginx-proxy-manager-and-cloudflare/) for instructions
 
 1. Select `Force SSL`
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/ssl.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/ssl.png)
 
 1. Select `Details` tab
 
 1. Select the gear icon for custom Nginx configuration
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/details.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/details.png)
 
 
 1. Paste in the below config example, making sure to change the variable names as needed.  Variables are in <> and ALL CAPS.  Values to change are the Nginx Proxy Manager IP and the Dispatcharr IP
 
-    ```
-    # Dispatcharr HTTPS Nginx Proxy Manager
-    location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$ {
-        allow all;
-        proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
+    ??? example "Example (click to see)"
+        ```nginx
+        # Dispatcharr HTTPS Nginx Proxy Manager
+        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$ {
+            allow all;
+            proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
 
-        add_header 'Access-Control-Allow-Origin' '*';
-        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
-    Accept';
-    }
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
+        Accept';
+        }
 
-    # Restrict access.  In this instance all traffic to Dispatcharr flows through proxy.  You can add another allow block if you want to allow traffic not through the proxy. 
-    location / {
-        allow <NPM IP ADDRESS>/32;
-        deny all;
+        # Restrict access.  In this instance all traffic to Dispatcharr flows through proxy.  You can add another allow block if you want to allow traffic not through the proxy. 
+        location / {
+            allow <NPM IP ADDRESS>/32;
+            deny all;
 
-        proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
+            proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
 
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "Upgrade";
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
 
-        add_header 'Access-Control-Allow-Origin' '*';
-        add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-        add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
-    Accept';
-    }
-    ```
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
+        Accept';
+        }
+        ```
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/custom_nginx_config.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/custom_nginx_config.png)
 
 
 1. Select `Save`
 
 1. Verify access by visiting Dispatcharr DNS name in browser.  Verify that the SSL certificate is valid.
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/cert.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/cert.png)
 
 1. Login and enjoy!
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/login.png)
+    ??? info "Screenshot" 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/login.png)
 
+        ![Add Proxy Host](../assets/nginx-proxy-manager-images/done.png)
 
-    ![Add Proxy Host](../assets/nginx-proxy-manager-images/done.png)
-
-- Note: if you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
+    !!! note
+        If you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
