@@ -231,7 +231,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
         ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_ip.png)
 
 
-    1. This step is dependent what router you use
+    1. This step is dependent on what router you use
 
 1. Create new proxy host in Nginx Proxy Manager
     ??? info "Screenshot" 
@@ -247,9 +247,11 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 
 1. Select `Websockets Support`
 
-    * Note: the custom SSL config added in step 14 also sets the Websocket support.  I've tested with `Websocket Support` both toggled on and off and have not noticed a difference
     ??? info "Screenshot" 
         ![Add Proxy Host](../assets/nginx-proxy-manager-images/proxy_data.png)
+
+    !!! note
+        The custom SSL config added in step 14 also sets the Websocket support.  We've tested with `Websocket Support` toggled on and off and have not noticed a difference
 
 1. Select SSL (on the top tap under `Edit Proxy Host`)
 
