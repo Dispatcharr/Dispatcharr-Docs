@@ -21,7 +21,8 @@ You can use hardware acceleration with custom ffmpeg stream profiles. This will 
 
 ## Logos are missing in Plex
 Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
-  * If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies) set up.
+
+* If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies) set up
 
 ---
 
