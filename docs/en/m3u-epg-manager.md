@@ -58,14 +58,14 @@ From this page you can add and maintain your M3U accounts and EPGs
         !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
 
-            === "Xtream Codes Account Type"
+        === "Xtream Codes Account Type"
             1. Set up Provider-A as an M3U account (Xtream Codes) in the M3U & EPG manager.  
             2. Click the corresponding yellow edit icon under the Actions column.  
             3. Click the "Profiles" button.  
             4. Click the "New" button.  
             5. Enter a Name, Max Streams (if desired), the New Username, and New Password
 
-            === "Standard (M3U) Account Type"
+        === "Standard (M3U) Account Type"
             1. Set up Provider-A as an M3U account (Standard) in the M3U & EPG manager.  
             2. Click the corresponding yellow edit icon under the Actions column.  
             3. Click the "Profiles" button.  
