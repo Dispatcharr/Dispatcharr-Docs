@@ -181,6 +181,35 @@ Install Docker using the official instructions, such as those for [Ubuntu](https
 
 ---
 
+---
+
+## Modular Deployment
+
+By default, Dispatcharr runs in all-in-one (AIO) mode with Redis and PostgreSQL bundled inside a single container. Modular deployment separates these into individual containers, giving you control over database versions, resource allocation, and connection security.
+
+!!! note
+    Modular deployment is optional. AIO mode works for most users. Consider modular deployment if you need TLS-encrypted database connections, want to use existing external Redis or PostgreSQL instances, or require independent scaling of services.
+
+### Modular Docker Compose
+
+```yaml
+--8<-- "https://raw.githubusercontent.com/Dispatcharr/Dispatcharr/refs/heads/main/docker/docker-compose.yml"
+```
+
+### Key Differences from AIO
+
+* `DISPATCHARR_ENV=modular` replaces `DISPATCHARR_ENV=aio`
+* PostgreSQL and Redis run as separate containers with their own health checks
+* The Celery worker runs in a dedicated container with its own entrypoint
+* Environment variables for PostgreSQL and Redis must match across the web and celery services
+* TLS encryption for database connections is only available in modular mode
+
+### TLS Configuration
+
+Modular deployments support TLS encryption for connections between Dispatcharr and external Redis/PostgreSQL services. See [Connection Security](/Dispatcharr-Docs/advanced/#connection-security) in the Advanced section for configuration details.
+
+---
+
 ## Accessing Dispatcharr
 
 Open your web browser and navigate to:
