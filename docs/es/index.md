@@ -11,7 +11,6 @@
 
 </div>
 ## Descripción
-
 Dispatcharr te ayuda a...
 
 - Recopilar, organizar, y distribuir tus transmisiones (streams) IPTV.
@@ -32,12 +31,15 @@ Funciones adicionales, como un proxy robusto y soporte para múltiples clientes 
 
 Este proyecto se distribuye bajo la licencia [GNU AGPL v3.0](https://www.gnu.org/licenses/agpl-3.0.html).
 
+* Use & Modify - Cualquiera puede usar, estudiar y modificar el software.
+* Share Source - Si distribuyes el software o ejecutas una versión modificada como servicio, el código fuente correspondiente debe ponerse a disposición.
+* Keep It Open - Los trabajos derivados deben permanecer bajo la misma licencia AGPL.
+
 ## Contribuciones
 Las solicitudes (Pull requests), reportes de problemas, y solicitudes de mejoras o recomendaciones son bienvenidas! Solo pedimos que:
 
 Aceptes y respetes la licencia GNU AGPL v3.0.
-Sigas las buenas prácticas y los estándares de programación
- utilizados en el proyecto.
+Sigas las buenas prácticas y los estándares de programación utilizados en el proyecto.
 Mantengas una comunicación respetuosa con todos los colaboradores.
 
 ¡Tus contribuciones —ya sean código, documentación o incluso reportes de errores— son muy apreciadas!

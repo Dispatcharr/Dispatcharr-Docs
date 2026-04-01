@@ -88,7 +88,7 @@
 		- Description: `Intel GPU`
     - Clic Save
 	
-### Custom Stream Profiles
+###  Stream Profiles Personalizados
 - Abre Dispatcharr.
 - Ve a Settings > Add Stream Profile.
     - Nombralo con el nombre que prefieras
@@ -108,7 +108,7 @@
 		!!! Ejemplo
 		    - Parameters: `-hwaccel qsv -user_agent {userAgent} -i {streamUrl} -c:v h264_qsv -c:a aac -f mpegts pipe:1`
 
-## Process Priority Configuration
+## Configuración de Prioridad del Proceso
 Variables de entorno opcionales para ajustar la prioridad de tareas. Valores más bajos = mayor prioridad. Rango: -20 (máxima) a 19 (mínima). Los valores negativos requieren `cap_add: SYS_NICE`  
 
 - `UWSGI_NICE_LEVEL` - Prioridad para uWSGI, FFmpeg y streaming. Predeterminado 0; recomendado -5 para alta prioridad. 
@@ -123,8 +123,9 @@ Variables de entorno opcionales para ajustar la prioridad de tareas. Valores má
         cap_add:
           - SYS_NICE
     ```
- 
-## Nginx reverse proxy
+
+## Reverse Proxies 
+## Nginx
 Ejemplo de configuración HTTPS (solo streams vía HTTPS, WebUI a través de la red local y Wireguard)
 
 ??? example "Example (click to see)"
@@ -178,3 +179,37 @@ Ejemplo de configuración HTTPS (solo streams vía HTTPS, WebUI a través de la 
     3. Crea un usuario con XC password en la página[Users](/Dispatcharr-Docs/system/#users) si aún no lo has hecho 
     4. Usa el siguiente formato de enlace M3U para compartir con tus usuarios: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
     5. Y este formato para EPG: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
+
+### Pangolin
+* Crea tu recurso tal como lo harías con cualquier otro en Pangolin.
+* Si estás alojando Dispatcharr en el mismo VPS (si usas un VPS) que Pangolin, asegúrate de configurarlo como recurso local y usa 172.XX.X.X como la IP, luego introduce el puerto. De lo contrario, configúralo de forma normal.
+* Si deseas habilitar el SSO de Pangolin para este recurso por motivos de seguridad, hazlo en la pestaña Authentication de tu nuevo recurso de Dispatcharr.
+
+Para permitir que Dispatcharr se conecte con clientes cuando está protegido detrás del SSO de Pangolin o de otro IdP que hayas agregado, necesitas crear Bypass Rules. Consulta abajo la lista de reglas necesarias. Una vez guardes estas reglas, la WebUI de Dispatcharr estará protegida por tu SSO mientras que las aplicaciones y servicios podrán conectarse mediante XC.
+
+* TLa Action será `Bypass Auth` fpara todas ellas.
+* El Match Type será `Path` para todas ellas.
+
+??? example "Reglas de bypass (haz clic para ver)"
+
+    * ```/player_api.php/*```
+    * ```/get.php/*```
+    * ```/xmltv.php/*```
+    * ```/*/*/*.ts```
+    * ```/proxy/ts/stream/*```
+    * ```/proxy/vod/episode/*```
+    * ```/proxy/vod/movie/*```
+    * ```/api/channels/logos/*/cache/```
+    * ```/live/*/*```
+    * ```/movie/*/*```
+    * ```/series/*/*```
+
+    **(Opcional para acceso mediante HDHR, M3U y/o URL de EPG; no es necesario si utilizas XC. Si utilizas HDHR, M3U o EPG, deberías restringirlo aún más en [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/system/#network-access). De lo contrario, tus enlaces HDHR, M3U y/o EPG serán accesibles públicamente a través de internet.** 
+    
+    * ```/hdhr/*```
+    * ```/output/m3u/*```
+    * ```/output/epg/*```
+
+* Si deseas configurar GeoBlock para cualquiera o todos los recursos, consulta la [documentation oficial de Pangolin](https://docs.pangolin.net/self-host/advanced/enable-geoblocking) para obtener orientación.
+
+* Prueba tu nueva configuración accediendo a Dispatcharr en una ventana incógnito o privada. Ahora deberías ver el panel de inicio de sesión de Pangolin al acceder a la WebUI cuando no estés autenticado, mientras que tus clientes seguirán pudiendo conectarse para permitir el streaming.

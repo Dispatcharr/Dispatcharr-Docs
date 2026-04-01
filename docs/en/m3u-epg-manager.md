@@ -36,8 +36,8 @@ From this page you can add and maintain your M3U accounts and EPGs
                 Keep in mind this is a *stream* filter so you will still see the groups/categories show up for the M3U. However, excluded streams will not appear in the streams table
 
         * "Groups" button - Opens the Group Manager
-            * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later.
-            * Filter visible groups with the search box at the top of the group manager
+            * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later
+            * Filter visible groups with the search box at the top of the group manager, or click the buttons to the right to filter by Enabled or Disabled groups
             * Ignore streams from groups by de-selecting them
             * Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
                 * Channel Numbering Mode
@@ -57,15 +57,24 @@ From this page you can add and maintain your M3U accounts and EPGs
         * "Profiles" button - Allows you to add a second set of credentials for the same provider. <span id="m3u-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#m3u-profiles)
         !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
-            1. Set up Provider-A as an M3U account (Standard or Xtream Codes) in the M3U & EPG manager.  
-            2. Click the corresponding yellow edit icon under the Actions column.  
-            3. Click the "Profiles" button.  
-            4. Click the "New" button.  
-            5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  
-            !!! example
-                | Example URL | Search Pattern | Replace Pattern |
-                | --- | --- | --- |
-                | `http://provider.com/live/username1/password1/stream` | `username1/password1` | `username2/password2` |
+
+            === "Xtream Codes Account Type"
+                1. Set up Provider-A as an M3U account (Xtream Codes) in the M3U & EPG manager.  
+                2. Click the corresponding yellow edit icon under the Actions column.  
+                3. Click the "Profiles" button.  
+                4. Click the "New" button.  
+                5. Enter a Name, Max Streams (if desired), the New Username, and New Password
+
+            === "Standard (M3U) Account Type"
+                1. Set up Provider-A as an M3U account (Standard) in the M3U & EPG manager.  
+                2. Click the corresponding yellow edit icon under the Actions column.  
+                3. Click the "Profiles" button.  
+                4. Click the "New" button.  
+                5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  
+                !!! example
+                    | Example URL | Search Pattern | Replace Pattern |
+                    | --- | --- | --- |
+                    | `http://provider.com/live/username1/password1/stream` | `username1/password1` | `username2/password2` |
             
     * <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
     * <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account

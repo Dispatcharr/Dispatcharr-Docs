@@ -11,8 +11,8 @@ From the channels page you can create and manage all added channels, streams, an
     * To rename a Channel Profile, click the drop-down menu and select the <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> icon next to the Channel Profile that you wish to rename
 * Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
     * Hide/Show Disabled - Selectable only when a Channel profile is active. Toggle to hide/show any channels which are disabled for the selected profile
-    * Only Empty Channels - Check the box to show only channels with no associated streams.
-    * Has Stale Streams - Check the box to show only channels with stale streams.
+    * Only Empty Channels - Check the box to show only channels with no associated streams (Channel rows are shown with a red tint)
+    * Has Stale Streams - Check the box to show only channels with stale streams (Channel rows are shown with an orange tint)
 * Search channel names by clicking in the "Name" column header
 * Filter by EPG by clicking in the "EPG" column header
 * Search by channel group by clicking in the "Group" column header
@@ -75,7 +75,7 @@ From the channels page you can create and manage all added channels, streams, an
     * "<i data-lucide="square-minus" style="color: white; width: 18px;"></i> Delete" to delete the selected stream(s)
 * Click the <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter icon to use advanced filtering
     * Only Unassociated - Only show streams which are currently not assigned to any Channels
-    * Hide Stale - Hide any streams which are stale (not available as of the last M3U account refresh).
+    * Hide Stale - Hide any streams which are stale (not available as of the last M3U account refresh). Stale stream rows will be highlighted with a red tint
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Create Stream" - Create a new stream not associated with any of your uploaded M3Us
 * <i data-lucide="ellipsis-vertical" style="color: White; width: 18px;"></i> (Table Settings) - Toggle Streams table columns on/off. Available columns:
     * Name (click in the column header to search)
