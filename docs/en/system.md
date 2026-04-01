@@ -12,10 +12,12 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
     * In Settings, only able to change UI settings
     * XC login enabled only if an XC Password is set for the user
     * Optionally hide channels marked as "Mature Content" in user settings
+    * Optionally set stream limits in user settings
 3. Streamer
     * No access to the Dispatcharr UI
     * This user level is for XC login only
     * Optionally hide channels marked as "Mature Content" in user settings
+    * Optionally set stream limits in user settings
 
 ## Logo Manager
 From the Logo Manager page you can upload and manage logos.  
@@ -161,3 +163,9 @@ Create, schedule, and restore backups
         `30 14 1 * *` - 1st of every month at 2:30 PM  
         
 * Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.  
+
+### User Limits
+* Terminate on Limit Exceeded - Check to enable user stream limits based on the below criteria
+* Prioritize Single Client Channels - prefer freeing streams on channels only that user is watching
+* Ignore Same-Channel Connections - count multiple connections to the same live channel as one stream toward the limit
+* Terminate Oldest - Check to prioritize terminating the oldest stream when limits are exceeded. Unchecked prioritizes the newest stream
