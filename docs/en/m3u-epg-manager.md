@@ -58,23 +58,23 @@ From this page you can add and maintain your M3U accounts and EPGs
         !!! info
             Let's say you have 3 accounts you want to add to dispatcharr. 2 from Provider-A and 1 from Provider-B. Rather than adding three separate M3U accounts, you could add Provider-A once and set up a profile to use the username and password from each Provider-A account under the same M3U account.  
 
-        === "Xtream Codes Account Type"
-            1. Set up Provider-A as an M3U account (Xtream Codes) in the M3U & EPG manager.  
-            2. Click the corresponding yellow edit icon under the Actions column.  
-            3. Click the "Profiles" button.  
-            4. Click the "New" button.  
-            5. Enter a Name, Max Streams (if desired), the New Username, and New Password
+            === "Xtream Codes Account Type"
+                1. Set up Provider-A as an M3U account (Xtream Codes) in the M3U & EPG manager.  
+                2. Click the corresponding yellow edit icon under the Actions column.  
+                3. Click the "Profiles" button.  
+                4. Click the "New" button.  
+                5. Enter a Name, Max Streams (if desired), the New Username, and New Password
 
-        === "Standard (M3U) Account Type"
-            1. Set up Provider-A as an M3U account (Standard) in the M3U & EPG manager.  
-            2. Click the corresponding yellow edit icon under the Actions column.  
-            3. Click the "Profiles" button.  
-            4. Click the "New" button.  
-            5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  
-            !!! example
-                | Example URL | Search Pattern | Replace Pattern |
-                | --- | --- | --- |
-                | `http://provider.com/live/username1/password1/stream` | `username1/password1` | `username2/password2` |
+            === "Standard (M3U) Account Type"
+                1. Set up Provider-A as an M3U account (Standard) in the M3U & EPG manager.  
+                2. Click the corresponding yellow edit icon under the Actions column.  
+                3. Click the "Profiles" button.  
+                4. Click the "New" button.  
+                5. The "Search Pattern (Regex)" and "Replace Pattern" fields will act as a search and replace in your m3u file.  
+                !!! example
+                    | Example URL | Search Pattern | Replace Pattern |
+                    | --- | --- | --- |
+                    | `http://provider.com/live/username1/password1/stream` | `username1/password1` | `username2/password2` |
             
     * <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated M3U account
     * <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
