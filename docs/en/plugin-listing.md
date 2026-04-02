@@ -17,9 +17,9 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 
 Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring
 
-**License:** [MIT](https://spdx.org/licenses/MIT.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1451260201775923421) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sethwv/dispatcharr-exporter)
 
-**Dispatcharr Compatibility:** v0.19.0+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.19.0-brightgreen?style=flat-square)
 
 **Downloads:**
  [Latest Release (`2.4.2`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/dispatcharr-exporter/dispatcharr-exporter-latest.zip)
@@ -35,9 +35,9 @@ Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitori
 
 An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
-**License:** [MIT](https://spdx.org/licenses/MIT.html)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1422776847703212132) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jordandalley/dispatchwrapparr)
 
-**Dispatcharr Compatibility:** v0.21.0+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.21.0-brightgreen?style=flat-square)
 
 **Downloads:**
  [Latest Release (`1.6.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/dispatchwrapparr/dispatchwrapparr-latest.zip)
@@ -53,7 +53,7 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
 Automatically drops all active streams once per day at a configured time, with a manual drop-now button.
 
-**License:** [Artistic-2.0](https://spdx.org/licenses/Artistic-2.0.html)
+[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic--2.0-blue?style=flat-square)](https://spdx.org/licenses/Artistic-2.0.html)
 
 **Downloads:**
  [Latest Release (`1.0.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/stream-dripper/stream-dripper-latest.zip)
@@ -73,4 +73,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Apr 02 2026, 13:11 UTC*
+*Last updated: Apr 02 2026, 15:54 UTC*
