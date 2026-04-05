@@ -8,6 +8,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `2.4.2` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.0` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
 | [`Event Channel Managarr`](#event-channel-managarr) | `0.7.0` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. |
+| [`IPTV Checker`](#iptv-checker) | `0.8.0` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 
 ---
@@ -63,6 +64,24 @@ Automates channel visibility by hiding channels without events and showing those
 - [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/event-channel-managarr)
 
 **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/event-channel-managarr) | **Last Change:** [`20da5ab`](https://github.com/Dispatcharr/Plugins/commit/20da5ab8199239ab728cf95c7c5c6305131999ff)
+
+---
+
+### [IPTV Checker](https://github.com/Dispatcharr/Plugins/blob/releases/zips/iptv-checker/README.md)
+
+**Version:** `0.8.0` | **Author:** PiratesIRC | **Last Updated:** Apr 05 2026, 21:33 UTC
+
+A Dispatcharr Plugin that goes through a playlist to check IPTV channels
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/PiratesIRC/Dispatcharr-IPTV-Checker-Plugin)
+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
+
+**Downloads:**
+ [Latest Release (`0.8.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/iptv-checker/iptv-checker-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/iptv-checker)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/iptv-checker) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/iptv-checker/README.md) | **Last Change:** [`33d258c`](https://github.com/Dispatcharr/Plugins/commit/33d258cc0bbd193c1192f0c0a364b66e689a7350)
 
 ---
 
