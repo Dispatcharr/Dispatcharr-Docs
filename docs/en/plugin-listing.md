@@ -10,6 +10,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Event Channel Managarr`](#event-channel-managarr) | `0.7.0` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. |
 | [`IPTV Checker`](#iptv-checker) | `0.8.0` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
+| [`Stream-Mapparr`](#stream-mapparr) | `0.9.0` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 
 ---
 
@@ -101,6 +102,24 @@ Automatically drops all active streams once per day at a configured time, with a
 
 ---
 
+### [Stream-Mapparr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/stream-mapparr/README.md)
+
+**Version:** `0.9.0` | **Author:** PiratesIRC | **Last Updated:** Apr 05 2026, 21:34 UTC
+
+Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/PiratesIRC/Stream-Mapparr)
+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
+
+**Downloads:**
+ [Latest Release (`0.9.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/stream-mapparr/stream-mapparr-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/stream-mapparr)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/stream-mapparr) | **Last Change:** [`f42e889`](https://github.com/Dispatcharr/Plugins/commit/f42e889c2c1192cc5982cb2d98236a4130402d81)
+
+---
+
 ## Using the Manifest
 
 Fetch `manifest.json` to programmatically access plugin metadata and download URLs:
@@ -111,4 +130,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Apr 05 2026, 21:33 UTC*
+*Last updated: Apr 05 2026, 21:34 UTC*
