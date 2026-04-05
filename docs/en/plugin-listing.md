@@ -7,6 +7,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 |--------|---------|-------|---------|-------------|
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `2.4.2` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.0` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
+| [`Event Channel Managarr`](#event-channel-managarr) | `0.7.0` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 
 ---
@@ -47,6 +48,24 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
 ---
 
+### [Event Channel Managarr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/event-channel-managarr/README.md)
+
+**Version:** `0.7.0` | **Author:** PiratesIRC | **Last Updated:** Apr 05 2026, 21:33 UTC
+
+Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/PiratesIRC/Dispatcharr-Event-Channel-Managarr-Plugin)
+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
+
+**Downloads:**
+ [Latest Release (`0.7.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/event-channel-managarr/event-channel-managarr-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/event-channel-managarr)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/event-channel-managarr) | **Last Change:** [`20da5ab`](https://github.com/Dispatcharr/Plugins/commit/20da5ab8199239ab728cf95c7c5c6305131999ff)
+
+---
+
 ### [Stream Dripper](https://github.com/Dispatcharr/Plugins/blob/releases/zips/stream-dripper/README.md)
 
 **Version:** `1.0.0` | **Author:** Megamannen | **Last Updated:** Mar 29 2026, 15:51 UTC
@@ -73,4 +92,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Apr 02 2026, 15:54 UTC*
+*Last updated: Apr 05 2026, 21:33 UTC*
