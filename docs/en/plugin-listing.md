@@ -8,6 +8,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1001200` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `2.4.2` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.0` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
+| [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `0.7.0` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. |
 | [`IPTV Checker`](#iptv-checker) | `0.8.0` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.9520` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
@@ -67,6 +68,24 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 - [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/dispatchwrapparr)
 
 **Maintainers:** michaelmurfy | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatchwrapparr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatchwrapparr/README.md) | **Last Change:** [`2d4aba3`](https://github.com/Dispatcharr/Plugins/commit/2d4aba36b3e8546bef2dfd8efbb105e9f1c51638)
+
+---
+
+### [EPG Janitor](https://github.com/Dispatcharr/Plugins/blob/releases/zips/epg-janitor/README.md)
+
+**Version:** `1.26.1021352` | **Author:** PiratesIRC | **Last Updated:** Apr 12 2026, 19:22 UTC
+
+Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1420051973994053848) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/PiratesIRC/Dispatcharr-EPG-Janitor-Plugin)
+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
+
+**Downloads:**
+ [Latest Release (`1.26.1021352`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epg-janitor/epg-janitor-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epg-janitor)
+
+**Maintainers:** PiratesIRC | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epg-janitor) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/epg-janitor/README.md) | **Last Change:** [`2cf371a`](https://github.com/Dispatcharr/Plugins/commit/2cf371ad80c2219d832938067564d40b038ccd26)
 
 ---
 
@@ -168,4 +187,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Apr 10 2026, 16:08 UTC*
+*Last updated: Apr 12 2026, 19:22 UTC*
