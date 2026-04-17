@@ -89,14 +89,13 @@ The "Links" section has buttons to see and copy the external links needed by a c
 
 * <i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Use this link for clients that use HD Homerun format
 * <i data-lucide="screen-share" style="color: SlateBlue; width: 18px;"></i> <span style="color: SlateBlue;">M3U</span> - Use this link for clients that use M3U format
-    * Advanced options
-        1. Bypass logo caching by adding the following to your URL `?cachedlogos=false` (Default true)
-        2. Set what is used for the TVG-ID field (Options: channel_number (default), tvg_id, gracenote) `?tvg_id_source=gracenote`
-        3. URLs output in the M3U will be the direct URL from the first stream in the channel list `?direct=true` (Default false)
-        4. Combine multiple options `?cachedlogos=false&tvg_id_source=gracenote`
+    * Advanced options - These options will modify the generated URL, make sure to copy the URL *after* making any options changes
+        * Use cached logos - Proxy channel logos through Dispatcharr
+        * Direct stream URLs - Bypass the Dispatcharr proxy; client connects directly to the source
+        * TVG-ID Source - Value used as the tvg-id attribute in the M3U
 * <i data-lucide="scroll" style="color: Gray; width: 18px;"></i> <span style="color: Gray;">EPG</span> - Use this link to provide your client with episode guide data that matches your channels
-    * Advanced options
-        1. Bypass logo caching by adding the following to your URL (useful for Plex) `?cachedlogos=false` 
-        2. Use Gracenote ID's for TVG-ID's by adding the following to your URL (useful for Emby) `?tvg_id_source=gracenote`
-        3. Number of days to output the epg for `?days=4` (Default 0 = all)
-        4. Combine multiple options `?cachedlogos=false&tvg_id_source=gracenote&days=7`
+    * Advanced options - These options will modify the generated URL, make sure to copy the URL *after* making any options changes
+        * Use cached logos - Proxy channel logos through Dispatcharr
+        * TVG-ID Source - Value used to match EPG channels to M3U streams
+        * Days forward - Limit EPG to this many future days; 0 returns all available data
+        * Days back - Include this many past days of EPG data (max 30); 0 returns none

@@ -19,6 +19,9 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
     * Optionally hide channels marked as "Mature Content" in user settings
     * Optionally set stream limits in user settings
 
+!!! note
+    Each user's EPG defaults can be set in the "EPG Defaults" tab for that user, allowing you to specify how many past and future days of EPG data to include
+
 ## Logo Manager
 From the Logo Manager page you can upload and manage logos.  
 !!! info
