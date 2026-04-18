@@ -8,7 +8,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1001200` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `3.0.0` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.1` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
-| [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.0.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
+| [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.0.1` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1081615` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1081815` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
@@ -74,19 +74,19 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
 ### [Embyfin Stream Cleanup](https://github.com/Dispatcharr/Plugins/blob/releases/zips/embyfin-stream-cleanup/README.md)
 
-**Version:** `1.0.0` | **Author:** sethwv | **Last Updated:** Apr 18 2026, 19:12 UTC
+**Version:** `1.0.1` | **Author:** sethwv | **Last Updated:** Apr 18 2026, 19:34 UTC
 
 Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sethwv/emby-stream-cleanup)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1491487318832447668) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sethwv/emby-stream-cleanup)
 
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.0.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/embyfin-stream-cleanup/embyfin-stream-cleanup-latest.zip)
-- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/embyfin-stream-cleanup)
+ [Latest Release (`1.0.1`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/embyfin-stream-cleanup/embyfin-stream-cleanup-latest.zip)
+- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/embyfin-stream-cleanup)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/embyfin-stream-cleanup) | **Last Change:** [`74dabed`](https://github.com/Dispatcharr/Plugins/commit/74dabedde785395324cc1ff88c15fe26e01386e6)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/embyfin-stream-cleanup) | **Last Change:** [`ede9f2e`](https://github.com/Dispatcharr/Plugins/commit/ede9f2ea1412434bf69c6e5e114347a6fdd7e140)
 
 ---
 
@@ -206,4 +206,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Apr 18 2026, 19:12 UTC*
+*Last updated: Apr 18 2026, 19:34 UTC*
