@@ -144,45 +144,6 @@ Install Docker using the official instructions, such as those for [Ubuntu](https
 
 ---
 
-### Building from Source (Unsupported)
-
-1. Clone this repository:
-    ```bash
-    git clone https://github.com/Dispatcharr/Dispatcharr.git
-    cd Dispatcharr
-    ```
-
-2. Create and activate a virtual environment (optional but recommended):
-    ```bash
-    python -m venv venv
-    source venv/bin/activate
-    ```
-
-3. Install required dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Run database migrations and start the server (Django + React front-end):
-
-    ```bash
-    python manage.py migrate
-    python manage.py runserver
-    ```
-
-5. For the front-end, navigate to the frontend/ folder and run:
-
-    ```
-    npm install
-    npm run build
-    ```
-   
-6. Once running, visit [http://localhost:9191](http://localhost:9191/) (or the port you exposed) in your browser.
-
----
-
----
-
 ## Modular Deployment
 
 By default, Dispatcharr runs in all-in-one (AIO) mode with Redis and PostgreSQL bundled inside a single container. Modular deployment separates these into individual containers, giving you control over database versions, resource allocation, and connection security.
