@@ -17,7 +17,7 @@ Event data is available as environment variables in scripts (prefixed with DISPA
 
 ??? example "Example Script (click to see)"
     ```python
-    #!/usr/bin/env python3
+    #!/dispatcharrpy/bin/python
 
     import requests
     import json
