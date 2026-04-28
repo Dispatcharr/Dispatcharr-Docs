@@ -8,7 +8,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1001200` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `3.0.0` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.2` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
-| [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.1.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
+| [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.1.1` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1172336` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1161403` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
@@ -74,19 +74,19 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
 ### [Embyfin Stream Cleanup](https://github.com/Dispatcharr/Plugins/blob/releases/zips/embyfin-stream-cleanup/README.md)
 
-**Version:** `1.1.0` | **Author:** sethwv | **Last Updated:** Apr 27 2026, 15:40 UTC
+**Version:** `1.1.1` | **Author:** sethwv | **Last Updated:** Apr 28 2026, 18:33 UTC
 
 Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1491487318832447668) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/sethwv/emby-stream-cleanup)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1491487318832447668) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/swvn-dispatch/emby-stream-cleanup)
 
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.1.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/embyfin-stream-cleanup/embyfin-stream-cleanup-latest.zip)
-- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/embyfin-stream-cleanup)
+ [Latest Release (`1.1.1`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/embyfin-stream-cleanup/embyfin-stream-cleanup-latest.zip)
+- [All Versions (4 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/embyfin-stream-cleanup)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/embyfin-stream-cleanup) | **Last Change:** [`c3305c3`](https://github.com/Dispatcharr/Plugins/commit/c3305c3d5afc9226577cb01f8fae58c9785338c0)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/embyfin-stream-cleanup) | **Last Change:** [`9416199`](https://github.com/Dispatcharr/Plugins/commit/94161991dd24c6bc86be99d9044b8cf5e6622952)
 
 ---
 
@@ -206,4 +206,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Apr 28 2026, 01:30 UTC*
+*Last updated: Apr 28 2026, 18:33 UTC*
