@@ -17,7 +17,7 @@ Los datos del evento están disponibles como variables de entorno en scripts (co
 
 ??? example "Ejemplo Script (clic para ver)"
     ```python
-    #!/usr/bin/env python3
+    #!/dispatcharrpy/bin/python
 
     import requests
     import json
