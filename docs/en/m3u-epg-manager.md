@@ -46,13 +46,18 @@ From this page you can add and maintain your M3U accounts and EPGs
                     * **Next Available**: Auto-assign starting from 1, skipping all used channel numbers
                 * Start Channel #: Set a starting channel number for each group to organize your channels.
                 * Advanced options:
-                    * Force Dummy EPG: Sets a dummy EPG for the channel that matches the channel name
-                    * Override Channel Group: Set a channel group for the created channels that differs from the group you selected
-                    * Channel Name Find & Replace (Regex): Search and replace to rename your channels. By default the channel name will match the stream name
-                    * Channel Name Filter (Regex): Only create channels from streams which match your filter criteria
-                    * Channel Profile Assignment: Allows you to choose which profile(s) to include the created channels in (default All)
-                    * Channel Sort Order: Choose the sort order for your created channels (Provider order is default)
-                    * Stream Profile Assignment: Allows you to change the stream profile for the created channels from default.
+                    * Name Transforms
+                        * Channel Name Find & Replace (Regex): Search and replace to rename your channels. By default the channel name will match the stream name
+                        * Include/Exclude if name matches (Regex): Only create channels from streams which match your filter criteria
+                    * EPG & Logo
+                        * EPG source: Force a specific EPG source. Defaults to auto-matching by tvg-id if blank
+                        * Custom Logo: Provide a custom logo or leave blank to use the stream logo 
+                    * Channel assignment
+                        * Override Channel Group: Send auto-created channels into a different group than their source
+                        * Channel Profiles: Limit auto-created channels to specific channel profiles (defaults to all when blank)
+                        * Stream Profile: Apply a specific stream profile to all channels created by this group
+                        * Channel Sort Order: Order channels within the group prior to assigning channel numbers
+                    * Compact numbering: Channel numbers shift on hide/unhide. Pin a number with a channel number override
                     
         * "Profiles" button - Allows you to add a second set of credentials for the same provider. <span id="m3u-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#m3u-profiles)
         !!! info

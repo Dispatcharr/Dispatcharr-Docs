@@ -20,7 +20,12 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
     * Optionally set stream limits in user settings
 
 !!! note
-    Each user's EPG defaults can be set in the "EPG Defaults" tab for that user, allowing you to specify how many past and future days of EPG data to include
+    * Each user's EPG defaults can be set in the "EPG Defaults" tab for that user, allowing you to specify how many past and future days of EPG data to include
+    * In the user `API & XC` tab, you can set the following options
+        * XC Password - (leave blank for no XC access)
+        * Output Format Override - Override the system default output format for this user. Clear to use system default
+        * Output Profile Override - Pre-delivery transcode profile applied to streams for this user. Clear to use no transcoding
+        * Allowed IPs - Restrict all access for this user by IP. Leave empty to inherit global settings
 
 ## Logo Manager
 From the Logo Manager page you can upload and manage logos.  
@@ -35,6 +40,7 @@ From the Logo Manager page you can upload and manage logos.
 * Time format - Set the display of time to either 12 hour or 24 hour format
 * Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
 * Time Zone - Set your preferred time zone
+* Web Player Output Profile - Output profile applied when previewing streams in the browser player
 * Navigation - Drag and drop to reorder the sidebar navigation items, or click the <i data-lucide="eye" style="color: LightGray; width: 18px;"></i> to toggle visibility
     * System cannot be hidden
     * Click the `Reset to Default` button at the bottom of the Navigation section to restore defaults
@@ -63,8 +69,8 @@ From the Logo Manager page you can upload and manage logos.
 ### Stream Settings
 * Default User-Agent - Set the default User-Agent
 * Default Stream Profile - Set the default Stream Profile
-* Preferred Region - Set your preferred region
-* Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
+* Default Output Format - Container format used when proxying streams. MPEG-TS is broadly compatible with media players and devices; fMP4 has better support for modern codecs like AV1 and is preferred by some newer clients
+* HDHR Default Output Profile - An output profile that is applied to all HDHR stream URLs by default (can be overwridden by modifying the HDHR output URL). When cleared, streams are served as-is (pass-through)
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
     * The default setting hashes on URL. Available options include:
         * Name
@@ -79,9 +85,9 @@ From the Logo Manager page you can upload and manage logos.
         Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to `URL` and `TVG-ID` only
 
 ### System settings
-Configure how many system events (channel start/stop, buffering, etc.) to keep in the database. Events are displayed on the Stats page.
-
-* Maximum System Events - Number of events to retain (minimum: 10, maximum: 1000)
+* Maximum System Events - Configure how many system events (channel start/stop, buffering, etc.) to keep in the database (minimum: 10, maximum: 1000). Events are displayed on the Stats page.
+* Preferred Region - Set your preferred region
+* Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
     
 ### Connection Security
 Displays the current TLS encryption status for Redis and PostgreSQL connections. This section is only visible in [modular deployment mode](/Dispatcharr-Docs/installation/#modular-deployment).
@@ -134,7 +140,13 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * Custom Command (only for Custom) - Enter the executable name (e.g. ffmpeg) or full path (e.g. /usr/local/bin/mycmd)
     * Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
     * User-Agent - Set the default user-agent for this stream profile
-    
+
+### Output Profiles
+Similar to stream profiles but allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. When a client requests an output profile, one transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
+
+!!! example
+    Common use case: a profile that converts AC3 audio to AAC for browser and mobile clients while the native stream (AC3 intact) continues to serve Plex/Emby/Jellyfin. 
+
 ### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
 !!! example
