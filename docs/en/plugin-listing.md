@@ -13,7 +13,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`EPGeditARR`](#epgeditarr) | `0.2.01` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and sorts SiriusXM channels into official lineup order with automatic seasonal channel handling. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1362004` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1362003` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
-| [`Lineuparr`](#lineuparr) | `1.26.1091027` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
+| [`Lineuparr`](#lineuparr) | `1.26.1370103` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
@@ -165,7 +165,7 @@ A Dispatcharr Plugin that goes through a playlist to check IPTV channels
 
 ### [Lineuparr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/lineuparr/README.md)
 
-**Version:** `1.26.1091027` | **Author:** PiratesIRC | **Last Updated:** Apr 19 2026, 11:01 UTC
+**Version:** `1.26.1370103` | **Author:** PiratesIRC | **Last Updated:** May 17 2026, 18:53 UTC
 
 Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them.
 
@@ -174,10 +174,10 @@ Mirror real-world provider channel lineups by creating channel groups, channels,
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.26.1091027`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/lineuparr/lineuparr-latest.zip)
-- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/lineuparr)
+ [Latest Release (`1.26.1370103`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/lineuparr/lineuparr-latest.zip)
+- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/lineuparr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/lineuparr) | **Last Change:** [`9f1898e`](https://github.com/Dispatcharr/Plugins/commit/9f1898eec05b56849cbd0500cbb3561aff756bae)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/lineuparr) | **Last Change:** [`c0400ef`](https://github.com/Dispatcharr/Plugins/commit/c0400efc30fbb59172ea0886e7fc5408effeb0f7)
 
 ---
 
@@ -261,4 +261,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 17 2026, 16:52 UTC*
+*Last updated: May 17 2026, 18:53 UTC*
