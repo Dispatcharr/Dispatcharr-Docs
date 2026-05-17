@@ -8,15 +8,16 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1001200` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `3.0.1` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.2` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
-| [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.1.2` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
+| [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.2.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
-| [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1291442` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
-| [`IPTV Checker`](#iptv-checker) | `1.26.1221101` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
+| [`EPGeditARR`](#epgeditarr) | `0.2.01` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and sorts SiriusXM channels into official lineup order with automatic seasonal channel handling. |
+| [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1362004` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
+| [`IPTV Checker`](#iptv-checker) | `1.26.1362003` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.1091027` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
-| [`YouTubearr`](#youtubearr) | `1.17.7` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
+| [`YouTubearr`](#youtubearr) | `1.18.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
 
 ---
 
@@ -76,19 +77,19 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
 ### [Embyfin Stream Cleanup](https://github.com/Dispatcharr/Plugins/blob/releases/zips/embyfin-stream-cleanup/README.md)
 
-**Version:** `1.1.2` | **Author:** sethwv | **Last Updated:** May 10 2026, 18:25 UTC
+**Version:** `1.2.0` | **Author:** sethwv | **Last Updated:** May 15 2026, 17:13 UTC
 
 Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1491487318832447668) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/swvn-dispatch/emby-stream-cleanup)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1491487318832447668) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/swvn-dispatch/embyfin-stream-cleanup)
 
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.1.2`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/embyfin-stream-cleanup/embyfin-stream-cleanup-latest.zip)
-- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/embyfin-stream-cleanup)
+ [Latest Release (`1.2.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/embyfin-stream-cleanup/embyfin-stream-cleanup-latest.zip)
+- [All Versions (6 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/embyfin-stream-cleanup)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/embyfin-stream-cleanup) | **Last Change:** [`006432d`](https://github.com/Dispatcharr/Plugins/commit/006432da42655d524601830db5aa888437551c84)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/embyfin-stream-cleanup) | **Last Change:** [`315a967`](https://github.com/Dispatcharr/Plugins/commit/315a967448ff4db469a66491ebc404bfb8e0bb42)
 
 ---
 
@@ -110,9 +111,25 @@ Scans for channels with EPG assignments but no program data. Auto-matches EPG to
 
 ---
 
+### [EPGeditARR](https://github.com/Dispatcharr/Plugins/blob/releases/zips/epgeditarr/README.md)
+
+**Version:** `0.2.01` | **Author:** jstevenscl | **Last Updated:** May 17 2026, 16:17 UTC
+
+Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and sorts SiriusXM channels into official lineup order with automatic seasonal channel handling.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jstevenscl/epgeditarr)
+
+**Downloads:**
+ [Latest Release (`0.2.01`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epgeditarr/epgeditarr-latest.zip)
+- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epgeditarr) | **Last Change:** [`ca4b4e2`](https://github.com/Dispatcharr/Plugins/commit/ca4b4e2bae16e6f7fe3e066ad1d215cffe8ee3fb)
+
+---
+
 ### [Event Channel Managarr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/event-channel-managarr/README.md)
 
-**Version:** `1.26.1291442` | **Author:** PiratesIRC | **Last Updated:** May 09 2026, 17:03 UTC
+**Version:** `1.26.1362004` | **Author:** PiratesIRC | **Last Updated:** May 16 2026, 20:45 UTC
 
 Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG.
 
@@ -121,16 +138,16 @@ Automates channel visibility by hiding channels without events and showing those
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.26.1291442`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/event-channel-managarr/event-channel-managarr-latest.zip)
-- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/event-channel-managarr)
+ [Latest Release (`1.26.1362004`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/event-channel-managarr/event-channel-managarr-latest.zip)
+- [All Versions (6 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/event-channel-managarr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/event-channel-managarr) | **Last Change:** [`ff391f3`](https://github.com/Dispatcharr/Plugins/commit/ff391f33bcb804bf26f73f399a30819d8f3509b5)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/event-channel-managarr) | **Last Change:** [`19fd3e6`](https://github.com/Dispatcharr/Plugins/commit/19fd3e6db4a7f3f6c95c46eb74c2136cc1846a52)
 
 ---
 
 ### [IPTV Checker](https://github.com/Dispatcharr/Plugins/blob/releases/zips/iptv-checker/README.md)
 
-**Version:** `1.26.1221101` | **Author:** PiratesIRC | **Last Updated:** May 02 2026, 17:57 UTC
+**Version:** `1.26.1362003` | **Author:** PiratesIRC | **Last Updated:** May 16 2026, 20:45 UTC
 
 A Dispatcharr Plugin that goes through a playlist to check IPTV channels
 
@@ -139,10 +156,10 @@ A Dispatcharr Plugin that goes through a playlist to check IPTV channels
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.26.1221101`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/iptv-checker/iptv-checker-latest.zip)
-- [All Versions (4 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/iptv-checker)
+ [Latest Release (`1.26.1362003`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/iptv-checker/iptv-checker-latest.zip)
+- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/iptv-checker)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/iptv-checker) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/iptv-checker/README.md) | **Last Change:** [`aa662b3`](https://github.com/Dispatcharr/Plugins/commit/aa662b3a97476953ed876651024d62f054973cb7)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/iptv-checker) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/iptv-checker/README.md) | **Last Change:** [`5d5ad16`](https://github.com/Dispatcharr/Plugins/commit/5d5ad161aef730f9f95a176d8547547a25899c43)
 
 ---
 
@@ -218,7 +235,7 @@ Waybill matches, renames, and organizes any streams no matter the provider. Infi
 
 ### [YouTubearr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/youtubearr/README.md)
 
-**Version:** `1.17.7` | **Author:** jeff-gooch | **Last Updated:** May 02 2026, 22:55 UTC
+**Version:** `1.18.0` | **Author:** jeff-gooch | **Last Updated:** May 16 2026, 17:32 UTC
 
 Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering
 
@@ -227,10 +244,10 @@ Zero-dependency YouTube livestream plugin with automatic monitoring and configur
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.17.7`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/youtubearr/youtubearr-latest.zip)
-- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/youtubearr)
+ [Latest Release (`1.18.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/youtubearr/youtubearr-latest.zip)
+- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/youtubearr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/youtubearr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/youtubearr/README.md) | **Last Change:** [`de0e8ba`](https://github.com/Dispatcharr/Plugins/commit/de0e8ba2d627eb6227392a7dc590571ef869ca85)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/youtubearr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/youtubearr/README.md) | **Last Change:** [`debb66d`](https://github.com/Dispatcharr/Plugins/commit/debb66d9d3205e01fd4b2d808931e5f5564793a5)
 
 ---
 
@@ -244,4 +261,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 12 2026, 19:36 UTC*
+*Last updated: May 17 2026, 16:17 UTC*
