@@ -10,7 +10,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.2` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
 | [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.2.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
-| [`EPGeditARR`](#epgeditarr) | `0.2.04` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
+| [`EPGeditARR`](#epgeditarr) | `0.2.05` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1362004` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1362003` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.1370103` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
@@ -113,17 +113,17 @@ Scans for channels with EPG assignments but no program data. Auto-matches EPG to
 
 ### [EPGeditARR](https://github.com/Dispatcharr/Plugins/blob/releases/zips/epgeditarr/README.md)
 
-**Version:** `0.2.04` | **Author:** jstevenscl | **Last Updated:** May 17 2026, 23:23 UTC
+**Version:** `0.2.05` | **Author:** jstevenscl | **Last Updated:** May 18 2026, 02:05 UTC
 
 Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jstevenscl/epgeditarr)
 
 **Downloads:**
- [Latest Release (`0.2.04`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epgeditarr/epgeditarr-latest.zip)
-- [All Versions (4 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
+ [Latest Release (`0.2.05`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epgeditarr/epgeditarr-latest.zip)
+- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epgeditarr) | **Last Change:** [`eeb2f7b`](https://github.com/Dispatcharr/Plugins/commit/eeb2f7b19075bbacf33a01f5ceee085bf8dee5c5)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epgeditarr) | **Last Change:** [`7abd9ea`](https://github.com/Dispatcharr/Plugins/commit/7abd9ea3e4fa0f3458d41ba7d915dc8bc17989c5)
 
 ---
 
@@ -261,4 +261,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 17 2026, 23:23 UTC*
+*Last updated: May 18 2026, 02:05 UTC*
