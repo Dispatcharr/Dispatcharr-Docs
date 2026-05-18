@@ -121,7 +121,7 @@ Transform and clean your EPG data using regex and find/replace rules. Creates vi
 
 **Downloads:**
  [Latest Release (`0.2.05`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epgeditarr/epgeditarr-latest.zip)
-- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
 
 **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epgeditarr) | **Last Change:** [`7abd9ea`](https://github.com/Dispatcharr/Plugins/commit/7abd9ea3e4fa0f3458d41ba7d915dc8bc17989c5)
 
@@ -261,4 +261,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 18 2026, 02:05 UTC*
+*Last updated: May 18 2026, 14:13 UTC*
