@@ -10,14 +10,14 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.6.2` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
 | [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.2.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
-| [`EPGeditARR`](#epgeditarr) | `0.2.01` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and sorts SiriusXM channels into official lineup order with automatic seasonal channel handling. |
+| [`EPGeditARR`](#epgeditarr) | `0.2.05` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1362004` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1362003` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
-| [`Lineuparr`](#lineuparr) | `1.26.1091027` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
+| [`Lineuparr`](#lineuparr) | `1.26.1370103` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
-| [`YouTubearr`](#youtubearr) | `1.18.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
+| [`YouTubearr`](#youtubearr) | `1.19.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
 
 ---
 
@@ -113,17 +113,17 @@ Scans for channels with EPG assignments but no program data. Auto-matches EPG to
 
 ### [EPGeditARR](https://github.com/Dispatcharr/Plugins/blob/releases/zips/epgeditarr/README.md)
 
-**Version:** `0.2.01` | **Author:** jstevenscl | **Last Updated:** May 17 2026, 16:17 UTC
+**Version:** `0.2.05` | **Author:** jstevenscl | **Last Updated:** May 18 2026, 02:05 UTC
 
-Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and sorts SiriusXM channels into official lineup order with automatic seasonal channel handling.
+Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jstevenscl/epgeditarr)
 
 **Downloads:**
- [Latest Release (`0.2.01`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epgeditarr/epgeditarr-latest.zip)
-- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
+ [Latest Release (`0.2.05`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/epgeditarr/epgeditarr-latest.zip)
+- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/epgeditarr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epgeditarr) | **Last Change:** [`ca4b4e2`](https://github.com/Dispatcharr/Plugins/commit/ca4b4e2bae16e6f7fe3e066ad1d215cffe8ee3fb)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/epgeditarr) | **Last Change:** [`7abd9ea`](https://github.com/Dispatcharr/Plugins/commit/7abd9ea3e4fa0f3458d41ba7d915dc8bc17989c5)
 
 ---
 
@@ -165,7 +165,7 @@ A Dispatcharr Plugin that goes through a playlist to check IPTV channels
 
 ### [Lineuparr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/lineuparr/README.md)
 
-**Version:** `1.26.1091027` | **Author:** PiratesIRC | **Last Updated:** Apr 19 2026, 11:01 UTC
+**Version:** `1.26.1370103` | **Author:** PiratesIRC | **Last Updated:** May 17 2026, 18:53 UTC
 
 Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them.
 
@@ -174,10 +174,10 @@ Mirror real-world provider channel lineups by creating channel groups, channels,
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.26.1091027`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/lineuparr/lineuparr-latest.zip)
-- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/lineuparr)
+ [Latest Release (`1.26.1370103`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/lineuparr/lineuparr-latest.zip)
+- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/lineuparr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/lineuparr) | **Last Change:** [`9f1898e`](https://github.com/Dispatcharr/Plugins/commit/9f1898eec05b56849cbd0500cbb3561aff756bae)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/lineuparr) | **Last Change:** [`c0400ef`](https://github.com/Dispatcharr/Plugins/commit/c0400efc30fbb59172ea0886e7fc5408effeb0f7)
 
 ---
 
@@ -235,7 +235,7 @@ Waybill matches, renames, and organizes any streams no matter the provider. Infi
 
 ### [YouTubearr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/youtubearr/README.md)
 
-**Version:** `1.18.0` | **Author:** jeff-gooch | **Last Updated:** May 16 2026, 17:32 UTC
+**Version:** `1.19.0` | **Author:** jeff-gooch | **Last Updated:** May 17 2026, 16:52 UTC
 
 Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering
 
@@ -244,10 +244,10 @@ Zero-dependency YouTube livestream plugin with automatic monitoring and configur
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.18.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/youtubearr/youtubearr-latest.zip)
-- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/youtubearr)
+ [Latest Release (`1.19.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/youtubearr/youtubearr-latest.zip)
+- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/youtubearr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/youtubearr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/youtubearr/README.md) | **Last Change:** [`debb66d`](https://github.com/Dispatcharr/Plugins/commit/debb66d9d3205e01fd4b2d808931e5f5564793a5)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/youtubearr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/youtubearr/README.md) | **Last Change:** [`d468305`](https://github.com/Dispatcharr/Plugins/commit/d4683054a70509329279d4ce5e20779591bd297a)
 
 ---
 
@@ -261,4 +261,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 17 2026, 16:17 UTC*
+*Last updated: May 18 2026, 02:05 UTC*
