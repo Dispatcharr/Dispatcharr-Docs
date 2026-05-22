@@ -12,7 +12,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`EPG Janitor`](#epg-janitor) | `1.26.1021352` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`EPGeditARR`](#epgeditarr) | `0.2.07` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1401103` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
-| [`IPTV Checker`](#iptv-checker) | `1.26.1362003` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
+| [`IPTV Checker`](#iptv-checker) | `1.26.1421301` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.1370103` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
@@ -147,7 +147,7 @@ Automates channel visibility by hiding channels without events and showing those
 
 ### [IPTV Checker](https://github.com/Dispatcharr/Plugins/blob/releases/zips/iptv-checker/README.md)
 
-**Version:** `1.26.1362003` | **Author:** PiratesIRC | **Last Updated:** May 16 2026, 20:45 UTC
+**Version:** `1.26.1421301` | **Author:** PiratesIRC | **Last Updated:** May 22 2026, 14:18 UTC
 
 A Dispatcharr Plugin that goes through a playlist to check IPTV channels
 
@@ -156,10 +156,10 @@ A Dispatcharr Plugin that goes through a playlist to check IPTV channels
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
- [Latest Release (`1.26.1362003`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/iptv-checker/iptv-checker-latest.zip)
-- [All Versions (5 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/iptv-checker)
+ [Latest Release (`1.26.1421301`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/iptv-checker/iptv-checker-latest.zip)
+- [All Versions (6 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/iptv-checker)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/iptv-checker) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/iptv-checker/README.md) | **Last Change:** [`5d5ad16`](https://github.com/Dispatcharr/Plugins/commit/5d5ad161aef730f9f95a176d8547547a25899c43)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/iptv-checker) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/iptv-checker/README.md) | **Last Change:** [`c53b209`](https://github.com/Dispatcharr/Plugins/commit/c53b209e8defac59b5c28c8e25c0fc0a04f14bff)
 
 ---
 
@@ -261,4 +261,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 22 2026, 04:46 UTC*
+*Last updated: May 22 2026, 14:18 UTC*
