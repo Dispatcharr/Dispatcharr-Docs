@@ -16,6 +16,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Lineuparr`](#lineuparr) | `1.26.1431300` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
+| [`Tickarr`](#tickarr) | `0.1.0` | jstevenscl | MIT | Dynamic text overlays for IPTV channels — SiriusXM Now Playing, Sports Ticker, Custom Text |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
 | [`YouTubearr`](#youtubearr) | `1.19.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
 
@@ -215,6 +216,22 @@ Automatically add matching streams to channels based on name similarity and qual
 
 ---
 
+### [Tickarr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/tickarr/README.md)
+
+**Version:** `0.1.0` | **Author:** jstevenscl | **Last Updated:** May 23 2026, 17:15 UTC
+
+Dynamic text overlays for IPTV channels — SiriusXM Now Playing, Sports Ticker, Custom Text
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jstevenscl/tickarr)
+
+**Downloads:**
+ [Latest Release (`0.1.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/tickarr/tickarr-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/tickarr)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/tickarr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/tickarr/README.md) | **Last Change:** [`4c2b8e8`](https://github.com/Dispatcharr/Plugins/commit/4c2b8e810006e824883c678e1f7873695a8d1b07)
+
+---
+
 ### [Waybill](https://github.com/Dispatcharr/Plugins/blob/releases/zips/waybill/README.md)
 
 **Version:** `1.3.0` | **Author:** Matthew-Beckett | **Last Updated:** May 12 2026, 19:36 UTC
@@ -261,4 +278,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 23 2026, 17:06 UTC*
+*Last updated: May 23 2026, 17:15 UTC*
