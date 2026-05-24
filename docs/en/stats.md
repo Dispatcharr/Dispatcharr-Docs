@@ -34,6 +34,8 @@ The Stats page shows info on all active streams and the system event viewer
     * Number of watchers
     * IP addresses and associated User-Agents
     * Username of the connected user(s)
+    * Container format (mpegts or fmp4)
+    * Output profile name (if active)
     * You can force stop any current streams by clicking the <i data-lucide="square-x" style="color: red; width: 18px;"></i> "Stop Channel" button
 * System Events
     * Captures M3U refreshes, EPG updates, stream switches, authentication events, network access blocks, and errors.

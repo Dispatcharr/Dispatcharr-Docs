@@ -13,6 +13,10 @@ From the channels page you can create and manage all added channels, streams, an
     * Hide/Show Disabled - Selectable only when a Channel profile is active. Toggle to hide/show any channels which are disabled for the selected profile
     * Only Empty Channels - Check the box to show only channels with no associated streams (Channel rows are shown with a red tint)
     * Has Stale Streams - Check the box to show only channels with stale streams (Channel rows are shown with an orange tint)
+    * Has Overrides - Check the box to show only channels with overrides. Each row's name cell renders a yellow Pencil icon when overrides are active (tooltip lists the overridden field names)
+    * Active Only - Check the box to show only active channels
+    * Hidden Only - Check the box to show only hidden channels
+    * Show All - Check the box to show all channels
 * Search channel names by clicking in the "Name" column header
 * Filter by EPG by clicking in the "EPG" column header
 * Search by channel group by clicking in the "Group" column header
@@ -88,11 +92,15 @@ From the channels page you can create and manage all added channels, streams, an
 The "Links" section has buttons to see and copy the external links needed by a client
 
 * <i data-lucide="tv-minimal" style="color: YellowGreen; width: 18px;"></i> <span style="color: YellowGreen;">HDHR</span> - Use this link for clients that use HD Homerun format
+    * Advanced options - These options will modify the generated URL, make sure to copy the URL *after* making any options changes
+        * Output Profile - Choose an [output profile](/Dispatcharr-Docs/system/#output-profiles) to override the default stream profile for clients accessing streams with this link
 * <i data-lucide="screen-share" style="color: SlateBlue; width: 18px;"></i> <span style="color: SlateBlue;">M3U</span> - Use this link for clients that use M3U format
     * Advanced options - These options will modify the generated URL, make sure to copy the URL *after* making any options changes
         * Use cached logos - Proxy channel logos through Dispatcharr
         * Direct stream URLs - Bypass the Dispatcharr proxy; client connects directly to the source
         * TVG-ID Source - Value used as the tvg-id attribute in the M3U
+        * Output Format - Container format for streams embedded in this M3U
+        * Output Profile - Choose an [output profile](/Dispatcharr-Docs/system/#output-profiles) to override the default stream profile for clients accessing streams with this link
 * <i data-lucide="scroll" style="color: Gray; width: 18px;"></i> <span style="color: Gray;">EPG</span> - Use this link to provide your client with episode guide data that matches your channels
     * Advanced options - These options will modify the generated URL, make sure to copy the URL *after* making any options changes
         * Use cached logos - Proxy channel logos through Dispatcharr
