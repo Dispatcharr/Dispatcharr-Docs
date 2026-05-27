@@ -14,6 +14,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1401103` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1421301` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.1431300` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
+| [`Multiview`](#multiview) | `0.1.0` | sethwv | MIT | Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Tickarr`](#tickarr) | `0.1.0` | jstevenscl | MIT | Dynamic text overlays for IPTV channels — SiriusXM Now Playing, Sports Ticker, Custom Text |
@@ -182,6 +183,24 @@ Mirror real-world provider channel lineups by creating channel groups, channels,
 
 ---
 
+### [Multiview](https://github.com/Dispatcharr/Plugins/blob/releases/zips/multiview/README.md)
+
+**Version:** `0.1.0` | **Author:** sethwv | **Last Updated:** May 27 2026, 19:22 UTC
+
+Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1509200002407465001) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/swvn-dispatch/dispatcharr-multiview)
+
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square)
+
+**Downloads:**
+ [Latest Release (`0.1.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/multiview/multiview-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/multiview)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/multiview) | **Last Change:** [`2555219`](https://github.com/Dispatcharr/Plugins/commit/255521931c4b5b211d7504431a24a3acc380f7da)
+
+---
+
 ### [Stream Dripper](https://github.com/Dispatcharr/Plugins/blob/releases/zips/stream-dripper/README.md)
 
 **Version:** `1.0.0` | **Author:** Megamannen | **Last Updated:** Mar 29 2026, 15:51 UTC
@@ -278,4 +297,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: May 24 2026, 21:57 UTC*
+*Last updated: May 27 2026, 19:23 UTC*
