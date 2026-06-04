@@ -18,7 +18,8 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
 | [`Stream-Mapparr`](#stream-mapparr) | `1.26.1082140` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Telegram Alerts`](#telegram-alerts) | `0.4.5` | R3XCHRIS | MIT | Push Dispatcharr channel/stream/VOD events to a Telegram chat via a bot. Includes a manual test action, per-event toggles, and an optional cron-driven daily report (public IP + geo + speedtest + activity + source health). |
-| [`Tickarr`](#tickarr) | `0.1.0` | jstevenscl | MIT | Dynamic text overlays for IPTV channels — SiriusXM Now Playing, Sports Ticker, Custom Text |
+| [`Tickarr`](#tickarr) | `0.1.01` | jstevenscl | MIT | Dynamic text overlays for IPTV channels - SiriusXM Now Playing, Sports Ticker, Custom Text |
+| [`Twitcharr`](#twitcharr) | `1.2.25` | eliasbruno124-dev | MIT | Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback. |
 | [`VOD to Media Library`](#vod-to-media-library) | `1.15.0` | R3XCHRIS | MIT | Generate .strm files (with optional NFO metadata) from your Dispatcharr VOD catalogue so Jellyfin / Emby / Kodi / ChannelsDVR can index your movies and series. Adds a cron-driven auto-rescan that picks up newly-added episodes nightly. Optional category-nested folder layout for genre-organised libraries. |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
 | [`YouTubearr`](#youtubearr) | `1.19.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
@@ -187,19 +188,19 @@ Mirror real-world provider channel lineups by creating channel groups, channels,
 
 ### [Multiview](https://github.com/Dispatcharr/Plugins/blob/releases/zips/multiview/README.md)
 
-**Version:** `0.1.0` | **Author:** sethwv | **Last Updated:** May 27 2026, 19:22 UTC
+**Version:** `0.1.0` | **Author:** sethwv | **Last Updated:** Jun 04 2026, 16:03 UTC
 
 Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1509200002407465001) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/swvn-dispatch/dispatcharr-multiview)
 
-![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square)
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square) ![Dispatcharr max](https://img.shields.io/badge/Dispatcharr_max-v0.25.1-orange?style=flat-square)
 
 **Downloads:**
  [Latest Release (`0.1.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/multiview/multiview-latest.zip)
 - [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/multiview)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/multiview) | **Last Change:** [`2555219`](https://github.com/Dispatcharr/Plugins/commit/255521931c4b5b211d7504431a24a3acc380f7da)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/multiview) | **Last Change:** [`5bddf4e`](https://github.com/Dispatcharr/Plugins/commit/5bddf4e19c75244ea27e321d8a178b1a3107dece)
 
 ---
 
@@ -257,17 +258,33 @@ Push Dispatcharr channel/stream/VOD events to a Telegram chat via a bot. Include
 
 ### [Tickarr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/tickarr/README.md)
 
-**Version:** `0.1.0` | **Author:** jstevenscl | **Last Updated:** May 23 2026, 17:15 UTC
+**Version:** `0.1.01` | **Author:** jstevenscl | **Last Updated:** Jun 02 2026, 21:10 UTC
 
-Dynamic text overlays for IPTV channels — SiriusXM Now Playing, Sports Ticker, Custom Text
+Dynamic text overlays for IPTV channels - SiriusXM Now Playing, Sports Ticker, Custom Text
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jstevenscl/tickarr)
 
 **Downloads:**
- [Latest Release (`0.1.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/tickarr/tickarr-latest.zip)
-- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/tickarr)
+ [Latest Release (`0.1.01`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/tickarr/tickarr-latest.zip)
+- [All Versions (2 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/tickarr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/tickarr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/tickarr/README.md) | **Last Change:** [`4c2b8e8`](https://github.com/Dispatcharr/Plugins/commit/4c2b8e810006e824883c678e1f7873695a8d1b07)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/tickarr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/tickarr/README.md) | **Last Change:** [`489bbb5`](https://github.com/Dispatcharr/Plugins/commit/489bbb5253740ef509a4dd8d8545f03971b289e8)
+
+---
+
+### [Twitcharr](https://github.com/Dispatcharr/Plugins/blob/releases/zips/twitcharr/README.md)
+
+**Version:** `1.2.25` | **Author:** eliasbruno124-dev | **Last Updated:** Jun 02 2026, 17:16 UTC
+
+Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/eliasbruno124-dev/Twitcharr)
+
+**Downloads:**
+ [Latest Release (`1.2.25`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/twitcharr/twitcharr-latest.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/twitcharr)
+
+**Maintainers:** eliasbruno124-dev | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/twitcharr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/twitcharr/README.md) | **Last Change:** [`ff09842`](https://github.com/Dispatcharr/Plugins/commit/ff09842b40864d9a56364f45b9c86618895b6206)
 
 ---
 
@@ -335,4 +352,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Jun 01 2026, 21:03 UTC*
+*Last updated: Jun 04 2026, 16:03 UTC*
