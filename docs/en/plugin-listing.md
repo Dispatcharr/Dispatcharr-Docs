@@ -188,19 +188,19 @@ Mirror real-world provider channel lineups by creating channel groups, channels,
 
 ### [Multiview](https://github.com/Dispatcharr/Plugins/blob/releases/zips/multiview/README.md)
 
-**Version:** `0.1.0` | **Author:** sethwv | **Last Updated:** May 27 2026, 19:22 UTC
+**Version:** `0.1.0` | **Author:** sethwv | **Last Updated:** Jun 04 2026, 16:03 UTC
 
 Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Discord](https://img.shields.io/badge/Discord-Discussion-5865F2?style=flat-square&logo=discord&logoColor=white)](https://discord.com/channels/1340492560220684331/1509200002407465001) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/swvn-dispatch/dispatcharr-multiview)
 
-![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square)
+![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.22.0-brightgreen?style=flat-square) ![Dispatcharr max](https://img.shields.io/badge/Dispatcharr_max-v0.25.1-orange?style=flat-square)
 
 **Downloads:**
  [Latest Release (`0.1.0`)](https://github.com/Dispatcharr/Plugins/raw/releases/zips/multiview/multiview-latest.zip)
 - [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/zips/multiview)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/multiview) | **Last Change:** [`2555219`](https://github.com/Dispatcharr/Plugins/commit/255521931c4b5b211d7504431a24a3acc380f7da)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/multiview) | **Last Change:** [`5bddf4e`](https://github.com/Dispatcharr/Plugins/commit/5bddf4e19c75244ea27e321d8a178b1a3107dece)
 
 ---
 
@@ -352,4 +352,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Jun 02 2026, 21:10 UTC*
+*Last updated: Jun 04 2026, 16:03 UTC*
