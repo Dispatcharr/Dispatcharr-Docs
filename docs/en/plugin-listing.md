@@ -7,7 +7,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 |--------|---------|-------|---------|-------------|
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1430910` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `3.0.1` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
-| [`Dispatchwrapparr`](#dispatchwrapparr) | `1.7.2` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
+| [`Dispatchwrapparr`](#dispatchwrapparr) | `1.7.3` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
 | [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.2.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1420824` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`EPGeditARR`](#epgeditarr) | `0.2.07` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
@@ -64,7 +64,7 @@ Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitori
 
 ### [Dispatchwrapparr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/dispatchwrapparr/README.md)
 
-**Version:** `1.7.2` | **Author:** jordandalley | **Last Updated:** Jun 06 2026, 02:42 UTC
+**Version:** `1.7.3` | **Author:** jordandalley | **Last Updated:** Jun 07 2026, 12:42 UTC
 
 An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
@@ -73,10 +73,10 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.25.0-brightgreen?style=flat-square)
 
 **Downloads:**
-- [Latest Release (`1.7.2`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatchwrapparr-1.7.2/dispatchwrapparr-1.7.2.zip)
-- [All Versions (6 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatchwrapparr)
+- [Latest Release (`1.7.3`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatchwrapparr-1.7.3/dispatchwrapparr-1.7.3.zip)
+- [All Versions (7 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatchwrapparr)
 
-**Maintainers:** michaelmurfy | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatchwrapparr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatchwrapparr/README.md) | **Last Change:** [`0d3e0b5`](https://github.com/Dispatcharr/Plugins/commit/0d3e0b5e7f0a11840589e5bd75ae4f2608d1722d)
+**Maintainers:** michaelmurfy | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatchwrapparr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatchwrapparr/README.md) | **Last Change:** [`bc522f1`](https://github.com/Dispatcharr/Plugins/commit/bc522f1f01c094273bded4b7b66350dc62d039fa)
 
 ---
 
@@ -352,4 +352,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Jun 06 2026, 22:36 UTC*
+*Last updated: Jun 07 2026, 12:43 UTC*
