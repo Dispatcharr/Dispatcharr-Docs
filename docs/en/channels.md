@@ -22,15 +22,16 @@ From the channels page you can create and manage all added channels, streams, an
 * Search by channel group by clicking in the "Group" column header
 * Edit a channel by clicking the corresponding <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> "Edit Channel" icon under the "Actions" column 
     * Channel Name - Edit the name for your Channel
+    * Channel # - Edit the channel number
     * Channel Group - Edit the group for your channel. If you want to create and add to a new group, click the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon
-    * Stream Profile - Click here if you want to use something other than the default stream profile for this channel
-    * User Level Access - Set which user types can access this channel via Xtream Codes output
     * Logo - Choose a logo, upload a new one, or use logo from the assigned EPG
-    * Mature Content - Toggle whether to set a channel as mature content. Mature content can be hidden from non-admin users via "Hide Mature Content" toggle in [user settings](/Dispatcharr-Docs/system/#users)
-    * Channel # - Edit the channel number. Currently only integers are accepted
     * TVG-ID - Edit the TVG-ID field for your channel. Auto-match tries to match episode guide to this field
     * Gracenote StationID - Edit the Gracenote ID for your channel. These are typically 5 or 6 digit numbers that Gracenote (a common EPG provider) can use to identify TV channels.
     * EPG - Click in the box to manually choose an EPG entry, click "Use Dummy" to assign a dummy EPG entry, or click "Auto Match" to attempt EPG auto-match
+    * Stream Profile - Click here if you want to use something other than the default stream profile for this channel
+    * User Level Access - Set which user types can access this channel via Xtream Codes output
+    * Mature Content - Toggle whether to set a channel as mature content. Mature content can be hidden from non-admin users via "Hide Mature Content" toggle in [user settings](/Dispatcharr-Docs/system/#users)
+    * Hidden - Toggle whether to exclude a channel from all output (HDHR, M3U, EPG, XC) without deleting it
 * Delete a channel by clicking the corresponding <i data-lucide="square-minus" style="color: red; width: 18px;"></i> "Delete channel" icon under the "Actions" column 
 * Preview (play) a channel by clicking the corresponding <i data-lucide="circle-play" style="color: Limegreen; width: 18px;"></i> "Preview channel" icon under the "Actions" column 
 * Toggle the channel check boxes to use the bulk editing buttons above the grid on the selected channels, or to add streams to channels
