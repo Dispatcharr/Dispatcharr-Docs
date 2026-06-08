@@ -90,7 +90,6 @@ From this page you can add and maintain your M3U accounts and EPGs
         * Name - A name for your EPG
         * URL - The URL for your EPG (may be xml or compressed xml as .gz or .zip)
         * Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
-        * API Key - API key for services that require authentication
         * Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
             * Use cron schedule: Click to switch over to `Cron Expression` option
         * Cron Expression: Enter a cron expression to define the EPG account refresh interval, or click `Open Cron Builder` for user-friendly assistance
