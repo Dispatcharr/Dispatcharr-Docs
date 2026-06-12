@@ -142,10 +142,15 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * User-Agent - Set the default user-agent for this stream profile
 
 ### Output Profiles
-Similar to stream profiles but allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. When a client requests an output profile, one transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
+Output profiles take the output from the stream profile and transcodes for any client that requests an output profile. It allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. One transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
 
 !!! example
     Common use case: a profile that converts AC3 audio to AAC for browser and mobile clients while the native stream (AC3 intact) continues to serve Plex/Emby/Jellyfin. 
+
+Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `pipe:1` as the output in ffmpeg parameters. Output must be in MPEG-TS format (-f mpegts).
+
+!!! example
+    -i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1
 
 ### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
