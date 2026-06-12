@@ -53,6 +53,9 @@ plugins:
         - locale: es
           name: Español
           build: true
+        - locale: pt
+          name: Português (BR)
+          build: true
         - locale: "null"
           name: Help Translating
           build: false
