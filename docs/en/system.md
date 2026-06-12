@@ -150,7 +150,7 @@ Output profiles take the output from the stream profile and transcodes for any c
 Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `pipe:1` as the output in ffmpeg parameters. Output must be in MPEG-TS format (-f mpegts).
 
 !!! example
-    -i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1
+    `-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1`
 
 ### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
