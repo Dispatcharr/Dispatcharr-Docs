@@ -7,11 +7,12 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 |--------|---------|-------|---------|-------------|
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1430910` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `3.0.1` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
+| [`Ranked Matchups (Top Games)`](#ranked-matchups-top-games-) | `1.2.0` | Jacob-Lasky | MIT | Cross-sport interestingness curator. Pulls upcoming games per enabled sport, scores them on interestingness, matches to Dispatcharr channels via EPG, and renames+groups them into a Top Matchups channel profile so your guide shows only the games worth watching. |
 | [`Dispatchwrapparr`](#dispatchwrapparr) | `1.7.3` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
 | [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.2.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1420824` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`EPGeditARR`](#epgeditarr) | `0.2.07` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
-| [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1401103` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
+| [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1600157` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1582047` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.1431300` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
 | [`Multiview`](#multiview) | `0.1.0` | sethwv | MIT | Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg |
@@ -20,7 +21,7 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Telegram Alerts`](#telegram-alerts) | `0.4.5` | R3XCHRIS | MIT | Push Dispatcharr channel/stream/VOD events to a Telegram chat via a bot. Includes a manual test action, per-event toggles, and an optional cron-driven daily report (public IP + geo + speedtest + activity + source health). |
 | [`Tickarr`](#tickarr) | `0.1.01` | jstevenscl | MIT | Dynamic text overlays for IPTV channels - SiriusXM Now Playing, Sports Ticker, Custom Text |
 | [`Twitcharr`](#twitcharr) | `1.2.25` | eliasbruno124-dev | MIT | Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback. |
-| [`VOD to Media Library`](#vod-to-media-library) | `1.15.1` | R3XCHRIS | MIT | Generate .strm files (with optional NFO metadata) from your Dispatcharr VOD catalogue so Jellyfin / Emby / Kodi / ChannelsDVR can index your movies and series. Adds a cron-driven auto-rescan that picks up newly-added episodes nightly. Optional category-nested folder layout for genre-organised libraries. |
+| [`VOD to Media Library`](#vod-to-media-library) | `1.15.2` | R3XCHRIS | MIT | Generate .strm files (with optional NFO metadata) from your Dispatcharr VOD catalogue so Jellyfin / Emby / Kodi / ChannelsDVR can index your movies and series. Adds a cron-driven auto-rescan that picks up newly-added episodes nightly. Optional category-nested folder layout for genre-organised libraries. |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
 | [`YouTubearr`](#youtubearr) | `1.20.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
 
@@ -59,6 +60,22 @@ Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitori
 - [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatcharr-exporter)
 
 **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatcharr-exporter) | **Last Change:** [`b70abd6`](https://github.com/Dispatcharr/Plugins/commit/b70abd6df9cd520bcc28ad7fced085be135897a9)
+
+---
+
+### [Ranked Matchups (Top Games)](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/dispatcharr-ranked-matchups/README.md)
+
+**Version:** `1.2.0` | **Author:** Jacob-Lasky | **Last Updated:** Jun 11 2026, 14:00 UTC
+
+Cross-sport interestingness curator. Pulls upcoming games per enabled sport, scores them on interestingness, matches to Dispatcharr channels via EPG, and renames+groups them into a Top Matchups channel profile so your guide shows only the games worth watching.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Jacob-Lasky/dispatcharr_ranked_matchups)
+
+**Downloads:**
+- [Latest Release (`1.2.0`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatcharr-ranked-matchups-1.2.0/dispatcharr-ranked-matchups-1.2.0.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatcharr-ranked-matchups)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatcharr-ranked-matchups) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatcharr-ranked-matchups/README.md) | **Last Change:** [`bea9b43`](https://github.com/Dispatcharr/Plugins/commit/bea9b43cfed545635982722ed6c66f26e26a47f5)
 
 ---
 
@@ -134,7 +151,7 @@ Transform and clean your EPG data using regex and find/replace rules. Creates vi
 
 ### [Event Channel Managarr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/event-channel-managarr/README.md)
 
-**Version:** `1.26.1401103` | **Author:** PiratesIRC | **Last Updated:** May 20 2026, 11:52 UTC
+**Version:** `1.26.1600157` | **Author:** PiratesIRC | **Last Updated:** Jun 09 2026, 13:28 UTC
 
 Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG.
 
@@ -143,10 +160,10 @@ Automates channel visibility by hiding channels without events and showing those
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
-- [Latest Release (`1.26.1401103`)](https://github.com/Dispatcharr/Plugins/releases/download/event-channel-managarr-1.26.1401103/event-channel-managarr-1.26.1401103.zip)
-- [All Versions (7 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/event-channel-managarr)
+- [Latest Release (`1.26.1600157`)](https://github.com/Dispatcharr/Plugins/releases/download/event-channel-managarr-1.26.1600157/event-channel-managarr-1.26.1600157.zip)
+- [All Versions (8 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/event-channel-managarr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/event-channel-managarr) | **Last Change:** [`618a835`](https://github.com/Dispatcharr/Plugins/commit/618a835b69185ab601e3cce394cb4d9bcc0e5258)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/event-channel-managarr) | **Last Change:** [`76083e4`](https://github.com/Dispatcharr/Plugins/commit/76083e4d8945665024f9d01cd14041be1b5ad2ab)
 
 ---
 
@@ -290,7 +307,7 @@ Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV gu
 
 ### [VOD to Media Library](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/vod2mlib/README.md)
 
-**Version:** `1.15.1` | **Author:** R3XCHRIS | **Last Updated:** Jun 05 2026, 16:49 UTC
+**Version:** `1.15.2` | **Author:** R3XCHRIS | **Last Updated:** Jun 11 2026, 14:01 UTC
 
 Generate .strm files (with optional NFO metadata) from your Dispatcharr VOD catalogue so Jellyfin / Emby / Kodi / ChannelsDVR can index your movies and series. Adds a cron-driven auto-rescan that picks up newly-added episodes nightly. Optional category-nested folder layout for genre-organised libraries.
 
@@ -299,10 +316,10 @@ Generate .strm files (with optional NFO metadata) from your Dispatcharr VOD cata
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.24.0-brightgreen?style=flat-square)
 
 **Downloads:**
-- [Latest Release (`1.15.1`)](https://github.com/Dispatcharr/Plugins/releases/download/vod2mlib-1.15.1/vod2mlib-1.15.1.zip)
-- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/vod2mlib)
+- [Latest Release (`1.15.2`)](https://github.com/Dispatcharr/Plugins/releases/download/vod2mlib-1.15.2/vod2mlib-1.15.2.zip)
+- [All Versions (4 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/vod2mlib)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/vod2mlib) | **Last Change:** [`c3df2a3`](https://github.com/Dispatcharr/Plugins/commit/c3df2a35d89fa79c6acaf600c2909684a7fb4c61)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/vod2mlib) | **Last Change:** [`142c867`](https://github.com/Dispatcharr/Plugins/commit/142c8676b719565bb8453c4c3cfa3bd2efd053ff)
 
 ---
 
@@ -352,4 +369,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Jun 08 2026, 00:13 UTC*
+*Last updated: Jun 11 2026, 14:02 UTC*
