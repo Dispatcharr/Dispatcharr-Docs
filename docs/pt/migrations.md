@@ -2,7 +2,7 @@ Para migrar de outros aplicativos de gerenciamento de IPTV.
 
 ## IPTV Editor
 
-!!! Cuidado
+!!! warning
     Este método só é recomendado se você tiver apenas um provedor no IPTV Editor. Se tiver vários, será mais fácil começar do zero no Dispatcharr.
 
 1. No Dispatcharr, navegue até `Settings` > `Stream Settings` > `M3U Hash Key`
