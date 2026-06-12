@@ -144,8 +144,8 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 ### Output Profiles
 Output profiles take the output from the stream profile and transcodes for any client that requests an output profile. It allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. One transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
 
-!!! note
-    Common use case: a profile that converts AC3 audio to AAC for browser and mobile clients while the native stream (AC3 intact) continues to serve Plex/Emby/Jellyfin. 
+!!! note "Common use case"
+    A profile that converts AC3 audio to AAC for browser and mobile clients while the native stream (AC3 intact) continues to serve Plex/Emby/Jellyfin. 
 
 Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `pipe:1` as the output in ffmpeg parameters. Output must be in MPEG-TS format (-f mpegts).
 
