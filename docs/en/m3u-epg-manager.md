@@ -9,6 +9,7 @@ From this page you can add and maintain your M3U accounts and EPGs
     * Upload files - If uploading a local M3U file (not required if M3U URL is used)
     * Expiration Date - Set an expiration date to receive a warning notification (only available with `Standard` Account Type. Xtream Codes expiration is pulled automatically)
     * Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
+    * Server Group - Share login limits across accounts in a server group. Accounts in the same group share connection limits when they use the same provider login. Limits come from each account profile's max streams
     * User-Agent - If you want to set a specific user-agent for this account
     * Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
         * Use cron schedule: Click to switch over to `Cron Expression` option
