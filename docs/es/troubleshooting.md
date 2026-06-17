@@ -15,13 +15,13 @@ search:
 ---
 
 ## ¿Dispatcharr soporta aceleración por hardware?
-* Puedes usar aceleración por hardware con perfiles de transmisión (streaming) personalizados en ffmpeg. Esto requerirá [mapear tu hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) al contenedor y configurar un perfil ffmpeg personalizado [custom ffmpeg stream profile](/Dispatcharr-Docs/system/#custom-stream-profiles). 
+* Puedes usar aceleración por hardware con perfiles de transmisión (streaming) personalizados en ffmpeg. Esto requerirá [mapear tu hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) al contenedor y configurar un [custom ffmpeg stream profile](/Dispatcharr-Docs/advanced/#custom-stream-profiles).
 
 ---
 
 ## Plex no muestra los Logos
 * Plex no soporta logos en caché. Agrega `?cachedlogos=false` al final de la URL de tu EPG para evitar el almacenamiento en caché de logos.
-  *  Si subiste tus propios logos en Dispatcharr y quieres que Plex los muestre, solo aparecerán si se sirven a través de HTTPS, lo cual requiere tener configurado un proxy inverso[reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies).
+  *  Si subiste tus propios logos en Dispatcharr y quieres que Plex los muestre, solo aparecerán si se sirven a través de HTTPS, lo cual requiere tener configurado un [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies).
 
 ---
 
@@ -68,7 +68,7 @@ Consulta [Backup & Restore](/Dispatcharr-Docs/system/#backup-restore)
 --- 
 
 ## ¿Cómo puedo proteger con contraseña mi M3U para compartirlo por internet??
-1. Configura tu reverse proxy como se muestra en la [documentación](/Dispatcharr-Docs/advanced/#reverse-proxy)
+1. Configura tu reverse proxy como se muestra en la [documentación](/Dispatcharr-Docs/advanced/#reverse-proxies)
 2. En Dispatcharr, ve a Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), y restringe M3U / EPG Endpoints únicamente a tu red local (ejemplo: 192.168.1.0/24)
 3. Crea un usuario con XC password en la página [Users](/Dispatcharr-Docs/system/#users) si aún no lo has hecho
 4. Usa el siguiente formato de enlace M3U para compartir con tus usuarios: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
@@ -116,19 +116,23 @@ Las credenciales XC de Dispatcharr pueden configurarse en la pestaña Users. Cre
 
 Si tu cliente o aplicación admite el uso de credenciales XC, te solicitará una API o URL, nombre de usuario y contraseña. Introduce la URL que utilizas para acceder a Dispatcharr (IP de la LAN:Puerto o proxy inverso), el nombre de usuario de la pestaña Users, y la XC Password creada para ese usuario.
 
+---
+
 ## Multicast streams no están funcionando
-Los streams multicast requieren que Dispatcharr se ejecute en modo de red host[host network mode](https://docs.docker.com/engine/network/drivers/host/) que use [macvlan](https://docs.docker.com/engine/network/drivers/macvlan/). 
+Los streams multicast requieren que Dispatcharr se ejecute en [host network mode](https://docs.docker.com/engine/network/drivers/host/) o que use [macvlan](https://docs.docker.com/engine/network/drivers/macvlan/). 
 
 Además, si hay varias interfaces de red disponibles, tendrás que especificar una interfaz usando uno de los dos métodos siguientes:
 
 1. Agrega el argumento `-localaddr [interface-ip]` a un perfil personalizado de stream FFmpeg.
 2. Añade `?localaddr=[interface-ip]` al argumento existente `-i {streamUrl}` en un perfil personalizado de stream FFmpeg.
 
-!!! example "Examplo 1"
+!!! example "Ejemplo 1"
     `-localaddr 192.168.86.1 -i {streamUrl} -user_agent {userAgent} -i {streamUrl} -c copy -f mpegts pipe:1`
 
-!!! example "Examplo 2"
+!!! example "Ejemplo 2"
     `-i {streamUrl}?localaddr=192.168.86.1 -user_agent {userAgent} -i {streamUrl} -c copy -f mpegts pipe:1`
+
+---
 
 ## ¿Cómo elimino todo el VOD de Dispatcharr?
 1. En la página de [M3U & EPG manager](/Dispatcharr-Docs/m3u-epg-manager/#m3u-epg-manager) haz clic en el ícono de editar <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> en cualquier cuenta que proporcione VOD (solo las cuentas de tipo XC pueden hacerlo).
