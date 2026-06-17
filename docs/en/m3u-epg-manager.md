@@ -7,8 +7,8 @@ From this page you can add and maintain your M3U accounts and EPGs
     Server groups are the way to share connection limits for M3U accounts that share the same credentials. Here's a common use-case:
     
     * Two dispatcharr M3U accounts that share the same provider and credentials
-        1. *Standard M3U account* — Using a modified M3U playlist (3rd party curated M3U templates can be found online for various providers) for Live TV
-        2. *Xtream Codes (XC) account* — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
+        * **Standard M3U account** — Using a modified M3U playlist (3rd party curated M3U templates can be found online for various providers) for Live TV
+        * **Xtream Codes (XC) account** — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
 
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add M3U" - Click this button to add new M3U accounts 
     * Name - A name for your M3U account
