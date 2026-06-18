@@ -177,7 +177,7 @@ No es necesario solucionarlo ni cambiarlo. La expiración de 90 días es continu
 ## ¿Dónde se guardan las grabaciones de DVR?
 Las grabaciones se guardan en la carpeta `/data/recordings` de acuerdo con tu [template settings](/Dispatcharr-Docs/system/#dvr). Es posible que quieras usar bind mounts en Docker Compose para guardar las grabaciones en una ubicación diferente en tu host.
 
-!!! example
+!!! example "Ejemplo"
     ```yaml
     volumes:
       - dispatcharr_data:/data

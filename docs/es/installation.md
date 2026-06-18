@@ -60,12 +60,12 @@ Dispatcharr se implementa usando el siguiente `docker-compose.yml`:
 
 ### Linux Docker
 
-!!! warning
+!!! warning "Advertencia"
     Algunas distribuciones usan versiones desactualizadas de Docker, así que se recomienda instalarlo directamente desde Docker.
 
 Instala Docker siguiendo las instrucciones oficiales, como las de [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
-??? example "Ubuntu example"
+??? example "Ejemplo Ubuntu"
     1. Desinstala las versiones anteriores.
 
     ```shell
@@ -109,7 +109,7 @@ Instala Docker siguiendo las instrucciones oficiales, como las de [Ubuntu](https
     docker compose up -d
     ```
 
-!!! note
+!!! note "Nota"
     Si quieres usar los comandos `docker compose` sin `sudo`, quizá debas seguir la guía oficial de Docker [aquí](https://docs.docker.com/engine/install/linux-postinstall/).
 
 ---
@@ -149,7 +149,7 @@ Instala Docker siguiendo las instrucciones oficiales, como las de [Ubuntu](https
 
 Por defecto, Dispatcharr se ejecuta en modo all-in-one (AIO) con Redis y PostgreSQL incluidos dentro de un solo contenedor. El despliegue modular separa estos servicios en contenedores individuales, lo que te da control sobre las versiones de la base de datos, la asignación de recursos y la seguridad de la conexión.
 
-!!! note
+!!! note "Nota"
     El despliegue modular es opcional. El modo AIO funciona para la mayoría de los usuarios. Considera el despliegue modular si necesitas conexiones cifradas con TLS a la base de datos, si quieres usar instancias externas existentes de Redis o PostgreSQL, o si requieres escalado independiente de los servicios.
 
 ### Docker Compose modular

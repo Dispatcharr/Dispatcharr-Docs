@@ -185,7 +185,7 @@ Crea, programa y restaura backups
 * Schedule backups - Habilita para definir un programa regular de backups
 * Advanced (Cron Expression) - Habilita para definir una expresión cron para backups programados. Las expresiones cron permiten un control más granular sobre los programas de backup.
 
-    !!! examples
+    !!! examples "Ejemplos"
         `0 3 * * *` - Todos los días a las 3:00 AM
         `0 2 * * 0` - Todos los domingos a las 2:00 AM
         `0 */6 * * *` - Cada 6 horas

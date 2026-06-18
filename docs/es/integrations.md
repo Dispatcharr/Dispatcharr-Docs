@@ -1,4 +1,4 @@
-## Connections
+## Conexiones
 Desde la página Connections puedes crear y administrar webhooks basados en eventos y la ejecución de scripts.
 
 Haz clic en <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection para crear un nuevo webhook o una ejecución de script basada en eventos.
