@@ -1,6 +1,6 @@
 ﻿Migración desde otras aplicaciones de gestión IPTV.
 
-##IPTV Editor
+## IPTV Editor
 
 !!! warning "Advertencia"
     Este método solo se recomienda si tienes un solo proveedor configurado en IPTV Editor.
@@ -46,4 +46,4 @@
     * Haz clic en Save. 
 18. Haz clic en el ícono <i data-lucide="refresh-ccw" style="color: royalblue; width: 18px;"></i> (actualización azul) en tu M3U. Esto puede tomar unos minutos. Espera a que se complete antes de continuar.
 19. Para agregar una EPG, haz clic en <i data-lucide="square-plus" style="color: white; width: 18px;"></i> Add EPG y proporciona la URL de EPG de tu proveedor.
-20. Has migrado exitosamente de IPTV Editor a Dispatcharr. Revisa [Discord](https://discord.gg/wfeqTRRJru) si necesitas soporte adicional. 
+20. Has migrado exitosamente de IPTV Editor a Dispatcharr. Revisa [Discord](https://discord.gg/wfeqTRRJru) si necesitas soporte adicional.
