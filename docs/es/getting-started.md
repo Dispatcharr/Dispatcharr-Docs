@@ -13,7 +13,7 @@ Mira [guia de instalación](installation.md).
 
 Después de la instalación y ejecución, abre tu navegador web y visita: `http://{your_ip_here}:9191`
 Crea tu cuenta de usuario ingresando un nombre de usuario y una contraseña que puedas recordar. Opcionalmente, puedes añadir una dirección de correo electrónico.
-!!! nota
+!!! note "Nota"
     Las direcciones de correo electrónico actualmente no se utilizan, pero podrían implementarse en versiones futuras.
 
 ---
@@ -83,7 +83,7 @@ Crea tu cuenta de usuario ingresando un nombre de usuario y una contraseña que 
     ![Jellyfin LiveTV Setup Tuner](assets/jellyfin_livetv_setup_tuner.png)
 - En "Tuner Type", selecciona HDHomeRun si estás usando la URL HDHR, o M3U Tuner si estás usando la URL M3U de Dispatcharr.  
 - Agrega la URL y guarda los cambios.  
-!!! nota
+!!! note "Nota"
     Si lo agregas como M3U, deja el límite de transmisiones simultáneas en "0", ya que los límites de reproducción serán manejados por Dispatcharr..  
 ##### Agregar lista de programación
 - Para agregar datos de guía de programación desde Dispatcharr, navega a la página "Channels" en Dispatcharr, luego haz clic en el botón EPG en la parte superior de la página y copia la URL proporcionada.
@@ -121,7 +121,7 @@ Crea tu cuenta de usuario ingresando un nombre de usuario y una contraseña que 
 ??? info "Captura de pantalla"
     ![Map EPG Plex](assets/map_epg_plex.png){style="height:70vmin"}
 - Haz clic en `Continue` y Plex cargará los canales y la programación de la EPG
-!!! nota "Falta de logos?"
+!!! note "¿Faltan logos?"
     Agrega `?cachedlogos=false` al final de tu URL de EPG para evitar el almacenamiento en caché de logos, el cual Plex no soporta actualmente. 
 	
 ---
@@ -175,7 +175,7 @@ Crea tu cuenta de usuario ingresando un nombre de usuario y una contraseña que 
 - Haz clic en "Live TV", luego en "Add TV source".
 - Selecciona HDHomeRun si estás usando la URL HDHR, o M3U si estás usando la URL M3U desde Dispatcharr.  
 - Agrega la URL y guarda los cambios.  
-!!! nota
+!!! note "Nota"
         Si lo agregas como M3U, deja el límite de transmisiones (streams) simultáneas en "0", ya que los límites serán manejados por Dispatcharr.  
 ##### Agregar lista de programación
 - Puedes usar la guía de programación proporcionada por Emby, la guía de programación de Dispatcharr, o una combinación de ambos.

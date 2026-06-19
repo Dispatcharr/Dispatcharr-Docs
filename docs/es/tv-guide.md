@@ -6,8 +6,8 @@ La página TV Guide mostrará por defecto los canales para los que hay datos de 
 * Haz clic en el logo del canal para previsualizar el canal.
 * Haz clic en las entradas de la guía para expandir los datos del programa, previsualizar el canal o configurarlo para grabar.
     * Puedes programar la grabación con las siguientes opciones:
-        * Just this one – Solo este episodio
-        * Every episode – Todos los episodios
-        * New episodes only – Solo episodios nuevos (los datos del EPG deben incluir etiquetas `<new />` para identificar episodios nuevos)
-!!! note
+        * `Just this one`
+        * `Every episode`
+        * `New episodes only` (los datos del EPG deben incluir etiquetas `<new />` para identificar episodios nuevos)
+!!! note "Nota"
     También puedes grabar por canal y hora desde la página DVR.
