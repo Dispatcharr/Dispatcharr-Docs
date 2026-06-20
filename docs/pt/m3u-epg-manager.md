@@ -1,7 +1,16 @@
 Nesta página você pode adicionar e gerenciar suas contas M3U e EPGs
 
 ## Contas M3U
-* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add" - Clique neste botão para adicionar novas contas M3U
+* Server Groups - Clique neste botão para abrir o gerenciador de Server Groups e criar, renomear, excluir grupos e ver quantas contas pertencem a cada um
+
+!!! info "O que são server groups?"
+    Server groups são a forma de compartilhar limites de conexão para contas M3U que compartilham as mesmas credenciais. Aqui está um caso de uso comum:
+    
+    * Duas contas M3U do Dispatcharr que compartilham o mesmo provedor e credenciais
+        * **Conta M3U Standard** — Usando uma playlist M3U modificada (templates M3U curados por terceiros podem ser encontrados online para vários provedores) para Live TV
+        * **Conta Xtream Codes (XC)** — Para VOD e grupos de canais que não estão disponíveis (ou não são práticos) através do caminho M3U
+
+* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add M3U" - Clique neste botão para adicionar novas contas M3U
     * Name - Um nome para sua conta M3U
     * URL - A URL do M3U (não obrigatório se estiver enviando um arquivo M3U)
     * Account Type - Standard para URLs M3U diretas, Xtream Codes para serviços baseados em painel
@@ -9,6 +18,7 @@ Nesta página você pode adicionar e gerenciar suas contas M3U e EPGs
     * Upload files - Se estiver enviando um arquivo M3U local (não obrigatório se a URL do M3U for usada)
     * Expiration Date - Defina uma data de expiração para receber uma notificação de aviso (disponível apenas com o tipo de conta `Standard`. A expiração do Xtream Codes é obtida automaticamente)
     * Max Streams - Defina um número para o máximo de streams simultâneos permitidos para sua conta. Para ilimitado, defina como 0
+    * Server Group - Compartilhe limites de login entre contas em um server group. Contas no mesmo grupo compartilham limites de conexão quando usam o mesmo login de provedor. Os limites vêm do max streams de cada perfil de conta
     * User-Agent - Se quiser definir um user-agent específico para esta conta
     * Refresh Interval (hours) - Com que frequência (em horas) atualizar a URL do M3U
         * Use cron schedule: Clique para alternar para a opção `Cron Expression`
