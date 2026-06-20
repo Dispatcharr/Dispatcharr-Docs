@@ -142,10 +142,15 @@ No contexto de IPTV, um user agent é uma string de texto que identifica o aplic
     * User-Agent - Defina o user-agent padrão para este perfil de stream
 
 ### Perfis de Saída
-Semelhante aos perfis de stream, mas permite personalizar a saída do stream via URL HDHR, URL M3U e/ou por usuário XC. Quando um cliente solicita um perfil de saída, um processo de transcodificação é executado por par (canal, perfil) ativo e todos os clientes solicitantes compartilham o buffer de saída resultante.
+Os perfis de saída pegam a saída do perfil de stream e transcodificam para qualquer cliente que solicitar um perfil de saída. Permite personalizar a saída do stream via URL HDHR, URL M3U e/ou por usuário XC. Um processo de transcodificação é executado por par (canal, perfil) ativo e todos os clientes solicitantes compartilham o buffer de saída resultante.
+
+!!! note "Caso de uso comum"
+    Um perfil que converte áudio AC3 para AAC para clientes de navegador e mobile enquanto o stream nativo (AC3 intacto) continua servindo Plex/Emby/Jellyfin.
+
+Ao contrário dos perfis de stream, os perfis de saída precisam usar `pipe:0` como entrada e `pipe:1` como saída nos parâmetros do ffmpeg. A saída deve estar no formato MPEG-TS (`-f mpegts`).
 
 !!! example
-    Caso de uso comum: um perfil que converte áudio AC3 para AAC para clientes de navegador e mobile enquanto o stream nativo (AC3 intacto) continua servindo Plex/Emby/Jellyfin.
+    `-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1`
 
 ### Acesso à Rede
 Permite restringir o acesso ao Dispatcharr por faixa CIDR. Você pode inserir múltiplas faixas CIDR separadas por vírgulas. 0.0.0.0/0 permite todos os IPs
