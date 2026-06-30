@@ -175,10 +175,13 @@ These settings affect all stream profiles with the exception of redirect
 
 * Buffering Timeout - Maximum time (in seconds) to wait for buffering before switching streams
 * Buffering Speed - Speed threshold below which buffering is detected (1.0 = normal speed)
-* Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
-* Channel Shutdown Delay - Delay in seconds before shutting down a channel after last client disconnects
-* Channel Initialization Grace Period - Grace period in seconds during channel initialization 
+* Channel Shutdown Delay - Delay in seconds after the last viewer disconnects before the channel is stopped
 * New Client Buffer (seconds) - Seconds of received buffer to start behind live when a new client connects (0 = start at live). Note: this is chunk receive time, not video duration
+
+*Advanced settings*
+* Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
+* Channel Initialization Timeout - How long a channel may spend connecting and cycling through failover streams before giving up during startup
+* Client Connect Grace Period - How long a ready channel with no viewers stays up waiting for the first client
 
 ### Backup & Restore
 Create, schedule, and restore backups
