@@ -290,8 +290,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 
             add_header 'Access-Control-Allow-Origin' '*';
             add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type
-        Accept';
+            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
         }
 
         # Restrict access.  In this instance all traffic to Dispatcharr flows through proxy.  You can add another allow block if you want to allow traffic not through the proxy. 
