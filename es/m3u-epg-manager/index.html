@@ -1,0 +1,1524 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/m3u-epg-manager/">
+      
+      
+        <link rel="prev" href="../vods/">
+      
+      
+        <link rel="next" href="../tv-guide/">
+      
+      
+        
+          <link rel="alternate" href="../../m3u-epg-manager/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../pt/m3u-epg-manager/" hreflang="pt">
+        
+          <link rel="alternate" href="https://discord.gg/wfeqTRRJru" hreflang="null">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>M3U & EPG Manager - Dispatcharr Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#cuentas-m3u" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="Dispatcharr Docs" class="md-header__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dispatcharr Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              M3U & EPG Manager
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../m3u-epg-manager/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/m3u-epg-manager/" hreflang="pt" class="md-select__link">
+              Português (BR)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://discord.gg/wfeqTRRJru" hreflang="null" class="md-select__link">
+              Help Translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Dispatcharr/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../installation/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../channels/" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ/Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../plugin-listing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Plugins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Dispatcharr Docs" class="md-nav__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Dispatcharr Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Dispatcharr/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VODs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M3U & EPG Manager
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M3U & EPG Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cuentas-m3u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cuentas M3U
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EPGs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tv-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TV Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dvr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DVR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-listing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join Discord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Dispatcharr/edit/master/docs/es/m3u-epg-manager.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Dispatcharr/raw/master/docs/es/m3u-epg-manager.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>M3U & EPG Manager</h1>
+
+<p>Desde esta página puedes agregar y mantener tus cuentas M3U y EPGs</p>
+<h2 id="cuentas-m3u">Cuentas M3U<a class="headerlink" href="#cuentas-m3u" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Server Groups - Haz clic en este botón para abrir el administrador de Server Groups, crear, renombrar y eliminar grupos, y ver cuántas cuentas pertenecen a cada uno</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">¿Qué son los server groups?</p>
+<p>Los server groups son la forma de compartir límites de conexión para cuentas M3U que usan las mismas credenciales. Este es un caso de uso común:</p>
+<ul>
+<li>Dos cuentas M3U de Dispatcharr que comparten el mismo proveedor y credenciales<ul>
+<li><strong>Standard M3U account</strong> — Usa una playlist M3U modificada (se pueden encontrar en línea plantillas M3U curadas por terceros para varios proveedores) para Live TV</li>
+<li><strong>Xtream Codes (XC) account</strong> — Para VOD y grupos de canales que no están disponibles (o no son prácticos) mediante la ruta M3U</li>
+</ul>
+</li>
+</ul>
+</div>
+<ul>
+<li>"<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add M3U" - Haz clic en este botón para agregar nuevas cuentas M3U<ul>
+<li>Name - Un nombre para tu cuenta M3U</li>
+<li>URL - La URL M3U (no es requerida si subes un archivo M3U)</li>
+<li>Account Type - Standard para URLs M3U directas, Xtream Codes para servicios basados en panel</li>
+<li>Enable VOD Scanning - Activa/desactiva el escaneo de contenido VOD (solo disponible con el <code>Xtream Codes</code> Account Type)</li>
+<li>Upload files - Si subes un archivo M3U local (no requerido si se usa una URL M3U)</li>
+<li>Expiration Date - Define una fecha de expiración para recibir una notificación de advertencia (solo disponible con <code>Standard</code> Account Type. La expiración de Xtream Codes se obtiene automáticamente)</li>
+<li>Max Streams - Define el número máximo de streams simultáneos permitidos para tu cuenta. Para ilimitado, usa 0</li>
+<li>Server Group - Comparte límites de login entre cuentas de un server group. Las cuentas del mismo grupo comparten límites de conexión cuando usan el mismo login de proveedor. Los límites provienen del max streams de cada perfil de cuenta</li>
+<li>User-Agent - Si quieres definir un user-agent específico para esta cuenta</li>
+<li>Refresh Interval (hours) - Cada cuánto (en número de horas) se actualiza la URL M3U<ul>
+<li>Use cron schedule: Haz clic para cambiar a la opción <code>Cron Expression</code></li>
+</ul>
+</li>
+<li>Cron Expression: Ingresa una expresión cron para definir el intervalo de actualización de la cuenta M3U, o haz clic en <code>Open Cron Builder</code> para recibir ayuda con una interfaz amigable<ul>
+<li>Use interval schedule: Haz clic para volver a <code>Refresh Interval (hours)</code></li>
+<li>Open Cron Builder: Abre el constructor interactivo amigable de expresiones cron, con botones predefinidos y editores de campos personalizados</li>
+</ul>
+</li>
+<li>Stale Stream Retention (days) - Los streams (y Groups) que no se hayan visto durante esta cantidad de días se eliminarán. Para eliminación inmediata, usa 0</li>
+<li>VOD Priority - Prioridad para la selección de proveedor VOD (números más altos = mayor prioridad). Se usa cuando varios proveedores ofrecen el mismo contenido.</li>
+<li>Is Active - Activa o desactiva si esta cuenta está activa</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Los M3U pueden agregarse automáticamente a Dispatcharr agregando archivo(s) M3U en la carpeta <code>/data/m3us</code> si <code>Auto-Import Mapped Files</code> está habilitado en Settings &gt; Stream Settings</p>
+</div>
+</li>
+<li>Puedes hacer clic en los encabezados de columna para cambiar el orden de clasificación de las cuentas M3U existentes</li>
+<li>
+<p>Actions column</p>
+<ul>
+<li>
+<p>Ícono de edición <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> para editar la cuenta M3U asociada</p>
+<ul>
+<li>
+<p>Botón "Filters" - Abre el Filters Manager</p>
+<ul>
+<li>Haz clic en 'New' para agregar filtros. Los filtros se procesan en orden y, una vez que hay una coincidencia, no se evalúan reglas adicionales. Los filtros pueden ordenarse usando el ancla de arrastrar y soltar a la izquierda de la regla, y editarse/eliminarse usando los íconos a la derecha de la regla<ul>
+<li>Field: selecciona qué atributo del stream se filtrará: "Group", "Stream Name" o "Stream URL"</li>
+<li>Regex Pattern: ingresa una expresión regular válida para hacer coincidir el Field</li>
+<li>Exclude: alterna para determinar inclusión/exclusión según la expresión regular</li>
+<li>Case Sensitive: alterna para determinar sensibilidad a mayúsculas/minúsculas en la expresión regular</li>
+</ul>
+</li>
+<li>Selecciona 'Save' para agregar el filtro recién creado</li>
+<li>Agrega filtros adicionales para refinar los valores del Field seleccionado según sea necesario</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Ten en cuenta que este es un filtro de <em>streams</em>, por lo que seguirás viendo los grupos/categorías del M3U. Sin embargo, los streams excluidos no aparecerán en la tabla de streams</p>
+</div>
+</li>
+<li>
+<p>Botón "Groups" - Abre el Group Manager</p>
+<ul>
+<li>Automatically enable new groups discovered on future scans - Cuando está deshabilitado, los grupos nuevos de la fuente M3U se crearán pero quedarán deshabilitados por defecto. Puedes habilitarlos manualmente más adelante</li>
+<li>Filtra los grupos visibles con el cuadro de búsqueda en la parte superior del group manager, o haz clic en los botones de la derecha para filtrar por grupos Enabled o Disabled</li>
+<li>Ignora streams de grupos deseleccionándolos</li>
+<li>Auto Channel Sync (solo para grupos Live): Cuando está habilitado, se crearán automáticamente canales para todos los streams del grupo durante las actualizaciones M3U, y se eliminarán cuando los streams ya no estén presentes.<ul>
+<li>Channel Numbering Mode<ul>
+<li><strong>Fixed Start Number</strong>  (default): Comienza en un número especificado e incrementa secuencialmente</li>
+<li><strong>Use Provider Number</strong>: Usa números de canal de la fuente M3U (tvg-chno), con fallback configurable si falta el número del proveedor</li>
+<li><strong>Next Available</strong>: Asigna automáticamente desde 1, omitiendo todos los números de canal usados</li>
+</ul>
+</li>
+<li>Start Channel #: Define un número de canal inicial para cada grupo para organizar tus canales.</li>
+<li>Advanced options:<ul>
+<li>Name Transforms<ul>
+<li>Channel Name Find &amp; Replace (Regex): Busca y reemplaza para renombrar tus canales. Por defecto, el nombre del canal coincidirá con el nombre del stream</li>
+<li>Include/Exclude if name matches (Regex): Solo crea canales desde streams que coincidan con tus criterios de filtro</li>
+</ul>
+</li>
+<li>EPG &amp; Logo<ul>
+<li>EPG source: Fuerza una fuente EPG específica. Por defecto, si se deja en blanco, se hace auto-match por tvg-id</li>
+<li>Custom Logo: Proporciona un logo personalizado o déjalo en blanco para usar el logo del stream</li>
+</ul>
+</li>
+<li>Channel assignment<ul>
+<li>Override Channel Group: Envía los canales creados automáticamente a un grupo diferente al de su fuente</li>
+<li>Channel Profiles: Limita los canales creados automáticamente a channel profiles específicos (por defecto todos cuando está en blanco)</li>
+<li>Stream Profile: Aplica un stream profile específico a todos los canales creados por este grupo</li>
+<li>Channel Sort Order: Ordena los canales dentro del grupo antes de asignar números de canal</li>
+</ul>
+</li>
+<li>Compact numbering: Los números de canal cambian al ocultar/mostrar. Fija un número con un override de número de canal</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Botón "Profiles" - Permite agregar un segundo conjunto de credenciales para el mismo proveedor. <span id="m3u-profiles"></span> <a href="#m3u-profiles"><i data-lucide="link" style="color: Grey; width: 18px;"></i></a></p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Información</p>
+<p>Supongamos que tienes 3 cuentas que quieres agregar a Dispatcharr: 2 de Provider-A y 1 de Provider-B. En lugar de agregar tres cuentas M3U separadas, puedes agregar Provider-A una vez y configurar un perfil para usar el username y password de cada cuenta de Provider-A dentro de la misma cuenta M3U.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="cuentas-m3u-xtream-codes-account-type" name="__tabbed_1" type="radio" /><input id="cuentas-m3u-standard-m3u-account-type" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="cuentas-m3u-xtream-codes-account-type">Xtream Codes Account Type</label><label for="cuentas-m3u-standard-m3u-account-type">Standard (M3U) Account Type</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Configura Provider-A como una cuenta M3U (Xtream Codes) en el M3U &amp; EPG manager.</li>
+<li>Haz clic en el ícono de edición amarillo correspondiente en la columna Actions.</li>
+<li>Haz clic en el botón "Profiles".</li>
+<li>Haz clic en el botón "New".</li>
+<li>Ingresa un Name, Max Streams (si lo deseas), el New Username y el New Password</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Configura Provider-A como una cuenta M3U (Standard) en el M3U &amp; EPG manager.</li>
+<li>Haz clic en el ícono de edición amarillo correspondiente en la columna Actions.</li>
+<li>Haz clic en el botón "Profiles".</li>
+<li>Haz clic en el botón "New".</li>
+<li>Los campos "Search Pattern (Regex)" y "Replace Pattern" actuarán como búsqueda y reemplazo en tu archivo m3u.</li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<table>
+<thead>
+<tr>
+<th>Example URL</th>
+<th>Search Pattern</th>
+<th>Replace Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>http://provider.com/live/username1/password1/stream</code></td>
+<td><code>username1/password1</code></td>
+<td><code>username2/password2</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Ícono de eliminación <i data-lucide="square-minus" style="color: red; width: 18px;"></i> para quitar la cuenta M3U asociada</p>
+</li>
+<li>Ícono de actualización <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> para actualizar manualmente la cuenta M3U asociada</li>
+</ul>
+</li>
+</ul>
+<h2 id="epgs">EPGs<a class="headerlink" href="#epgs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>"<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Haz clic en este botón para agregar una nueva EPG<ul>
+<li>Standard EPG Source - Para agregar una fuente EPG XMLTV estándar<ul>
+<li>Name - Un nombre para tu EPG</li>
+<li>URL - La URL de tu EPG (puede ser xml o xml comprimido como .gz o .zip)</li>
+<li>Source Type - Elige XMLTV o Schedules Direct según el formato de tu proveedor EPG</li>
+<li>Refresh Interval (hours) - Cada cuánto (en número de horas) se actualiza la EPG<ul>
+<li>Use cron schedule: Haz clic para cambiar a la opción <code>Cron Expression</code></li>
+</ul>
+</li>
+<li>Cron Expression: Ingresa una expresión cron para definir el intervalo de actualización de la cuenta EPG, o haz clic en <code>Open Cron Builder</code> para recibir ayuda con una interfaz amigable<ul>
+<li>Use interval schedule: Haz clic para volver a <code>Refresh Interval (hours)</code></li>
+<li>Open Cron Builder: Abre el constructor interactivo amigable de expresiones cron, con botones predefinidos y editores de campos personalizados</li>
+</ul>
+</li>
+<li>Priority - Prioridad para coincidencia de EPG (números más altos = mayor prioridad). Se usa cuando varias fuentes EPG tienen entradas coincidentes para un canal.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Las EPGs pueden agregarse automáticamente a Dispatcharr agregando archivo(s) EPG en la carpeta <code>/data/epgs</code> si <code>Auto-Import Mapped Files</code> está habilitado en Settings &gt; Stream Settings ((el tipo de archivo debe ser xml o xml comprimido como .gz o .zip))</p>
+</div>
+</li>
+<li>Dummy EPG Source - Para agregar una dummy EPG personalizada<ul>
+<li>Name - Un nombre para tu dummy EPG personalizada</li>
+<li>Pattern configuration<ul>
+<li>Name Source (Required) - Elige si se debe analizar el nombre del canal o el nombre de un stream asignado al canal</li>
+<li>Title Pattern (Required) - Patrón regex para extraer información del título (por ejemplo, nombres de equipos, liga). Ejemplo: <code>(?&lt;league&gt;\w+) \d+: (?&lt;team1&gt;.*) VS (?&lt;team2&gt;.*)</code></li>
+<li>Time Pattern (Optional) - Extrae la hora desde títulos de canales. Grupos requeridos: 'hour' (1-12 o 0-23), 'minute' (0-59), 'ampm' (AM/PM - opcional para 24-hour). Ejemplos: <code>@ (?&lt;hour&gt;\d+):(?&lt;minute&gt;\d+)(?&lt;ampm&gt;AM|PM) for '8:30PM'</code> OR <code>@ (?&lt;hour&gt;\d{1,2}):(?&lt;minute&gt;\d{2}) for '20:30'</code></li>
+<li>Date Pattern (Optional) - Extrae la fecha desde títulos de canales. Grupos: 'month' (nombre o número), 'day', 'year' (opcional, por defecto el año actual). Ejemplos: <code>@ (?&lt;month&gt;\w+) (?&lt;day&gt;\d+)</code> for 'Oct 17' OR <code>(?&lt;month&gt;\d+)/(?&lt;day&gt;\d+)/(?&lt;year&gt;\d+)</code> for '10/17/2025'</li>
+</ul>
+</li>
+<li>Output templates<ul>
+<li>Title Template (Optional) - Da formato al título EPG usando los grupos extraídos. Usa {time} (12-hour: '10 PM') o {time24} (24-hour: '22:00'). Ejemplo: <code>{league} - {team1} vs {team2} @ {time}</code></li>
+<li>Subtitle Template (Optional) - Da formato al subtítulo EPG usando los grupos extraídos. Ejemplo: <code>{starttime} - {endtime}</code></li>
+<li>Description Template (Optional) - Da formato a la descripción EPG usando los grupos extraídos. Usa {time} (12-hour) o {time24} (24-hour). Ejemplo: <code>Watch {team1} take on {team2} at {time}!</code></li>
+</ul>
+</li>
+<li>Upcoming/Ended Templates<ul>
+<li>Upcoming Title Template (Optional) - Título para programas antes de que empiece el evento. Usa {time} (12-hour) o {time24} (24-hour). Ejemplo: <code>{team1} vs {team2} starting at {time}.</code></li>
+<li>Upcoming Description Template (Optional) - Descripción para programas antes del evento. Usa {time} (12-hour) o {time24} (24-hour). Ejemplo: <code>Upcoming: Watch the {league} match up where the {team1} take on the {team2} at {time}!</code></li>
+<li>Ended Title Template (Optional) - Título para programas después de que el evento terminó. Usa {time} (12-hour) o {time24} (24-hour). Ejemplo: <code>{team1} vs {team2} started at {time}.</code></li>
+<li>Ended Description Template (Optional) - Descripción para programas después del evento. Usa {time} (12-hour) o {time24} (24-hour). Ejemplo: <code>The {league} match between {team1} and {team2} started at {time}.</code></li>
+</ul>
+</li>
+<li>Fallback Templates<ul>
+<li>Fallback Title Template (Optional) - Título personalizado cuando los patrones no coinciden. Si está vacío, usa el nombre del canal/stream.</li>
+<li>Fallback Description Template (Optional) - Descripción personalizada cuando los patrones no coinciden. Si está vacío, usa mensajes placeholder integrados.</li>
+</ul>
+</li>
+<li>EPG Settings<ul>
+<li>Event Timezone (Required) - La timezone de las horas del evento en los títulos de tus canales. DST (Daylight Saving Time) se maneja automáticamente. Todas las timezones soportadas por pytz están disponibles.</li>
+<li>Output Timezone (Optional) - Muestra las horas en una timezone diferente a la del evento. Déjalo vacío para usar la timezone del evento. Ejemplo: evento a las 10 PM ET mostrado como 9 PM CT.</li>
+<li>Program Duration (minutes) (required) - Duración predeterminada para cada programa</li>
+<li>Categories (Optional) - Categorías EPG para estos programas. Usa comas para separar varias (por ejemplo, Sports, Live, HD). Nota: Solo se agregan al evento principal, no a programas de relleno upcoming/ended.</li>
+<li>Channel Logo URL (Optional) - Construye una URL para el logo del canal usando grupos regex. Ejemplo: https://example.com/logos/{league_normalize}/{team1_normalize}.png. Usa {groupname_normalize} para URLs más limpias (solo alfanuméricas, en minúsculas). Esto se usará como el <icon> del canal en la salida EPG.</li>
+<li>Program Poster URL (Optional) - Construye una URL para el poster/icon del programa usando grupos regex. Ejemplo: https://example.com/posters/{team1_normalize}-vs-{team2_normalize}.jpg. Usa {groupname_normalize} para URLs más limpias (solo alfanuméricas, en minúsculas). Esto se usará como el <icon> del programa en la salida EPG.</li>
+<li>Include Date Tag - Incluye la etiqueta <date> en la salida EPG con la fecha de inicio del programa (formato YYYY-MM-DD). Se agrega a todos los programas.</li>
+<li>Include Live Tag - Marca programas como contenido live con la etiqueta <live /> en la salida EPG. Nota: Solo se agrega al evento principal, no a programas de relleno upcoming/ended.</li>
+<li>Include New Tag - Marca programas como contenido nuevo con la etiqueta <new /> en la salida EPG. Nota: Solo se agrega al evento principal, no a programas de relleno upcoming/ended.</li>
+</ul>
+</li>
+<li>Sample Channel Name - Prueba tus patrones y templates con un nombre de canal de muestra para previsualizar la salida. Ingresa un nombre de canal de muestra para probar la coincidencia de patrones y ver la salida formateada</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Puedes hacer clic en los encabezados de columna para cambiar el orden de clasificación de las EPGs existentes</li>
+<li>Actions column<ul>
+<li>Ícono de edición <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> para editar la EPG asociada</li>
+<li>Ícono de eliminación <i data-lucide="square-minus" style="color: red; width: 18px;"></i> para quitar la EPG asociada</li>
+<li>Ícono de actualización <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> para actualizar manualmente la EPG asociada</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../vods/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: VODs">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                VODs
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../tv-guide/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: TV Guide">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                TV Guide
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+      
+        <script src="../../javascripts/lucide-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1763 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dispatcharr.github.io/Dispatcharr-Docs/es/system/">
+      
+      
+        <link rel="prev" href="../integrations/">
+      
+      
+        <link rel="next" href="../notifications/">
+      
+      
+        
+          <link rel="alternate" href="../../system/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+          <link rel="alternate" href="../../pt/system/" hreflang="pt">
+        
+          <link rel="alternate" href="https://discord.gg/wfeqTRRJru" hreflang="null">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>System - Dispatcharr Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#usuarios" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="Dispatcharr Docs" class="md-header__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dispatcharr Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../system/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../pt/system/" hreflang="pt" class="md-select__link">
+              Português (BR)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://discord.gg/wfeqTRRJru" hreflang="null" class="md-select__link">
+              Help Translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Dispatcharr/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../installation/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../channels/" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ/Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../plugin-listing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Plugins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Dispatcharr Docs" class="md-nav__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Dispatcharr Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Dispatcharr/" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VODs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m3u-epg-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M3U & EPG Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tv-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TV Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dvr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DVR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usuarios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logo-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logo Manager
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Settings
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Settings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dvr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DVR
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connection-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User-Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stream Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#output-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Output Profiles
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proxy-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Proxy Settings
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#backup-restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backup &amp; Restore
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        User Limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-listing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join Discord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Dispatcharr/edit/master/docs/es/system.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Dispatcharr/raw/master/docs/es/system.md" title="Ver código fuente de esta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>System</h1>
+
+<h2 id="usuarios">Usuarios<a class="headerlink" href="#usuarios" title="Permanent link">&para;</a></h2>
+<p>Desde la página Users puedes crear y administrar todos los usuarios de Dispatcharr. Hay 3 tipos de usuarios:</p>
+<ol>
+<li>Admin<ul>
+<li>Tiene acceso total en Dispatcharr</li>
+<li>El login XC solo está habilitado si se define una XC Password para el usuario</li>
+</ul>
+</li>
+<li>Standard User<ul>
+<li>Tiene acceso a la UI de Dispatcharr, pero solo a las páginas Channels, TV Guide y Settings<ul>
+<li>El acceso a la UI de Dispatcharr se concede para todos los canales</li>
+</ul>
+</li>
+<li>Puede permitir acceso a todos los Channel Profiles o restringirlo a un subconjunto<ul>
+<li>Las restricciones solo aplican al acceso mediante XC</li>
+</ul>
+</li>
+<li>En Settings, solo puede cambiar UI settings</li>
+<li>El login XC solo está habilitado si se define una XC Password para el usuario</li>
+<li>Opcionalmente puede ocultar canales marcados como "Mature Content" en user settings</li>
+<li>Opcionalmente puede definir límites de streams en user settings</li>
+</ul>
+</li>
+<li>Streamer<ul>
+<li>No tiene acceso a la UI de Dispatcharr</li>
+<li>Este nivel de usuario es solo para login XC</li>
+<li>Opcionalmente puede ocultar canales marcados como "Mature Content" en user settings</li>
+<li>Opcionalmente puede definir límites de streams en user settings</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul>
+<li>Los valores predeterminados de EPG de cada usuario se pueden definir en la pestaña "EPG Defaults" de ese usuario, lo que permite especificar cuántos días pasados y futuros de datos EPG se deben incluir</li>
+<li>En la pestaña <code>API &amp; XC</code> del usuario, puedes definir las siguientes opciones<ul>
+<li>XC Password - (dejar en blanco para no permitir acceso XC)</li>
+<li>Output Format Override - Sobrescribe el formato de salida predeterminado del sistema para este usuario. Borrar para usar el valor predeterminado del sistema</li>
+<li>Output Profile Override - Perfil de transcodificación previo a la entrega aplicado a streams para este usuario. Borrar para no usar transcodificación</li>
+<li>Allowed IPs - Restringe todo el acceso de este usuario por IP. Dejar vacío para heredar la configuración global</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="logo-manager">Logo Manager<a class="headerlink" href="#logo-manager" title="Permanent link">&para;</a></h2>
+<p>Desde la página Logo Manager puedes subir y administrar logos.</p>
+<div class="admonition info">
+<p class="admonition-title">Información</p>
+<p>Dispatcharr también escaneará automáticamente <code>/data/logos</code> en busca de archivos existentes</p>
+</div>
+<h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
+<h3 id="ui-settings">UI Settings<a class="headerlink" href="#ui-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Table Size - Define el tamaño de las filas de canales en "Channels"</li>
+<li>Pin Table Headers - Alterna si se mantienen visibles los encabezados de tabla al desplazarte</li>
+<li>Time format - Define la visualización de la hora en formato de 12 o 24 horas</li>
+<li>Date format - Define la visualización de fechas como Día/Mes/Año o Mes/Día/Año</li>
+<li>Time Zone - Define tu time zone preferida</li>
+<li>Web Player Output Profile - Output profile aplicado al previsualizar streams en el reproductor del navegador</li>
+<li>Navigation - Arrastra y suelta para reordenar los elementos de navegación de la barra lateral, o haz clic en <i data-lucide="eye" style="color: LightGray; width: 18px;"></i> para alternar la visibilidad<ul>
+<li>System no se puede ocultar</li>
+<li>Haz clic en el botón <code>Reset to Default</code> al final de la sección Navigation para restaurar los valores predeterminados</li>
+</ul>
+</li>
+</ul>
+<h3 id="dvr">DVR<a class="headerlink" href="#dvr" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Enable Comskip (remove commercials after recording) - Activa o desactiva</li>
+<li>Custom comskip.ini path - Ingresa una ruta personalizada o déjala en blanco para usar los valores integrados predeterminados.</li>
+<li>Select comskip.ini - Haz clic en este botón para seleccionar, subir y usar un comskip.ini personalizado en Dispatcharr</li>
+<li>Start early (minutes) - Comienza la grabación esta cantidad de minutos antes del inicio programado.</li>
+<li>End late (minutes) - Continúa la grabación esta cantidad de minutos después del final programado.</li>
+<li>TV Path Template - Soporta <code>{show}</code>, <code>{season}</code>, <code>{episode}</code>, <code>{sub_title}</code>, <code>{channel}</code>, <code>{year}</code>, <code>{start}</code>, <code>{end}</code>. Usa especificadores de formato como <code>{season:02d}</code>. Las rutas relativas están bajo el directorio de tu biblioteca.</li>
+<li>TV Fallback Template - Template usado cuando un episodio no tiene temporada/episodio. Soporta <code>{show}</code>, <code>{start}</code>, <code>{end}</code>, <code>{channel}</code>, <code>{year}</code>.</li>
+<li>Movie Path Template - Soporta <code>{title}</code>, <code>{year}</code>, <code>{channel}</code>, <code>{start}</code>, <code>{end}</code>. Las rutas relativas están bajo el directorio de tu biblioteca.</li>
+<li>Movie Fallback Template - Template usado cuando los metadatos de película están incompletos. Soporta <code>{start}</code>, <code>{end}</code>, <code>{channel}</code>.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><span id="recording-location"></span><a href="#recording-location"><i data-lucide="link" style="color: Grey; width: 18px;"></i></a> Las grabaciones se guardan en la carpeta <code>/data/recordings</code> según tu configuración de templates. Es posible que quieras usar bind mounts de docker compose para guardar grabaciones en una ubicación diferente en tu host</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">volumes</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dispatcharr_data:/data</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">host_path/media:/data/recordings</span>
+</span></code></pre></div>
+</div>
+</div>
+<h3 id="stream-settings">Stream Settings<a class="headerlink" href="#stream-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Default User-Agent - Define el User-Agent predeterminado</li>
+<li>Default Stream Profile - Define el Stream Profile predeterminado</li>
+<li>Default Output Format - Formato de contenedor usado al hacer proxy de streams. MPEG-TS es ampliamente compatible con reproductores multimedia y dispositivos; fMP4 tiene mejor soporte para codecs modernos como AV1 y algunos clientes nuevos lo prefieren</li>
+<li>HDHR Default Output Profile - Un output profile que se aplica de forma predeterminada a todas las URLs de stream HDHR (puede sobrescribirse modificando la URL de salida HDHR). Cuando se borra, los streams se sirven tal cual (pass-through)</li>
+<li>M3U Hash Key - Define cómo generar el hash de tu M3U. Esto afecta la limpieza de streams obsoletos.<ul>
+<li>La configuración predeterminada usa hash sobre URL. Las opciones disponibles incluyen:<ul>
+<li>Name</li>
+<li>URL - Para cuentas XC, el hash del stream usa el stream_id estable en lugar de la URL al hacer hashing, lo que garantiza que los streams XC mantengan su identidad y asociaciones de canales incluso cuando cambian las credenciales de cuenta o URLs del servidor</li>
+<li>TVG-ID</li>
+<li>M3U ID</li>
+<li>Group</li>
+</ul>
+</li>
+<li>El stream original desaparecerá de Dispatcharr según la configuración Stale Stream Retention (days) de tu cuenta M3U</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Asegúrate de hacer clic en el botón <code>Save</code> después de hacer cualquier cambio en M3U Hash Key.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<p>Tu proveedor cambia regularmente los nombres de ciertos streams PPV, pero tienes canales configurados para esos streams y no quieres que se eliminen durante la limpieza de streams obsoletos. Como el proveedor cambia el nombre del stream, pero no la URL ni el TVG-ID, defines tu M3U hash key solo como <code>URL</code> y <code>TVG-ID</code></p>
+</div>
+</li>
+</ul>
+<h3 id="system-settings">System settings<a class="headerlink" href="#system-settings" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Maximum System Events - Configura cuántos eventos del sistema (channel start/stop, buffering, etc.) conservar en la base de datos (mínimo: 10, máximo: 1000). Los eventos se muestran en la página Stats.</li>
+<li>Preferred Region - Define tu región preferida</li>
+<li>Auto Import Mapped Files - Activa/desactiva la importación automática de archivos M3U o datos EPG xml desde /data/epgs y/o /data/m3us</li>
+</ul>
+<h3 id="connection-security">Connection Security<a class="headerlink" href="#connection-security" title="Permanent link">&para;</a></h3>
+<p>Muestra el estado actual de cifrado TLS para conexiones Redis y PostgreSQL. Esta sección solo es visible en <a href="/Dispatcharr-Docs/installation/#modular-deployment">modular deployment mode</a>.</p>
+<ul>
+<li><strong>Encryption</strong> - Si TLS está habilitado para la conexión</li>
+<li><strong>Server Verification</strong> (Redis) / <strong>Verification Mode</strong> (PostgreSQL) - Si la identidad del servidor se verifica usando un CA certificate</li>
+<li><strong>Mutual TLS</strong> - Si Dispatcharr se autentica ante el servidor usando un client certificate</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Connection Security es de solo lectura. TLS se configura mediante environment variables en el archivo docker compose. Consulta <a href="/Dispatcharr-Docs/advanced/#connection-security">Connection Security</a> en la sección Advanced para detalles de configuración.</p>
+</div>
+<h3 id="user-agents">User-Agents<a class="headerlink" href="#user-agents" title="Permanent link">&para;</a></h3>
+<p>En el contexto de IPTV, un user agent es una cadena de texto que identifica la aplicación cliente (por ejemplo, un reproductor como Kodi o VLC) ante el servidor IPTV. Se incluye en los headers HTTP de las solicitudes enviadas por el cliente al servidor, informando al servidor sobre el tipo de dispositivo y software usado para acceder al stream IPTV. Dispatcharr incluye User-Agents predeterminados para VLC, Chrome y TiviMate.</p>
+<ul>
+<li>Agrega tu propio User-Agent haciendo clic en el botón "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" en la página Settings<ul>
+<li>Name - un nombre para tu user-agent</li>
+<li>User-Agent - El texto que se incluirá para tu cadena user-agent</li>
+<li>Description - (Opcional) una descripción del user-agent para tu propio uso</li>
+</ul>
+</li>
+</ul>
+<h3 id="stream-profiles">Stream Profiles<a class="headerlink" href="#stream-profiles" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Stream Profile</th>
+<th style="text-align: center;"><a href="/Dispatcharr-Docs/system/#proxy-settings">Proxy support <br>(buffer, VPN support, etc.)</a></th>
+<th style="text-align: center;"><a href="/Dispatcharr-Docs/channels/#fallback-streams">Fallback stream<br> support</a></th>
+<th style="text-align: center;"><a href="/Dispatcharr-Docs/stats/#stats">Stream stats<br> support</a></th>
+<th style="text-align: center;">System resources</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ffmpeg</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Proxy</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td>Redirect</td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-x" style="color: red; width: 18px;"></i></td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td>streamlink</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>VLC</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td>Custom ffmpeg</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;">Low to Very High</td>
+</tr>
+<tr>
+<td>Custom VLC</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i></td>
+<td style="text-align: center;">Low to Very High</td>
+</tr>
+<tr>
+<td>yt-dlp</td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;"><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i></td>
+<td style="text-align: center;">Low</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p><i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> = Soporte completo
+<i data-lucide="triangle-alert" style="color: yellow; width: 18px;"></i> = Soporte parcial
+<i data-lucide="square-x" style="color: red; width: 18px;"></i> = No soportado</p>
+</div>
+<ul>
+<li>
+<p>Hay 5 stream profiles predeterminados con la posibilidad de crear tus propios perfiles personalizados</p>
+<ul>
+<li>ffmpeg - Dispatcharr hará proxy de streams mediante ffmpeg. No se realiza transcoding con el stream profile predeterminado de ffmpeg, solo remux de streams. Usa más recursos del sistema que proxy</li>
+<li>
+<p>Proxy - Hace proxy de los streams originales, lo que permite usar funciones de Dispatcharr (streams redundantes por canal) y agrega un pequeño buffer para ayudar con la estabilidad del stream. Usa menos recursos del sistema que ffmpeg.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Proxy vuelve al stream profile predeterminado de ffmpeg si el stream fuente no es mpegts</p>
+</div>
+</li>
+<li>
+<p>Redirect - Redirige la URL original del stream M3U a tu cliente. No hay proxying con este profile</p>
+</li>
+<li>streamlink - Para streams personalizados basados en los servicios soportados por <a href="https://streamlink.github.io/">streamlink</a></li>
+<li>VLC - Dispatcharr hará proxy de streams mediante VLC. No se realiza transcoding con el stream profile predeterminado de VLC, solo remux de streams. Usa más recursos del sistema que proxy</li>
+<li>Custom Stream Profiles - crea tu propio stream profile personalizado haciendo clic en el botón "Add Stream Profile" en la página Settings</li>
+<li>Name - un nombre para tu stream profile</li>
+<li>Command - FFmpeg, Streamlink, VLC, yt-dlp, or Custom</li>
+<li>Custom Command (only for Custom) - Ingresa el nombre del ejecutable (por ejemplo, ffmpeg) o la ruta completa (por ejemplo, /usr/local/bin/mycmd)</li>
+<li>Parameters - Define tus parámetros personalizados de <a href="https://ffmpeg.org/ffmpeg.html">FFmpeg</a>, <a href="https://streamlink.github.io/cli.html">Streamlink</a>, <a href="https://wiki.videolan.org/VLC_command-line_help/">VLC</a>, o <a href="https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template">yt-dlp</a></li>
+<li>User-Agent - Define el user-agent predeterminado para este stream profile</li>
+</ul>
+</li>
+</ul>
+<h3 id="output-profiles">Output Profiles<a class="headerlink" href="#output-profiles" title="Permanent link">&para;</a></h3>
+<p>Los output profiles toman la salida del stream profile y transcodifican para cualquier cliente que solicite un output profile. Permiten ajustar la salida del stream mediante URL HDHR, URL M3U y/o por usuario XC. Se ejecuta un proceso de transcode por cada par activo (channel, profile) y todos los clientes solicitantes comparten el buffer de salida resultante.</p>
+<div class="admonition note">
+<p class="admonition-title">Caso de uso común</p>
+<p>Un profile que convierte audio AC3 a AAC para clientes de navegador y móviles, mientras el stream nativo (AC3 intacto) sigue sirviendo a Plex/Emby/Jellyfin.</p>
+</div>
+<p>A diferencia de los stream profiles, los output profiles deben usar <code>pipe:0</code> como entrada y <code>pipe:1</code> como salida en los parámetros de ffmpeg. La salida debe estar en formato MPEG-TS (-f mpegts).</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<p><code>-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1</code></p>
+</div>
+<h3 id="network-access">Network Access<a class="headerlink" href="#network-access" title="Permanent link">&para;</a></h3>
+<p>Permite restringir el acceso a Dispatcharr por rango CIDR. Puedes ingresar varios rangos CIDR separados por comas. 0.0.0.0/0 permite todas las IPs</p>
+<div class="admonition example">
+<p class="admonition-title">Ejemplo</p>
+<table>
+<thead>
+<tr>
+<th>CIDR Range</th>
+<th style="text-align: center;">Number of IPs</th>
+<th>Range example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>192.168.1.0/32</td>
+<td style="text-align: center;">1</td>
+<td>192.168.1.0 (single IP)</td>
+</tr>
+<tr>
+<td>192.168.1.0/24</td>
+<td style="text-align: center;">256</td>
+<td>192.168.1.0 - 192.168.1.255</td>
+</tr>
+<tr>
+<td>192.168.1.0/16</td>
+<td style="text-align: center;">65,536</td>
+<td>192.168.0.0 - 192.168.255.255</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>M3U / EPG Endpoints - Limita el acceso a URLs M3U, EPG y HDHR (la configuración predeterminada permite acceso solo en redes locales)</li>
+<li>Stream Endpoints - Limita el acceso de red a URLs de stream, incluidas URLs de stream XC</li>
+<li>XC API - Limita el acceso a la XC API</li>
+<li>UI - Limita el acceso a la UI de Dispatcharr</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Consejo</p>
+<p>Para bloquear por completo el acceso a cualquiera de los anteriores, usa la dirección <code>127.0.0.1/32</code> (¡NO usar para UI!)</p>
+</div>
+<h3 id="proxy-settings">Proxy Settings<a class="headerlink" href="#proxy-settings" title="Permanent link">&para;</a></h3>
+<p>Estas configuraciones afectan a todos los stream profiles excepto redirect</p>
+<ul>
+<li>Buffering Timeout - Tiempo máximo (en segundos) que se espera por buffering antes de cambiar de stream</li>
+<li>Buffering Speed - Umbral de velocidad por debajo del cual se detecta buffering (1.0 = velocidad normal)</li>
+<li>Buffer Chunk TTL - Time-to-live para chunks de buffer en segundos (cuánto tiempo se cachean datos del stream)</li>
+<li>Channel Shutdown Delay - Retraso en segundos antes de apagar un canal después de que el último cliente se desconecta</li>
+<li>Channel Initialization Grace Period - Período de gracia en segundos durante la inicialización del canal</li>
+<li>New Client Buffer (seconds) - Segundos de buffer recibido para iniciar detrás del live cuando se conecta un nuevo cliente (0 = empezar en live). Nota: esto es tiempo de recepción del chunk, no duración de video</li>
+</ul>
+<h3 id="backup-restore">Backup &amp; Restore<a class="headerlink" href="#backup-restore" title="Permanent link">&para;</a></h3>
+<p>Crea, programa y restaura backups</p>
+<ul>
+<li>Schedule backups - Habilita para definir un programa regular de backups</li>
+<li>
+<p>Advanced (Cron Expression) - Habilita para definir una expresión cron para backups programados. Las expresiones cron permiten un control más granular sobre los programas de backup.</p>
+<div class="admonition examples">
+<p class="admonition-title">Ejemplos</p>
+<p><code>0 3 * * *</code> - Todos los días a las 3:00 AM
+<code>0 2 * * 0</code> - Todos los domingos a las 2:00 AM
+<code>0 */6 * * *</code> - Cada 6 horas
+<code>30 14 1 * *</code> - Día 1 de cada mes a las 2:30 PM</p>
+</div>
+</li>
+<li>
+<p>Retention - La cantidad de backups a conservar. El backup más antiguo se eliminará cuando se cree un backup nuevo que exceda este número. Usa 0 para conservar todos los backups antiguos.</p>
+</li>
+</ul>
+<h3 id="user-limits">User Limits<a class="headerlink" href="#user-limits" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Terminate on Limit Exceeded - Marca para habilitar límites de streams de usuario según los criterios siguientes</li>
+<li>Prioritize Single Client Channels - prefiere liberar streams en canales que solo ese usuario está viendo</li>
+<li>Ignore Same-Channel Connections - cuenta varias conexiones al mismo canal live como un solo stream para el límite</li>
+<li>Terminate Oldest - Marca para priorizar terminar el stream más antiguo cuando se exceden los límites. Si no está marcado, prioriza el más nuevo</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../integrations/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Integrations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Integrations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../notifications/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Notifications">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Notifications
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+      
+        <script src="../../javascripts/lucide-init.js"></script>
+      
+    
+  </body>
+</html>
