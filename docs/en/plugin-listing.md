@@ -7,8 +7,8 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 |--------|---------|-------|---------|-------------|
 | [`Channel Mapparr`](#channel-mapparr) | `1.26.1791324` | PiratesIRC | MIT | Standardizes broadcast (OTA) and premium/cable channel names using network data and channel lists. Supports M3U stream import, category organization, and fuzzy matching across 42K+ channels in 11 countries. |
 | [`Dispatcharr Exporter`](#dispatcharr-exporter) | `3.0.1` | sethwv | MIT | Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitoring |
-| [`Ranked Matchups (Top Games)`](#ranked-matchups-top-games-) | `1.10.0` | Jacob-Lasky | MIT | Cross-sport interestingness curator. Pulls upcoming games per enabled sport, scores them on interestingness, matches to Dispatcharr channels via EPG, and renames+groups them into a Top Matchups channel profile so your guide shows only the games worth watching. Channels are numbered by kickoff time, so the list sorts soonest-first and the guide binds correctly in both the default M3U/EPG output and the Xtream Codes API with no special settings. |
-| [`Dispatchwrapparr`](#dispatchwrapparr) | `1.7.5` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
+| [`Ranked Matchups (Top Games)`](#ranked-matchups-top-games-) | `1.11.1` | Jacob-Lasky | MIT | Cross-sport interestingness curator. Pulls upcoming games per enabled sport, scores them on interestingness, matches to Dispatcharr channels via EPG, and renames+groups them into a Top Matchups channel profile so your guide shows only the games worth watching. Channels are numbered by kickoff time, so the list sorts soonest-first and the guide binds correctly in both the default M3U/EPG output and the Xtream Codes API with no special settings. |
+| [`Dispatchwrapparr`](#dispatchwrapparr) | `1.7.6` | jordandalley | MIT | An intelligent DRM/Clearkey capable stream profile for Dispatcharr |
 | [`Embyfin Stream Cleanup`](#embyfin-stream-cleanup) | `1.2.0` | sethwv | MIT | Monitors Dispatcharr client activity and terminates idle Emby/Jellyfin connections |
 | [`EPG Janitor`](#epg-janitor) | `1.26.1791309` | PiratesIRC | MIT | Scans for channels with EPG assignments but no program data. Auto-matches EPG to channels using intelligent fuzzy matching with aliases, removes EPG from hidden channels, and manages EPG assignments. |
 | [`EPGeditARR`](#epgeditarr) | `0.2.07` | jstevenscl | MIT | Transform and clean your EPG data using regex and find/replace rules. Creates virtual copies of your sources — originals are never touched. Fills placeholder schedules for channels with no EPG, and provides a full SiriusXM toolkit: fill EPG from the community XMLTV (741 channels, sports smart blocks), sort into official lineup order, assign logos, and rename channels using the official SiriusXM API channel database. |
@@ -18,10 +18,10 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Multiview`](#multiview) | `0.3.1` | sethwv | MIT | Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg |
 | [`reservoarr`](#reservoarr) | `6.3.1` | brko7 | MIT | Delay-buffer stream profile that absorbs IPTV CDN gaps so Plex Live TV stops dying |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
-| [`Stream-Mapparr`](#stream-mapparr) | `1.26.1820605` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
+| [`Stream-Mapparr`](#stream-mapparr) | `1.26.1931038` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Telegram Alerts`](#telegram-alerts) | `0.4.5` | R3XCHRIS | MIT | Push Dispatcharr channel/stream/VOD events to a Telegram chat via a bot. Includes a manual test action, per-event toggles, and an optional cron-driven daily report (public IP + geo + speedtest + activity + source health). |
-| [`Tickarr`](#tickarr) | `0.3.01` | jstevenscl | MIT | Dynamic text overlays for IPTV channels — Satellite Radio Now Playing, Sports Ticker, Custom Text, EAS/JAS Weather Alerts |
-| [`Twitcharr`](#twitcharr) | `1.3.1` | eliasbruno124-dev | MIT | Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback. |
+| [`Tickarr`](#tickarr) | `0.3.03` | jstevenscl | MIT | Dynamic text overlays for IPTV channels — Satellite Radio Now Playing, Sports Ticker, Custom Text, EAS/JAS Weather Alerts |
+| [`Twitcharr`](#twitcharr) | `1.3.2` | eliasbruno124-dev | MIT | Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback. |
 | [`VOD to Media Library`](#vod-to-media-library) | `1.16.0` | R3XCHRIS | MIT | Generate .strm files (with optional NFO metadata) from your Dispatcharr VOD catalogue so Jellyfin / Emby / Kodi / ChannelsDVR can index your movies and series. Adds a cron-driven auto-rescan that picks up newly-added episodes nightly. Optional category-nested folder layout for genre-organised libraries. |
 | [`Waybill`](#waybill) | `1.3.0` | Matthew-Beckett | MIT | Waybill matches, renames, and organizes any streams no matter the provider. Infinitely configurable pipelines for total control. |
 | [`YouTubearr`](#youtubearr) | `1.30.0` | jeff-gooch | Unlicense | Zero-dependency YouTube livestream plugin with automatic monitoring and configurable numbering |
@@ -66,23 +66,23 @@ Expose Dispatcharr metrics in Prometheus exporter-compatible format for monitori
 
 ### [Ranked Matchups (Top Games)](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/dispatcharr-ranked-matchups/README.md)
 
-**Version:** `1.10.0` | **Author:** Jacob-Lasky | **Last Updated:** Jun 28 2026, 18:15 UTC
+**Version:** `1.11.1` | **Author:** Jacob-Lasky | **Last Updated:** Jul 11 2026, 12:24 UTC
 
 Cross-sport interestingness curator. Pulls upcoming games per enabled sport, scores them on interestingness, matches to Dispatcharr channels via EPG, and renames+groups them into a Top Matchups channel profile so your guide shows only the games worth watching. Channels are numbered by kickoff time, so the list sorts soonest-first and the guide binds correctly in both the default M3U/EPG output and the Xtream Codes API with no special settings.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/Jacob-Lasky/dispatcharr_ranked_matchups)
 
 **Downloads:**
-- [Latest Release (`1.10.0`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatcharr-ranked-matchups-1.10.0/dispatcharr-ranked-matchups-1.10.0.zip)
-- [All Versions (8 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatcharr-ranked-matchups)
+- [Latest Release (`1.11.1`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatcharr-ranked-matchups-1.11.1/dispatcharr-ranked-matchups-1.11.1.zip)
+- [All Versions (10 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatcharr-ranked-matchups)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatcharr-ranked-matchups) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatcharr-ranked-matchups/README.md) | **Last Change:** [`224a791`](https://github.com/Dispatcharr/Plugins/commit/224a7911f90db6635a3c7831393a4423592d7d57)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatcharr-ranked-matchups) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatcharr-ranked-matchups/README.md) | **Last Change:** [`c22c57a`](https://github.com/Dispatcharr/Plugins/commit/c22c57a445bf16bf841578c318f1b6a8b60248eb)
 
 ---
 
 ### [Dispatchwrapparr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/dispatchwrapparr/README.md)
 
-**Version:** `1.7.5` | **Author:** jordandalley | **Last Updated:** Jun 27 2026, 05:59 UTC
+**Version:** `1.7.6` | **Author:** jordandalley | **Last Updated:** Jul 08 2026, 01:38 UTC
 
 An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 
@@ -91,10 +91,10 @@ An intelligent DRM/Clearkey capable stream profile for Dispatcharr
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.25.0-brightgreen?style=flat-square)
 
 **Downloads:**
-- [Latest Release (`1.7.5`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatchwrapparr-1.7.5/dispatchwrapparr-1.7.5.zip)
-- [All Versions (9 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatchwrapparr)
+- [Latest Release (`1.7.6`)](https://github.com/Dispatcharr/Plugins/releases/download/dispatchwrapparr-1.7.6/dispatchwrapparr-1.7.6.zip)
+- [All Versions (10 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/dispatchwrapparr)
 
-**Maintainers:** michaelmurfy | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatchwrapparr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatchwrapparr/README.md) | **Last Change:** [`2f419a0`](https://github.com/Dispatcharr/Plugins/commit/2f419a064b0332118cccc8ee680904fe399e51b6)
+**Maintainers:** michaelmurfy | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/dispatchwrapparr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/dispatchwrapparr/README.md) | **Last Change:** [`9fc5ffc`](https://github.com/Dispatcharr/Plugins/commit/9fc5ffc13904e456ba251ceecc747d3b2d837221)
 
 ---
 
@@ -258,7 +258,7 @@ Automatically drops all active streams once per day at a configured time, with a
 
 ### [Stream-Mapparr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/stream-mapparr/README.md)
 
-**Version:** `1.26.1820605` | **Author:** PiratesIRC | **Last Updated:** Jul 03 2026, 10:43 UTC
+**Version:** `1.26.1931038` | **Author:** PiratesIRC | **Last Updated:** Jul 13 2026, 02:54 UTC
 
 Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup.
 
@@ -267,10 +267,10 @@ Automatically add matching streams to channels based on name similarity and qual
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
-- [Latest Release (`1.26.1820605`)](https://github.com/Dispatcharr/Plugins/releases/download/stream-mapparr-1.26.1820605/stream-mapparr-1.26.1820605.zip)
-- [All Versions (8 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/stream-mapparr)
+- [Latest Release (`1.26.1931038`)](https://github.com/Dispatcharr/Plugins/releases/download/stream-mapparr-1.26.1931038/stream-mapparr-1.26.1931038.zip)
+- [All Versions (9 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/stream-mapparr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/stream-mapparr) | **Last Change:** [`a4e29d2`](https://github.com/Dispatcharr/Plugins/commit/a4e29d2c3f8fbf9d9f99dd8ae831ed74d9872654)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/stream-mapparr) | **Last Change:** [`62a7907`](https://github.com/Dispatcharr/Plugins/commit/62a790775f91eaeb5ee4e7d3576e03b32752d346)
 
 ---
 
@@ -294,33 +294,33 @@ Push Dispatcharr channel/stream/VOD events to a Telegram chat via a bot. Include
 
 ### [Tickarr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/tickarr/README.md)
 
-**Version:** `0.3.01` | **Author:** jstevenscl | **Last Updated:** Jun 28 2026, 11:49 UTC
+**Version:** `0.3.03` | **Author:** jstevenscl | **Last Updated:** Jul 10 2026, 00:22 UTC
 
 Dynamic text overlays for IPTV channels — Satellite Radio Now Playing, Sports Ticker, Custom Text, EAS/JAS Weather Alerts
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/jstevenscl/tickarr)
 
 **Downloads:**
-- [Latest Release (`0.3.01`)](https://github.com/Dispatcharr/Plugins/releases/download/tickarr-0.3.01/tickarr-0.3.01.zip)
-- [All Versions (7 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/tickarr)
+- [Latest Release (`0.3.03`)](https://github.com/Dispatcharr/Plugins/releases/download/tickarr-0.3.03/tickarr-0.3.03.zip)
+- [All Versions (9 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/tickarr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/tickarr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/tickarr/README.md) | **Last Change:** [`ddd4f98`](https://github.com/Dispatcharr/Plugins/commit/ddd4f98763a2c5ebe2d51cfc14d0e1ff4bf358b5)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/tickarr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/tickarr/README.md) | **Last Change:** [`eff1cb7`](https://github.com/Dispatcharr/Plugins/commit/eff1cb74b2969f737f76e22f0b5a6f87e18251e4)
 
 ---
 
 ### [Twitcharr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/twitcharr/README.md)
 
-**Version:** `1.3.1` | **Author:** eliasbruno124-dev | **Last Updated:** Jun 21 2026, 18:14 UTC
+**Version:** `1.3.2` | **Author:** eliasbruno124-dev | **Last Updated:** Jul 13 2026, 02:54 UTC
 
 Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/eliasbruno124-dev/Twitcharr)
 
 **Downloads:**
-- [Latest Release (`1.3.1`)](https://github.com/Dispatcharr/Plugins/releases/download/twitcharr-1.3.1/twitcharr-1.3.1.zip)
-- [All Versions (3 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/twitcharr)
+- [Latest Release (`1.3.2`)](https://github.com/Dispatcharr/Plugins/releases/download/twitcharr-1.3.2/twitcharr-1.3.2.zip)
+- [All Versions (4 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/twitcharr)
 
-**Maintainers:** eliasbruno124-dev | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/twitcharr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/twitcharr/README.md) | **Last Change:** [`e7c35b1`](https://github.com/Dispatcharr/Plugins/commit/e7c35b1506985c50d060ff8cb79e0c613129ea84)
+**Maintainers:** eliasbruno124-dev | **Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/twitcharr) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/twitcharr/README.md) | **Last Change:** [`2d65eb1`](https://github.com/Dispatcharr/Plugins/commit/2d65eb13b1ad72210ca517520c9d0608d2dc342b)
 
 ---
 
@@ -388,4 +388,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Jul 06 2026, 18:12 UTC*
+*Last updated: Jul 13 2026, 02:54 UTC*
