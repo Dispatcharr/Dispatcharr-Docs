@@ -15,10 +15,11 @@ Want to get your plugin added to this list? Check out the [plugin repository](ht
 | [`Event Channel Managarr`](#event-channel-managarr) | `1.26.1711720` | PiratesIRC | MIT | Automates channel visibility by hiding channels without events and showing those with events, based on EPG data and channel names. Optionally manages dummy EPG for channels without real EPG. |
 | [`IPTV Checker`](#iptv-checker) | `1.26.1741204` | PiratesIRC | MIT | A Dispatcharr Plugin that goes through a playlist to check IPTV channels |
 | [`Lineuparr`](#lineuparr) | `1.26.1791747` | PiratesIRC | MIT | Mirror real-world provider channel lineups by creating channel groups, channels, and fuzzy-matching IPTV streams to them. |
+| [`M3U Expiration Notifier`](#m3u-expiration-notifier) | `1.0.0` | barryanderson | MIT | Checks your M3U account expiration dates on a schedule and emails you before (and when) they expire. |
 | [`Multiview`](#multiview) | `0.3.1` | sethwv | MIT | Tile multiple Dispatcharr channel streams into multi-view outputs using FFmpeg |
 | [`reservoarr`](#reservoarr) | `6.3.1` | brko7 | MIT | Delay-buffer stream profile that absorbs IPTV CDN gaps so Plex Live TV stops dying |
 | [`Stream Dripper`](#stream-dripper) | `1.0.0` | Megamannen | Artistic-2.0 | Automatically drops all active streams once per day at a configured time, with a manual drop-now button. |
-| [`Stream-Mapparr`](#stream-mapparr) | `1.26.1931038` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
+| [`Stream-Mapparr`](#stream-mapparr) | `1.26.1972151` | PiratesIRC | MIT | Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup. |
 | [`Telegram Alerts`](#telegram-alerts) | `0.4.5` | R3XCHRIS | MIT | Push Dispatcharr channel/stream/VOD events to a Telegram chat via a bot. Includes a manual test action, per-event toggles, and an optional cron-driven daily report (public IP + geo + speedtest + activity + source health). |
 | [`Tickarr`](#tickarr) | `0.3.03` | jstevenscl | MIT | Dynamic text overlays for IPTV channels — Satellite Radio Now Playing, Sports Ticker, Custom Text, EAS/JAS Weather Alerts |
 | [`Twitcharr`](#twitcharr) | `1.3.2` | eliasbruno124-dev | MIT | Twitch live-TV plugin for Dispatcharr with automatic channels, streams, XMLTV guide data and Streamlink playback. |
@@ -204,6 +205,22 @@ Mirror real-world provider channel lineups by creating channel groups, channels,
 
 ---
 
+### [M3U Expiration Notifier](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/m3u-expiration-notifier/README.md)
+
+**Version:** `1.0.0` | **Author:** barryanderson | **Last Updated:** Jul 17 2026, 00:26 UTC
+
+Checks your M3U account expiration dates on a schedule and emails you before (and when) they expire.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](https://spdx.org/licenses/MIT.html) [![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/barryanderson/dispatcharr-m3u-expiration-notifier)
+
+**Downloads:**
+- [Latest Release (`1.0.0`)](https://github.com/Dispatcharr/Plugins/releases/download/m3u-expiration-notifier-1.0.0/m3u-expiration-notifier-1.0.0.zip)
+- [All Versions (1 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/m3u-expiration-notifier)
+
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/m3u-expiration-notifier) | [README](https://github.com/Dispatcharr/Plugins/blob/main/plugins/m3u-expiration-notifier/README.md) | **Last Change:** [`af83e50`](https://github.com/Dispatcharr/Plugins/commit/af83e5054bf456bbe78b841eabc3a3373abbbae1)
+
+---
+
 ### [Multiview](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/multiview/README.md)
 
 **Version:** `0.3.1` | **Author:** sethwv | **Last Updated:** Jul 06 2026, 18:11 UTC
@@ -258,7 +275,7 @@ Automatically drops all active streams once per day at a configured time, with a
 
 ### [Stream-Mapparr](https://github.com/Dispatcharr/Plugins/blob/releases/metadata/stream-mapparr/README.md)
 
-**Version:** `1.26.1931038` | **Author:** PiratesIRC | **Last Updated:** Jul 13 2026, 02:54 UTC
+**Version:** `1.26.1972151` | **Author:** PiratesIRC | **Last Updated:** Jul 17 2026, 00:31 UTC
 
 Automatically add matching streams to channels based on name similarity and quality precedence. Supports unlimited stream matching, channel visibility management, and CSV export cleanup.
 
@@ -267,10 +284,10 @@ Automatically add matching streams to channels based on name similarity and qual
 ![Dispatcharr min](https://img.shields.io/badge/Dispatcharr_min-v0.20.0-brightgreen?style=flat-square)
 
 **Downloads:**
-- [Latest Release (`1.26.1931038`)](https://github.com/Dispatcharr/Plugins/releases/download/stream-mapparr-1.26.1931038/stream-mapparr-1.26.1931038.zip)
-- [All Versions (9 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/stream-mapparr)
+- [Latest Release (`1.26.1972151`)](https://github.com/Dispatcharr/Plugins/releases/download/stream-mapparr-1.26.1972151/stream-mapparr-1.26.1972151.zip)
+- [All Versions (10 available)](https://github.com/Dispatcharr/Plugins/tree/releases/metadata/stream-mapparr)
 
-**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/stream-mapparr) | **Last Change:** [`62a7907`](https://github.com/Dispatcharr/Plugins/commit/62a790775f91eaeb5ee4e7d3576e03b32752d346)
+**Source:** [Browse](https://github.com/Dispatcharr/Plugins/tree/main/plugins/stream-mapparr) | **Last Change:** [`563e1fe`](https://github.com/Dispatcharr/Plugins/commit/563e1fefe48407e1cf045ee6a112de4eb11649b3)
 
 ---
 
@@ -388,4 +405,4 @@ curl https://raw.githubusercontent.com/Dispatcharr/Plugins/releases/manifest.jso
 
 ---
 
-*Last updated: Jul 13 2026, 02:54 UTC*
+*Last updated: Jul 17 2026, 00:32 UTC*
