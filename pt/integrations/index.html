@@ -1,0 +1,2243 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dispatcharr.github.io/Dispatcharr-Docs/pt/integrations/">
+      
+      
+        <link rel="prev" href="../plugins/">
+      
+      
+        <link rel="next" href="../system/">
+      
+      
+        
+          <link rel="alternate" href="../../integrations/" hreflang="en">
+        
+          <link rel="alternate" href="../../es/integrations/" hreflang="es">
+        
+          <link rel="alternate" href="./" hreflang="pt">
+        
+          <link rel="alternate" href="https://discord.gg/wfeqTRRJru" hreflang="null">
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Integrations - Dispatcharr Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#conexoes" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../" title="Dispatcharr Docs" class="md-header__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Dispatcharr Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integrations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../integrations/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/integrations/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="pt" class="md-select__link">
+              Português (BR)
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://discord.gg/wfeqTRRJru" hreflang="null" class="md-select__link">
+              Help Translating
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Dispatcharr/" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../installation/" class="md-tabs__link">
+          
+  
+  
+  Setup
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../channels/" class="md-tabs__link">
+          
+  
+  
+  User Guide
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../troubleshooting/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  FAQ/Troubleshooting
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../api/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  API
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../plugin-listing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Plugins
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Join Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Dispatcharr Docs" class="md-nav__button md-logo" aria-label="Dispatcharr Docs" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Dispatcharr Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Dispatcharr/" title="Ir ao repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Dispatcharr
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Setup
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Setup
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    User Guide
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    User Guide
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../channels/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Channels
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VODs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../m3u-epg-manager/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    M3U & EPG Manager
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tv-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TV Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dvr/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DVR
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stats
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrations
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conexoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conexões
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#templates-de-payload-para-webhooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Templates de Payload para Webhooks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Templates de Payload para Webhooks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-auto-injetadas-eventos-com-contexto-de-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variáveis auto-injetadas (eventos com contexto de canal)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variaveis-por-evento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variáveis por evento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variáveis por evento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#channel_start-canal-iniciado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        channel_start — Canal Iniciado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel_stop-canal-parado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        channel_stop — Canal Parado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel_reconnect-canal-reconectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        channel_reconnect — Canal Reconectado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel_error-erro-de-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        channel_error — Erro de Canal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#channel_failover-failover-de-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        channel_failover — Failover de Canal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stream_switch-troca-de-stream" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        stream_switch — Troca de Stream
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording_start-gravacao-iniciada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recording_start — Gravação Iniciada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#recording_end-gravacao-encerrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        recording_end — Gravação Encerrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epg_refresh-epg-atualizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        epg_refresh — EPG Atualizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m3u_refresh-m3u-atualizado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        m3u_refresh — M3U Atualizado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client_connect-cliente-conectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        client_connect — Cliente Conectado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client_disconnect-cliente-desconectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        client_disconnect — Cliente Desconectado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#login_failed-login-falhou" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        login_failed — Login Falhou
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#epg_blocked-epg-bloqueado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        epg_blocked — EPG Bloqueado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#m3u_blocked-m3u-bloqueado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        m3u_blocked — M3U Bloqueado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vod_start-vod_stop-vod-iniciado-vod-parado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vod_start / vod_stop — VOD Iniciado / VOD Parado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#armadilhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Armadilhas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-praticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos práticos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplos práticos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#discord-inicio-parada-de-canal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Discord — início / parada de canal
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slack-alertas-de-erro-failover-reconexao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slack — alertas de erro / failover / reconexão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ntfy-gotify-pushover-push-mobile-para-eventos-de-seguranca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ntfy / Gotify / Pushover — push mobile para eventos de segurança
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#home-assistant-estado-de-now-playing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home Assistant — estado de now-playing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#influxdb-metricas-de-saude-do-provedor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        InfluxDB — métricas de saúde do provedor
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Logs
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../system/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../advanced/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Advanced
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ/Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugin-listing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://discord.gg/wfeqTRRJru" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Join Discord
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/Dispatcharr/edit/master/docs/pt/integrations.md" title="Editar esta página" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Dispatcharr/raw/master/docs/pt/integrations.md" title="Ver fonte desta página" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+  <h1>Integrations</h1>
+
+<h2 id="conexoes">Conexões<a class="headerlink" href="#conexoes" title="Permanent link">&para;</a></h2>
+<p>Na página de Conexões você pode criar e gerenciar webhooks orientados a eventos e execução de scripts</p>
+<p>Clique em <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection para criar um novo webhook ou execução de script orientada a eventos</p>
+<ul>
+<li>Suporta múltiplos tipos de eventos incluindo:<ul>
+<li>Ciclo de vida do canal (start, stop, reconnect, error, failover)</li>
+<li>Operações de stream (switch),</li>
+<li>Eventos de gravação (start, end)</li>
+<li>Atualizações de dados (EPG, M3U)</li>
+<li>Atividade de cliente (connect, disconnect)</li>
+<li>Eventos de segurança (login failed, EPG/M3U blocked)</li>
+<li>Reprodução VOD (start, stop)</li>
+</ul>
+</li>
+</ul>
+<p>Os dados do evento estão disponíveis como variáveis de ambiente em scripts (com prefixo DISPATCHARR_), payloads POST para webhooks e payloads de execução de plugins</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Scripts devem ser colocados em <code>data/scripts</code> e devem ter permissões de execução</p>
+</div>
+<details class="example">
+<summary>Exemplo de Script (clique para ver)</summary>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="ch">#!/usr/bin/env python3</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">webhook_url</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">message</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Test event from Dispatcharr!&quot;</span><span class="p">]</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">#    if not re.search(r&quot;DISPATCHARR_&quot;, key):</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">#        continue</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;DISPATCHARR_&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">message</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">key</span><span class="si">}</span><span class="s2"> = </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="c1"># The data to be sent in the POST request</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1"># &#39;content&#39; is the key for a basic message.</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># Please leave this thats how the project works!</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="s2">&quot;content&quot;</span><span class="p">:</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">}</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1"># The headers to specify the content type</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    <span class="s2">&quot;Content-Type&quot;</span><span class="p">:</span> <span class="s2">&quot;application/json&quot;</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1"># Send the POST request</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">webhook_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1"># Check if the request was successful</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">204</span><span class="p">:</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Message sent successfully!&quot;</span><span class="p">)</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="k">else</span><span class="p">:</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to send message. Status code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</span></code></pre></div>
+</details>
+<h2 id="templates-de-payload-para-webhooks">Templates de Payload para Webhooks<a class="headerlink" href="#templates-de-payload-para-webhooks" title="Permanent link">&para;</a></h2>
+<p>Ao criar uma conexão webhook, você pode opcionalmente fornecer um <strong>template de payload</strong>. O template é renderizado com a <a href="https://docs.djangoproject.com/en/stable/ref/templates/language/">linguagem de template Django</a> (o texto de ajuda menciona Jinja2, mas o motor é do Django). Variáveis do payload do evento são expostas diretamente no contexto do template — referencie-as como <code>{{ variable_name }}</code>.</p>
+<p>Se o template renderizado for analisado como JSON válido, o Dispatcharr força <code>Content-Type: application/json</code> na requisição de saída. Caso contrário, a string renderizada é enviada via POST como está, usando quaisquer cabeçalhos que você definiu na conexão.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Se você <strong>deixar o template em branco</strong>, o dict bruto do payload do evento é passado para <code>requests.post(..., data=&lt;dict&gt;)</code>, que o codifica como <code>application/x-www-form-urlencoded</code> (ex.: <code>channel_name=CNN&amp;stream_name=...</code>). <strong>Não</strong> é enviado como JSON. Se você quer JSON, forneça um template — mesmo um trivial como <code>{{ payload|default:"" }}</code> também não funcionará; você deve renderizar o body você mesmo, ex.: <code>{"channel": "{{ channel_name }}"}</code>.</p>
+</div>
+<h3 id="variaveis-auto-injetadas-eventos-com-contexto-de-canal">Variáveis auto-injetadas (eventos com contexto de canal)<a class="headerlink" href="#variaveis-auto-injetadas-eventos-com-contexto-de-canal" title="Permanent link">&para;</a></h3>
+<p>Qualquer evento que carrega um <code>channel_id</code> é enriquecido no momento do envio com os seguintes campos (obtidos do registro do canal, do stream atualmente em reprodução e do M3U/perfil no Redis):</p>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome de exibição do canal</td>
+</tr>
+<tr>
+<td><code>stream_name</code></td>
+<td>Nome do stream atualmente em reprodução</td>
+</tr>
+<tr>
+<td><code>stream_url</code></td>
+<td>URL upstream do stream atualmente em reprodução</td>
+</tr>
+<tr>
+<td><code>channel_url</code></td>
+<td>Alias de <code>stream_url</code></td>
+</tr>
+<tr>
+<td><code>provider_name</code></td>
+<td>Nome da conta M3U que suporta o stream ativo</td>
+</tr>
+<tr>
+<td><code>profile_used</code></td>
+<td>Nome do StreamProfile aplicado ao stream ativo</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Valores falsy são removidos antes da renderização</p>
+<p>Qualquer chave do payload cujo valor seja falsy sob a veracidade Python — <code>None</code>, <code>""</code>, <code>0</code>, <code>0.0</code>, <code>False</code>, <code>[]</code> vazio, <code>{}</code> vazio — é <strong>excluída do payload antes do template ser renderizado</strong>. Isso significa que campos numéricos e booleanos também podem desaparecer: ex.: <code>bytes_written=0</code> em <code>recording_end</code> ou <code>interrupted=False</code> estarão ambos ausentes, não presentes-com-zero. Se um campo pode estar ausente, proteja-o com um default: <code>{{ stream_name|default:"-" }}</code>. Caso contrário, uma variável indefinida será renderizada como uma string vazia e pode produzir JSON inválido.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Escape variáveis que vão dentro de strings JSON</p>
+<p>O motor de template do Django faz escape HTML de <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>"</code>, <code>'</code> por padrão, mas <strong>não</strong> faz escape de barras invertidas ou quebras de linha. Isso significa:</p>
+<ul>
+<li><strong>Uma URL com parâmetros de query <code>&amp;</code></strong> renderizada como <code>"url": "{{ stream_url }}"</code> produz <code>"url": "http://host/?a=1&amp;amp;b=2"</code> — o JSON é analisado corretamente, mas o receptor recebe uma URL com <code>&amp;amp;</code> literal.</li>
+<li><strong>Um <code>error_message</code> contendo quebra de linha ou barra invertida</strong> (muito comum em texto de exceção) produz JSON inválido.</li>
+</ul>
+<p>O padrão seguro para qualquer variável que vai dentro de uma string JSON é o filtro <code>escapejs</code>, que faz escape de tudo que é perigoso em contexto de string JS/JSON (aspas, barras invertidas, quebras de linha, <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>) como sequências <code>\uXXXX</code>. A saída parece ruidosa, mas é inequívoca após <code>JSON.parse</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="x">&quot;url&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">stream_url</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="x">&quot;detail&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">error_message</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;</span>
+</span></code></pre></div>
+<p>Para alvos de <strong>texto puro</strong> como bodies de linha ntfy, você pode usar <code>|safe</code> em cada variável para ignorar o autoescape e evitar ruído no estilo <code>&amp;lt;</code> na mensagem renderizada.</p>
+</div>
+<h3 id="variaveis-por-evento">Variáveis por evento<a class="headerlink" href="#variaveis-por-evento" title="Permanent link">&para;</a></h3>
+<p>As tabelas abaixo listam as variáveis que cada evento fornece <em>além dos</em> campos auto-injetados acima (quando aplicável).</p>
+<h4 id="channel_start-canal-iniciado"><code>channel_start</code> — Canal Iniciado<a class="headerlink" href="#channel_start-canal-iniciado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>stream_name</code></td>
+<td>Nome do stream</td>
+</tr>
+<tr>
+<td><code>stream_id</code></td>
+<td>ID interno do stream</td>
+</tr>
+</tbody>
+</table>
+<h4 id="channel_stop-canal-parado"><code>channel_stop</code> — Canal Parado<a class="headerlink" href="#channel_stop-canal-parado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>runtime</code></td>
+<td>Tempo total de execução em segundos</td>
+</tr>
+<tr>
+<td><code>total_bytes</code></td>
+<td>Total de bytes transmitidos</td>
+</tr>
+</tbody>
+</table>
+<h4 id="channel_reconnect-canal-reconectado"><code>channel_reconnect</code> — Canal Reconectado<a class="headerlink" href="#channel_reconnect-canal-reconectado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>attempt</code></td>
+<td>Número da tentativa de reconexão atual</td>
+</tr>
+<tr>
+<td><code>max_attempts</code></td>
+<td>Máximo de tentativas configuradas</td>
+</tr>
+</tbody>
+</table>
+<h4 id="channel_error-erro-de-canal"><code>channel_error</code> — Erro de Canal<a class="headerlink" href="#channel_error-erro-de-canal" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>error_type</code></td>
+<td>Um de <code>connection_failed</code>, <code>connection_exception</code></td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td>Primeiros 100 caracteres da URL do stream</td>
+</tr>
+<tr>
+<td><code>attempts</code></td>
+<td>Quantas tentativas foram feitas antes de desistir</td>
+</tr>
+<tr>
+<td><code>error_message</code></td>
+<td>Detalhe da exceção (apenas em <code>connection_exception</code>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="channel_failover-failover-de-canal"><code>channel_failover</code> — Failover de Canal<a class="headerlink" href="#channel_failover-failover-de-canal" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>Por que o failover foi acionado (ex.: <code>buffering_timeout</code>)</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>Quanto tempo a condição de falha persistiu antes do failover</td>
+</tr>
+</tbody>
+</table>
+<h4 id="stream_switch-troca-de-stream"><code>stream_switch</code> — Troca de Stream<a class="headerlink" href="#stream_switch-troca-de-stream" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>new_url</code></td>
+<td>Primeiros 100 caracteres da nova URL do stream</td>
+</tr>
+<tr>
+<td><code>stream_id</code></td>
+<td>Novo ID do stream</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recording_start-gravacao-iniciada"><code>recording_start</code> — Gravação Iniciada<a class="headerlink" href="#recording_start-gravacao-iniciada" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>recording_id</code></td>
+<td>ID da linha de gravação</td>
+</tr>
+</tbody>
+</table>
+<h4 id="recording_end-gravacao-encerrada"><code>recording_end</code> — Gravação Encerrada<a class="headerlink" href="#recording_end-gravacao-encerrada" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>recording_id</code></td>
+<td>ID da linha de gravação</td>
+</tr>
+<tr>
+<td><code>interrupted</code></td>
+<td><code>True</code> se a gravação terminou antecipadamente</td>
+</tr>
+<tr>
+<td><code>bytes_written</code></td>
+<td>Total de bytes escritos no disco</td>
+</tr>
+</tbody>
+</table>
+<h4 id="epg_refresh-epg-atualizado"><code>epg_refresh</code> — EPG Atualizado<a class="headerlink" href="#epg_refresh-epg-atualizado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>source_name</code></td>
+<td>Nome da fonte EPG</td>
+</tr>
+<tr>
+<td><code>programs</code></td>
+<td>Número de programas ingeridos</td>
+</tr>
+<tr>
+<td><code>channels</code></td>
+<td>Número de canais com programas</td>
+</tr>
+<tr>
+<td><code>skipped_programs</code></td>
+<td>Programas ignorados durante a análise</td>
+</tr>
+<tr>
+<td><code>unmapped_channels</code></td>
+<td>Canais EPG sem canal Dispatcharr correspondente</td>
+</tr>
+</tbody>
+</table>
+<h4 id="m3u_refresh-m3u-atualizado"><code>m3u_refresh</code> — M3U Atualizado<a class="headerlink" href="#m3u_refresh-m3u-atualizado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>account_name</code></td>
+<td>Nome da conta M3U</td>
+</tr>
+<tr>
+<td><code>elapsed_time</code></td>
+<td>Duração da atualização em segundos (arredondado para 2dp)</td>
+</tr>
+<tr>
+<td><code>streams_created</code></td>
+<td>Novos streams adicionados nesta atualização</td>
+</tr>
+<tr>
+<td><code>streams_updated</code></td>
+<td>Streams existentes atualizados</td>
+</tr>
+<tr>
+<td><code>streams_deleted</code></td>
+<td>Streams removidos porque o provedor os retirou</td>
+</tr>
+<tr>
+<td><code>total_processed</code></td>
+<td>Total de streams vistos na playlist</td>
+</tr>
+</tbody>
+</table>
+<h4 id="client_connect-cliente-conectado"><code>client_connect</code> — Cliente Conectado<a class="headerlink" href="#client_connect-cliente-conectado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>client_ip</code></td>
+<td>Endereço IP do cliente</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>ID interno do cliente por conexão</td>
+</tr>
+<tr>
+<td><code>user_agent</code></td>
+<td>User-Agent do cliente (truncado para 100 caracteres)</td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td>Nome de usuário autenticado, se houver</td>
+</tr>
+</tbody>
+</table>
+<h4 id="client_disconnect-cliente-desconectado"><code>client_disconnect</code> — Cliente Desconectado<a class="headerlink" href="#client_disconnect-cliente-desconectado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>channel_name</code></td>
+<td>Nome do canal</td>
+</tr>
+<tr>
+<td><code>client_ip</code></td>
+<td>Endereço IP do cliente</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>ID interno do cliente por conexão</td>
+</tr>
+<tr>
+<td><code>user_agent</code></td>
+<td>User-Agent do cliente (truncado para 100 caracteres)</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>Duração da sessão em segundos (arredondado para 2dp)</td>
+</tr>
+<tr>
+<td><code>bytes_sent</code></td>
+<td>Bytes entregues a este cliente</td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td>Nome de usuário autenticado, se houver</td>
+</tr>
+</tbody>
+</table>
+<h4 id="login_failed-login-falhou"><code>login_failed</code> — Login Falhou<a class="headerlink" href="#login_failed-login-falhou" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user</code></td>
+<td>Nome de usuário submetido (ou <code>unknown</code> / <code>token_refresh</code>)</td>
+</tr>
+<tr>
+<td><code>client_ip</code></td>
+<td>Endereço IP do cliente</td>
+</tr>
+<tr>
+<td><code>user_agent</code></td>
+<td>User-Agent do cliente</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>Motivo da falha (credenciais inválidas, acesso à rede negado, etc.)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="epg_blocked-epg-bloqueado"><code>epg_blocked</code> — EPG Bloqueado<a class="headerlink" href="#epg_blocked-epg-bloqueado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>profile</code></td>
+<td>Nome do perfil de saída (ou <code>all</code>)</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>Por que a requisição foi bloqueada</td>
+</tr>
+<tr>
+<td><code>client_ip</code></td>
+<td>Endereço IP do cliente</td>
+</tr>
+<tr>
+<td><code>user_agent</code></td>
+<td>User-Agent do cliente</td>
+</tr>
+</tbody>
+</table>
+<h4 id="m3u_blocked-m3u-bloqueado"><code>m3u_blocked</code> — M3U Bloqueado<a class="headerlink" href="#m3u_blocked-m3u-bloqueado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>profile</code></td>
+<td>Nome do perfil de saída (ou <code>all</code>) — presente no caminho padrão M3U</td>
+</tr>
+<tr>
+<td><code>user</code></td>
+<td>Nome de usuário submetido — presente no caminho da API Xtream Codes</td>
+</tr>
+<tr>
+<td><code>reason</code></td>
+<td>Por que a requisição foi bloqueada</td>
+</tr>
+<tr>
+<td><code>client_ip</code></td>
+<td>Endereço IP do cliente</td>
+</tr>
+<tr>
+<td><code>user_agent</code></td>
+<td>User-Agent do cliente</td>
+</tr>
+</tbody>
+</table>
+<h4 id="vod_start-vod_stop-vod-iniciado-vod-parado"><code>vod_start</code> / <code>vod_stop</code> — VOD Iniciado / VOD Parado<a class="headerlink" href="#vod_start-vod_stop-vod-iniciado-vod-parado" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content_name</code></td>
+<td>Título do VOD</td>
+</tr>
+<tr>
+<td><code>content_uuid</code></td>
+<td>UUID do conteúdo VOD (compartilhado pelo par start/stop correspondente)</td>
+</tr>
+<tr>
+<td><code>client_ip</code></td>
+<td>Endereço IP do cliente</td>
+</tr>
+<tr>
+<td><code>username</code></td>
+<td>Nome de usuário autenticado, se houver</td>
+</tr>
+</tbody>
+</table>
+<h3 id="armadilhas">Armadilhas<a class="headerlink" href="#armadilhas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Valores falsy desaparecem.</strong> Conforme observado acima, o Dispatcharr exclui qualquer chave do payload cujo valor esteja vazio antes da renderização. Sempre use <code>{{ var|default:"-" }}</code> (ou envolva campos em <code>{% if var %}…{% endif %}</code>) para manter seu JSON válido.</li>
+<li><strong>Campos de contexto de canal podem estar ausentes em alguns eventos.</strong> <code>stream_name</code> / <code>stream_url</code> / <code>channel_url</code> / <code>provider_name</code> / <code>profile_used</code> são populados a partir de uma linha <code>Stream</code>. O dispatcher usa um <code>stream_id</code> explícito do local da chamada se um foi passado (verdadeiro para <code>channel_start</code> e <code>stream_switch</code>); caso contrário, faz fallback para a chave Redis <code>channel_stream:&lt;channel.id&gt;</code>. Se nenhum produzir um stream, todos os cinco campos são <code>None</code> e são removidos antes da renderização. Na prática, isso afeta eventos como <code>channel_stop</code>, <code>channel_reconnect</code>, <code>channel_error</code>, <code>channel_failover</code>, <code>recording_start</code>, <code>recording_end</code>, <code>client_connect</code> e <code>client_disconnect</code> quando o estado Redis do stream ao vivo já foi limpo.</li>
+<li><strong>Alguns eventos registrados não acionam webhooks.</strong> <code>login_success</code>, <code>logout</code>, <code>m3u_download</code>, <code>epg_download</code> e <code>channel_buffering</code> são gravados no log de Eventos do Sistema, mas <strong>não</strong> estão no registro de eventos webhook, então assinaturas nesses eventos nunca serão acionadas.</li>
+<li><strong>O UUID do Canal não é exposto aos templates.</strong> A camada de envio aceita um argumento <code>channel_id</code> internamente e o usa como chave de busca UUID para a linha <code>Channel</code>, mas o valor é consumido nesse ponto e <strong>não</strong> é adicionado ao contexto do template. <code>{{ channel_id }}</code> em um template de payload é renderizado como uma string vazia. Use <code>{{ channel_name }}</code> para identificar o canal.</li>
+<li><strong>Nenhuma assinatura HMAC está integrada.</strong> Se seu receptor precisa autenticar o webhook, coloque um segredo compartilhado longo nos cabeçalhos da conexão (ex.: <code>X-Auth-Token</code>) e valide-o no lado receptor.</li>
+</ul>
+<h3 id="exemplos-praticos">Exemplos práticos<a class="headerlink" href="#exemplos-praticos" title="Permanent link">&para;</a></h3>
+<h4 id="discord-inicio-parada-de-canal">Discord — início / parada de canal<a class="headerlink" href="#discord-inicio-parada-de-canal" title="Permanent link">&para;</a></h4>
+<p>Use <strong>duas assinaturas separadas</strong> com rótulos fixos — não tente detectar start vs. stop a partir da veracidade de <code>total_bytes</code>/<code>runtime</code>, porque uma sessão legítima de 0 bytes seria reduzida a nada e classificada incorretamente.</p>
+<p>Para <code>channel_start</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="x">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="x">  &quot;username&quot;: &quot;Dispatcharr&quot;,</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="x">  &quot;embeds&quot;: [{</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="x">    &quot;title&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">channel_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;Unknown&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x"> started&quot;,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="x">    &quot;fields&quot;: [</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="x">      {&quot;name&quot;: &quot;Stream&quot;,   &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">stream_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;,   &quot;inline&quot;: true},</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="x">      {&quot;name&quot;: &quot;Provider&quot;, &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">provider_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;, &quot;inline&quot;: true},</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="x">      {&quot;name&quot;: &quot;Profile&quot;,  &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">profile_used</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;,  &quot;inline&quot;: true}</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="x">    ]</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="x">  }]</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="x">}</span>
+</span></code></pre></div>
+<p>Para <code>channel_stop</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="x">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="x">  &quot;username&quot;: &quot;Dispatcharr&quot;,</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="x">  &quot;embeds&quot;: [{</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="x">    &quot;title&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">channel_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;Unknown&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x"> stopped&quot;,</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="x">    &quot;fields&quot;: [</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="x">      {&quot;name&quot;: &quot;Stream&quot;,      &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">stream_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;, &quot;inline&quot;: true},</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="x">      {&quot;name&quot;: &quot;Provider&quot;,    &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">provider_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;, &quot;inline&quot;: true},</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="x">      {&quot;name&quot;: &quot;Runtime (s)&quot;, &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">runtime</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">&quot;, &quot;inline&quot;: true},</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="x">      {&quot;name&quot;: &quot;Bytes&quot;,       &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">total_bytes</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">&quot;, &quot;inline&quot;: true}</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="x">    ]</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="x">  }]</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="x">}</span>
+</span></code></pre></div>
+<h4 id="slack-alertas-de-erro-failover-reconexao">Slack — alertas de erro / failover / reconexão<a class="headerlink" href="#slack-alertas-de-erro-failover-reconexao" title="Permanent link">&para;</a></h4>
+<p>Um webhook do Slack cobre todos os três eventos da classe de erro. Note o filtro <code>|escapejs</code> em cada valor de variável — sem ele, um <code>error_message</code> que contenha quebra de linha ou barra invertida (muito comum em texto bruto de exceção Python) produzirá JSON inválido e a entrega falhará:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="x">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="x">  &quot;text&quot;: &quot;:warning: *</span><span class="cp">{{</span> <span class="nv">channel_name</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">* — </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">error_type</span> <span class="cp">%}{{</span> <span class="nv">error_type</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}{%</span> <span class="k">elif</span> <span class="nv">reason</span> <span class="cp">%}{{</span> <span class="nv">reason</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}{%</span> <span class="k">else</span> <span class="cp">%}</span><span class="x">reconnect </span><span class="cp">{{</span> <span class="nv">attempt</span> <span class="cp">}}</span><span class="x">/</span><span class="cp">{{</span> <span class="nv">max_attempts</span> <span class="cp">}}{%</span> <span class="k">endif</span> <span class="cp">%}</span><span class="x">&quot;,</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="x">  &quot;attachments&quot;: [{</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="x">    &quot;color&quot;: &quot;warning&quot;,</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="x">    &quot;fields&quot;: [</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="x">      {&quot;title&quot;: &quot;Provider&quot;, &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">provider_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;, &quot;short&quot;: true},</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="x">      {&quot;title&quot;: &quot;Stream&quot;,   &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">stream_name</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;-&quot;</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;,   &quot;short&quot;: true}</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="x">      </span><span class="cp">{%</span> <span class="k">if</span> <span class="nv">error_message</span> <span class="cp">%}</span><span class="x">,{&quot;title&quot;: &quot;Detail&quot;, &quot;value&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">error_message</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;, &quot;short&quot;: false}</span><span class="cp">{%</span> <span class="k">endif</span> <span class="cp">%}</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="x">    ]</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="x">  }]</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="x">}</span>
+</span></code></pre></div>
+<h4 id="ntfy-gotify-pushover-push-mobile-para-eventos-de-seguranca">ntfy / Gotify / Pushover — push mobile para eventos de segurança<a class="headerlink" href="#ntfy-gotify-pushover-push-mobile-para-eventos-de-seguranca" title="Permanent link">&para;</a></h4>
+<p>Assine <code>login_failed</code>, <code>m3u_blocked</code>, <code>epg_blocked</code> para um tópico ntfy. O ntfy aceita um body de texto puro, então o template não precisa ser JSON:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">{{</span> <span class="nv">user</span><span class="o">|</span><span class="nf">default</span><span class="s2">:&quot;unknown&quot;</span> <span class="cp">}}</span><span class="x"> from </span><span class="cp">{{</span> <span class="nv">client_ip</span> <span class="cp">}}</span><span class="x"> — </span><span class="cp">{{</span> <span class="nv">reason</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>O nome do evento em si <strong>não</strong> está no contexto do template (apenas o dict do payload está), então inclua-o nos cabeçalhos da conexão, junto com outros metadados do ntfy:</p>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span><span class="nt">&quot;Title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dispatcharr security alert&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;Priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;high&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;Tags&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;warning&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="home-assistant-estado-de-now-playing">Home Assistant — estado de now-playing<a class="headerlink" href="#home-assistant-estado-de-now-playing" title="Permanent link">&para;</a></h4>
+<p>Use <strong>duas assinaturas separadas</strong> com valores <code>state</code> fixos (mesmo motivo do Discord). Note <code>|escapejs</code> em <code>stream_url</code> — sem ele, uma URL com parâmetros de query <code>&amp;</code> (toda URL Xtream/HLS) seria renderizada como <code>&amp;amp;</code> e o HA armazenaria a URL quebrada.</p>
+<p>Para <code>channel_start</code> e <code>stream_switch</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="x">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="x">  &quot;state&quot;: &quot;playing&quot;,</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="x">  &quot;channel&quot;:  &quot;</span><span class="cp">{{</span> <span class="nv">channel_name</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;,</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="x">  &quot;stream&quot;:   &quot;</span><span class="cp">{{</span> <span class="nv">stream_name</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;,</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="x">  &quot;provider&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">provider_name</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;,</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="x">  &quot;url&quot;:      &quot;</span><span class="cp">{{</span> <span class="nv">stream_url</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="x">}</span>
+</span></code></pre></div>
+<p>Para <code>channel_stop</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="x">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="x">  &quot;state&quot;: &quot;idle&quot;,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="x">  &quot;channel&quot;: &quot;</span><span class="cp">{{</span> <span class="nv">channel_name</span><span class="o">|</span><span class="nf">escapejs</span> <span class="cp">}}</span><span class="x">&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="x">}</span>
+</span></code></pre></div>
+<p>Conduza um <code>input_text</code> ou sensor de template a partir da automação webhook no lado do HA.</p>
+<h4 id="influxdb-metricas-de-saude-do-provedor">InfluxDB — métricas de saúde do provedor<a class="headerlink" href="#influxdb-metricas-de-saude-do-provedor" title="Permanent link">&para;</a></h4>
+<p>Envie <code>m3u_refresh</code> e <code>epg_refresh</code> para um endpoint de escrita HTTP do InfluxDB como protocolo de linha InfluxDB — texto puro, não JSON, então o caminho de detecção JSON não será acionado. Os dois eventos não compartilham nomes de campos, então use uma assinatura com um template para cada.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>O protocolo de linha do InfluxDB requer que valores de tag escapem espaços, vírgulas e <code>=</code>. O Django não tem filtro de protocolo de linha integrado, então a solução simples é <code>|cut:" "|cut:","|cut:"="</code> para remover esses caracteres da tag. A alternativa limpa é renomear suas contas M3U / fontes EPG para serem apenas alfanumérico+traço.</p>
+</div>
+<p>Para <code>m3u_refresh</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="x">m3u_refresh,account=</span><span class="cp">{{</span> <span class="nv">account_name</span><span class="o">|</span><span class="nf">cut</span><span class="s2">:&quot; &quot;</span><span class="o">|</span><span class="nf">cut</span><span class="s2">:&quot;,&quot;</span><span class="o">|</span><span class="nf">cut</span><span class="s2">:&quot;=&quot;</span> <span class="cp">}}</span><span class="x"> created=</span><span class="cp">{{</span> <span class="nv">streams_created</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">,updated=</span><span class="cp">{{</span> <span class="nv">streams_updated</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">,deleted=</span><span class="cp">{{</span> <span class="nv">streams_deleted</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">,elapsed=</span><span class="cp">{{</span> <span class="nv">elapsed_time</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<p>Para <code>epg_refresh</code>:</p>
+<div class="language-jinja highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="x">epg_refresh,source=</span><span class="cp">{{</span> <span class="nv">source_name</span><span class="o">|</span><span class="nf">cut</span><span class="s2">:&quot; &quot;</span><span class="o">|</span><span class="nf">cut</span><span class="s2">:&quot;,&quot;</span><span class="o">|</span><span class="nf">cut</span><span class="s2">:&quot;=&quot;</span> <span class="cp">}}</span><span class="x"> programs=</span><span class="cp">{{</span> <span class="nv">programs</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">,channels=</span><span class="cp">{{</span> <span class="nv">channels</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">,skipped=</span><span class="cp">{{</span> <span class="nv">skipped_programs</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span><span class="x">,unmapped=</span><span class="cp">{{</span> <span class="nv">unmapped_channels</span><span class="o">|</span><span class="nf">default</span><span class="o">:</span><span class="m">0</span> <span class="cp">}}</span>
+</span></code></pre></div>
+<h2 id="logs">Logs<a class="headerlink" href="#logs" title="Permanent link">&para;</a></h2>
+<p>Conexões acionadas, suas respostas e quaisquer erros serão registrados aqui</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../plugins/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Plugins">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                Plugins
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../system/" class="md-footer__link md-footer__link--next" aria-label="Próximo: System">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Próximo
+              </span>
+              <div class="md-ellipsis">
+                System
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["toc.integrate", "announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+      
+        <script src="../../javascripts/lucide-init.js"></script>
+      
+    
+  </body>
+</html>
