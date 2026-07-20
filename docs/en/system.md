@@ -21,6 +21,12 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
 
 !!! note
     * Each user's EPG defaults can be set in the "EPG Defaults" tab for that user, allowing you to specify how many past and future days of EPG data to include
+    * In the user `Permissions` tab, you can set the following options
+        * User Level - Admin, Standard User, or Streamer (see above)
+        * Stream Limit - The number of allowed simultaneous connections (0 for unlimited)
+        * Channel Profiles - Which set of channels the user will have access to
+        * Hide Mature Content - Toggle on to hide channels marked as mature content (admin users not affected)
+        * Enable Catchup - When toggled off this user cannot access timeshift or catchup endpoints, and their channels are not advertised as supporting catchup
     * In the user `API & XC` tab, you can set the following options
         * XC Password - (leave blank for no XC access)
         * Output Format Override - Override the system default output format for this user. Clear to use system default
@@ -88,6 +94,8 @@ From the Logo Manager page you can upload and manage logos.
 * Maximum System Events - Configure how many system events (channel start/stop, buffering, etc.) to keep in the database (minimum: 10, maximum: 1000). Events are displayed on the Stats page.
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
+* Enable IP Lookup - Toggle on/off whether to fetch and display the instance's public IP and country flag in the sidebar
+* Enable Catchup - When disabled, timeshift and catchup endpoints are blocked for all users, and channels are not advertised as supporting catchup to clients. Catchup capability is still shown in the web UI
     
 ### Connection Security
 Displays the current TLS encryption status for Redis and PostgreSQL connections. This section is only visible in [modular deployment mode](/Dispatcharr-Docs/installation/#modular-deployment).

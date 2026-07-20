@@ -126,7 +126,7 @@ Optional environment variables to adjust priority of various tasks. Lower values
  
 ## Reverse Proxies
 ### Nginx
-HTTPS config example (streams only via https, WebUI via local network and Wireguard)
+HTTPS config example (streams only via XC API, WebUI via local network and Wireguard)
 
 ??? example "Example (click to see)"
     ```nginx
@@ -138,7 +138,7 @@ HTTPS config example (streams only via https, WebUI via local network and Wiregu
         ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
         
-        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$ {
+        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/proxy/catchup/.*|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*|/timeshift/[^/]+/[^/]+/[^/]+/[^/]+/.*|/streaming/timeshift\.php)  {
             allow all;  # Allow everyone else
             proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
             proxy_set_header Host $host:443;
@@ -205,6 +205,8 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
     * ```/live/*/*```
     * ```/movie/*/*```
     * ```/series/*/*```
+    * ```/timeshift/*```
+    * ```/streaming/timeshift.php```
 
     **(Optional for HDHR, M3U, and/or EPG URL access, not required if using XC. If you're using HDHR, M3U, or EPG, you should further restrict it in dispatcharr's [Settings > Network Access > M3U / EPG Endpoints)](/Dispatcharr-Docs/system/#network-access). Otherwise, your HDHR, M3U, and/or EPG links will be publicly accessible over the internet** 
     
@@ -280,7 +282,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
     ??? example "Example (click to see)"
         ```nginx
         # Dispatcharr HTTPS Nginx Proxy Manager
-        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/api/channels/logos/.*/cache|/api/vod/vodlogos/.*/cache/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$ {
+        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/proxy/catchup/.*|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*|/timeshift/[^/]+/[^/]+/[^/]+/[^/]+/.*|/streaming/timeshift\.php)  {
             allow all;
             proxy_pass http://<DISPATCHARR IP ADDRESS>:9191;
             proxy_set_header Host $host;
@@ -335,6 +337,57 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 
     !!! note
         If you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
+
+### Caddy
+HTTPS config example (streams only via XC API)
+
+```
+example.domain.com {
+        encode zstd gzip
+
+        log {
+                output file /data/caddy/logs/caddy.log
+                level INFO
+        }
+
+        tls {
+                protocols tls1.2 tls1.3
+        }
+
+        header {
+                Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+                X-Content-Type-Options "nosniff"
+                X-Frame-Options "SAMEORIGIN"
+                Referrer-Policy "no-referrer"
+                Permissions-Policy "camera=(), microphone=(), geolocation=()"
+                Content-Security-Policy "default-src 'none'; frame-ancestors 'none';"
+        }
+
+        @iptv {
+            path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/api/channels/(channels|groups|recordings|logos/.*/cache)/?|/api/vod/(categories|vodlogos/.*/cache)/?|/api/epg/(epgdata|grid|current-programs|programs)/?|/api/accounts/users/me/|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
+        }
+
+        handle @iptv {
+                reverse_proxy X.X.X.X:9191 {
+                        header_up X-Forwarded-For {remote_host}
+                        header_up X-Real-IP {remote_host}
+                        header_up Host {host}
+                        header_up X-Forwarded-Proto {scheme}
+
+                        transport http {
+                                versions 1.1 2
+                                read_timeout 3600s
+                                write_timeout 3600s
+                        }
+                }
+        }
+
+        handle {
+                log_name view
+                respond "Forbidden" 403
+        }
+}
+```
 
 ---
 
