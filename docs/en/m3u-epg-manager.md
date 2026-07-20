@@ -98,7 +98,7 @@ From this page you can add and maintain your M3U accounts and EPGs
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG
     * Standard EPG Source - To add a standard XMLTV EPG source
         * Name - A name for your EPG
-        * URL - The URL for your EPG (may be xml or compressed xml as .gz or .zip)
+        * URL - The URL for your EPG (may be xml or compressed xml as `.gz`, `.zip`, or `.xz`)
         * Source Type - Choose XMLTV or Schedules Direct depending on your EPG provider format
         * Refresh Interval (hours) - How often (in number of hours) to refresh the EPG
             * Use cron schedule: Click to switch over to `Cron Expression` option
