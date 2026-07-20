@@ -365,7 +365,7 @@ HTTPS config example (streams only via XC API)
             }
 
             @iptv {
-                path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/api/channels/(channels|groups|recordings|logos/.*/cache)/?|/api/vod/(categories|vodlogos/.*/cache)/?|/api/epg/(epgdata|grid|current-programs|programs)/?|/api/accounts/users/me/|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
+                path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)|/proxy/catchup/.*|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*|/timeshift/[^/]+/[^/]+/[^/]+/[^/]+/.*|/streaming/timeshift\.php)
             }
 
             handle @iptv {
