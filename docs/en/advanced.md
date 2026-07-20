@@ -341,53 +341,54 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
 ### Caddy
 HTTPS config example (streams only via XC API)
 
-```
-example.domain.com {
-        encode zstd gzip
+??? example "Example (click to see)"
+    ```
+    example.domain.com {
+            encode zstd gzip
 
-        log {
-                output file /data/caddy/logs/caddy.log
-                level INFO
-        }
+            log {
+                    output file /data/caddy/logs/caddy.log
+                    level INFO
+            }
 
-        tls {
-                protocols tls1.2 tls1.3
-        }
+            tls {
+                    protocols tls1.2 tls1.3
+            }
 
-        header {
-                Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-                X-Content-Type-Options "nosniff"
-                X-Frame-Options "SAMEORIGIN"
-                Referrer-Policy "no-referrer"
-                Permissions-Policy "camera=(), microphone=(), geolocation=()"
-                Content-Security-Policy "default-src 'none'; frame-ancestors 'none';"
-        }
+            header {
+                    Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+                    X-Content-Type-Options "nosniff"
+                    X-Frame-Options "SAMEORIGIN"
+                    Referrer-Policy "no-referrer"
+                    Permissions-Policy "camera=(), microphone=(), geolocation=()"
+                    Content-Security-Policy "default-src 'none'; frame-ancestors 'none';"
+            }
 
-        @iptv {
-            path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/api/channels/(channels|groups|recordings|logos/.*/cache)/?|/api/vod/(categories|vodlogos/.*/cache)/?|/api/epg/(epgdata|grid|current-programs|programs)/?|/api/accounts/users/me/|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
-        }
+            @iptv {
+                path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/api/channels/(channels|groups|recordings|logos/.*/cache)/?|/api/vod/(categories|vodlogos/.*/cache)/?|/api/epg/(epgdata|grid|current-programs|programs)/?|/api/accounts/users/me/|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
+            }
 
-        handle @iptv {
-                reverse_proxy X.X.X.X:9191 {
-                        header_up X-Forwarded-For {remote_host}
-                        header_up X-Real-IP {remote_host}
-                        header_up Host {host}
-                        header_up X-Forwarded-Proto {scheme}
+            handle @iptv {
+                    reverse_proxy X.X.X.X:9191 {
+                            header_up X-Forwarded-For {remote_host}
+                            header_up X-Real-IP {remote_host}
+                            header_up Host {host}
+                            header_up X-Forwarded-Proto {scheme}
 
-                        transport http {
-                                versions 1.1 2
-                                read_timeout 3600s
-                                write_timeout 3600s
-                        }
-                }
-        }
+                            transport http {
+                                    versions 1.1 2
+                                    read_timeout 3600s
+                                    write_timeout 3600s
+                            }
+                    }
+            }
 
-        handle {
-                log_name view
-                respond "Forbidden" 403
-        }
-}
-```
+            handle {
+                    log_name view
+                    respond "Forbidden" 403
+            }
+    }
+    ```
 
 ---
 
