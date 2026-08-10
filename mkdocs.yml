@@ -131,7 +131,7 @@ nav:
     - Stats: stats.md
     - Plugins: plugins.md
     - System: system.md
-      - Connect: connect.md
+    - Connect: connect.md
     - Notifications: notifications.md
   - Advanced: advanced.md
     - Hardware Acceleration: hardware-acceleration.md
