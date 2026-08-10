@@ -1,4 +1,4 @@
-## Connections
+## Connect
 From the Connections page you can create and manage event-driven webhooks and script execution
 
 Click <i data-lucide="square-plus" style="color: White; width: 18px;"></i> New Connection to create a new webhook or event-driven script execution
