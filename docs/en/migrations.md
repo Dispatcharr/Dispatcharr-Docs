@@ -1,6 +1,6 @@
 ﻿For migrating from other IPTV management applications. 
 
-##IPTV Editor
+## IPTV Editor
 
 !!!Warning
     This method is only advised if you have just one provider in IPTV Editor. If you have multiple, it will be easier to start from scratch in dispatcharr.

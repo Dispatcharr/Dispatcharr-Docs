@@ -1,6 +1,7 @@
 From this page you can add and maintain your M3U accounts and EPGs
 
 ## M3U accounts
+* <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter by account type (M3U or XC)
 * Server Groups - Click this button to open the Server Groups manager to create, rename, delete groups and see how many accounts belong to each one
 
 !!! info "What are server groups?"
@@ -95,6 +96,7 @@ From this page you can add and maintain your M3U accounts and EPGs
     * <i data-lucide="refresh-cw" style="color: RoyalBlue; width: 18px;"></i> refresh icon to manually refresh/update the associated M3U account
     
 ## EPGs
+* <i data-lucide="funnel" style="color: white; width: 18px;"></i> Filter by EPG type
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add EPG" - Click this button to add a new EPG
     * Standard EPG Source - To add a standard XMLTV EPG source
         * Name - A name for your EPG

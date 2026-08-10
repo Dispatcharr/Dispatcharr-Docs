@@ -25,7 +25,7 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
         * User Level - Admin, Standard User, or Streamer (see above)
         * Stream Limit - The number of allowed simultaneous connections (0 for unlimited)
         * Channel Profiles - Which set of channels the user will have access to
-        * Hide Mature Content - Toggle on to hide channels marked as mature content (admin users not affected)
+        * Hide Mature Content - Toggle on to hide channels and VOD marked as mature content (admin users not affected)
         * Enable Catchup - When toggled off this user cannot access timeshift or catchup endpoints, and their channels are not advertised as supporting catchup
     * In the user `API & XC` tab, you can set the following options
         * XC Password - (leave blank for no XC access)
@@ -105,7 +105,7 @@ Displays the current TLS encryption status for Redis and PostgreSQL connections.
 * **Mutual TLS** - Whether Dispatcharr authenticates to the server using a client certificate
 
 !!! note
-    Connection Security is read-only. TLS is configured via environment variables in the docker compose file. See [Connection Security](/Dispatcharr-Docs/advanced/#connection-security) in the Advanced section for configuration details.
+    Connection Security is read-only. TLS is configured via environment variables in the docker compose file. See [Connection Security](connection-security.md) in the Advanced section for configuration details.
 
 ### User-Agents
 In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
