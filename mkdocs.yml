@@ -133,7 +133,7 @@ nav:
     - System: system.md
     - Connect: connect.md
     - Notifications: notifications.md
-  - Advanced: advanced.md
+  - Advanced:
     - Hardware Acceleration: hardware-acceleration.md
     - Process Priority: process-priority.md
     - Reverse Proxies: reverse-proxies.md
