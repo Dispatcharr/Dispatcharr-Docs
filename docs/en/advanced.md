@@ -126,59 +126,261 @@ Optional environment variables to adjust priority of various tasks. Lower values
  
 ## Reverse Proxies
 ### Nginx
-HTTPS config example (streams only via XC API, WebUI via local network and Wireguard)
+
+This example splits Dispatcharr across separate location blocks, one per exposure decision, so you can publish the Xtream Codes API to the internet while keeping the web UI and the credential-free endpoints on networks you trust.
+
+The trusted-network list lives once in the `server` block. Every location inherits it, so anything you do not explicitly open stays private, including any block you add later. A block goes public by declaring `allow all;`, which replaces the inherited list for that location only.
+
+As written, the internet can reach the Xtream Codes API (`player_api.php`, `panel_api.php`, `get.php`, `xmltv.php`), Xtream Codes playback (`/live/`, `/movie/`, `/series/`, `/timeshift/`), and the artwork URLs that players need for logos and covers. Everything else stays on your trusted networks: the web UI and its login page, `/api/`, the WebSocket, the internal stream proxy under `/proxy/`, and the plain `/output/m3u`, `/output/epg`, and `/hdhr/` endpoints.
 
 ??? example "Example (click to see)"
     ```nginx
-    # Dispatcharr HTTPS DynuDNS
+    # /etc/nginx/conf.d/dispatcharr.conf
+
+    # Change the address once here; every location below points at it.
+    upstream dispatcharr {
+        server 10.0.0.10:9191;   # Adjust for your Dispatcharr host or IP
+    }
+
+    # "Connection: upgrade" for WebSockets, "close" for everything else.
+    map $http_upgrade $dispatcharr_connection {
+        default upgrade;
+        ''      close;
+    }
+
+    server {
+        listen 80;
+        listen [::]:80;
+        server_name dispatcharr.your.domain.com;   # Adjust for your domain
+        return 301 https://$host$request_uri;
+    }
+
     server {
         listen 443 ssl;
-        server_name dispatcharr.your.domain.com;  #Adjust for your domain
+        listen [::]:443 ssl;
+        server_name dispatcharr.your.domain.com;   # Adjust for your domain
 
-        ssl_certificate /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
+        ssl_certificate     /etc/letsencrypt/live/yourdomain.com/fullchain.pem;
         ssl_certificate_key /etc/letsencrypt/live/yourdomain.com/privkey.pem;
-        
-        location ~ ^(/proxy/(vod|ts)/(stream|movie|episode)|/proxy/catchup/.*|/player_api.php|/xmltv.php|/api/channels/logos/.*/cache|/(live|movie|series)/[^/]+/.*|/timeshift/[^/]+/[^/]+/[^/]+/[^/]+/.*|/streaming/timeshift\.php)  {
-            allow all;  # Allow everyone else
-            proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
-            proxy_set_header Host $host:443;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
-            # CORS settings
-            add_header 'Access-Control-Allow-Origin' '*';
-            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
+
+        # Streams and playlist uploads are not size-bound.
+        client_max_body_size 0;
+
+        # ===============================================================
+        # Trusted networks
+        #
+        # Every location inherits this list, so the default for anything
+        # not named below is "private only". A location opts out with its
+        # own "allow all;", which replaces the whole list for that location
+        # (nginx inherits allow/deny only into locations that declare none).
+        #
+        # Each block below is therefore one decision:
+        #     allow all;   reachable from anywhere
+        #     no allow     trusted networks only
+        #
+        # Add your VPN subnet if it falls outside these, and delete the
+        # ranges you do not use.
+        # ===============================================================
+        allow 127.0.0.0/8;       # loopback
+        allow 10.0.0.0/8;        # private
+        allow 172.16.0.0/12;     # private
+        allow 192.168.0.0/16;    # private
+        allow ::1/128;           # loopback
+        allow fc00::/7;          # unique local
+        allow fe80::/10;         # link-local
+        # allow 100.64.0.0/10;   # Tailscale and other CGNAT clients
+        deny all;
+
+        # Set once here and inherited by every location below. A location that
+        # declares its own proxy_set_header drops all of these, so none of them do.
+        proxy_http_version 1.1;
+        proxy_set_header Host              $host;
+        proxy_set_header Upgrade           $http_upgrade;
+        proxy_set_header Connection        $dispatcharr_connection;
+        proxy_set_header X-Real-IP         $remote_addr;
+        proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-Host  $host;
+        proxy_set_header X-Forwarded-Port  $server_port;
+
+        # ---------------------------------------------------------------
+        # 1. Artwork. PUBLIC.
+        # The XC API and the players hand out absolute image URLs on this
+        # hostname, so remote clients must reach these or covers, logos,
+        # and guide posters come up blank.
+        #   /api/channels/logos/{id}/cache/                 channel logos
+        #   /api/vod/vodlogos/{id}/cache/                   movie/series covers
+        #   /api/vod/{movies|series|episodes}/{id}/image/   backdrops and stills
+        #   /api/epg/programs/{id}/poster/                  Schedules Direct posters
+        # No credentials, but nothing here is more than a picture, and
+        # Dispatcharr's own nginx already caches them, so there is no second
+        # cache layer here.
+        # ---------------------------------------------------------------
+        location ~ ^/api/(?:channels/logos/\d+/cache|vod/vodlogos/\d+/cache|vod/(?:movies|series|episodes)/\d+/image|epg/programs/\d+/poster)/?$ {
+            allow all;
+
+            proxy_pass http://dispatcharr;
         }
 
-        location / {
-            allow 10.0.0.0/22;  # Allow the local network, adjust for your network
-            allow 10.1.0.0/24;  # Allow Wireguard, adjust for your network
-            deny all;  # Deny everyone else
-            proxy_pass http://dispatcharrserver:9191;  # Adjust for your server name or IP
-            # WebSocket headers
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "Upgrade";
-            proxy_set_header Host $host:443;
-            proxy_set_header X-Real-IP $remote_addr;
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-            proxy_set_header X-Forwarded-Proto $scheme;
-            # CORS settings
-            add_header 'Access-Control-Allow-Origin' '*';
-            add_header 'Access-Control-Allow-Methods' 'GET, POST, OPTIONS';
-            add_header 'Access-Control-Allow-Headers' 'Origin, Content-Type, Accept';
+        # ---------------------------------------------------------------
+        # 2. Xtream Codes API. PUBLIC.
+        # Every one of these requires a username and the user's XC password
+        # as query parameters, so publishing them is what lets a remote XC
+        # player log in at all.
+        #   player_api.php   handshake, categories, streams, VOD info
+        #   panel_api.php    same, for clients that ask for it instead
+        #   get.php          the M3U, containing /live/{user}/{pass}/ URLs
+        #   xmltv.php        the guide
+        # Because the playlist carries the user's own credentials, sharing
+        # a get.php link shares that one account, and Settings > Users can
+        # revoke it. This is the supported way to hand out a playlist. The
+        # credential-free equivalents are in block 5.
+        # ---------------------------------------------------------------
+        location ~ ^/(?:player_api|panel_api|get|xmltv)\.php(?:/|$) {
+            allow all;
+
+            proxy_pass http://dispatcharr;
+
+            # A full playlist or guide can take a while to build.
+            proxy_read_timeout 300s;
+            proxy_send_timeout 300s;
         }
-    }  
+
+        # ---------------------------------------------------------------
+        # 3. Xtream Codes playback. PUBLIC.
+        # The URLs handed out by block 2, credentials in the path.
+        #   /live|/movie|/series/{user}/{pass}/...  live and VOD
+        #   /timeshift/{user}/{pass}/...            catch-up, path form
+        #   /streaming/timeshift.php                catch-up, query form
+        # These stream from Dispatcharr directly; an XC client never needs
+        # the /proxy/ routes in block 4.
+        # ---------------------------------------------------------------
+        location ~ ^/(?:(?:live|movie|series)/[^/]+/[^/]+/|timeshift/[^/]+/[^/]+/[^/]+/[^/]+/|streaming/timeshift\.php(?:/|$)) {
+            allow all;
+
+            proxy_pass http://dispatcharr;
+
+            # Buffering off so nginx does not sit on stream data. The
+            # timeouts are idle gaps against Dispatcharr, not a total
+            # stream length: each resets whenever either side moves a
+            # byte. A paused client is a different timer (send_timeout,
+            # left at nginx's default) and is decided inside
+            # Dispatcharr's own nginx, not here.
+            proxy_buffering         off;
+            proxy_request_buffering off;
+            proxy_read_timeout      3600s;
+            proxy_send_timeout      3600s;
+        }
+
+        # Optional, part of block 3: the legacy XC form "/{user}/{pass}/{id}",
+        # which a few players use instead of "/live/{user}/{pass}/{id}".
+        # Uncomment only if a client needs it. The lookahead keeps the app's
+        # own prefixes out; without it the pattern also swallows three-segment
+        # URLs like /api/channels/streams. It still catches any three-segment
+        # web UI route, which then serves the (public) web UI shell.
+        #
+        # location ~ ^/(?!api/|proxy/|output/|hdhr/|admin/|ws/|static/|assets/|logos/)[^/]+/[^/]+/[^/]+$ {
+        #     allow all;
+        #
+        #     proxy_pass http://dispatcharr;
+        #
+        #     proxy_buffering         off;
+        #     proxy_request_buffering off;
+        #     proxy_read_timeout      3600s;
+        #     proxy_send_timeout      3600s;
+        # }
+
+        # ---------------------------------------------------------------
+        # 4. Internal stream proxy. TRUSTED ONLY.
+        #   /proxy/ts/stream/{uuid}                 live
+        #   /proxy/vod/{movie|episode|series}/...   VOD
+        #   /proxy/catchup/{uuid}                   catch-up
+        # These are what the web UI player, the plain M3U, and the HDHR
+        # lineup point at. They accept a UUID and no credentials, so anyone
+        # holding the URL can stream; only Settings > Network Access >
+        # Streams stands behind them. Add "allow all;" only alongside
+        # block 5.
+        # The patterns are deliberately narrow: the sibling stats/,
+        # status/, stop/, and stop_client/ routes are admin-only and are
+        # left to block 6. Quotes are required because of the {36}.
+        # ---------------------------------------------------------------
+        location ~ "^/proxy/(?:ts/stream/|vod/(?:movie|episode|series)/|catchup/[0-9a-fA-F-]{36})" {
+            proxy_pass http://dispatcharr;
+
+            # Same buffering and idle-timeout notes as block 3.
+            proxy_buffering         off;
+            proxy_request_buffering off;
+            proxy_read_timeout      3600s;
+            proxy_send_timeout      3600s;
+        }
+
+        # ---------------------------------------------------------------
+        # 5. Plain outputs. TRUSTED ONLY.
+        #   /output/m3u[/{profile}]   playlist
+        #   /output/epg[/{profile}]   guide
+        #   /hdhr/...                 HDHomeRun emulation, for Plex etc.
+        # The prefix match covers every profile form under /hdhr/:
+        # bare, /{channel_profile}/..., /output_profile/{id}/..., and
+        # /{channel_profile}/output_profile/{id}/....
+        # No credentials anywhere: the URL is the only thing needed, it
+        # exposes every channel in the profile, and there is no per-user
+        # revocation. Prefer block 2's get.php for anything leaving the
+        # house. Dispatcharr also defaults Settings > Network Access >
+        # M3U / EPG Endpoints to private ranges, so publishing this block
+        # alone is not enough, which is deliberate.
+        # ---------------------------------------------------------------
+        location ~ ^/(?:output|hdhr)(?:/|$) {
+            proxy_pass http://dispatcharr;
+
+            proxy_read_timeout 300s;
+            proxy_send_timeout 300s;
+        }
+
+        # ---------------------------------------------------------------
+        # 6. Everything else. TRUSTED ONLY.
+        # The web UI and its login page, /api/, the /ws/ WebSocket, Swagger,
+        # DVR recording playback, and the admin-only stream control routes
+        # left over from block 4. This is the whole management surface, and
+        # the pieces are not separable: the login page is useless without
+        # /api/ and /ws/ behind it.
+        # Publishing this means publishing the login form. Dispatcharr's UI
+        # network policy defaults to allowing every address, so this list is
+        # the only thing in front of it unless you also narrow Settings >
+        # Network Access > UI.
+        # ---------------------------------------------------------------
+        location / {
+            proxy_pass http://dispatcharr;
+
+            proxy_read_timeout 300s;
+            proxy_send_timeout 300s;
+        }
+    }
     ```
 
-!!! note "Tip"
-    Even with a properly configured reverse proxy, your M3U output may be available over the internet. Follow these best practices to block standard M3U access and allow only with a specified username and password. 
-	
-    1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/advanced/#nginx-reverse-proxy)
-    2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
-    3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/system/#users) page if you haven't already done so
+!!! warning "Trusted networks are matched on the address nginx sees"
+    If a tunnel, CDN, or another reverse proxy sits in front of this one, every request arrives from that hop instead of from the client. When that hop holds a private address, the trusted list admits the entire internet. Check your access log and confirm the addresses there are real client addresses before relying on it.
+
+    If there is a hop in front, recover the client address at the top of the server block, listing the hop's address and never a client's:
+
+    ```nginx
+    set_real_ip_from  172.18.0.0/16;
+    real_ip_header    X-Forwarded-For;
+    real_ip_recursive on;
+    ```
+
+!!! note "Tip: share a playlist with credentials, not a bare URL"
+    `/output/m3u` and `/output/epg` take no credentials, hand out every channel in the profile, and cannot be revoked for one person, which is why the example above keeps them private. `get.php` and `xmltv.php` take a username and XC password, so each user gets a link you can revoke individually.
+
+    1. Set up your reverse proxy as shown above
+    2. In Dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
+    3. Set up a user with an XC password on the [Users](/Dispatcharr-Docs/system/#users) page if you haven't already done so
     4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
     5. And this format for epg: `https://hostname/xmltv.php?username=XCUSERNAME&password=XCPASSWORD`
+
+    If you do publish the plain outputs anyway, publish block 4 with them. `/output/m3u` and `/hdhr/lineup.json` hand out stream URLs under `/proxy/ts/stream/`, so on its own the playlist downloads but nothing plays. Xtream Codes clients never need `/proxy/`; they stream from `/live/`, `/movie/`, `/series/`, and `/timeshift/` directly.
+
+!!! note "Client IP addresses inside Dispatcharr"
+    Dispatcharr's own Network Access rules, its logs, and its per-user connection limits all key off the client address. It only honors `X-Real-IP` and `X-Forwarded-For` when the request reaches it from a trusted proxy, which defaults to the private ranges. If your reverse proxy reaches Dispatcharr from a public address, set `DISPATCHARR_TRUSTED_PROXIES` to that address, or every client will be logged and filtered as the proxy itself.
 
 ---
     
