@@ -167,7 +167,7 @@ By default, Dispatcharr runs in all-in-one (AIO) mode with Redis and PostgreSQL 
 
 ### TLS Configuration
 
-Modular deployments support TLS encryption for connections between Dispatcharr and external Redis/PostgreSQL services. See [Connection Security](/Dispatcharr-Docs/advanced/#connection-security) in the Advanced section for configuration details.
+Modular deployments support TLS encryption for connections between Dispatcharr and external Redis/PostgreSQL services. See [Connection Security](connection-security.md) in the Advanced section for configuration details.
 
 ---
 

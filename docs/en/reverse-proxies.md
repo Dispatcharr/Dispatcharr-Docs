@@ -1,4 +1,4 @@
-### Nginx
+## Nginx
 
 This example splits Dispatcharr across separate location blocks, one per exposure decision, so you can publish the Xtream Codes API to the internet while keeping the web UI and the credential-free endpoints on networks you trust.
 
@@ -257,7 +257,7 @@ As written, the internet can reach the Xtream Codes API (`player_api.php`, `pane
 
 ---
     
-### Pangolin
+## Pangolin
 * Create your resource just as you would any other in Pangolin
 * If you're hosting Dispatcharr on the same VPS (if you're using a VPS) as Pangolin, be sure to set it as a local resource and use 172.XX.X.X as the IP, then enter the port. Otherwise set it up normally
 * If you'd like to enable Pangolin's SSO for this resource for security, do so in the Authentication tab of your new Dispatcharr resource
@@ -301,7 +301,7 @@ To allow Dispatcharr to connect to clients when secured behind Pangolin SSO or a
 
 ---
 
-### Nginx Proxy Manager
+## Nginx Proxy Manager
 
 Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  This guide assumes that Nginx Proxy Manager is already setup and has SSL certificates configured.  Setting up Nginx Proxy Manager and certs is out of scope for this guide.  You can find setup info at the [Nginx Proxy Manager](https://nginxproxymanager.com/guide/) install guide and at [this blog](https://medium.com/@life-is-short-so-enjoy-it/homelab-nginx-proxy-manager-setup-ssl-certificate-with-domain-name-in-cloudflare-dns-732af64ddc0b).
 
@@ -419,7 +419,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
     !!! note
         If you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
 
-### Caddy
+## Caddy
 HTTPS config example (streams only via XC API)
 
 ??? example "Example (click to see)"

@@ -15,14 +15,14 @@ Check existing feature requests in our [discord](https://discord.gg/Sp45V5BcxU) 
 ---
 
 ## Does dispatcharr support hardware acceleration? 
-You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/advanced/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/advanced/#custom-stream-profiles). 
+You can use hardware acceleration with custom ffmpeg stream profiles. This will require [mapping your hardware](/Dispatcharr-Docs/hardware-acceleration/#mapping-hardware) to the container and setting up a [custom ffmpeg stream profile](/Dispatcharr-Docs/hardware-acceleration/#custom-stream-profiles). 
 
 ---
 
 ## Logos are missing in Plex
 Plex does not support cached logos. Add `?cachedlogos=false` to the end of your EPG to bypass logo caching. 
 
-* If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](/Dispatcharr-Docs/advanced/#reverse-proxies) set up
+* If you uploaded your own logos into dispatcharr and want to serve those to Plex, they will only show if served over https, which requires [reverse proxy](reverse-proxies.md) set up
 
 ---
 
@@ -70,7 +70,7 @@ See [Backup & Restore](/Dispatcharr-Docs/system/#backup-restore)
 ---
 
 ## How can I password protect my M3U to share over the internet?
-1. Set up your reverse proxy as shown in the [docs](/Dispatcharr-Docs/advanced/#reverse-proxies)
+1. Set up your reverse proxy as shown in the [docs](reverse-proxies.md)
 2. In dispatcharr at Settings > [Network Access](/Dispatcharr-Docs/system/#network-access), restrict M3U / EPG Endpoints to your local network only (example: 192.168.1.0/24)
 3. Set up a user with XC password on the [Users](/Dispatcharr-Docs/system/#users) page if you haven't already done so
 4. Use the following m3u link format to share with your users: `https://hostname/get.php?username=XCUSERNAME&password=XCPASSWORD`
