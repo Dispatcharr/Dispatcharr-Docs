@@ -3,6 +3,7 @@ From the channels page you can create and manage all added channels, streams, an
 ## Channels	
 * Choose the "Channel Profile" by clicking the drop-down menu under the Channels header. The default profile is "All"
     * Create a new Channel Profile by clicking the <i data-lucide="square-plus" style="color: LimeGreen; width: 18px;"></i> icon next to the drop-down menu
+        * Start empty - Check this box to start with all channels deselected. By default new profiles include all channels
     * Channel Profiles can be used to create subsets of your Channels list. Each profile will have it's own HDHR, M3U, and EPG link generated. When creating XC users, you can select which Channel Profiles each user has access to
     * To remove channels from a Channel Profile, click the corresponding toggle icon in the <i data-lucide="scan-eye" style="color: white; width: 18px;"></i> column to toggle it off
         * For bulk toggling, use the channel check boxes to select multiple channels, then click the toggle icon
