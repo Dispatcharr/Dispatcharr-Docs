@@ -27,6 +27,9 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
         * Channel Profiles - Which set of channels the user will have access to
         * Hide Mature Content - Toggle on to hide channels and VOD marked as mature content (admin users not affected)
         * Enable Catchup - When toggled off this user cannot access timeshift or catchup endpoints, and their channels are not advertised as supporting catchup
+        * Enable Movies - Toggle VOD Movie access on/off. Defaults to on
+        * Enable Series - Toggle VOD Series access on/off. Defaults to on
+        * DVR Access - None: no DVR page or playback. View: watch recordings for channels they can access (default). Manage: create, delete, and manage recordings and rules like an admin for DVR endpoints. Streamer accounts are excluded from DVR
     * In the user `API & XC` tab, you can set the following options
         * XC Password - (leave blank for no XC access)
         * Output Format Override - Override the system default output format for this user. Clear to use system default
