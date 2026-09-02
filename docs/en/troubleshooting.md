@@ -10,7 +10,7 @@ Check if the Stream Profile (default and/or for the channel) is set to redirect.
 ---
 
 ## Will you implement X new feature?
-Check existing feature requests in our [discord](https://discord.gg/Sp45V5BcxU) or [github](https://github.com/Dispatcharr/Dispatcharr/issues). If it's not already requested, feel free to request. 
+The Dispatcharr team requests that all feature requests and bug reports are done on the github repo's issue tracker. Check existing requests on [our repo here](https://github.com/Dispatcharr/Dispatcharr/issues?q=is%3Aissue%20state%3Aopen%20type%3AFeature). If it's not already requested, [feel free to submit a new feature request here](https://github.com/Dispatcharr/Dispatcharr/issues/new?template=feature_request.yml). 
 
 ---
 
