@@ -1,6 +1,3 @@
-!!! note "Just want a different port, not a reverse proxy?"
-    If your only goal is exposing Dispatcharr on a port other than `9191` and you don't need TLS, a login gate, or the network-scoping shown below, you likely don't need a reverse proxy at all. See [`DISPATCHARR_PORT`](installation.md#accessing-dispatcharr) in the Installation guide.
-
 ## Nginx
 
 This example splits Dispatcharr across separate location blocks, one per exposure decision, so you can publish the Xtream Codes API to the internet while keeping the web UI and the credential-free endpoints on networks you trust.
@@ -473,3 +470,7 @@ HTTPS config example (streams only via XC API)
             }
     }
     ```
+
+## Changing the dispatcharr port
+!!! note "Just want a different port, not a reverse proxy?"
+    If your only goal is exposing Dispatcharr on a port other than `9191` and you don't need TLS, a login gate, or the network-scoping shown above, see [`DISPATCHARR_PORT`](installation.md#accessing-dispatcharr) in the Installation guide.

@@ -25,6 +25,8 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
         * User Level - Admin, Standard User, or Streamer (see above)
         * Stream Limit - The number of allowed simultaneous connections (0 for unlimited)
         * Channel Profiles - Which set of channels the user will have access to
+        * Allowed Provider Profiles - Limit which M3U accounts this user may use when Dispatcharr hands them a provider URL (Redirect live/catchup via the channel's effective profile, and VOD when the system default is Redirect). Unrestricted allows all profiles. Clearing the list denies all provider profiles
+          * Note this setting only takes effect when the `Redirect` stream profile is in use
         * Hide Mature Content - Toggle on to hide channels and VOD marked as mature content (admin users not affected)
         * Enable Catchup - When toggled off this user cannot access timeshift or catchup endpoints, and their channels are not advertised as supporting catchup
         * Enable Movies - Toggle VOD Movie access on/off. Defaults to on
@@ -40,6 +42,13 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
 From the Logo Manager page you can upload and manage logos.  
 !!! info
     Dispatcharr will also automatically scan `/data/logos` for existing files
+
+## Logs
+List, view, and download log files
+
+* Click a log to view it in browser
+  * Color by severity, filter by level / category / search, auto-refresh, and virtualized scrolling for large files
+* The Logs nav entry is omitted when no collector is running
 
 ## Settings
 
@@ -58,6 +67,7 @@ From the Logo Manager page you can upload and manage logos.
 * Enable Comskip (remove commercials after recording) - Toggle on or off
 * Custom comskip.ini path - Enter a custom path or leave blank to use the built-in defaults.
 * Select comskip.ini - Click this button to select, upload, and use a custom comskip.ini to dispatcharr
+* DVR Output Profile - Output profile applied when capturing a recording. Leave unset to record the source as-is
 * Start early (minutes) - Begin recording this many minutes before the scheduled start.
 * End late (minutes) - Continue recording this many minutes after the scheduled end.
 * TV Path Template - Supports `{show}`, `{season}`, `{episode}`, `{sub_title}`, `{channel}`, `{year}`, `{start}`, `{end}`. Use format specifiers like `{season:02d}`. Relative paths are under your library dir.
@@ -95,6 +105,9 @@ From the Logo Manager page you can upload and manage logos.
 
 ### System settings
 * Maximum System Events - Configure how many system events (channel start/stop, buffering, etc.) to keep in the database (minimum: 10, maximum: 1000). Events are displayed on the Stats page.
+* Persist Logs to File - Write logs to disk for the Logs page (Logs are written to `/data/logs`)
+* Maximum Log File Size (MB) - Set the file size limit in MB for log files. The log will be rotated once it grows past this size
+* Log Files Kept - How many logs files to keep before the oldest is deleted
 * Preferred Region - Set your preferred region
 * Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
 * Enable IP Lookup - Toggle on/off whether to fetch and display the instance's public IP and country flag in the sidebar
@@ -194,6 +207,7 @@ Each proxy setting affects all stream profiles with the exception of redirect
 * Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
 * Channel Initialization Timeout - How long a channel may spend connecting and cycling through failover streams before giving up during startup
 * Client Connect Grace Period - How long a ready channel with no viewers stays up waiting for the first client
+* Validate Redirect URLs - Before Redirect handoff, probe the provider URL with a HEAD (then GET) request and try alternate streams if it fails. Disable for providers that close probe connections or add channel-change latency. Failover probing is skipped when disabled
 
 ### Backup & Restore
 Create, schedule, and restore backups
