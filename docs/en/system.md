@@ -176,6 +176,24 @@ Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `
 !!! example
     `-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1`
 
+```mermaid
+flowchart TD
+    PR["`**Provider source stream**`"] --> CH("`**Channel**`")
+        subgraph D["Dispatcharr"]
+        CH
+        OU
+        OU2
+    end
+    CH -->|Stream Profile| G((Client A))
+    CH -->|Stream Profile| OU{Output profile}
+    CH -->|Stream Profile| OU2{Output profile 2}
+    OU -->|HDHR URL| CB(((Client B)))
+    OU -->|M3U URL| CC[/Client C\]
+    OU2 -->|Dispatcharr XC User 1| CD[/Client D/]
+    OU2 -->|Dispatcharr XC User 1| CE[\Client E\]
+```
+
+
 ### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
 !!! example
