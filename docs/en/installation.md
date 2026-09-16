@@ -179,3 +179,10 @@ Open your web browser and navigate to:
 
 Replace `localhost` with your server's IP address if accessing remotely.
 
+!!! note "Mapping a different host port? Set `DISPATCHARR_PORT` to match"
+    If you change the left-hand side of the `ports:` mapping in the compose file above to something other than `9191:9191` (for example `80:9191` or `8080:9191`) and you are **not** running a [reverse proxy](reverse-proxies.md) in front of Dispatcharr, also set `DISPATCHARR_PORT` to the same value on both sides (`8080:8080` with `DISPATCHARR_PORT=8080`).
+
+    Without a reverse proxy, Dispatcharr has no way to know which port a client actually reached it on, and falls back to the port it sees internally, which is `9191` unless `DISPATCHARR_PORT` says otherwise. That value gets baked into every URL Dispatcharr hands out for itself: channel logos, the M3U and XMLTV endpoints, VOD posters, and catch-up links. If the host and internal ports do not match, those URLs point at a port nothing is actually listening on from outside the container, and images, playlists, and playback all silently fail.
+
+    If you do run a reverse proxy, it already forwards the real host and port for you, and `DISPATCHARR_PORT` is not needed.
+
