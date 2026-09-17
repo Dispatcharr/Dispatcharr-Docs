@@ -167,9 +167,8 @@ A Stream Profile defines the processing and output parameters Dispatcharr uses w
     * Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
     * User-Agent - Set the default user-agent for this stream profile
 
----
-Visual of Stream Profiles
----
+
+#### Visual of Stream Profiles
 ```mermaid
 flowchart LR
  subgraph D["Dispatcharr"]
@@ -186,9 +185,8 @@ Output profiles take the output from the stream profile and transcodes for any c
 
 Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `pipe:1` as the output in ffmpeg parameters. Output must be in MPEG-TS format (-f mpegts).
 
----
-Visual of Output Profiles <span id="visual-output-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-output-profiles)
----
+
+#### Visual of Output Profiles <span id="visual-output-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-output-profiles)
 ```mermaid
 flowchart TB
  subgraph D["Dispatcharr"]
