@@ -132,6 +132,8 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * Description - (Optional) a description of the user-agent for your own use
 
 ### Stream Profiles
+A Stream Profile defines the processing and output parameters Dispatcharr uses when delivering a channel stream. That channel stream may be delivered to a client or further processed by output profiles.
+
 | Stream Profile | [Proxy support <br>(buffer, VPN support, etc.)](/Dispatcharr-Docs/system/#proxy-settings)          | [Fallback stream<br> support](/Dispatcharr-Docs/channels/#fallback-streams)                          | [Stream stats<br> support](/Dispatcharr-Docs/stats/#stats)                                        | System resources      | 
 | -------------- | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-----------------------------------------------------------------------: | :-------------------: |
 | ffmpeg         | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | Low                   |
@@ -165,16 +167,44 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
     * User-Agent - Set the default user-agent for this stream profile
 
+
+#### Visual of Stream Profiles
+```mermaid
+flowchart LR
+ subgraph D["Dispatcharr"]
+        SP[/"Stream Profile <br> V: HEVC, A: AC3"/]
+  end
+    PR["`**Provider source stream** <br> V: H264, A: EAC3`"] --> SP
+    SP --> CTI(("📺<br/>Tivimate"))
+```
+
 ### Output Profiles
 Output profiles take the output from the stream profile and transcodes for any client that requests an output profile. It allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. One transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
+
+Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `pipe:1` as the output in ffmpeg parameters. Output must be in MPEG-TS format (-f mpegts).
+
+
+#### Visual of Output Profiles <span id="visual-output-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-output-profiles)
+```mermaid
+flowchart TB
+ subgraph D["Dispatcharr"]
+        SP[/"Stream Profile <br> V: H264, A: AC3"/]
+        OU{"Output profile 1 <br> V: HEVC, A: AC3"}
+        OU2{"Output profile 2 <br> V: H264, A: AAC"}
+  end
+    SP --> OU & OU2 & CTI(("📺<br/>Tivimate"))
+    OU -- "HDHR-URL/output_profile/1" --> CPL(("Plex"))
+    OU -- "M3U-URL?output_profile=1" --> CJE(("Jellyfin"))
+    OU2 -- Dispatcharr XC User --> CDW(("🖥️<br/>Dispatcharr Web Player"))
+    PR["`**Provider source stream** <br> V: H264, A: EAC3`"] --> SP
+```
 
 !!! note "Common use case"
     A profile that converts AC3 audio to AAC for browser and mobile clients while the native stream (AC3 intact) continues to serve Plex/Emby/Jellyfin. 
 
-Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `pipe:1` as the output in ffmpeg parameters. Output must be in MPEG-TS format (-f mpegts).
-
 !!! example
     `-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1`
+
 
 ### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
