@@ -33,9 +33,9 @@ From this page you can add and maintain your M3U accounts and EPGs
       SG
       CH2
     end
-    MP --> CH(Channels)
+    MP --> CH(Channels <br/> VOD)
     CH -->|3 connections| PL((Players))
-    SG --> CH2(Channels)
+    SG --> CH2(Channels <br/> VOD)
     CH2 -->|1 connection| PL
     ```
 
