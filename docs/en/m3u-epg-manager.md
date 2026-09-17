@@ -12,19 +12,19 @@ From this page you can add and maintain your M3U accounts and EPGs
         * **Xtream Codes (XC) account** — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
 
     ---
-    title: Visual of M3U Profiles vs. ServerGroups
+    Visual of M3U Profiles vs. ServerGroups
     ---    
     ```mermaid
     flowchart TD
-    PR1(["`**Provider #1**`"]) -->|XC user1 & password1
+    PR1(["`**Provider #1**`"]) -->|XC user-1 & password-1
                                  1 connection| MP[/"`**M3U Profile**`"\]
-    PR2(["`**Provider #2**`"]) -->|XC user2 & password2
+    PR2(["`**Provider #2**`"]) -->|XC user-2 & password-2
                                  1 connection| MP
-    PR3(["`**Provider #3**`"]) -->|XC user3 & password3
+    PR3(["`**Provider #3**`"]) -->|XC user-3 & password-3
                                  1 connection| MP
     PRA[["`**Provider A**`"]] -->|M3U URL
                                 1 connection| SG[\Server Group/]
-    PRA2[["`**Provider A**`"]] -->|XC userA & passwordA
+    PRA2[["`**Provider A**`"]] -->|XC user-A & password-A
                                  1 connection| SG
     subgraph D["Dispatcharr"]
       MP
