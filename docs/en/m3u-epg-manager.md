@@ -11,6 +11,33 @@ From this page you can add and maintain your M3U accounts and EPGs
         * **Standard M3U account** — Using a modified M3U playlist (3rd party curated M3U templates can be found online for various providers) for Live TV
         * **Xtream Codes (XC) account** — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
 
+    ---
+    title: Visual of M3U Profiles vs. ServerGroups
+    ---    
+    ```mermaid
+    flowchart TD
+    PR1(["`**Provider #1**`"]) -->|XC user1 & password1
+                                 1 connection| MP[/"`**M3U Profile**`"\]
+    PR2(["`**Provider #2**`"]) -->|XC user2 & password2
+                                 1 connection| MP
+    PR3(["`**Provider #3**`"]) -->|XC user3 & password3
+                                 1 connection| MP
+    PRA[["`**Provider A**`"]] -->|M3U URL
+                                1 connection| SG[\Server Group/]
+    PRA2[["`**Provider A**`"]] -->|XC userA & passwordA
+                                 1 connection| SG
+    subgraph D["Dispatcharr"]
+      MP
+      CH
+      SG
+      CH2
+    end
+    MP --> CH(Channels)
+    CH -->|3 connections| PL((Players))
+    SG --> CH2(Channels)
+    CH2 -->|1 connection| PL
+    ```
+
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add M3U" - Click this button to add new M3U accounts 
     * Name - A name for your M3U account
     * URL - The M3U URL (not required if uploading an M3U file)

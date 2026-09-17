@@ -168,15 +168,18 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 ### Output Profiles
 Output profiles take the output from the stream profile and transcodes for any client that requests an output profile. It allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. One transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
 
+---
+title: Visual of Output Profiles
+---
 ```mermaid
 flowchart TD
     PR["`**Provider source stream**`"] --> CH("`**Channel**`")
         subgraph D["Dispatcharr"]
-        CH
-        SP
-        OU
-        OU2
-    end
+          CH
+          SP
+          OU
+          OU2
+        end
     CH --> SP[/Stream Profile/] 
     SP -->|Dispatcharr XC User 1| CTI((" 📺 Tivimate"))
     SP --> OU{Output profile 1}
