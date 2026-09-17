@@ -26,7 +26,7 @@ From this page you can add and maintain your M3U accounts and EPGs
                                 1 connection| SG[\Server Group/]
     PRA2[["`**Provider A**`"]] -->|XC user-A & password-A
                                  1 connection| SG
-    subgraph D["Dispatcharr"]
+    subgraph D["<br/> <br/> Dispatcharr"]
       MP
       CH
       SG
