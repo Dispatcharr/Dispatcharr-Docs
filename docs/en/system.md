@@ -168,6 +168,24 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
 ### Output Profiles
 Output profiles take the output from the stream profile and transcodes for any client that requests an output profile. It allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. One transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
 
+```mermaid
+flowchart TD
+    PR["`**Provider source stream**`"] --> CH("`**Channel**`")
+        subgraph D["Dispatcharr"]
+        CH
+        SP
+        OU
+        OU2
+    end
+    CH --> SP[/Stream Profile/] 
+    SP -->|Dispatcharr XC User 1| CTI((" 📺 Tivimate"))
+    SP --> OU{Output profile 1}
+    SP --> OU2{Output profile 2}
+    OU -->|HDHR-URL/output_profile/1| CPL((Plex))
+    OU -->|M3U-URL?output_profile=1| CJE((Jellyfin))
+    OU2 -->|Dispatcharr XC User 2| CDW((" 🖥️ Dispatcharr Web Player"))
+```
+
 !!! note "Common use case"
     A profile that converts AC3 audio to AAC for browser and mobile clients while the native stream (AC3 intact) continues to serve Plex/Emby/Jellyfin. 
 
@@ -175,23 +193,6 @@ Unlike stream profiles, output profiles need to use `pipe:0` as the input, and `
 
 !!! example
     `-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1`
-
-```mermaid
-flowchart TD
-    PR["`**Provider source stream**`"] --> CH("`**Channel**`")
-        subgraph D["Dispatcharr"]
-        CH
-        OU
-        OU2
-    end
-    CH -->|Stream Profile| G((Client A))
-    CH -->|Stream Profile| OU{Output profile}
-    CH -->|Stream Profile| OU2{Output profile 2}
-    OU -->|HDHR URL| CB(((Client B)))
-    OU -->|M3U URL| CC[/Client C\]
-    OU2 -->|Dispatcharr XC User 1| CD[/Client D/]
-    OU2 -->|Dispatcharr XC User 1| CE[\Client E\]
-```
 
 
 ### Network Access
