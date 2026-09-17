@@ -17,13 +17,14 @@ From this page you can add and maintain your M3U accounts and EPGs
     ```mermaid
     flowchart TD
     PR1(["`**Provider A**`"]) -->|XC user-1 & password-1
-                                 1 connection| MP[/"`**M3U Profile**`"\]
+                                  1 connection| MP[/"`**M3U Profile**`"\]
     PR2(["`**Provider A**`"]) -->|XC user-2 & password-2
-                                 1 connection| MP
+                                  1 connection| MP
     PR3(["`**Provider A**`"]) -->|XC user-3 & password-3
-                                 1 connection| MP
+                                  1 connection| MP
     PRA[["`**Provider B**`"]] -->|M3U URL
-                                1 connection| SG[\Server Group/]
+                                  user-B & password-B
+                                  1 connection| SG[\Server Group/]
     PRA2[["`**Provider B**`"]] -->|XC user-B & password-B
                                  1 connection| SG
     subgraph D["<br/> <br/> Dispatcharr"]
