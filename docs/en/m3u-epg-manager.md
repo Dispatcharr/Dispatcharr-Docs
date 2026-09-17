@@ -11,9 +11,8 @@ From this page you can add and maintain your M3U accounts and EPGs
         * **Standard M3U account** — Using a modified M3U playlist (3rd party curated M3U templates can be found online for various providers) for Live TV
         * **Xtream Codes (XC) account** — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
 
-    ---
-    Visual of M3U Profiles vs. Server Groups <span id="visual-server-groups"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-server-groups)
-    ---    
+    
+    Visual of Server Groups vs. M3U Profiles <span id="visual-server-groups"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-server-groups)
     ```mermaid
         flowchart TB
         subgraph D["<br> <br> Dispatcharr"]
