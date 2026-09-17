@@ -12,7 +12,7 @@ From this page you can add and maintain your M3U accounts and EPGs
         * **Xtream Codes (XC) account** — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
 
     
-    ### Visual of Server Groups vs. M3U Profiles <span id="visual-server-groups"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-server-groups)
+    ### Visual of Server Groups vs. [M3U Profiles](#m3u-profiles)
     ```mermaid
         flowchart TB
         subgraph D["<br> <br> Dispatcharr"]
