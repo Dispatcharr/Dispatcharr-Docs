@@ -175,9 +175,7 @@ flowchart LR
         SP[/"Stream Profile <br> V: HEVC, A: AC3"/]
   end
     PR["`**Provider source stream** <br> V: H264, A: EAC3`"] --> SP
-    SP --> n1@{ label: "<span style=\"background-color:\">📺</span>Tivimate" }
-
-    n1@{ shape: circle}
+    SP --> CTI(("📺<br/>Tivimate"))
 ```
 
 ### Output Profiles
@@ -194,10 +192,10 @@ flowchart TB
         OU{"Output profile 1 <br> V: HEVC, A: AC3"}
         OU2{"Output profile 2 <br> V: H264, A: AAC"}
   end
-    SP --> OU & OU2
+    SP --> OU & OU2 & CTI(("📺<br/>Tivimate"))
     OU -- "HDHR-URL/output_profile/1" --> CPL(("Plex"))
     OU -- "M3U-URL?output_profile=1" --> CJE(("Jellyfin"))
-    OU2 -- Dispatcharr XC User --> CDW(("🖥️ Dispatcharr Web Player"))
+    OU2 -- Dispatcharr XC User --> CDW(("🖥️<br/>Dispatcharr Web Player"))
     PR["`**Provider source stream** <br> V: H264, A: EAC3`"] --> SP
 ```
 
