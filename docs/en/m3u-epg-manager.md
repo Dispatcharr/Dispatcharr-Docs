@@ -12,7 +12,7 @@ From this page you can add and maintain your M3U accounts and EPGs
         * **Xtream Codes (XC) account** — For VOD and channel groups that aren't available (or aren't practical) through the M3U path
 
     ---
-    Visual of M3U Profiles vs. ServerGroups
+    Visual of M3U Profiles vs. Server Groups
     ---    
     ```mermaid
     flowchart TD
