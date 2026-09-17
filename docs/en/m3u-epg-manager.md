@@ -18,13 +18,13 @@ From this page you can add and maintain your M3U accounts and EPGs
     flowchart TD
     PR1(["`**Provider #1**`"]) -->|XC user-1 & password-1
                                  1 connection| MP[/"`**M3U Profile**`"\]
-    PR2(["`**Provider #2**`"]) -->|XC user-2 & password-2
+    PR2(["`**Provider #1**`"]) -->|XC user-2 & password-2
                                  1 connection| MP
-    PR3(["`**Provider #3**`"]) -->|XC user-3 & password-3
+    PR3(["`**Provider #1**`"]) -->|XC user-3 & password-3
                                  1 connection| MP
-    PRA[["`**Provider A**`"]] -->|M3U URL
+    PRA[["`**Provider #2**`"]] -->|M3U URL
                                 1 connection| SG[\Server Group/]
-    PRA2[["`**Provider A**`"]] -->|XC user-A & password-A
+    PRA2[["`**Provider #2**`"]] -->|XC user-2 & password-2
                                  1 connection| SG
     subgraph D["<br/> <br/> Dispatcharr"]
       MP
