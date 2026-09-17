@@ -165,6 +165,20 @@ In the context of IPTV, a user agent is a string of text that identifies the cli
     * Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
     * User-Agent - Set the default user-agent for this stream profile
 
+---
+Visual of Stream Profiles
+---
+```mermaid
+flowchart TB
+ subgraph D["Dispatcharr"]
+        SP[/"Stream Profile <br> V: HEVC, A: AC3"/]
+  end
+    PR["`**Provider source stream** <br> V: H264, A: EAC3`"] --> SP
+    SP --> n1@{ label: "<span style=\"background-color:\">📺</span>Tivimate" }
+
+    n1@{ shape: circle}
+```
+
 ### Output Profiles
 Output profiles take the output from the stream profile and transcodes for any client that requests an output profile. It allows you to tailor stream output via HDHR URL, M3U URL, and/or per XC user. One transcode process runs per active (channel, profile) pair and all requesting clients share the resulting output buffer.
 
@@ -172,21 +186,17 @@ Output profiles take the output from the stream profile and transcodes for any c
 Visual of Output Profiles <span id="visual-output-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-output-profiles)
 ---
 ```mermaid
-flowchart TD
-    PR["`**Provider source stream**`"] --> CH("`**Channel**`")
-        subgraph D["Dispatcharr"]
-          CH
-          SP
-          OU
-          OU2
-        end
-    CH --> SP[/Stream Profile/] 
-    SP -->|Dispatcharr XC User 1| CTI((" 📺 Tivimate"))
-    SP --> OU{Output profile 1}
-    SP --> OU2{Output profile 2}
-    OU -->|HDHR-URL/output_profile/1| CPL((Plex))
-    OU -->|M3U-URL?output_profile=1| CJE((Jellyfin))
-    OU2 -->|Dispatcharr XC User 2| CDW((" 🖥️ Dispatcharr Web Player"))
+flowchart TB
+ subgraph D["Dispatcharr"]
+        SP[/"Stream Profile <br> V: H264, A: AC3"/]
+        OU{"Output profile 1 <br> V: HEVC, A: AC3"}
+        OU2{"Output profile 2 <br> V: H264, A: AAC"}
+  end
+    SP --> OU & OU2
+    OU -- "HDHR-URL/output_profile/1" --> CPL(("Plex"))
+    OU -- "M3U-URL?output_profile=1" --> CJE(("Jellyfin"))
+    OU2 -- Dispatcharr XC User --> CDW(("🖥️ Dispatcharr Web Player"))
+    PR["`**Provider source stream** <br> V: H264, A: EAC3`"] --> SP
 ```
 
 !!! note "Common use case"

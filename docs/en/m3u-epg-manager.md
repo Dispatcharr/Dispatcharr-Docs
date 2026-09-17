@@ -15,28 +15,20 @@ From this page you can add and maintain your M3U accounts and EPGs
     Visual of M3U Profiles vs. Server Groups <span id="visual-server-groups"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#visual-server-groups)
     ---    
     ```mermaid
-    flowchart TD
-    PR1(["`**Provider A**`"]) -->|XC user-1 & password-1
-                                  1 connection| MP[/"`**M3U Profile**`"\]
-    PR2(["`**Provider A**`"]) -->|XC user-2 & password-2
-                                  1 connection| MP
-    PR3(["`**Provider A**`"]) -->|XC user-3 & password-3
-                                  1 connection| MP
-    PRA[["`**Provider B**`"]] -->|M3U URL
-                                  user-B & password-B
-                                  1 connection| SG[\"`**Server Group**`"/]
-    PRA2[["`**Provider B**`"]] -->|XC user-B & password-B
-                                 1 connection| SG
-    subgraph D["<br/> <br/> Dispatcharr"]
-      MP
-      CH
-      SG
-      CH2
-    end
-    MP --> CH(Channels <br/> VOD)
-    CH -->|3 connections| PL((Players))
-    SG --> CH2(Channels <br/> VOD)
-    CH2 -->|1 connection| PL
+        flowchart TB
+        subgraph D["<br> <br> Dispatcharr"]
+                MP[/"`**M3U Profile**`"\]
+                SG[\"`**Server Group**`"/]
+        end
+            PRA(["`**Provider A**`"]) --> a1["Account 1<br>Type: XC<br>1 connection"] & a2["Account 2<br>Type: XC<br>1 connection"] & a3["Account 3<br>Type: XC<br>2 connections"]
+            a1 --> MP
+            a2 --> MP
+            a3 --> MP
+            PRA2[["`**Provider B**`"]] --> a4["Account 1<br>Type: XC<br>1 connection"] & a5["Account 1<br>Type: M3U<br>1 connection"]
+            a4 --> SG
+            a5 --> SG
+            SG -- 1 connection --> PL(("Players"))
+            MP -- 4 connections --> PL
     ```
 
 * "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add M3U" - Click this button to add new M3U accounts 
@@ -58,7 +50,7 @@ From this page you can add and maintain your M3U accounts and EPGs
     * VOD Priority - Priority for VOD provider selection (higher numbers = higher priority). Used when multiple providers offer the same content.
     * Is Active - Toggle whether this account is active or not
     !!! note
-        M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings
+        M3Us can be automatically added into dispatcharr by adding M3U file(s) into the `/data/m3us` folder and if `Auto-Import Mapped Files` is enabled under Settings > System Settings
 * You can click column headers to change the sort order of existing M3U accounts
 * Actions column
     * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated M3U account
@@ -137,7 +129,7 @@ From this page you can add and maintain your M3U accounts and EPGs
             * Open Cron Builder: Opens the user-friendly interactive cron expression builder with preset buttons and custom field editors
         * Priority - Priority for EPG matching (higher numbers = higher priority). Used when multiple EPG sources have matching entries for a channel.
         !!! note
-            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > Stream Settings ((file type must be xml or compressed xml as .gz or .zip))
+            EPGs can be automatically added into dispatcharr by adding EPG file(s) into the `/data/epgs` folder and if `Auto-Import Mapped Files` is enabled under Settings > System Settings ((file type must be xml or compressed xml as .gz or .zip))
     * Dummy EPG Source - To add a customized dummy EPG          
         * Name - A name for your custom dummy EPG
         * Pattern configuration
