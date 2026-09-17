@@ -171,7 +171,7 @@ A Stream Profile defines the processing and output parameters Dispatcharr uses w
 Visual of Stream Profiles
 ---
 ```mermaid
-flowchart TB
+flowchart LR
  subgraph D["Dispatcharr"]
         SP[/"Stream Profile <br> V: HEVC, A: AC3"/]
   end
