@@ -420,7 +420,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
         If you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
 
 ## Caddy
-HTTPS config example (streams only via XC API)
+HTTPS config example (streams/API only, Web UI not exposed)
 
 ??? example "Example (click to see)"
     ```
@@ -437,6 +437,7 @@ HTTPS config example (streams only via XC API)
             }
 
             header {
+                    -Server
                     Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
                     X-Content-Type-Options "nosniff"
                     X-Frame-Options "SAMEORIGIN"
@@ -446,7 +447,7 @@ HTTPS config example (streams only via XC API)
             }
 
             @iptv {
-                path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)|/proxy/catchup/.*|/player_api.php|/xmltv.php|/api/channels/logos/\d+/cache|/api/vod/vodlogos/\d+/cache|/api/vod/movies/\d+/image|/api/vod/series/\d+/image|/api/vod/episodes/\d+/image|/api/epg/programs/\d+/poster|/(live|movie|series)/[^/]+/.*|/timeshift/[^/]+/[^/]+/[^/]+/[^/]+/.*|/streaming/timeshift\.php)
+                path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/proxy/catchup/.*|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/api/channels/(channels|groups|recordings|logos/.*/cache)/?|/api/vod/(categories|vodlogos/.*/cache|movies/\d+/image|series/\d+/image|episodes/\d+/image)/?|/api/epg/(epgdata|grid|current-programs|programs|programs/\d+/poster)/?|/api/accounts/users/me/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
             }
 
             handle @iptv {
