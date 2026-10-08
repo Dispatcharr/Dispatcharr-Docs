@@ -59,31 +59,11 @@ List, view, and download log files
 * Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
 * Time Zone - Set your preferred time zone
 * Web Player Output Profile - Output profile applied when previewing streams in the browser player
-* Navigation - Drag and drop to reorder the sidebar navigation items, or click the <i data-lucide="eye" style="color: LightGray; width: 18px;"></i> to toggle visibility
-    * System cannot be hidden
-    * Click the `Reset to Default` button at the bottom of the Navigation section to restore defaults
 
-### DVR
-* Enable Comskip (remove commercials after recording) - Toggle on or off
-* Custom comskip.ini path - Enter a custom path or leave blank to use the built-in defaults.
-* Select comskip.ini - Click this button to select, upload, and use a custom comskip.ini to dispatcharr
-* DVR Output Profile - Output profile applied when capturing a recording. Leave unset to record the source as-is
-* Start early (minutes) - Begin recording this many minutes before the scheduled start.
-* End late (minutes) - Continue recording this many minutes after the scheduled end.
-* TV Path Template - Supports `{show}`, `{season}`, `{episode}`, `{sub_title}`, `{channel}`, `{year}`, `{start}`, `{end}`. Use format specifiers like `{season:02d}`. Relative paths are under your library dir.
-* TV Fallback Template - Template used when an episode has no season/episode. Supports `{show}`, `{start}`, `{end}`, `{channel}`, `{year}`.
-* Movie Path Template - Supports `{title}`, `{year}`, `{channel}`, `{start}`, `{end}`. Relative paths are under your library dir.
-* Movie Fallback Template - Template used when movie metadata is incomplete. Supports `{start}`, `{end}`, `{channel}`.
-
-!!! note 
-    <span id="recording-location"></span>[<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#recording-location) Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
-
-    !!! example
-        ```yaml
-        volumes:
-          - dispatcharr_data:/data
-          - host_path/media:/data/recordings
-        ```
+### Navigation 
+Drag and drop to reorder the sidebar navigation items, or click the <i data-lucide="eye" style="color: LightGray; width: 18px;"></i> to toggle visibility
+* System cannot be hidden
+* Click the `Reset to Default` button at the bottom of the Navigation section to restore defaults
 
 ### Stream Settings
 * Default User-Agent - Set the default User-Agent
@@ -103,33 +83,20 @@ List, view, and download log files
     !!! example
         Your provider regularly changes the names of certain PPV streams, but you have channels set up for these streams and don't want the stream to be deleted due to stale stream cleanup. Since the provider is changing the stream name, but not the URL or TVG-ID, you set your M3U hash key to `URL` and `TVG-ID` only
 
-### System settings
-* Maximum System Events - Configure how many system events (channel start/stop, buffering, etc.) to keep in the database (minimum: 10, maximum: 1000). Events are displayed on the Stats page.
-* Persist Logs to File - Write logs to disk for the Logs page (Logs are written to `/data/logs`)
-* Maximum Log File Size (MB) - Set the file size limit in MB for log files. The log will be rotated once it grows past this size
-* Log Files Kept - How many logs files to keep before the oldest is deleted
-* Preferred Region - Set your preferred region
-* Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
-* Enable IP Lookup - Toggle on/off whether to fetch and display the instance's public IP and country flag in the sidebar
-* Enable Catchup - When disabled, timeshift and catchup endpoints are blocked for all users, and channels are not advertised as supporting catchup to clients. Catchup capability is still shown in the web UI
-    
-### Connection Security
-Displays the current TLS encryption status for Redis and PostgreSQL connections. This section is only visible in [modular deployment mode](/Dispatcharr-Docs/installation/#modular-deployment).
+### Proxy Settings
+Each proxy setting affects all stream profiles with the exception of redirect
 
-* **Encryption** - Whether TLS is enabled for the connection
-* **Server Verification** (Redis) / **Verification Mode** (PostgreSQL) - Whether the server's identity is verified using a CA certificate
-* **Mutual TLS** - Whether Dispatcharr authenticates to the server using a client certificate
+* Buffering Timeout - Maximum time (in seconds) to wait for buffering before switching streams
+* Buffering Speed - Speed threshold below which buffering is detected (1.0 = normal speed)
+* Channel Shutdown Delay - Delay in seconds after the last viewer disconnects before the channel is stopped
+* New Client Buffer (seconds) - Seconds of received buffer to start behind live when a new client connects (0 = start at live). Note: this is chunk receive time, not video duration
 
-!!! note
-    Connection Security is read-only. TLS is configured via environment variables in the docker compose file. See [Connection Security](connection-security.md) in the Advanced section for configuration details.
+*Advanced settings*
 
-### User-Agents
-In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
-
-* Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
-    * Name - a name for your user-agent
-    * User-Agent - The text to include for your user-agent string
-    * Description - (Optional) a description of the user-agent for your own use
+* Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
+* Channel Initialization Timeout - How long a channel may spend connecting and cycling through failover streams before giving up during startup
+* Client Connect Grace Period - How long a ready channel with no viewers stays up waiting for the first client
+* Validate Redirect URLs - Before Redirect handoff, probe the provider URL with a HEAD (then GET) request and try alternate streams if it fails. Disable for providers that close probe connections or add channel-change latency. Failover probing is skipped when disabled
 
 ### Stream Profiles
 A Stream Profile defines the processing and output parameters Dispatcharr uses when delivering a channel stream. That channel stream may be delivered to a client or further processed by output profiles.
@@ -205,6 +172,35 @@ flowchart TB
 !!! example
     `-i pipe:0 -c:v libx264 -b:v 2000k -vf scale=-2:720 -c:a copy -f mpegts pipe:1`
 
+### DVR Settings
+* Enable Comskip (remove commercials after recording) - Toggle on or off
+* Custom comskip.ini path - Enter a custom path or leave blank to use the built-in defaults.
+* Select comskip.ini - Click this button to select, upload, and use a custom comskip.ini to dispatcharr
+* DVR Output Profile - Output profile applied when capturing a recording. Leave unset to record the source as-is
+* Start early (minutes) - Begin recording this many minutes before the scheduled start.
+* End late (minutes) - Continue recording this many minutes after the scheduled end.
+* TV Path Template - Supports `{show}`, `{season}`, `{episode}`, `{sub_title}`, `{channel}`, `{year}`, `{start}`, `{end}`. Use format specifiers like `{season:02d}`. Relative paths are under your library dir.
+* TV Fallback Template - Template used when an episode has no season/episode. Supports `{show}`, `{start}`, `{end}`, `{channel}`, `{year}`.
+* Movie Path Template - Supports `{title}`, `{year}`, `{channel}`, `{start}`, `{end}`. Relative paths are under your library dir.
+* Movie Fallback Template - Template used when movie metadata is incomplete. Supports `{start}`, `{end}`, `{channel}`.
+
+!!! note 
+    <span id="recording-location"></span>[<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#recording-location) Recordings are saved in the `/data/recordings` folder according to your template settings. You may wish to use docker compose bind mounts to save recordings to a different location on your host
+
+    !!! example
+        ```yaml
+        volumes:
+          - dispatcharr_data:/data
+          - host_path/media:/data/recordings
+        ```
+
+### User-Agents
+In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
+
+* Add your own User-Agent by clicking the "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User-Agent" button on the Settings page
+    * Name - a name for your user-agent
+    * User-Agent - The text to include for your user-agent string
+    * Description - (Optional) a description of the user-agent for your own use
 
 ### Network Access
 Allows you to restrict access to Dispatcharr by CIDR range. You may enter multiple CIDR ranges separated by commas. 0.0.0.0/0 allows all IPs
@@ -222,22 +218,37 @@ Allows you to restrict access to Dispatcharr by CIDR range. You may enter multip
     
 !!! tip
     To block access entirely for any of the above, use the address `127.0.0.1/32` (do NOT use for UI!)
-    
-    
-### Proxy Settings
-Each proxy setting affects all stream profiles with the exception of redirect
 
-* Buffering Timeout - Maximum time (in seconds) to wait for buffering before switching streams
-* Buffering Speed - Speed threshold below which buffering is detected (1.0 = normal speed)
-* Channel Shutdown Delay - Delay in seconds after the last viewer disconnects before the channel is stopped
-* New Client Buffer (seconds) - Seconds of received buffer to start behind live when a new client connects (0 = start at live). Note: this is chunk receive time, not video duration
+### System settings
+* Maximum System Events - Configure how many system events (channel start/stop, buffering, etc.) to keep in the database (minimum: 10, maximum: 1000). Events are displayed on the Stats page.
+* Persist Logs to File - Write logs to disk for the Logs page (Logs are written to `/data/logs`)
+* Maximum Log File Size (MB) - Set the file size limit in MB for log files. The log will be rotated once it grows past this size
+* Log Files Kept - How many logs files to keep before the oldest is deleted
+* Preferred Region - Set your preferred region
+* Auto Import Mapped Files - Toggle on/off auto-importing of M3U files or EPG xml data from /data/epgs and/or /data/m3us
+* Enable IP Lookup - Toggle on/off whether to fetch and display the instance's public IP and country flag in the sidebar
+* Enable Catchup - When disabled, timeshift and catchup endpoints are blocked for all users, and channels are not advertised as supporting catchup to clients. Catchup capability is still shown in the web UI
 
-*Advanced settings*
+### Reverse Proxy Auth
+Enable Reverse Proxy Auth to exchange a configured identity header (such as X-Forwarded-User, X-Auth-Request-User, or Cf-Access-Authenticated-User-Email) for standard JWT tokens. 
+* Stays disabled until `DISPATCHARR_TRUSTED_PROXIES` explicitly names the proxy
+* The proxy must strip client-supplied identity headers before forwarding
 
-* Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
-* Channel Initialization Timeout - How long a channel may spend connecting and cycling through failover streams before giving up during startup
-* Client Connect Grace Period - How long a ready channel with no viewers stays up waiting for the first client
-* Validate Redirect URLs - Before Redirect handoff, probe the provider URL with a HEAD (then GET) request and try alternate streams if it fails. Disable for providers that close probe connections or add channel-change latency. Failover probing is skipped when disabled
+### User Limits
+* Terminate on Limit Exceeded - Check to enable user stream limits based on the below criteria
+* Prioritize Single Client Channels - prefer freeing streams on channels only that user is watching
+* Ignore Same-Channel Connections - count multiple connections to the same live channel as one stream toward the limit
+* Terminate Oldest - Check to prioritize terminating the oldest stream when limits are exceeded. Unchecked prioritizes the newest stream
+
+### Connection Security
+Displays the current TLS encryption status for Redis and PostgreSQL connections. This section is only visible in [modular deployment mode](/Dispatcharr-Docs/installation/#modular-deployment).
+
+* **Encryption** - Whether TLS is enabled for the connection
+* **Server Verification** (Redis) / **Verification Mode** (PostgreSQL) - Whether the server's identity is verified using a CA certificate
+* **Mutual TLS** - Whether Dispatcharr authenticates to the server using a client certificate
+
+!!! note
+    Connection Security is read-only. TLS is configured via environment variables in the docker compose file. See [Connection Security](connection-security.md) in the Advanced section for configuration details.
 
 ### Backup & Restore
 Create, schedule, and restore backups
@@ -252,9 +263,3 @@ Create, schedule, and restore backups
         `30 14 1 * *` - 1st of every month at 2:30 PM  
         
 * Retention - The number of backups to keep. The oldest backup will be deleted when a new backup is created that exceeds this number. Set as 0 to retain all old backups.  
-
-### User Limits
-* Terminate on Limit Exceeded - Check to enable user stream limits based on the below criteria
-* Prioritize Single Client Channels - prefer freeing streams on channels only that user is watching
-* Ignore Same-Channel Connections - count multiple connections to the same live channel as one stream toward the limit
-* Terminate Oldest - Check to prioritize terminating the oldest stream when limits are exceeded. Unchecked prioritizes the newest stream
