@@ -420,7 +420,7 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
         If you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
 
 ## Caddy
-HTTPS config example (streams/API only, Web UI not exposed)
+HTTPS config example (XC and /api/ paths only, Web UI not exposed, credentials redacted from logs).
 
 ??? example "Example (click to see)"
     ```
