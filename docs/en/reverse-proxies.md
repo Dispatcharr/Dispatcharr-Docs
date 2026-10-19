@@ -420,56 +420,79 @@ Follow these steps to setup access to Dispatcharr through Nginx Proxy Manager.  
         If you point Pangolin at the Nginx Proxy Manager as a resource, you can access Dispatcharr through this instead of creating a new entry.
 
 ## Caddy
-HTTPS config example (streams/API only, Web UI not exposed)
+HTTPS config example (XC and /api/ paths only, Web UI not exposed, credentials redacted from logs).
 
 ??? example "Example (click to see)"
     ```
-    example.domain.com {
-            encode zstd gzip
+{
+        log {
+                output file /data/caddy/logs/caddy.log
+                level INFO
+        }
+        servers {
+                protocols h1 h2
+                timeouts {
+                        read_header 10s
+                }
+        }
+}
 
-            log {
-                    output file /data/caddy/logs/caddy.log
-                    level INFO
-            }
+example.domain.com {
+        encode zstd gzip
 
-            tls {
-                    protocols tls1.2 tls1.3
-            }
+        log {
+                output file /data/caddy/logs/caddy.log
+                level INFO
+                format filter {
+                        wrap json
+                        request>headers>X-Api-Key replace REDACTED
+                        request>uri regexp (?i)api_?key=[^&]+ api_key=REDACTED
+                        request>uri regexp password=[^&]+ password=REDACTED
+                        request>uri regexp ^/(live|movie|series)/[^/]+/[^/]+/ /$1/REDACTED/REDACTED/
+                        request>uri regexp ^/timeshift/[^/]+/[^/]+/ /timeshift/REDACTED/REDACTED/
+                        request>uri regexp ^/[^/]+/[^/]+/([0-9]+(\.\w+)?)$ /REDACTED/REDACTED/$1
+                }
+        }
 
-            header {
-                    -Server
-                    Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
-                    X-Content-Type-Options "nosniff"
-                    X-Frame-Options "SAMEORIGIN"
-                    Referrer-Policy "no-referrer"
-                    Permissions-Policy "camera=(), microphone=(), geolocation=()"
-                    Content-Security-Policy "default-src 'none'; frame-ancestors 'none';"
-            }
+        tls {
+                protocols tls1.2 tls1.3
+        }
 
-            @iptv {
-                path_regexp ^(/proxy/(vod|ts)/(stream|movie|episode)/.*|/proxy/catchup/.*|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/api/channels/(channels|groups|recordings|logos/.*/cache)/?|/api/vod/(categories|vodlogos/.*/cache|movies/\d+/image|series/\d+/image|episodes/\d+/image)/?|/api/epg/(epgdata|grid|current-programs|programs|programs/\d+/poster)/?|/api/accounts/users/me/?|/(live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
-            }
+        header {
+                -Server
+                Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+                X-Content-Type-Options "nosniff"
+                X-Frame-Options "SAMEORIGIN"
+                Referrer-Policy "no-referrer"
+                Permissions-Policy "camera=(), microphone=(), geolocation=()"
+                Content-Security-Policy "default-src 'none'; frame-ancestors 'none';"
+        }
 
-            handle @iptv {
-                    reverse_proxy X.X.X.X:9191 {
-                            header_up X-Forwarded-For {remote_host}
-                            header_up X-Real-IP {remote_host}
-                            header_up Host {host}
-                            header_up X-Forwarded-Proto {scheme}
+        @iptv {
+                # Caddy Regex for Dispatcharr /api/ Paths (non-XC)
+                #path_regexp ^(?:/api/(?:accounts/(?:token/(?:refresh/)?|users/(?:me/)?)|core/(?:version|settings)/|channels/(?:channels/(?:[^/]+/(?:streams/)?)?|groups/|profiles/(?:[^/]+/)?|logos/[^/]+/cache/|summary/|recordings/(?:[^/]+/(?:(?:file|stop|comskip)/)?)?|series-rules/(?:evaluate/)?)|epg/(?:grid|current-programs|epgdata|sources)/|epg/programs/(?:[^/]+/(?:poster/?)?)?|m3u/accounts/|vod/(?:categories/|vodlogos/[^/]+/cache/?|movies/(?:[^/]+/(?:(?:providers|provider-info|image)/?)?)?|series/(?:[^/]+/(?:(?:providers|provider-info|episodes|image)/?)?)?|episodes/(?:[^/]+/image/?)?)|proxy/hls/sessions/(?:[^/]+/)?|catchup/sessions/(?:[^/]+/(?:position/)?)?)|/proxy/hls/[^/]+/(?:index\.m3u8|[^/]+\.ts))$
+                # Caddy Regex for Dispatcharr /api/ and XC Paths
+                path_regexp ^(?:/api/(?:accounts/(?:token/(?:refresh/)?|users/(?:me/)?)|core/(?:version|settings)/|channels/(?:channels/(?:[^/]+/(?:streams/)?)?|groups/|profiles/(?:[^/]+/)?|logos/[^/]+/cache/|summary/|recordings/(?:[^/]+/(?:(?:file|stop|comskip)/)?)?|series-rules/(?:evaluate/)?)|epg/(?:grid|current-programs|epgdata|sources)/|epg/programs/(?:[^/]+/(?:poster/?)?)?|m3u/accounts/|vod/(?:categories/|vodlogos/[^/]+/cache/?|movies/(?:[^/]+/(?:(?:providers|provider-info|image)/?)?)?|series/(?:[^/]+/(?:(?:providers|provider-info|episodes|image)/?)?)?|episodes/(?:[^/]+/image/?)?)|proxy/hls/sessions/(?:[^/]+/)?|catchup/sessions/(?:[^/]+/(?:position/)?)?)|/player_api\.php|/xmltv\.php|/streaming/timeshift\.php|/timeshift/.*|/proxy/(?:ts/stream|vod/(?:movie|episode))/.*|/proxy/catchup/.*|/proxy/hls/[^/]+/(?:index\.m3u8|[^/]+\.ts)|/(?:live|movie|series)/[^/]+/.*|/[^/]+/[^/]+/[0-9]+(?:\.[^/.]+)?)$
+        }
 
-                            transport http {
-                                    versions 1.1 2
-                                    read_timeout 3600s
-                                    write_timeout 3600s
-                            }
-                    }
-            }
+        handle @iptv {
+                reverse_proxy X.X.X.X:9191 {
+                        header_up X-Real-IP {remote_host}
+                        header_up Host {host}
 
-            handle {
-                    log_name view
-                    respond "Forbidden" 403
-            }
-    }
+                        transport http {
+                                versions 1.1 2
+                                read_timeout 3600s
+                                write_timeout 3600s
+                        }
+                }
+        }
+
+        handle {
+                log_name view
+                respond "Forbidden" 403
+        }
+}
     ```
 
 ## Changing the dispatcharr port
