@@ -1,16 +1,32 @@
-From the plugins page you can import, manage, and delete dispatcharr plugins. Plugin descriptions are available on [discord](https://discord.gg/Sp45V5BcxU)
+# Plugins
+
+Plugins extend Dispatcharr with optional integrations and features. Use **My Plugins** to manage plugins already installed on your instance, or **Find Plugins** to browse plugins published through configured repositories.
 
 ## My Plugins
-* Press the "Import Plugin" button to add a plugin, or load one into `/data/plugins` and reload.
-* Remove a plugin by clicking the <i data-lucide="trash-2" style="color: Pink; width: 18px;"></i> Delete plugin button
-* Enable/disable a plugin by clicking the Toggle icon to the right of the Delete plugin button
-!!! info
-    Interested in plugin development? View plugin development documentation on the [dispatcharr github](https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugins.md) 
+
+Open **My Plugins** to view installed plugins. From here, you can:
+
+- import a plugin ZIP;
+- enable or disable a plugin;
+- configure plugin settings and run its actions;
+- reload plugin code after making local changes;
+- update, remove, or pin installed plugins.
+
+Imported plugins are stored in `/data/plugins`.
 
 ## Find Plugins
-Administrator users can browse, install, and update plugins directly from their source repositories via the Plugin Hub. The official Dispatcharr Plugins repository is pre-configured
 
-* Search, sort, and filter plugins at the top of the page
-* Use the "Manage Repos" button at the top of the page to add plugin repositories by manifest URL
-    * Refresh Interval - Set the refresh interval for all repositories (set 0 to disable)
-    * Third-party repos are supported with an optional GPG public key
+Open **Find Plugins** to browse available plugins from configured repositories. The official Dispatcharr plugin repository is configured by default.
+
+You can search, filter, and sort available plugins, then install compatible plugins or update installed managed plugins. Use **Manage Repositories** to add or maintain third-party repositories. Refreshing a repository checks its available versions; reloading plugins restarts their code.
+
+## Develop plugins
+
+Use the plugin-development documentation to build, test, package, and publish a Dispatcharr plugin.
+
+- [Plugin development quick start](plugins/development/quick-start.md)
+- [Plugin manifest and interface](plugins/development/manifest-and-interface.md)
+- [Runtime, events, and background work](plugins/development/runtime-and-events.md)
+- [Capabilities and security](plugins/development/capabilities-and-security.md)
+- [Test and package a plugin](plugins/development/testing-and-packaging.md)
+- [Publish to the official plugin registry](plugins/development/publishing.md)
