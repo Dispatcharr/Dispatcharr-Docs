@@ -140,7 +140,7 @@ nav:
     - Connection Security: connection-security.md
   - FAQ/Troubleshooting: troubleshooting.md
   - API: api.md
-  - Plugins: plugin-listing.md
+  # - Plugins: plugin-listing.md
   - Join Discord: https://discord.gg/wfeqTRRJru
   
 extra_javascript:
