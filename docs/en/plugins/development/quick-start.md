@@ -2,7 +2,7 @@
 
 A Dispatcharr plugin is a directory containing a `plugin.json` manifest and Python code that exports a `Plugin` class. This guide creates a minimal plugin with one action and two settings.
 
-For full manifest-version guidance, see [Plugin manifest and interface](manifest-and-interface.md).
+For manifest, field, action, and capability guidance, see [Plugin manifest and capabilities](capabilities-and-security.md).
 
 ## Create the plugin directory
 
@@ -94,7 +94,6 @@ New plugins are disabled by default. Plugins that declare capabilities must be a
 
 ## Next steps
 
-- Define settings fields, actions, and supported manifest versions in [Plugin manifest and interface](manifest-and-interface.md).
+- Define settings fields, actions, and supported manifest versions in [Plugin manifest and capabilities](capabilities-and-security.md).
 - Learn about events, long-running work, and durable data in [Runtime, events, and background work](runtime-and-events.md).
-- Understand capability declarations and their limits in [Capabilities and security](capabilities-and-security.md).
 - Validate and package the plugin in [Test and package a plugin](testing-and-packaging.md).

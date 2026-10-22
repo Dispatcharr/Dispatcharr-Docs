@@ -25,8 +25,7 @@ You can search, filter, and sort available plugins, then install compatible plug
 Use the plugin-development documentation to build, test, package, and publish a Dispatcharr plugin.
 
 - [Plugin development quick start](plugins/development/quick-start.md)
-- [Plugin manifest and interface](plugins/development/manifest-and-interface.md)
+- [Plugin manifest and capabilities](plugins/development/capabilities-and-security.md)
 - [Runtime, events, and background work](plugins/development/runtime-and-events.md)
-- [Capabilities and security](plugins/development/capabilities-and-security.md)
 - [Test and package a plugin](plugins/development/testing-and-packaging.md)
 - [Publish to the official plugin registry](plugins/development/publishing.md)

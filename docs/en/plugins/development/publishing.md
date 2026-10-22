@@ -34,5 +34,4 @@ Contributors must also follow the repository's [Code of Conduct](https://github.
 ## Related documentation
 
 - [Test and package a plugin](testing-and-packaging.md)
-- [Plugin manifest and interface](manifest-and-interface.md)
-- [Capabilities and security](capabilities-and-security.md)
+- [Plugin manifest and capabilities](capabilities-and-security.md)

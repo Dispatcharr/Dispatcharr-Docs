@@ -30,7 +30,7 @@ Use `context["code_dir"]` for files bundled with the plugin. Treat this director
     cache_file.write_text('{"last_sync": "2026-10-22"}')
     ```
 
-Writing outside the code and data directories requires the appropriate capability. See [Capabilities and security](capabilities-and-security.md).
+Writing outside the code and data directories requires the appropriate capability. See [Plugin manifest and capabilities](capabilities-and-security.md).
 
 ## Long-running work
 
@@ -104,4 +104,4 @@ Declare the `persistent_service` capability for a plugin that implements these h
 
 Leadership can change during worker restarts or Redis failures. Hooks must be idempotent, tolerate a new leader taking over, and safely handle a brief overlap between leaders. Disable and reload release leadership immediately. A hard worker termination relies on lease expiry.
 
-See [Capabilities and security](capabilities-and-security.md) before using background tasks, persistent services, or any privileged operation.
+See [Plugin manifest and capabilities](capabilities-and-security.md) before using background tasks, persistent services, or any privileged operation.

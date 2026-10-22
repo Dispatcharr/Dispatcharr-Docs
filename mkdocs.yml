@@ -136,9 +136,8 @@ nav:
       - Overview: plugins.md
       - Development:
         - Quick start: plugins/development/quick-start.md
-        - Manifest: plugins/development/manifest-and-interface.md
+        - Manifest & capabilities: plugins/development/capabilities-and-security.md
         - Runtime & events: plugins/development/runtime-and-events.md
-        - Capabilities: plugins/development/capabilities-and-security.md
         - Test & package: plugins/development/testing-and-packaging.md
         - Publishing: plugins/development/publishing.md
   - Advanced:
