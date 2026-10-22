@@ -154,3 +154,4 @@ nav:
 extra_javascript:
   - https://unpkg.com/lucide@latest/dist/umd/lucide.min.js
   - javascripts/lucide-init.js
+  - javascripts/filter-search-by-language.js
