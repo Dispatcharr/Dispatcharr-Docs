@@ -6,7 +6,7 @@ For enabled plugins, non-empty `fields` and `actions` defined by the `Plugin` cl
 
 ## Manifest structure
 
-A manifest is a JSON object. New plugins should declare `manifest_version: 1` or later. Manifest version 2 or later is recommended because it enables Dispatcharr's supported runtime capability checks.
+A manifest is a JSON object. New plugins should declare `manifest_version: 1` or later. See [Capabilities and security](capabilities-and-security.md) for manifest-version support and capability behavior.
 
 ```json
 {
@@ -38,26 +38,9 @@ The recognized top-level keys are:
 
 Other top-level keys are ignored by Dispatcharr. `fields`, `actions`, and `capabilities` must be JSON lists. Invalid list entries are discarded.
 
-## Manifest versions
+If `plugin.json` is missing, unreadable, malformed, or its root value is not an object, Dispatcharr treats the plugin as legacy. Its metadata and interface become available only after its code is enabled and imported. A valid manifest that omits `manifest_version` is a version 0 manifest, not a legacy plugin.
 
-New plugins should declare `manifest_version: 1` or later. Use manifest version 2 or later when the plugin should receive Dispatcharr's supported runtime capability checks.
-
-| Version | Minimum Dispatcharr version | Maximum Dispatcharr version | Capability declarations | Runtime capability checks |
-| --- | --- | --- | --- | --- |
-| v0, omitted, invalid, or negative | Not set | Not set | Ignored | Not applied |
-| v1 | 0.29.0 | Not set | Read and presented for acknowledgement | Not applied |
-| v2 and later | 0.29.0 | Not set | Read and presented for acknowledgement | Applied on supported code paths |
-
-Versions 1 and 2 require Dispatcharr 0.29.0 or later. Future manifest versions currently follow the version 2 capability policy.
-
-A valid manifest that omits `manifest_version` is a version 0 manifest. It is not the same as a legacy plugin. Dispatcharr currently supports version 0 and version 1 manifests. No deprecation timeline has been set for either version.
-
-If `plugin.json` is missing, unreadable, malformed, or its root value is not an object, Dispatcharr treats the plugin as legacy. Its metadata and interface become available only after its code is enabled and imported.
-
-??? warning "Legacy fallback"
-    Legacy fallback keeps older plugins working, but it prevents Dispatcharr from safely showing manifest metadata, fields, and actions before importing code. New plugins should always include a valid manifest.
-
-See [Capabilities and security](capabilities-and-security.md) for capability IDs, acknowledgement, and the limits of runtime enforcement.
+See [Capabilities and security](capabilities-and-security.md) for manifest-version compatibility, capability IDs, acknowledgement, and the limits of runtime enforcement.
 
 ## Settings fields
 
