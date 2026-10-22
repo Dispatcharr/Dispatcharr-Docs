@@ -19,6 +19,9 @@ Use this checklist before packaging:
 
 Dispatcharr's own `python manage.py test` suite validates Dispatcharr. Plugin authors should maintain tests appropriate to their own code and dependencies.
 
+!!! tip
+    Test the packaged plugin in a clean Dispatcharr installation. A local development directory can hide missing files, undeclared dependencies, and incorrect archive layout.
+
 ## Prepare an importable archive
 
 A plugin archive must contain Python code that Dispatcharr can load:
@@ -32,6 +35,9 @@ Use a clear plugin directory name and test the final ZIP through **My Plugins** 
 
 A direct ZIP import does not validate every manifest field or enforce compatibility metadata. Test the exact archive that users will install.
 
+??? warning "Do not depend on archive discovery"
+    Dispatcharr can find a plugin entry point at the ZIP root or inside directories. Package one clear `plugin.py` or package `__init__.py` entry point so the selected code is predictable.
+
 ## Compatibility and releases
 
 When publishing through a repository, use `min_dispatcharr_version` and `max_dispatcharr_version` to describe the Dispatcharr versions a release supports. Plugin Hub uses this metadata when evaluating an install or update.
@@ -39,6 +45,9 @@ When publishing through a repository, use `min_dispatcharr_version` and `max_dis
 Compatibility metadata is not enforced for a direct ZIP import. It is still useful to document supported versions in the plugin README and release notes.
 
 Use a plugin versioning scheme that lets users and maintainers identify upgrades. The official registry requires a numeric `MAJOR.MINOR.PATCH` version for submitted plugins.
+
+!!! info
+    Registry compatibility metadata affects Plugin Hub installs and updates. It does not prevent a user from importing a ZIP directly.
 
 ## Before publishing
 

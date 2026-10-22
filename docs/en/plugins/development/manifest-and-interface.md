@@ -6,7 +6,7 @@ For enabled plugins, non-empty `fields` and `actions` defined by the `Plugin` cl
 
 ## Manifest structure
 
-A manifest is a JSON object. New plugins should declare `manifest_version: 1` or later. Version 2 is recommended because it enables Dispatcharr's supported runtime capability checks.
+A manifest is a JSON object. New plugins should declare `manifest_version: 1` or later. Manifest version 2 or later is recommended because it enables Dispatcharr's supported runtime capability checks.
 
 ```json
 {
@@ -38,9 +38,12 @@ The recognized top-level keys are:
 
 Other top-level keys are ignored by Dispatcharr. `fields`, `actions`, and `capabilities` must be JSON lists. Invalid list entries are discarded.
 
+!!! tip
+    Keep `plugin.json` focused on the plugin's public interface. Use Python code for behavior, not for metadata that Dispatcharr needs before the plugin is enabled.
+
 ## Manifest versions
 
-New plugins should declare `manifest_version: 1` or later. Use version 2 when the plugin should receive Dispatcharr's supported runtime capability checks.
+New plugins should declare `manifest_version: 1` or later. Use manifest version 2 or later when the plugin should receive Dispatcharr's supported runtime capability checks.
 
 | Version | Capability declarations | Runtime capability checks |
 | --- | --- | --- |
@@ -53,6 +56,9 @@ Versions 1 and 2 require Dispatcharr 0.29.0 or later. Future manifest versions c
 A valid manifest that omits `manifest_version` is a version 0 manifest. It is not the same as a legacy plugin. Dispatcharr currently supports version 0 and version 1 manifests. No deprecation timeline has been set for either version.
 
 If `plugin.json` is missing, unreadable, malformed, or its root value is not an object, Dispatcharr treats the plugin as legacy. Its metadata and interface become available only after its code is enabled and imported.
+
+??? warning "Legacy fallback"
+    Legacy fallback keeps older plugins working, but it prevents Dispatcharr from safely showing manifest metadata, fields, and actions before importing code. New plugins should always include a valid manifest.
 
 See [Capabilities and security](capabilities-and-security.md) for capability IDs, acknowledgement, and the limits of runtime enforcement.
 
@@ -92,6 +98,20 @@ For `select` and `multiselect`, define useful `options`. A table value is a list
 
 File fields may specify `accept` and `max_size`. Treat uploaded files as plugin data and validate their contents before use.
 
+??? example "A select field"
+    ```json
+    {
+      "id": "quality",
+      "label": "Quality",
+      "type": "select",
+      "default": "balanced",
+      "options": [
+        {"label": "Balanced", "value": "balanced"},
+        {"label": "High", "value": "high"}
+      ]
+    }
+    ```
+
 ## Actions
 
 Each action needs an `id` and a `label`:
@@ -113,3 +133,6 @@ Actions can also define `button_label`, `button_variant`, `button_color`, `event
 Every manual action runs on Dispatcharr's plugin task queue. An action with `"async": true` returns immediately with a task ID and contributes the `background_tasks` capability request.
 
 Actions can subscribe to Connect events with an `events` list. See [Runtime, events, and background work](runtime-and-events.md) for event payloads and execution behavior.
+
+!!! tip
+    Keep action IDs stable after release. Existing schedules, automation, and plugin code may refer to them.

@@ -4,6 +4,9 @@ The official [Dispatcharr Plugins](https://github.com/Dispatcharr/Plugins) repos
 
 Before you submit, confirm that the packaged plugin works in Dispatcharr, requests only the capabilities it needs, includes useful metadata and documentation, and has a supported license.
 
+!!! info
+    The official registry distributes reviewed releases. It does not replace your plugin's source repository, test suite, or release process.
+
 ## Choose a contribution model
 
 The official registry accepts two contribution models:
@@ -12,6 +15,9 @@ The official registry accepts two contribution models:
 - **Standard plugin:** submit the plugin source under the registry's `plugins/<slug>/` directory. The registry packages the source for distribution.
 
 Choose the model that fits your plugin's maintenance and release process. The registry contribution guide defines the current metadata, versioning, validation, and release requirements.
+
+??? tip "Choose external for an independent release process"
+    An external plugin is a good fit when you already publish versioned ZIP releases from your own repository. A standard plugin is a good fit for a smaller plugin maintained directly in the registry.
 
 ## Submit your plugin
 
@@ -27,6 +33,9 @@ It is the source of truth for:
 - generated release artifacts, checksums, and signatures.
 
 Contributors must also follow the repository's [Code of Conduct](https://github.com/Dispatcharr/Plugins/blob/main/CODE_OF_CONDUCT.md).
+
+!!! warning
+    The registry contribution guide is the source of truth. Do not rely on this page for validation details that may change with registry tooling.
 
 ## Related documentation
 

@@ -20,6 +20,9 @@ Dispatcharr makes this available to the application and Celery workers as:
 
 `DISPATCHARR_PLUGINS_DIR` overrides the runtime plugin directory.
 
+!!! tip
+    Keep the plugin directory name lowercase and stable. Dispatcharr uses it to identify local plugins and create their durable data directories.
+
 ## Add the manifest
 
 Create `data/plugins/my-plugin/plugin.json`:
@@ -54,7 +57,10 @@ Create `data/plugins/my-plugin/plugin.json`:
 }
 ```
 
-New plugins should declare `manifest_version: 1` or later. Version 2 is recommended because it enables Dispatcharr's supported runtime capability checks. This example needs no additional capabilities.
+New plugins should declare `manifest_version: 1` or later. Manifest version 2 or later is recommended because it enables Dispatcharr's supported runtime capability checks. This example needs no additional capabilities.
+
+??? info "Why use a manifest?"
+    Dispatcharr can read a valid manifest while the plugin is disabled, so it can display metadata, settings, actions, and capability requests without importing plugin code.
 
 ## Add the plugin code
 
@@ -88,6 +94,9 @@ The action ID passed to `run()` matches the action declared in `plugin.json`. `c
 4. Run **Run** from the plugin detail page.
 
 New plugins are disabled by default. Plugins that declare capabilities must be acknowledged before they can be enabled.
+
+!!! warning
+    Reloading stops and reimports plugin code. Use it after local changes, but ensure the plugin releases resources through `stop(context)` before relying on reload during development.
 
 ## Next steps
 

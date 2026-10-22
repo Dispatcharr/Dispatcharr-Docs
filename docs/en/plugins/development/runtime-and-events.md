@@ -19,6 +19,17 @@ Implement `stop(context)` to release resources when the plugin is disabled, dele
 
 Use `context["code_dir"]` for files bundled with the plugin. Treat this directory as read-only. Use `context["data_dir"]` for durable mutable state such as a local database, cache, or downloaded data. Dispatcharr keeps the data directory stable across managed-plugin updates.
 
+!!! info "Plugin files and data"
+    Dispatcharr creates `data_dir` before importing the plugin. It is a stable sibling directory for that plugin's mutable state. Dispatcharr does not provide a generic static-asset directory or plugin HTTP routes. Read packaged assets from `code_dir`; use a root-level `logo.png` only for the plugin icon.
+
+??? example "Store durable plugin state"
+    ```python
+    from pathlib import Path
+
+    cache_file = Path(context["data_dir"]) / "cache.json"
+    cache_file.write_text('{"last_sync": "2026-10-22"}')
+    ```
+
 Writing outside the code and data directories requires the appropriate capability. See [Capabilities and security](capabilities-and-security.md).
 
 ## Long-running work
@@ -32,7 +43,7 @@ task_id = context["dispatch_task"]("do_scan", params)
 return {"status": "started", "task_id": task_id}
 ```
 
-`dispatch_task` accepts only an action ID declared in the manifest. In a version 2 manifest, it requires the `background_tasks` capability. An action marked `"async": true` adds that capability request automatically.
+`dispatch_task` accepts only an action ID declared in the manifest. In a manifest version 2 or later, it requires the `background_tasks` capability. An action marked `"async": true` adds that capability request automatically.
 
 Background work can report progress:
 
@@ -41,6 +52,9 @@ context["report_progress"](50, "Scanning streams")
 ```
 
 Progress is available while an active plugin task is running. Dispatcharr records task history and sends progress updates to the user interface. Progress reporting outside an active task has no effect.
+
+!!! tip
+    Use `async: true` for actions that may take longer than an administrator should wait for in the interface. Use `report_progress` to make that work observable.
 
 ## Event actions
 
@@ -67,11 +81,17 @@ params = {
 
 Treat event payload fields as event-specific. Some events include stream, channel, provider, or profile details, but plugins should tolerate fields being absent.
 
+!!! warning
+    Event actions are fire-and-forget. Make handlers idempotent and handle failures in the plugin rather than assuming Dispatcharr will retry every event.
+
 ## Plugin-owned scheduled tasks
 
 A plugin may import modules containing Celery `@shared_task` tasks from its entrypoint. While the plugin is enabled, Dispatcharr records those task names as plugin-owned.
 
 When the plugin is disabled, Dispatcharr suspends its enabled periodic tasks. When it is enabled again, Dispatcharr restores tasks that it previously suspended and that still exist. Deleting a plugin removes its periodic-task records, but leaves shared interval and crontab definitions in place.
+
+??? info "Schedule ownership"
+    Dispatcharr records task ownership only for tasks imported while the plugin is enabled. Do not expect it to manage a schedule for a plugin that has never been loaded successfully.
 
 ## Persistent services
 
