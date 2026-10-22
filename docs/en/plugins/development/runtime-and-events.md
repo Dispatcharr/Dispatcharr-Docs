@@ -53,9 +53,6 @@ context["report_progress"](50, "Scanning streams")
 
 Progress is available while an active plugin task is running. Dispatcharr records task history and sends progress updates to the user interface. Progress reporting outside an active task has no effect.
 
-!!! tip
-    Use `async: true` for actions that may take longer than an administrator should wait for in the interface. Use `report_progress` to make that work observable.
-
 ## Event actions
 
 Actions can subscribe to Connect events:
@@ -80,9 +77,6 @@ params = {
 ```
 
 Treat event payload fields as event-specific. Some events include stream, channel, provider, or profile details, but plugins should tolerate fields being absent.
-
-!!! warning
-    Event actions are fire-and-forget. Make handlers idempotent and handle failures in the plugin rather than assuming Dispatcharr will retry every event.
 
 ## Plugin-owned scheduled tasks
 

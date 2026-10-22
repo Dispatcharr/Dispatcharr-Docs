@@ -46,15 +46,11 @@ Unknown capability names are preserved and shown to administrators as custom cap
 
 ## Manifest versions
 
-| Manifest version | Capability declarations | Administrator acknowledgement | Runtime checks |
-| --- | :---: | :---: | :---: |
-| v0 | <i data-lucide="square-x" style="color: red; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i> |
-| v1 | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i> |
-| v2 and later | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
-
-!!! note
-    <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> = Supported<br>
-    <i data-lucide="square-x" style="color: red; width: 18px;"></i> = Not available
+| Manifest version | Minimum Dispatcharr version | Maximum Dispatcharr version | Capability declarations | Administrator acknowledgement | Runtime checks |
+| --- | --- | --- | :---: | :---: | :---: |
+| v0 | Not set | Not set | <i data-lucide="square-x" style="color: red; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i> |
+| v1 | 0.29.0 | Not set | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-x" style="color: red; width: 18px;"></i> |
+| v2 and later | 0.29.0 | Not set | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> | <i data-lucide="square-check" style="color: limegreen; width: 18px;"></i> |
 
 Version 0 includes manifests that omit `manifest_version`. Version 1 reads capability declarations and requires administrator acknowledgement before enablement, but does not apply runtime checks. Manifest version 2 or later is recommended for new plugins because it applies the supported checks below.
 
@@ -83,9 +79,6 @@ For manifest version 2 or later, Dispatcharr applies best-effort checks to suppo
 `proxy_internals`, `user_data`, and `external_dependencies` are disclosures. They do not currently add runtime guards. `external_dependencies` does not install dependencies.
 
 The `network_listener` capability is marked as requiring a restart in the user interface. Plan listener plugins accordingly.
-
-!!! warning "Capability checks are not isolation"
-    The runtime guards selected Python operations. They do not provide a process sandbox or prevent trusted plugin code from bypassing Python-level checks.
 
 ## Security boundary
 

@@ -16,9 +16,6 @@ The official registry accepts two contribution models:
 
 Choose the model that fits your plugin's maintenance and release process. The registry contribution guide defines the current metadata, versioning, validation, and release requirements.
 
-??? tip "Choose external for an independent release process"
-    An external plugin is a good fit when you already publish versioned ZIP releases from your own repository. A standard plugin is a good fit for a smaller plugin maintained directly in the registry.
-
 ## Submit your plugin
 
 Follow the official [Plugins contribution guide](https://github.com/Dispatcharr/Plugins/blob/main/CONTRIBUTING.md) for the complete submission process.
@@ -33,9 +30,6 @@ It is the source of truth for:
 - generated release artifacts, checksums, and signatures.
 
 Contributors must also follow the repository's [Code of Conduct](https://github.com/Dispatcharr/Plugins/blob/main/CODE_OF_CONDUCT.md).
-
-!!! warning
-    The registry contribution guide is the source of truth. Do not rely on this page for validation details that may change with registry tooling.
 
 ## Related documentation
 

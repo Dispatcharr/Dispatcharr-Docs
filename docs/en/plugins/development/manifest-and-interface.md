@@ -38,18 +38,15 @@ The recognized top-level keys are:
 
 Other top-level keys are ignored by Dispatcharr. `fields`, `actions`, and `capabilities` must be JSON lists. Invalid list entries are discarded.
 
-!!! tip
-    Keep `plugin.json` focused on the plugin's public interface. Use Python code for behavior, not for metadata that Dispatcharr needs before the plugin is enabled.
-
 ## Manifest versions
 
 New plugins should declare `manifest_version: 1` or later. Use manifest version 2 or later when the plugin should receive Dispatcharr's supported runtime capability checks.
 
-| Version | Capability declarations | Runtime capability checks |
-| --- | --- | --- |
-| v0, omitted, invalid, or negative | Ignored | Not applied |
-| v1 | Read and presented for acknowledgement | Not applied |
-| v2 and later | Read and presented for acknowledgement | Applied on supported code paths |
+| Version | Minimum Dispatcharr version | Maximum Dispatcharr version | Capability declarations | Runtime capability checks |
+| --- | --- | --- | --- | --- |
+| v0, omitted, invalid, or negative | Not set | Not set | Ignored | Not applied |
+| v1 | 0.29.0 | Not set | Read and presented for acknowledgement | Not applied |
+| v2 and later | 0.29.0 | Not set | Read and presented for acknowledgement | Applied on supported code paths |
 
 Versions 1 and 2 require Dispatcharr 0.29.0 or later. Future manifest versions currently follow the version 2 capability policy.
 
@@ -133,6 +130,3 @@ Actions can also define `button_label`, `button_variant`, `button_color`, `event
 Every manual action runs on Dispatcharr's plugin task queue. An action with `"async": true` returns immediately with a task ID and contributes the `background_tasks` capability request.
 
 Actions can subscribe to Connect events with an `events` list. See [Runtime, events, and background work](runtime-and-events.md) for event payloads and execution behavior.
-
-!!! tip
-    Keep action IDs stable after release. Existing schedules, automation, and plugin code may refer to them.
