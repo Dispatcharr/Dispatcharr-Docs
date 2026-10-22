@@ -129,6 +129,9 @@ nav:
     - TV Guide: tv-guide.md
     - DVR: dvr.md
     - Stats: stats.md
+    - System: system.md
+    - Connect: connect.md
+    - Notifications: notifications.md
     - Plugins:
       - Overview: plugins.md
       - Development:
@@ -138,9 +141,6 @@ nav:
         - Capabilities: plugins/development/capabilities-and-security.md
         - Test & package: plugins/development/testing-and-packaging.md
         - Publishing: plugins/development/publishing.md
-    - System: system.md
-    - Connect: connect.md
-    - Notifications: notifications.md
   - Advanced:
     - Hardware Acceleration: hardware-acceleration.md
     - Process Priority: process-priority.md
