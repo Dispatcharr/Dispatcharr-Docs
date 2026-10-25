@@ -9,6 +9,7 @@ Open **My Plugins** to view installed plugins. From here, you can:
 - import a plugin ZIP;
 - enable or disable a plugin;
 - configure plugin settings and run its actions;
+- view background task progress and task history;
 - reload plugin code after making local changes;
 - update, remove, or pin installed plugins.
 

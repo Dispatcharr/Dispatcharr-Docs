@@ -118,9 +118,21 @@ Each field needs an `id` and a `type`. Use `label` for fields shown to users.
 | `table` | A list of structured rows. |
 | `file` | A file uploaded through the plugin settings UI. |
 
-Fields can also use `default`, `description`, `placeholder`, `input_type`, `min`, `max`, `step`, `value`, `options`, `section`, and `collapsed` where appropriate. For `select` and `multiselect`, define useful `options`. A table value is a list of row objects. Define `columns` for each table column, using `id`, `type`, and normally `label`. Table columns support `string`, `number`, `boolean`, and `select`.
+Fields can also use `default`, `description`, `placeholder`, `input_type`, `min`, `max`, `step`, `value`, `options`, `section`, and `collapsed` where appropriate. For `select` and `multiselect`, define useful `options`. A table value is a list of row objects. Define `columns` for each table column, using `id`, `type`, and normally `label`. Table columns support `string`, `number`, `boolean`, and `select`. Administrators can reset plugin settings to their declared defaults.
 
-File fields may specify `accept` and `max_size`. Treat uploaded files as plugin data and validate their contents before use.
+File fields may specify `accept` and `max_size`. Uploads are written to `uploads/<field-id>/` inside the plugin directory, and Dispatcharr stores only the resulting path in the setting. The server restricts accepted extensions, caps the requested size, and prevents uploads from replacing plugin code. Validate uploaded contents before use.
+
+??? example "Group fields and store structured rows"
+    Use a `section` field to group related settings. A `table` field stores a list of row objects whose columns use `string`, `number`, `boolean`, or `select` types.
+
+    ```json
+    {
+      "fields": [
+        {"id": "advanced", "label": "Advanced", "type": "section", "collapsed": true},
+        {"id": "rules", "label": "Rules", "type": "table", "section": "advanced", "default": [], "columns": [{"id": "enabled", "label": "Enabled", "type": "boolean"}]}
+      ]
+    }
+    ```
 
 ## Actions
 
@@ -138,7 +150,7 @@ Each action needs an `id` and a `label`:
 }
 ```
 
-Actions can also define `button_label`, `button_variant`, `button_color`, `events`, and `async`. Every manual action runs on Dispatcharr's plugin task queue. An action with `"async": true` returns immediately with a task ID and contributes the `background_tasks` capability request.
+Actions can also define `button_label`, `button_variant`, `button_color`, `confirm`, `events`, and `async`. Set `confirm: true` for a default confirmation prompt, or provide a confirmation object with `required`, `title`, and `message`. Every manual action runs on Dispatcharr's plugin task queue. An action with `"async": true` returns immediately with a task ID and contributes the `background_tasks` capability request.
 
 Actions can subscribe to Connect events with an `events` list. See [Runtime, events, and background work](runtime-and-events.md) for event payloads and execution behavior.
 

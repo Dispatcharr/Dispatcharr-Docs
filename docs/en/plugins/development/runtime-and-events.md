@@ -17,10 +17,10 @@ The `action` value is the ID declared in `plugin.json`. `params` contains values
 
 Implement `stop(context)` to release resources when the plugin is disabled, deleted, or reloaded. If `stop()` is not present, Dispatcharr calls `run("stop", {}, context)` as a compatibility fallback.
 
-Use `context["code_dir"]` for files bundled with the plugin. Treat this directory as read-only. Use `context["data_dir"]` for durable mutable state such as a local database, cache, or downloaded data. Dispatcharr keeps the data directory stable across managed-plugin updates.
+Use `context["code_dir"]` for files bundled with the plugin. Treat this directory as read-only. Use `context["data_dir"]` for durable mutable state such as a local database, cache, or downloaded data. Dispatcharr stores this durable data under `/data/plugins/_data/<canonical-plugin-id>/`, so it survives managed-plugin updates that replace the versioned code directory.
 
 !!! info "Plugin files and data"
-    Dispatcharr creates `data_dir` before importing the plugin. It is a stable sibling directory for that plugin's mutable state. Dispatcharr does not provide a generic static-asset directory or plugin HTTP routes. Read packaged assets from `code_dir`; use a root-level `logo.png` only for the plugin icon.
+    Dispatcharr creates `data_dir` before importing the plugin. It is a stable `_data/<canonical-plugin-id>/` directory for that plugin's mutable state. Dispatcharr does not provide a generic static-asset directory or plugin HTTP routes. Read packaged assets from `code_dir`; use a root-level `logo.png` only for the plugin icon.
 
 ??? example "Store durable plugin state"
     ```python
