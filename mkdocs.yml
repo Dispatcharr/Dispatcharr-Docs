@@ -132,14 +132,6 @@ nav:
     - System: system.md
     - Connect: connect.md
     - Notifications: notifications.md
-    - Plugins:
-      - Overview: plugins.md
-      - Development:
-        - Quick start: plugins/development/quick-start.md
-        - Manifest & capabilities: plugins/development/capabilities-and-security.md
-        - Runtime & events: plugins/development/runtime-and-events.md
-        - Test & package: plugins/development/testing-and-packaging.md
-        - Publishing: plugins/development/publishing.md
   - Advanced:
     - Hardware Acceleration: hardware-acceleration.md
     - Process Priority: process-priority.md
@@ -147,6 +139,14 @@ nav:
     - Connection Security: connection-security.md
   - FAQ/Troubleshooting: troubleshooting.md
   - API: api.md
+  - Plugins:
+    - Overview: plugins.md
+    - Development:
+      - Quick start: plugins/development/quick-start.md
+      - Manifest & capabilities: plugins/development/capabilities-and-security.md
+      - Runtime & events: plugins/development/runtime-and-events.md
+      - Test & package: plugins/development/testing-and-packaging.md
+      - Publishing: plugins/development/publishing.md
   # - Plugins: plugin-listing.md
   - Join Discord: https://discord.gg/wfeqTRRJru
   
