@@ -40,6 +40,7 @@ From this page you can add and maintain your M3U accounts and EPGs
     * Max Streams - Set a number for the max number of concurrent streams allowed for your account. For unlimited, set to 0
     * Server Group - Share login limits across accounts in a server group. Accounts in the same group share connection limits when they use the same provider login. Limits come from each account profile's max streams
     * User-Agent - If you want to set a specific user-agent for this account
+    * Hash Key Override - Optionally override the default system level stream [hash key](/Dispatcharr-Docs/system/#stream-settings) for this account
     * Refresh Interval (hours) - How often (in number of hours) to refresh the M3U URL
         * Use cron schedule: Click to switch over to `Cron Expression` option
     * Cron Expression: Enter a cron expression to define the M3U account refresh interval, or click `Open Cron Builder` for user-friendly assistance
@@ -66,28 +67,37 @@ From this page you can add and maintain your M3U accounts and EPGs
                 Keep in mind this is a *stream* filter so you will still see the groups/categories show up for the M3U. However, excluded streams will not appear in the streams table
 
         * "Groups" button - Opens the Group Manager
-            * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later
-            * Filter visible groups with the search box at the top of the group manager, or click the buttons to the right to filter by Enabled or Disabled groups
-            * Ignore streams from groups by de-selecting them
-            * Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
-                * Channel Numbering Mode
-                    * **Fixed Start Number**  (default): Start at a specified number and increment sequentially
-                    * **Use Provider Number**: Use channel numbers from the M3U source (tvg-chno), with configurable fallback if provider number is missing
-                    * **Next Available**: Auto-assign starting from 1, skipping all used channel numbers
-                * Start Channel #: Set a starting channel number for each group to organize your channels.
-                * Advanced options:
-                    * Name Transforms
-                        * Channel Name Find & Replace (Regex): Search and replace to rename your channels. By default the channel name will match the stream name
-                        * Include/Exclude if name matches (Regex): Only create channels from streams which match your filter criteria
-                    * EPG & Logo
-                        * EPG source: Force a specific EPG source. Defaults to auto-matching by tvg-id if blank
-                        * Custom Logo: Provide a custom logo or leave blank to use the stream logo 
-                    * Channel assignment
-                        * Override Channel Group: Send auto-created channels into a different group than their source
-                        * Channel Profiles: Limit auto-created channels to specific channel profiles (defaults to all when blank)
-                        * Stream Profile: Apply a specific stream profile to all channels created by this group
-                        * Channel Sort Order: Order channels within the group prior to assigning channel numbers
-                    * Compact numbering: Channel numbers shift on hide/unhide. Pin a number with a channel number override
+            * Live
+                * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later
+                * Filter visible groups with the search box at the top of the group manager, or click the buttons to the right to filter by Enabled or Disabled groups
+                * Ignore streams from groups by de-selecting them
+                * Auto Channel Sync (for Live groups only): When enabled, channels will be automatically created for all streams in the group during M3U updates, and removed when streams are no longer present. 
+                    * Channel Numbering Mode
+                        * **Fixed Start Number**  (default): Start at a specified number and increment sequentially
+                        * **Use Provider Number**: Use channel numbers from the M3U source (tvg-chno), with configurable fallback if provider number is missing
+                        * **Next Available**: Auto-assign starting from 1, skipping all used channel numbers
+                    * Start Channel #: Set a starting channel number for each group to organize your channels.
+                    * Advanced options:
+                        * Name Transforms
+                            * Channel Name Find & Replace (Regex): Search and replace to rename your channels. By default the channel name will match the stream name
+                            * Include/Exclude if name matches (Regex): Only create channels from streams which match your filter criteria
+                        * EPG & Logo
+                            * EPG source: Force a specific EPG source. Defaults to auto-matching by tvg-id if blank
+                            * Custom Logo: Provide a custom logo or leave blank to use the stream logo 
+                        * Channel assignment
+                            * Override Channel Group: Send auto-created channels into a different group than their source
+                            * Channel Profiles: Limit auto-created channels to specific channel profiles (defaults to all when blank)
+                            * Stream Profile: Apply a specific stream profile to all channels created by this group
+                            * Channel Sort Order: Order channels within the group prior to assigning channel numbers
+                        * Compact numbering: Channel numbers shift on hide/unhide. Pin a number with a channel number override
+            * VOD - Movies
+              * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later
+              * Filter visible groups with the search box at the top of the group manager, or click the buttons to the right to filter by Enabled or Disabled groups
+              * Below each enabled group, optionally set a 2-letter ISO 639-1 language and quality (4K, 1080p, 720p, 480p, or SD)
+            * VOD - Series
+              * Automatically enable new groups discovered on future scans - When disabled, new groups from the M3U source will be created but disabled by default. You can enable them manually later
+              * Filter visible groups with the search box at the top of the group manager, or click the buttons to the right to filter by Enabled or Disabled groups
+              * Below each enabled group, optionally set a 2-letter ISO 639-1 language and quality (4K, 1080p, 720p, 480p, or SD)
                     
         * "Profiles" button - Allows you to add a second set of credentials for the same provider. <span id="m3u-profiles"></span> [<i data-lucide="link" style="color: Grey; width: 18px;"></i>](#m3u-profiles)
         !!! info
