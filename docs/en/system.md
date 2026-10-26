@@ -19,24 +19,31 @@ From the Users page you can create and manage all Dispatcharr users. There are 3
     * Optionally hide channels marked as "Mature Content" in user settings
     * Optionally set stream limits in user settings
 
-!!! note
-    * Each user's EPG defaults can be set in the "EPG Defaults" tab for that user, allowing you to specify how many past and future days of EPG data to include
-    * In the user `Permissions` tab, you can set the following options
+* "<i data-lucide="square-plus" style="color: White; width: 18px;"></i> Add User" - Click this button to add a new user
+* Actions column
+    * <i data-lucide="square-pen" style="color: gold; width: 18px;"></i> edit icon to edit the associated user account
+    * Account tab - Set the username, email (optional), first name, last name, and UI password of the user 
+    * Permissions tab 
         * User Level - Admin, Standard User, or Streamer (see above)
         * Stream Limit - The number of allowed simultaneous connections (0 for unlimited)
         * Channel Profiles - Which set of channels the user will have access to
         * Allowed Provider Profiles - Limit which M3U accounts this user may use when Dispatcharr hands them a provider URL (Redirect live/catchup via the channel's effective profile, and VOD when the system default is Redirect). Unrestricted allows all profiles. Clearing the list denies all provider profiles
-          * Note this setting only takes effect when the `Redirect` stream profile is in use
+            * Note this setting only takes effect when the `Redirect` stream profile is in use
         * Hide Mature Content - Toggle on to hide channels and VOD marked as mature content (admin users not affected)
         * Enable Catchup - When toggled off this user cannot access timeshift or catchup endpoints, and their channels are not advertised as supporting catchup
         * Enable Movies - Toggle VOD Movie access on/off. Defaults to on
         * Enable Series - Toggle VOD Series access on/off. Defaults to on
         * DVR Access - None: no DVR page or playback. View: watch recordings for channels they can access (default). Manage: create, delete, and manage recordings and rules like an admin for DVR endpoints. Streamer accounts are excluded from DVR
-    * In the user `API & XC` tab, you can set the following options
+    * EPG Defaults tab - specify how many past and future days of EPG data to include
+    * API & XC tab
         * XC Password - (leave blank for no XC access)
         * Output Format Override - Override the system default output format for this user. Clear to use system default
         * Output Profile Override - Pre-delivery transcode profile applied to streams for this user. Clear to use no transcoding
         * Allowed IPs - Restrict all access for this user by IP. Leave empty to inherit global settings
+        * API Key - Regenerate or revoke an API key for this user. Buttons to the right of the key allow you to copy the key as a QR code or to the clipboard
+    * App Data tab - Third-party apps can store a small JSON blob under a unique key for this user. Clearing removes what that app saved; it does not revoke API keys
+* <i data-lucide="square-minus" style="color: red; width: 18px;"></i> delete icon to remove the associated user
+* <i data-lucide="link" style="color: white; width: 18px;"></i> copy user-specific XC URLs and/or details to the clipboard
 
 ## Logo Manager
 From the Logo Manager page you can upload and manage logos.  
@@ -68,7 +75,7 @@ Drag and drop to reorder the sidebar navigation items, or click the <i data-luci
 ### Stream Settings
 * Default User-Agent - Set the default User-Agent
 * Default Stream Profile - Set the default Stream Profile
-* Default Output Format - Container format used when proxying streams. MPEG-TS is broadly compatible with media players and devices; fMP4 has better support for modern codecs like AV1 and is preferred by some newer clients
+* Default Output Format - Container format used when proxying streams. MPEG-TS is broadly compatible with media players and devices; fMP4 has better support for modern codecs like AV1 and is preferred by some newer clients. HLS serves a segmented playlist for native Apple players and web playback.
 * HDHR Default Output Profile - An output profile that is applied to all HDHR stream URLs by default (can be overwridden by modifying the HDHR output URL). When cleared, streams are served as-is (pass-through)
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
     * The default setting hashes on URL. Available options include:
@@ -93,6 +100,8 @@ Each proxy setting affects all stream profiles with the exception of redirect
 
 *Advanced settings*
 
+* Stream Startup Timeout - Seconds without data after a connection opens before trying the next stream. Each new connection gets this timeout until it sends data. If there is no other stream to try, the channel keeps waiting up to Channel Initialization Timeout. Keep this shorter than Channel Initialization Timeout so the switch happens before the client is dropped
+* Stream Idle Timeout - Seconds without data from a stream that has already sent data before treating it as stalled
 * Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
 * Channel Initialization Timeout - How long a channel may spend connecting and cycling through failover streams before giving up during startup
 * Client Connect Grace Period - How long a ready channel with no viewers stays up waiting for the first client
@@ -193,6 +202,12 @@ flowchart TB
           - dispatcharr_data:/data
           - host_path/media:/data/recordings
         ```
+
+### EPG Settings
+* Minimum guide history (days) - Every channel keeps at least this many days of programmes that have already ended. 0 keeps none, unless that channel's catch-up days are higher
+* Maximum guide history (days) - Hard cap on how many days of ended programmes are kept, and how far back an EPG client can request
+* Default days back - Past days included when a client does not ask and the user has not set Days back. 0 means no past programmes. Cannot exceed the maximum
+* Default days forward - Future days included when a client does not ask and the user has not set Days forward. 0 means all stored future programmes
 
 ### User-Agents
 In the context of IPTV, a user agent is a string of text that identifies the client application (e.g., a player like Kodi or VLC) to the IPTV server. It's included in the HTTP headers of requests sent by the client to the server, informing the server about the type of device and software used to access the IPTV stream. Default Dispatcharr User-Agents are available for VLC, Chrome, and TiviMate.  
