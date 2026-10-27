@@ -65,7 +65,7 @@ An action declared with `"async": true` automatically requests `background_tasks
 | Capability | Introduced | Removed | Declare when the plugin needs to | Example |
 | --- | --- | --- | --- | --- |
 | `background_tasks` | v1 |  | Queue plugin work for later execution. | Start a long-running scan after returning to the user.<br>`context["dispatch_task"]("scan", {})` |
-| `persistent_service` | v1 |  | Run a leader-elected persistent service. | Keep one plugin-managed listener active across workers.<br>`def on_leader_acquired(self, context): ...` |
+| `persistent_service` | v1 |  | Run a leader-elected persistent service. | Start a host-managed service for the elected leader.<br>`context["start_service"](self._run_service)` |
 | `network_listener` | v1 |  | Bind or listen on a network socket. | Receive webhook requests on a local port.<br>`socket.bind(("0.0.0.0", 9000))` |
 | `subprocess` | v1 |  | Start a subprocess. | Run a bundled command-line tool.<br>`subprocess.run(["tool", "--sync"])` |
 | `outbound_network` | v1 |  | Make outbound network connections. | Call an external service API.<br>`requests.get("https://api.example.com")` |
