@@ -16,6 +16,12 @@ The official registry accepts two contribution models:
 
 Choose the model that fits your plugin's maintenance and release process. The registry contribution guide defines the current metadata, versioning, validation, and release requirements.
 
+## Publish a prerelease
+
+Use a SemVer prerelease suffix such as `1.2.3-rc.1` when publishing a release candidate. The registry keeps stable `latest` metadata pointed at the stable release and retains one prerelease candidate per plugin. A prerelease requires a prior stable release with the same base version.
+
+See the contribution guide for the current prerelease validation and replacement rules.
+
 ## Submit your plugin
 
 Follow the official [Plugins contribution guide](https://github.com/Dispatcharr/Plugins/blob/main/CONTRIBUTING.md) for the complete submission process.

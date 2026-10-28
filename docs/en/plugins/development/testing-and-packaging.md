@@ -41,7 +41,7 @@ When publishing through a repository, use `min_dispatcharr_version` and `max_dis
 
 Compatibility metadata is not enforced for a direct ZIP import. It is still useful to document supported versions in the plugin README and release notes.
 
-Use a plugin versioning scheme that lets users and maintainers identify upgrades. The official registry requires a numeric `MAJOR.MINOR.PATCH` version for submitted plugins.
+Use a plugin versioning scheme that lets users and maintainers identify upgrades. The official registry accepts stable SemVer versions such as `1.2.3` and prerelease versions such as `1.2.3-rc.1`. A prerelease must be based on a prior stable release with the same base version.
 
 ## Before publishing
 
