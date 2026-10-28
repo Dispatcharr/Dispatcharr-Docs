@@ -129,7 +129,6 @@ nav:
     - TV Guide: tv-guide.md
     - DVR: dvr.md
     - Stats: stats.md
-    - Plugins: plugins.md
     - System: system.md
     - Connect: connect.md
     - Notifications: notifications.md
@@ -140,9 +139,18 @@ nav:
     - Connection Security: connection-security.md
   - FAQ/Troubleshooting: troubleshooting.md
   - API: api.md
-  - Plugins: plugin-listing.md
+  - Plugins:
+    - Overview: plugins.md
+    - Development:
+      - Quick start: plugins/development/quick-start.md
+      - Manifest & capabilities: plugins/development/capabilities-and-security.md
+      - Runtime & events: plugins/development/runtime-and-events.md
+      - Test & package: plugins/development/testing-and-packaging.md
+      - Publishing: plugins/development/publishing.md
+  # - Plugins: plugin-listing.md
   - Join Discord: https://discord.gg/wfeqTRRJru
   
 extra_javascript:
   - https://unpkg.com/lucide@latest/dist/umd/lucide.min.js
   - javascripts/lucide-init.js
+  - javascripts/filter-search-by-language.js
