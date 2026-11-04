@@ -118,7 +118,7 @@ Each field needs an `id` and a `type`. Use `label` for fields shown to users.
 | `table` | A list of structured rows. |
 | `file` | A file uploaded through the plugin settings UI. |
 
-Fields can also use `default`, `description`, `placeholder`, `input_type`, `min`, `max`, `step`, `value`, `options`, `section`, and `collapsed` where appropriate. For `select` and `multiselect`, define useful `options`. A table value is a list of row objects. Define `columns` for each table column, using `id`, `type`, and normally `label`. Table columns support `string`, `number`, `boolean`, and `select`. Administrators can reset plugin settings to their declared defaults.
+Fields can also use `default`, `description`, `placeholder`, `input_type`, `rows`, `min`, `max`, `step`, `value`, `options`, `section`, and `collapsed` where appropriate. `rows` sets the initial visible height of a `text` field and must be a positive integer. It defaults to 4. For `select` and `multiselect`, define useful `options`. A table value is a list of row objects. Define `columns` for each table column, using `id`, `type`, and normally `label`. Table columns support `string`, `number`, `boolean`, and `select`. Administrators can reset plugin settings to their declared defaults.
 
 File fields may specify `accept` and `max_size`. Uploads are written to `uploads/<field-id>/` inside the plugin directory, and Dispatcharr stores only the resulting path in the setting. The server restricts accepted extensions, caps the requested size, and prevents uploads from replacing plugin code. Validate uploaded contents before use.
 
