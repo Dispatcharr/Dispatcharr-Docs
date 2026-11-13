@@ -1,6 +1,6 @@
 # Plugin manifest and capabilities
 
-`plugin.json` describes a plugin without importing its Python code. Dispatcharr uses it to display metadata, settings, actions, and capability requests while the plugin is disabled. For enabled plugins, non-empty `fields` and `actions` defined by the `Plugin` class take precedence.
+`plugin.json` describes a plugin without importing its Python code. Dispatcharr uses it to display metadata, settings, actions, and capability requests while the plugin is disabled. For enabled plugins, non-empty fields and actions provided by the `Plugin` class take precedence.
 
 ## Manifest structure
 
@@ -134,6 +134,22 @@ File fields may specify `accept` and `max_size`. Uploads are written to `uploads
     }
     ```
 
+### Dynamic fields
+
+An enabled plugin can define `get_fields(self, context)` to build its settings fields during discovery. For example:
+
+```python
+class Plugin:
+    def get_fields(self, context):
+        saved_name = context["settings"].get("name", "")
+        return [{"id": "name", "label": "Name", "type": "string",
+                 "default": saved_name}]
+```
+
+The discovery context contains `settings`, `data_dir`, `code_dir`, `logger`, and `dispatcharr`. `settings` contains saved values before field defaults are merged, and `data_dir` may not exist yet. `get_fields` takes precedence over the class's `fields` attribute; an empty result falls back to manifest fields. Fields are rebuilt on discovery or reload, not automatically when a catalog changes. While the plugin is disabled, Dispatcharr uses the manifest fields without importing its code.
+
+See [Runtime, events, and background work](runtime-and-events.md#watched-directories) for the filesystem helpers available during discovery.
+
 ## Actions
 
 Each action needs an `id` and a `label`:
@@ -174,7 +190,7 @@ For manifest version 2 or later, Dispatcharr applies best-effort checks to suppo
 | `network_listener` | Selected socket bind and listen operations. |
 | `outbound_network` | Selected HTTP and socket connection operations. |
 | `subprocess` | Selected `subprocess` functions. |
-| `filesystem_write` | File writes outside the code and stable data directories. |
+| `filesystem_write` | File writes outside the code and stable data directories, and host helper operations that create or remove shared watched directories. |
 
 `proxy_internals`, `user_data`, and `external_dependencies` are disclosures. They do not currently add runtime guards. `external_dependencies` does not install dependencies.
 

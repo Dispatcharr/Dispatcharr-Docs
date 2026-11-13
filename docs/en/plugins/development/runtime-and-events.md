@@ -32,6 +32,25 @@ Use `context["code_dir"]` for files bundled with the plugin. Treat this director
 
 Writing outside the code and data directories requires the appropriate capability. See [Plugin manifest and capabilities](capabilities-and-security.md).
 
+## Watched directories
+
+The `dispatcharr` context is available to `get_fields`, actions, `stop`, and leadership hooks. Its `directories` mapping exposes the watched paths `logos` (`/data/logos`), `m3u` (`/data/m3us`), and `epg` (`/data/epgs`). The paths may not exist until needed.
+
+```python
+from pathlib import Path
+
+api = context["dispatcharr"]
+logos_dir = Path(api["ensure_directory"]("logos"))
+snapshot = logos_dir / "my-plugin-snapshot"
+# Only remove a directory after checking that its contents belong to your plugin.
+if snapshot.is_dir():
+    api["remove_directory"](snapshot)
+```
+
+`ensure_directory(name)` creates a named watched directory on demand and returns its path. `remove_directory(path)` removes a directory tree using an absolute path beneath the plugin's data directory or a watched directory. It rejects the roots themselves, paths outside them, and symlink traversal. A missing target raises `FileNotFoundError`. Plugins must check that shared content belongs to them before removing it.
+
+For manifest version 2 or later, creating a watched directory or removing a tree beneath one requires `filesystem_write`; removing a tree beneath the plugin's own data directory does not. Versions 0 and 1 do not enforce this capability check. Discovery helpers expire when `get_fields` returns. Runtime helpers stop working when the loaded plugin instance is replaced or removed. These checks are not a sandbox or an isolation boundary.
+
 ## Long-running work
 
 Manual actions run on the `plugins` queue. A normal action waits for the worker result. Mark an action with `"async": true` when it should return immediately and run in the background.
@@ -53,9 +72,9 @@ context["report_progress"](50, "Scanning streams")
 
 Progress is available while an active plugin task is running. Dispatcharr records task history and sends progress updates to the user interface. Progress reporting outside an active task has no effect.
 
-Queued actions can report an outcome through their returned dictionary. Return `{"status": "ok"}` for success, `{"status": "error", "message": "..."}` to fail the task, or `{"status": "partial", "message": "..."}` to record a warning outcome without failing the Celery task. Returned error and partial details are retained in task history.
+Queued actions can report an outcome through their returned dictionary. Return `{"status": "ok"}` for success, `{"status": "error", "message": "..."}` to fail the task, or `{"status": "partial", "message": "..."}` to record a warning outcome without failing the Celery task. Results for all outcomes, including plugin-returned errors, are retained in background task history subject to retention limits. Completed runs with a non-null JSON-serializable result offer a JSON output download. An exception without a returned result has no output file.
 
-Task history records its trigger as `manual`, `action`, `schedule`, or `event`. Administrators can filter history by trigger. Set `PLUGIN_TASK_HISTORY_MAX_ENTRIES` to retain from 1 to 5000 entries per plugin, or `PLUGIN_TASK_HISTORY_TTL_SECONDS` to retain entries from 1 second to 90 days. Defaults are 50 entries and 7 days.
+Task history records its trigger as `manual`, `action`, `schedule`, or `event`; older records may have an `unknown` trigger. Administrators can filter by trigger when the history contains more than one distinct trigger. Set `PLUGIN_TASK_HISTORY_MAX_ENTRIES` to retain from 1 to 5000 entries per plugin, or `PLUGIN_TASK_HISTORY_TTL_SECONDS` to retain entries from 1 second to 90 days. Defaults are 50 entries and 7 days.
 
 ## Event actions
 

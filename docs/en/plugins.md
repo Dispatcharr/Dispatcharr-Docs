@@ -2,6 +2,9 @@
 
 Plugins extend Dispatcharr with optional integrations and features. Use **My Plugins** to manage plugins already installed on your instance, or **Find Plugins** to browse plugins published through configured repositories.
 
+!!! info "Development version"
+    Plugin documentation was reviewed against Dispatcharr `dev` at commit [`497bfbb`](https://github.com/Dispatcharr/Dispatcharr/commit/497bfbb65590113a5b47a47387b386e6fef2a8f8). Some features described here may not yet be available in a released version.
+
 ## My Plugins
 
 Open **My Plugins** to view installed plugins. From here, you can:
@@ -15,6 +18,10 @@ Open **My Plugins** to view installed plugins. From here, you can:
 
 Imported plugins are stored in `/data/plugins`.
 
+Use the plugin card's **…** actions menu to enable or disable it, or pin it to or unpin it from the sidebar. Enabling a plugin may require capability approval. Select and multiselect settings with more than 10 options are searchable, including select cells in editable tables.
+
+On a plugin's detail page, open **Tasks** and select **View history** to inspect runs. Completed runs with output offer **Download output**, which downloads the full JSON result. History is subject to retention limits.
+
 When removing a plugin with saved data, Dispatcharr asks whether to keep that data for a future reinstall or delete it. Empty saved-data directories are removed automatically.
 
 ## Find Plugins
@@ -22,6 +29,8 @@ When removing a plugin with saved data, Dispatcharr asks whether to keep that da
 Open **Find Plugins** to browse available plugins from configured repositories. The official Dispatcharr plugin repository is configured by default.
 
 You can search, filter, and sort available plugins, then install compatible plugins or update installed managed plugins. Use **Manage Repositories** to add or maintain third-party repositories. Refreshing a repository checks its available versions; reloading plugins restarts their code.
+
+After installation, you can choose **Enable now** when offered. If the plugin requests capabilities, review and approve them separately before enabling it. If enabling fails, the installation dialog remains open so you can retry.
 
 ## Develop plugins
 
