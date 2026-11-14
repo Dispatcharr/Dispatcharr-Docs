@@ -2,9 +2,6 @@
 
 Plugins extend Dispatcharr with optional integrations and features. Use **My Plugins** to manage plugins already installed on your instance, or **Find Plugins** to browse plugins published through configured repositories.
 
-!!! info "Development version"
-    Plugin documentation was reviewed against Dispatcharr commit [`33938d5`](https://github.com/Dispatcharr/Dispatcharr/commit/33938d5a54049b5fa832af445d2b5be84658e9e6). Some features described here may not yet be available in a released version.
-
 ## My Plugins
 
 Open **My Plugins** to view installed plugins. From here, you can:
