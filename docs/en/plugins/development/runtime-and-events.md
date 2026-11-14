@@ -76,6 +76,24 @@ Queued actions can report an outcome through their returned dictionary. Return `
 
 Task history records its trigger as `manual`, `action`, `schedule`, or `event`; older records may have an `unknown` trigger. Administrators can filter by trigger when the history contains more than one distinct trigger. Set `PLUGIN_TASK_HISTORY_MAX_ENTRIES` to retain from 1 to 5000 entries per plugin, or `PLUGIN_TASK_HISTORY_TTL_SECONDS` to retain entries from 1 second to 90 days. Defaults are 50 entries and 7 days.
 
+### Refresh after an action
+
+An action can request a refresh in its returned dictionary:
+
+```python
+return {
+    "status": "ok",
+    "message": "Updated",
+    "_dispatcharr": {"refresh": "plugin"},
+}
+```
+
+Use `"ui"` to fetch current plugin metadata and settings without rebuilding discovery-time `get_fields` values. Use `"plugin"` to reload the plugin on the worker after the action returns, rebuild its fields, and refresh connected clients. The backend performs the reload even if the browser disconnects. Other workers pick up the reload on their next discovery.
+
+Refreshes preserve unsaved edits to individual settings over the newly fetched values. If both the user and server changed the same setting, the unsaved edit takes precedence until saved or discarded.
+
+Directives apply to successful and partial results, including background actions, but not errors. A single-plugin reload waits for active actions and other explicit reloads across workers sharing the plugin directory; queued actions do not count as active. Reloading runs stop hooks and affects persistent services. If the requested reload fails, the task reports an error even though the action has already run.
+
 ## Event actions
 
 Actions can subscribe to Connect events:
