@@ -5,7 +5,7 @@ Desde la página Plugins puedes importar, administrar y eliminar plugins de Disp
 * Elimina un plugin haciendo clic en el botón <i data-lucide="trash-2" style="color: Pink; width: 18px;"></i> Delete plugin
 * Habilita/deshabilita un plugin haciendo clic en el ícono Toggle a la derecha del botón Delete plugin
 !!! info "Información"
-    ¿Te interesa el desarrollo de plugins? Consulta la documentación de desarrollo de plugins en el [dispatcharr github](https://github.com/Dispatcharr/Dispatcharr/blob/main/Plugins.md)
+    ¿Te interesa el desarrollo de plugins? Consulta la [guía de desarrollo de plugins](../en/plugins/development/quick-start.md) en inglés.
 
 ## Buscar plugins
 Los usuarios administradores pueden explorar, instalar y actualizar plugins directamente desde sus repositorios fuente mediante el Plugin Hub. El repository oficial de Dispatcharr Plugins viene preconfigurado

@@ -85,6 +85,8 @@ A manifest alone is not enough for discovery: the plugin directory must contain 
 
 The action ID passed to `run()` matches the action declared in `plugin.json`. `context["settings"]` contains the saved values for fields in the manifest.
 
+For manifest version 2 or later, declare actions in `plugin.json`; Python-only action definitions are not available. Settings fields can instead be provided in Python, although manifest fields let Dispatcharr display them while the plugin is disabled. See [Plugin settings fields](settings-fields.md).
+
 ## Load and enable the plugin
 
 1. Open **Plugins** in Dispatcharr.
@@ -96,6 +98,6 @@ New plugins are disabled by default. Plugins that declare capabilities must be a
 
 ## Next steps
 
-- Define settings fields, actions, and supported manifest versions in [Plugin manifest and capabilities](capabilities-and-security.md).
-- Learn about events, long-running work, and durable data in [Runtime, events, and background work](runtime-and-events.md).
+- Define settings in [Plugin settings fields](settings-fields.md), and review actions and manifest versions in [Plugin manifest and capabilities](capabilities-and-security.md).
+- Learn about events and long-running work in [Runtime, events, and background work](runtime-and-events.md), and durable data in [Plugin storage and lifecycle](storage-and-lifecycle.md).
 - Validate and package the plugin in [Test and package a plugin](testing-and-packaging.md).

@@ -144,7 +144,12 @@ nav:
     - Development:
       - Quick start: plugins/development/quick-start.md
       - Manifest & capabilities: plugins/development/capabilities-and-security.md
+      - Settings fields: plugins/development/settings-fields.md
       - Runtime & events: plugins/development/runtime-and-events.md
+      - Storage & lifecycle: plugins/development/storage-and-lifecycle.md
+      - Persistent services: plugins/development/persistent-services.md
+      - APIs & integration: plugins/development/apis-and-integration.md
+      - Migrate a plugin: plugins/development/migration.md
       - Test & package: plugins/development/testing-and-packaging.md
       - Publishing: plugins/development/publishing.md
   # - Plugins: plugin-listing.md

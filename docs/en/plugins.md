@@ -37,6 +37,11 @@ Use the plugin-development documentation to build, test, package, and publish a 
 
 - [Plugin development quick start](plugins/development/quick-start.md)
 - [Plugin manifest and capabilities](plugins/development/capabilities-and-security.md)
+- [Plugin settings fields](plugins/development/settings-fields.md)
 - [Runtime, events, and background work](plugins/development/runtime-and-events.md)
+- [Plugin storage and lifecycle](plugins/development/storage-and-lifecycle.md)
+- [Persistent plugin services](plugins/development/persistent-services.md)
+- [APIs and integration](plugins/development/apis-and-integration.md)
+- [Migrate an existing plugin](plugins/development/migration.md)
 - [Test and package a plugin](plugins/development/testing-and-packaging.md)
 - [Publish to the official plugin registry](plugins/development/publishing.md)
