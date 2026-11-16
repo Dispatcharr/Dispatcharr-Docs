@@ -1,5 +1,7 @@
 # Persistent plugin services
 
+--8<-- "includes/plugin-development-version.md"
+
 Do not start a persistent server, listener, or loop during module import or in `Plugin.__init__`. Use leader hooks and Dispatcharr's managed service runner instead:
 
 ```python

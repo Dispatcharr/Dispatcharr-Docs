@@ -1,5 +1,7 @@
 # Plugin storage and lifecycle
 
+--8<-- "includes/plugin-development-version.md"
+
 Implement `stop(context)` to release resources when the plugin is disabled, deleted, or reloaded. If `stop()` is not present, Dispatcharr calls `run("stop", {}, context)` as a compatibility fallback.
 
 On disable and delete, `stop()` runs inside a database transaction while the plugin row is locked. Keep it short and do not close database connections in the hook. If it encounters a database error, its database changes are rolled back and disable or delete still completes.

@@ -1,5 +1,7 @@
 # Runtime, events, and background work
 
+--8<-- "includes/plugin-development-version.md"
+
 Dispatcharr executes plugin actions through the `plugins` Celery queue. A plugin handles an action through its `Plugin` class:
 
 ```python

@@ -1,5 +1,7 @@
 # Plugin settings fields
 
+--8<-- "includes/plugin-development-version.md"
+
 Use settings fields to let an administrator configure a plugin without editing its code. Add field definitions to the `fields` list in `plugin.json`, then read their values from `context["settings"]` in an action. Start with the [quick start](quick-start.md) if you have not created a plugin yet.
 
 Each field needs an `id` and a `type`. Use `label` for fields shown to users. For example, add the following object to the manifest's `fields` list:

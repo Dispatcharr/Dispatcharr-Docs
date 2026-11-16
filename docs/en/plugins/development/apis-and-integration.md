@@ -1,5 +1,7 @@
 # Plugin APIs and integration
 
+--8<-- "includes/plugin-development-version.md"
+
 Plugins run inside the Dispatcharr Django application. Use `context["dispatch_task"]` for a plugin's own actions and `context["report_progress"]` for progress. Plugins can use Django models and transactions where appropriate, but should not ask users for the host Dispatcharr URL or credentials to call their own application. Use `context["logger"]` for logs and avoid logging credentials or sensitive user data.
 
 Choose the narrowest integration that fits the work:

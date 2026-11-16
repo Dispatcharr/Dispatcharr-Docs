@@ -1,5 +1,7 @@
 # Publish to the official plugin registry
 
+--8<-- "includes/plugin-development-version.md"
+
 The official [Dispatcharr Plugins](https://github.com/Dispatcharr/Plugins) repository is a distribution registry. Build, test, and maintain your plugin in your own repository or workspace before submitting it.
 
 Before you submit, confirm that the packaged plugin works in Dispatcharr, requests only the capabilities it needs, includes useful metadata and documentation, and has a supported license.

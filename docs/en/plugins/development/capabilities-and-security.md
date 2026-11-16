@@ -1,5 +1,7 @@
 # Plugin manifest and capabilities
 
+--8<-- "includes/plugin-development-version.md"
+
 `plugin.json` describes a plugin without importing its Python code. Dispatcharr uses it to display metadata, settings, actions, and capability requests while the plugin is disabled. For enabled plugins, non-empty fields provided by the `Plugin` class take precedence over manifest fields.
 
 ## Manifest structure

@@ -1,5 +1,7 @@
 # Migrate an existing plugin
 
+--8<-- "includes/plugin-development-version.md"
+
 Plugins without `manifest_version` use version 0. Manifest versions 1 and 2 require Dispatcharr 0.34.0 or later. See [Plugin manifest and capabilities](capabilities-and-security.md) for the version and capability reference.
 
 Before changing the manifest, test a copy of the plugin on a compatible Dispatcharr instance. Record its existing settings and back up mutable files so you can verify that an upgrade retains the data users need.

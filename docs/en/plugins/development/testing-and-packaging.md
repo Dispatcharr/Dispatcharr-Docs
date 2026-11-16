@@ -1,5 +1,7 @@
 # Test and package a plugin
 
+--8<-- "includes/plugin-development-version.md"
+
 Develop and test a plugin in its own repository or local workspace. The official Dispatcharr plugin registry distributes reviewed releases. It is not a plugin development environment or a replacement for an author's test workflow.
 
 ## Test locally

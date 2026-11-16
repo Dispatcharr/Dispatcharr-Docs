@@ -1,5 +1,7 @@
 # Plugin development quick start
 
+--8<-- "includes/plugin-development-version.md"
+
 A Dispatcharr plugin is a directory containing a `plugin.json` manifest and Python code that exports a `Plugin` class. This guide creates a minimal plugin with one action and two settings.
 
 For manifest, field, action, and capability guidance, see [Plugin manifest and capabilities](capabilities-and-security.md).
