@@ -94,6 +94,10 @@ Version 0 includes manifests that omit `manifest_version`. Version 1 reads capab
 
 Each field needs an `id` and a `type`. Use `label` for fields shown to users.
 
+Field types and attributes are subject to `manifest_version`, whether fields are defined in `plugin.json`, the class's `fields` attribute, or `get_fields`. Set `manifest_version` in `plugin.json` even when defining fields in Python. The versions below are manifest versions, not Dispatcharr release versions.
+
+Dispatcharr logs a warning and ignores unsupported field types. It removes unsupported attributes but retains the rest of the field. Discovery does not delete saved settings, but saving settings can drop values for fields omitted by the version policy. Set the correct manifest version before saving.
+
 ```json
 {
   "id": "api_url",
@@ -105,18 +109,28 @@ Each field needs an `id` and a `type`. Use `label` for fields shown to users.
 }
 ```
 
-| Type | Use |
-| --- | --- |
-| `string` | Short text input. |
-| `text` | Multi-line text input. |
-| `number` | Numeric input. |
-| `boolean` | On or off setting. |
-| `select` | One value from `options`. |
-| `multiselect` | Multiple values from `options`. |
-| `info` | Read-only information. |
-| `section` | A visual settings section. |
-| `table` | A list of structured rows. |
-| `file` | A file uploaded through the plugin settings UI. |
+| Type | Introduced | Removed | Use |
+| --- | --- | --- | --- |
+| `string` | v0 |  | Short text input. |
+| `text` | v0 |  | Multi-line text input. |
+| `number` | v0 |  | Numeric input. |
+| `boolean` | v0 |  | On or off setting. |
+| `select` | v0 |  | One value from `options`. |
+| `multiselect` | v1 |  | Multiple values from `options`. |
+| `info` | v0 |  | Read-only information. |
+| `section` | v1 |  | A visual settings section. |
+| `table` | v1 |  | A list of structured rows. |
+| `file` | v1 |  | A file uploaded through the plugin settings UI. |
+
+These attributes have additional manifest-version requirements:
+
+| Attribute | Applies to | Introduced | Removed |
+| --- | --- | --- | --- |
+| `section` | All field types | v1 |  |
+| `collapsed` | `section` | v1 |  |
+| `columns` | `table` | v1 |  |
+| `accept`, `max_size` | `file` | v1 |  |
+| `rows` | `text` | v1 |  |
 
 Fields can also use `default`, `description`, `placeholder`, `input_type`, `rows`, `min`, `max`, `step`, `value`, `options`, `section`, and `collapsed` where appropriate. `rows` sets the initial visible height of a `text` field and must be a positive integer. It defaults to 4. For `select` and `multiselect`, define useful `options`. A table value is a list of row objects. Define `columns` for each table column, using `id`, `type`, and normally `label`. Table columns support `string`, `number`, `boolean`, and `select`. Administrators can reset plugin settings to their declared defaults.
 
@@ -127,6 +141,7 @@ File fields may specify `accept` and `max_size`. Uploads are written to `uploads
 
     ```json
     {
+      "manifest_version": 1,
       "fields": [
         {"id": "advanced", "label": "Advanced", "type": "section", "collapsed": true},
         {"id": "rules", "label": "Rules", "type": "table", "section": "advanced", "default": [], "columns": [{"id": "enabled", "label": "Enabled", "type": "boolean"}]}

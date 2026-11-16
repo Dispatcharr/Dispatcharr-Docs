@@ -81,12 +81,14 @@ class Plugin:
 
 Dispatcharr loads the `Plugin` class from `plugin.py`. A package may export the class from its `__init__.py` instead. If both are present, Dispatcharr uses `plugin.py`.
 
+A manifest alone is not enough for discovery: the plugin directory must contain `plugin.py` or `__init__.py`.
+
 The action ID passed to `run()` matches the action declared in `plugin.json`. `context["settings"]` contains the saved values for fields in the manifest.
 
 ## Load and enable the plugin
 
 1. Open **Plugins** in Dispatcharr.
-2. Reload plugins after creating or changing local plugin files.
+2. Reload plugins after creating or changing local plugin files. The plugin list uses cached discovery and does not automatically rescan copied or removed folders.
 3. Open **My Plugin**, review its settings, and enable it.
 4. Run **Run** from the plugin detail page.
 

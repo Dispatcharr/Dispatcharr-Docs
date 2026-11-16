@@ -74,6 +74,8 @@ Progress is available while an active plugin task is running. Dispatcharr record
 
 Queued actions can report an outcome through their returned dictionary. Return `{"status": "ok"}` for success, `{"status": "error", "message": "..."}` to fail the task, or `{"status": "partial", "message": "..."}` to record a warning outcome without failing the Celery task. Results for all outcomes, including plugin-returned errors, are retained in background task history subject to retention limits. Completed runs with a non-null JSON-serializable result offer a JSON output download. An exception without a returned result has no output file.
 
+Action results must be JSON serializable, without non-finite numbers. An invalid result fails the task and is not retained. When an awaited action returns `status: error`, the API responds with HTTP 500 and includes the returned dictionary in `result`, alongside `success: false` and `error`.
+
 Task history records its trigger as `manual`, `action`, `schedule`, or `event`; older records may have an `unknown` trigger. Administrators can filter by trigger when the history contains more than one distinct trigger. Set `PLUGIN_TASK_HISTORY_MAX_ENTRIES` to retain from 1 to 5000 entries per plugin, or `PLUGIN_TASK_HISTORY_TTL_SECONDS` to retain entries from 1 second to 90 days. Defaults are 50 entries and 7 days.
 
 ### Refresh after an action
