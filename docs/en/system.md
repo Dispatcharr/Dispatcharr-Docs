@@ -63,7 +63,7 @@ List, view, and download log files
 * Table Size - Set the size of the channel rows in "Channels"
 * Pin Table Headers - Toggles whether to keep table headers visible when scrolling
 * Time format - Set the display of time to either 12 hour or 24 hour format
-* Date format - Set the display of dates to either Day/Month/Year or Month/Day/Year
+* Date format - Set your preferred date display format
 * Time Zone - Set your preferred time zone
 * Web Player Output Profile - Output profile applied when previewing streams in the browser player
 
@@ -77,6 +77,7 @@ Drag and drop to reorder the sidebar navigation items, or click the <i data-luci
 * Default Stream Profile - Set the default Stream Profile
 * Default Output Format - Container format used when proxying streams. MPEG-TS is broadly compatible with media players and devices; fMP4 has better support for modern codecs like AV1 and is preferred by some newer clients. HLS serves a segmented playlist for native Apple players and web playback.
 * HDHR Default Output Profile - An output profile that is applied to all HDHR stream URLs by default (can be overwridden by modifying the HDHR output URL). When cleared, streams are served as-is (pass-through)
+* HDHR Default Output Format - Override Default Output Format for HDHR stream URLs. Most HDHR clients expect MPEG-TS
 * M3U Hash Key - Set how to hash your M3U. This affects the Stale stream cleanup.
     * The default setting hashes on URL. Available options include:
         * Name
@@ -105,6 +106,8 @@ Each proxy setting affects all stream profiles with the exception of redirect
 * Buffer Chunk TTL - Time-to-live for buffer chunks in seconds (how long stream data is cached)
 * Channel Initialization Timeout - How long a channel may spend connecting and cycling through failover streams before giving up during startup
 * Client Connect Grace Period - How long a ready channel with no viewers stays up waiting for the first client
+* Max Connection Attempts - how many times the live proxy tries to open a stream URL before failing over to the next one
+* Stream Retry Timeout - how long channel startup waits for a free provider connection when every active M3U profile is already at its connection limit (for example when a player opens the next channel before the previous connection has finished closing)
 * Validate Redirect URLs - Before Redirect handoff, probe the provider URL with a HEAD (then GET) request and try alternate streams if it fails. Disable for providers that close probe connections or add channel-change latency. Failover probing is skipped when disabled
 
 ### Stream Profiles
@@ -141,6 +144,7 @@ A Stream Profile defines the processing and output parameters Dispatcharr uses w
     * Command - FFmpeg, Streamlink, VLC, yt-dlp, or Custom
     * Custom Command (only for Custom) - Enter the executable name (e.g. ffmpeg) or full path (e.g. /usr/local/bin/mycmd)
     * Parameters - Set your custom [FFmpeg](https://ffmpeg.org/ffmpeg.html), [Streamlink](https://streamlink.github.io/cli.html), [VLC](https://wiki.videolan.org/VLC_command-line_help/), or [yt-dlp](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#output-template) parameters
+        * Dispatcharr command line parameters support `{channelName}`,  `{tvgId}`, `{streamUrl}`, `{userAgent}`, and `{channelId}`
     * User-Agent - Set the default user-agent for this stream profile
 
 
