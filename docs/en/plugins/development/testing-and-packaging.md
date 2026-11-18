@@ -18,6 +18,8 @@ Use this checklist before packaging:
 6. Test disable, reload, and delete behavior. Confirm `stop()` releases resources.
 7. For background work, inspect task progress and history. For persistent services, test worker restart and leader handover.
 8. Restart Dispatcharr and confirm durable data is read from `context["data_dir"]`.
+9. If the plugin uses file fields, test upload persistence across updates and the uninstall data choice. Check whether older uploads stored in the plugin code directory need to be uploaded again.
+10. If the plugin uses socket context managers, test cleanup on normal and exceptional exits and verify that network operations require the appropriate capabilities.
 
 Dispatcharr's own `python manage.py test` suite validates Dispatcharr. Plugin authors should maintain tests appropriate to their own code and dependencies.
 

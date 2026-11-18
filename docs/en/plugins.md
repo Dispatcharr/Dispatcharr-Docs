@@ -23,6 +23,8 @@ Some plugin actions refresh settings or reload the plugin after they finish. Uns
 
 When removing a plugin with saved data, Dispatcharr asks whether to keep that data for a future reinstall or delete it. Empty saved-data directories are removed automatically.
 
+Files uploaded through plugin settings survive updates and follow the keep-or-delete data choice when removing a plugin. Older uploads are not moved automatically and may need to be uploaded again after an update.
+
 ## Find Plugins
 
 Open **Find Plugins** to browse available plugins from configured repositories. The official Dispatcharr plugin repository is configured by default.

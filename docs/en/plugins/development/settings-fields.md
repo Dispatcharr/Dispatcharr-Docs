@@ -8,7 +8,7 @@ Each field needs an `id` and a `type`. Use `label` for fields shown to users. Fo
 
 Field types and attributes are subject to `manifest_version`, whether fields are defined in `plugin.json`, the class's `fields` attribute, or `get_fields`. Set `manifest_version` in `plugin.json` even when defining fields in Python. The versions below are manifest versions, not Dispatcharr release versions.
 
-Dispatcharr logs a warning and ignores unsupported field types. It removes unsupported attributes but retains the rest of the field. Discovery does not delete saved settings, but saving settings can drop values for fields omitted by the version policy. Set the correct manifest version before saving.
+Dispatcharr logs a warning and ignores unsupported field types. It removes unsupported attributes but retains the rest of the field. Discovery does not delete saved settings. When at least one field has an ID, saving ignores submitted unknown keys but preserves existing values without matching field IDs. When no field IDs are available, saving replaces the saved settings with the submitted settings instead. Set the correct manifest version before saving.
 
 ```json
 {
@@ -69,9 +69,9 @@ Read the selected value as `context["settings"].get("mode", "safe")`. For multip
 
 Section markers do not store values. A field with a `section` that does not match a declared section is displayed ungrouped. A section's collapsed state is a UI preference and is not saved as a setting.
 
-File fields may specify `accept` and `max_size`. Uploads are written to `uploads/<field-id>/` inside the plugin directory, and Dispatcharr stores only the resulting path in the setting. The server restricts accepted extensions, caps the requested size, and prevents uploads from replacing plugin code. Validate uploaded contents before use.
+File fields may specify `accept` and `max_size`. Uploads are written to `_uploads/<field-id>/` under the plugin's durable `data_dir`, and Dispatcharr stores only the resulting path in the setting. The `_uploads` directory is reserved for Dispatcharr-managed files. The server restricts accepted extensions, caps the requested size, and prevents uploads from replacing plugin code. Validate uploaded contents before use.
 
-`accept` is a browser file-picker hint, not a replacement for the server's extension allowlist. Uploading another file to the same field replaces the previous file. Uninstalling removes uploads with the plugin directory, so do not treat them as durable `data_dir` storage.
+`accept` is a browser file-picker hint, not a replacement for the server's extension allowlist. Uploading another file to the same field replaces the previous file. Uploads survive plugin updates and follow the keep-or-delete data choice on uninstall. Older uploads stored in the plugin code directory are not moved automatically and may need to be uploaded again after an update.
 
 ??? example "Group fields and store structured rows"
     Use a `section` field to group related settings. A `table` field stores a list of row objects whose columns use `string`, `number`, `boolean`, or `select` types.
