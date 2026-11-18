@@ -8,6 +8,8 @@ On disable and delete, `stop()` runs inside a database transaction while the plu
 
 Use `context["code_dir"]` for files bundled with the plugin. Treat this directory as read-only. Use `context["data_dir"]` for durable mutable state such as a local database, cache, or downloaded data. Dispatcharr stores this durable data under `/data/plugins/_data/<canonical-plugin-id>/`, so it survives managed-plugin updates that replace the versioned code directory.
 
+Managed plugins use their repository slug as the data identity. If a repository removes a plugin or a ZIP import replaces a managed plugin, Dispatcharr retains that identity when the plugin becomes unmanaged. Dispatcharr reserves `_uploads` inside `data_dir` for [file-field uploads](settings-fields.md).
+
 !!! info "Plugin files and data"
     Dispatcharr creates `data_dir` when it builds an action or leadership context, not during discovery or import. It is a stable `_data/<canonical-plugin-id>/` directory for that plugin's mutable state. Do not assume it exists at module import time or in `Plugin.__init__`. Dispatcharr does not provide a generic static-asset directory or plugin HTTP routes. Read packaged assets from `code_dir`; use a root-level `logo.png` only for the plugin icon.
 

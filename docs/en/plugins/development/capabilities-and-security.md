@@ -142,6 +142,8 @@ For manifest version 2 or later, Dispatcharr applies best-effort checks to suppo
 
 The `network_listener` capability is marked as requiring a restart in the user interface. Plan listener plugins accordingly.
 
+Using `with socket.socket() as sock:` closes the socket on exit, including when an exception occurs. The context manager retains the applicable `network_listener` and `outbound_network` checks; it does not grant either capability.
+
 ## Security boundary
 
 Dispatcharr plugins run as Python code in the Dispatcharr process. Capability checks are a best-effort safety net, not process isolation or a complete sandbox. A trusted plugin author can bypass Python-level checks.

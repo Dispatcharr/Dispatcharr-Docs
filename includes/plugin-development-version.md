@@ -1,4 +1,4 @@
 !!! info "Documentation version"
-    Last updated against Dispatcharr v0.34.x, commit [`f58a82ce`](https://github.com/Dispatcharr/Dispatcharr/commit/f58a82ce01754684d1e8404cb86df6742bd71791).
+    Last updated against Dispatcharr v0.34.1, commit [`7448c4ad`](https://github.com/Dispatcharr/Dispatcharr/commit/7448c4ad4e39256c3a810db12fc674ee52147617).
 
     Changes made after this commit, including unreleased changes, may not yet be reflected in these pages.
